@@ -1,0 +1,130 @@
+{
+  "id": "eden",
+  "title": "Adam et Ève",
+  "reference": "Genèse 2 à 3",
+  "intro": "Adam et Ève. Une histoire de la Bible, dans le livre de la Genèse.",
+  "scenes": [
+    {
+      "id": "noms",
+      "stage": "names",
+      "reference": "Genèse 2.8-20",
+      "text": {
+        "agneaux": "Dieu planta un jardin magnifique, le jardin d'Éden. Il y mit Adam, le premier homme. Adam donna un nom à chaque animal.",
+        "bergers": "Dieu planta un jardin en Éden, plein d'arbres aux fruits délicieux. Il y plaça Adam pour cultiver le jardin et le garder. Dieu fit venir les animaux vers Adam, et Adam donna un nom à chacun.",
+        "explorateurs": "L'Éternel Dieu planta un jardin en Éden, du côté de l'orient. Il y fit pousser toutes sortes d'arbres agréables à voir et bons à manger, et un fleuve arrosait le jardin. Il y plaça l'homme pour le cultiver et le garder. Puis Dieu amena vers l'homme tous les animaux, et l'homme donna un nom à chacun."
+      },
+      "action": "Touche chaque animal pour qu'Adam lui donne un nom !"
+    },
+    {
+      "id": "eve",
+      "stage": "eve",
+      "reference": "Genèse 2.18-23",
+      "text": {
+        "agneaux": "Mais Adam était tout seul. Alors Dieu créa une femme : Ève. Adam était si content !",
+        "bergers": "Dieu dit : « Il n'est pas bon que l'homme soit seul. » Il endormit Adam profondément, et il créa une femme. Quand Adam la vit, il fut rempli de joie.",
+        "explorateurs": "L'Éternel Dieu dit : « Il n'est pas bon que l'homme soit seul ; je lui ferai une aide qui lui corresponde. » Il fit tomber un profond sommeil sur Adam, prit une de ses côtes et en forma une femme. Adam s'écria : « Voici cette fois celle qui est os de mes os et chair de ma chair ! »"
+      },
+      "action": "Touche Adam !"
+    },
+    {
+      "id": "arbre",
+      "stage": "tree",
+      "reference": "Genèse 2.16-17",
+      "text": {
+        "agneaux": "Dieu leur dit : « Mangez les fruits de tous les arbres, sauf de cet arbre-là. »",
+        "bergers": "Dieu leur dit : « Vous pouvez manger les fruits de tous les arbres du jardin. Mais ne mangez pas le fruit de l'arbre de la connaissance du bien et du mal. »",
+        "explorateurs": "L'Éternel Dieu donna cet ordre : « Tu pourras manger de tous les arbres du jardin ; mais tu ne mangeras pas de l'arbre de la connaissance du bien et du mal, car le jour où tu en mangeras, tu mourras. »"
+      },
+      "action": "Touche la lumière pour écouter Dieu."
+    },
+    {
+      "id": "serpent",
+      "stage": "serpent",
+      "reference": "Genèse 3.1-6",
+      "text": {
+        "agneaux": "Un serpent rusé dit à Ève : « Mange ce fruit ! » Ève en mangea, et en donna à Adam. Ils n'avaient pas écouté Dieu.",
+        "bergers": "Le serpent, très rusé, dit à Ève : « Tu ne mourras pas ! Si tu manges ce fruit, tu seras comme Dieu. » Ève prit le fruit et en mangea. Elle en donna aussi à Adam, qui en mangea. Ils avaient désobéi à Dieu.",
+        "explorateurs": "Le serpent était le plus rusé des animaux. Il dit à la femme : « Vous ne mourrez point ; Dieu sait que le jour où vous en mangerez, vos yeux s'ouvriront et vous serez comme des dieux. » La femme vit que le fruit était beau ; elle en prit, en mangea et en donna à son mari, qui en mangea aussi. C'était la première désobéissance."
+      },
+      "action": "Touche le serpent."
+    },
+    {
+      "id": "cachette",
+      "stage": "hide",
+      "reference": "Genèse 3.8-13",
+      "text": {
+        "agneaux": "Le soir, Adam et Ève se cachèrent. Mais Dieu les appela : « Où es-tu ? »",
+        "bergers": "Le soir, Adam et Ève entendirent Dieu dans le jardin, et ils se cachèrent derrière les arbres. Mais Dieu appela Adam : « Où es-tu ? » Personne ne peut se cacher de Dieu.",
+        "explorateurs": "Le soir, ils entendirent la voix de l'Éternel Dieu qui parcourait le jardin, et ils se cachèrent au milieu des arbres. Mais l'Éternel Dieu appela l'homme : « Où es-tu ? » Adam répondit : « J'ai eu peur, et je me suis caché. » Dieu les cherchait, comme il cherche chacun de nous."
+      },
+      "action": "Touche les buissons pour trouver Adam et Ève !"
+    },
+    {
+      "id": "habits",
+      "stage": "clothes",
+      "reference": "Genèse 3.15-24",
+      "text": {
+        "agneaux": "Adam et Ève durent quitter le jardin. Mais Dieu les aimait toujours : il leur fit des habits chauds.",
+        "bergers": "Parce qu'ils avaient désobéi, Adam et Ève durent quitter le jardin d'Éden. Mais Dieu ne les abandonna pas : il leur fit des habits de peau pour les couvrir, et il prit soin d'eux.",
+        "explorateurs": "À cause de leur désobéissance, Adam et Ève durent quitter le jardin d'Éden. Mais Dieu promit déjà qu'un jour, un descendant de la femme écraserait la tête du serpent : la première promesse d'un Sauveur. L'Éternel Dieu fit à Adam et à sa femme des habits de peau, et il les en revêtit."
+      },
+      "action": "Touche Adam et Ève pour qu'ils reçoivent leurs habits.",
+      "after": {
+        "all": "Même quand nous désobéissons, Dieu continue de nous aimer et de prendre soin de nous."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "names", "label": "Adam et les animaux" },
+        { "id": "eve", "label": "Dieu crée Ève" },
+        { "id": "tree", "label": "L'arbre interdit" },
+        { "id": "serpent", "label": "Le serpent" },
+        { "id": "hide", "label": "Ils se cachent" },
+        { "id": "clothes", "label": "Les habits" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Des animaux se cachent dans le jardin d'Éden ! Retrouve-les.",
+      "items": [
+        { "id": "rabbit", "label": "le lapin" },
+        { "id": "owl", "label": "le hibou" },
+        { "id": "frog", "label": "la grenouille" },
+        { "id": "tortoise", "label": "la tortue" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "ladybug", "label": "la coccinelle" },
+        { "id": "snail", "label": "l'escargot" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires du jardin.",
+      "pairs": ["fruit", "tree", "flower", "rabbit", "snake", "dove"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Mais l'Éternel Dieu appela l'homme, et lui dit : Où es-tu ?",
+    "reference": "Genèse 3.9",
+    "spoken": "Genèse, chapitre 3, verset 9 : Mais l'Éternel Dieu appela l'homme, et lui dit : Où es-tu ?",
+    "chunks": {
+      "bergers": ["Mais l'Éternel Dieu", "appela l'homme,", "et lui dit :", "Où es-tu ?"],
+      "explorateurs": ["Mais", "l'Éternel Dieu", "appela", "l'homme,", "et lui dit :", "Où es-tu ?"]
+    },
+    "referenceChoices": ["Genèse 3.9", "Genèse 9.3", "Exode 3.9"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "eden", "title": "Le jardin d'Éden" },
+  "reward": "Bravo ! Tu as terminé l'histoire d'Adam et Ève. Voici ton autocollant pour ton album !"
+}

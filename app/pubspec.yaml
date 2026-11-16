@@ -66,8 +66,12 @@ flutter:
     - assets/audio/sfx/
     - assets/stories/creation/
     - assets/stories/creation/audio/
+    - assets/stories/eden/
+    - assets/stories/eden/audio/
     - assets/stories/noe/
     - assets/stories/noe/audio/
+    - assets/stories/abraham/
+    - assets/stories/abraham/audio/
 
   fonts:
     - family: Fredoka

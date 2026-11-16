@@ -77,9 +77,12 @@ void main() {
     addTearDown(tester.view.reset);
     final state = GameState(MemorySaveStore());
     state.addProfile(name: 'Awa', age: AgeGroup.agneaux, avatar: 'sheep');
-    // La Création terminée à 3 étoiles : Noé est ouvert.
-    for (final part in [StoryPart.recit, StoryPart.seek, StoryPart.memory]) {
-      state.recordPart('creation', part);
+    // Les histoires avant Noé ont 3 étoiles chacune : Noé est ouvert.
+    final before = lot1.takeWhile((i) => i.id != 'noe').map((i) => i.id).toList();
+    for (final id in before) {
+      for (final part in [StoryPart.recit, StoryPart.seek, StoryPart.memory]) {
+        state.recordPart(id, part);
+      }
     }
     setup?.call(state);
     await tester.pumpWidget(
@@ -139,7 +142,10 @@ void main() {
     await tester.tap(find.text('La carte'));
     await frames(tester, 30);
     expect(find.bySemanticsLabel('Noé et l’arche, 1 étoiles sur 5'), findsOneWidget);
-    expect(find.bySemanticsLabel(RegExp('Awa, 4 étoiles')), findsOneWidget);
+    expect(
+      find.bySemanticsLabel(RegExp('Awa, ${lot1.indexWhere((i) => i.id == 'noe') * 3 + 1} étoiles')),
+      findsOneWidget,
+    );
   });
 
   testWidgets('reprendre Noé : les étoiles déjà gagnées sont là dans le menu des jeux', (tester) async {

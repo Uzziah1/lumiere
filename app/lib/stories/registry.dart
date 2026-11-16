@@ -5,7 +5,9 @@ import '../art/objects.dart';
 import '../story/scripted_stage.dart';
 import '../story/story_game.dart';
 import '../theme/palette.dart';
+import 'abraham/abraham.dart';
 import 'creation/creation.dart';
+import 'eden/eden.dart';
 import 'noe/noe_art.dart';
 import 'noe/noe_stages.dart';
 
@@ -133,6 +135,8 @@ abstract class SeekScene {
 
 final Map<String, StoryPack> storyPacks = {
   'creation': creationPack,
+  'eden': edenPack,
+  'abraham': abrahamPack,
   'noe': StoryPack(
     stages: noeStages,
     paintThumb: paintNoeThumb,
