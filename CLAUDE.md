@@ -77,7 +77,10 @@ et ressources libres, ou produits par nous.
 - `stories/` : le code propre à chaque histoire (`registry.dart` : `StoryPack` = décors, vignettes,
   scène de cache-cache, autocollant, objets des mini-jeux) ; un dossier par histoire : `creation`, `eden`,
   `noe`, `abraham`, `joseph`, `moise`, `david`, `jonas` (Ancien Testament), `naissance`, `temple`, `bapteme`,
-  `tempete`, `pains`, `zachee`, `samaritain`, `prodigue`, `paques`, `pentecote` (Nouveau Testament) ;
+  `tempete`, `pains`, `zachee`, `samaritain`, `prodigue`, `paques`, `pentecote`, `cana` (Nouveau Testament),
+  `jericho`, `gedeon`, `ruth`, `samuel`, `elie`, `daniel`, `esther` (les héros de la foi) ;
+  `ot/heroes.dart` : personnages et décors des héros de la foi (`Heroes.joshua`, `Heroes.priest`,
+  `Heroes.people`, `paintPeople`, `paintCovenantArk`, `paintWalledCity`) ;
   `nt/nt.dart` : personnages et décors communs au Nouveau Testament (`NT.jesus`, `NT.mary`, `NT.disciples`,
   `paintAngel`, `paintCrowd`, `paintGalilee`, `paintJerusalem`, `paintHouse`, `paintRoad`, `paintBaby`)
 - `audio/` : `Narrator`, `SoundEffects` et `MusicPlayer` (audioplayers ; versions muettes pour les tests),
@@ -87,11 +90,12 @@ et ressources libres, ou produits par nous.
   (`PrefsSaveStore`, `MemorySaveStore` pour les tests), `GameState` (ChangeNotifier, sauvegarde à chaque
   changement) et `GameScope` (`GameScope.of` pour l'affichage, `GameScope.read` pour les actions)
 - `profiles/` : « Qui joue ? » (`/profils`), création et modification (`/profils/nouveau`, `/profils/:id`)
-- `world/` : la carte du monde (`/carte`) — îles `lot1` (Ancien Testament) et `lot2` (Nouveau Testament),
-  `allIslands` (`world.dart` : règles d'ouverture `World`, ami de chaque île `treasure`), monuments dessinés
-  (`landmarks.dart`), `WorldMapScreen` (un panneau au début de chaque Testament), l'album (`/album`,
-  `AlbumScreen`, 18 autocollants), l'arche-trésor (`/tresor`, amis du lot 1) et le jardin (`/jardin`, amis du
-  lot 2), tous deux dans `TreasureScreen`
+- `world/` : la carte du monde (`/carte`) — îles `lot1` (les origines), `lot3` (les héros de la foi) et `lot2`
+  (Nouveau Testament), dans cet ordre sur la carte : `allIslands`, `islandsOfLot` (`world.dart` : règles
+  d'ouverture `World`, ami de chaque île `treasure`), monuments dessinés (`landmarks.dart`), `WorldMapScreen`
+  (un panneau au début de chaque partie), l'album (`/album`, `AlbumScreen`, 26 autocollants) et les trois
+  trésors de `TreasureScreen(lot:)` : l'arche (`/tresor`, lot 1), le coffre (`/coffre`, lot 3) et le jardin
+  (`/jardin`, lot 2), avec des boutons pour passer de l'un à l'autre
 - `parents/` : espace parents (`/parents`, `ParentsScreen` : enfants, réglages, à propos), politique de
   confidentialité et crédits (`privacy.dart`), temps de jeu et écran « À demain » (`play_time.dart`)
 - `screens/` : autres écrans (`ComingSoonScreen` pour les rubriques à venir)
@@ -117,8 +121,8 @@ et ressources libres, ou produits par nous.
   (`GatedNarrator` : sans voix, attente du temps de lecture), bruitages (`GatedSoundEffects`), sous-titres
   (`Settings.subtitlesFor` : selon l'âge, toujours, jamais ; toujours sans voix), réduire les animations et
   textes plus grands (appliqués à `MediaQuery` dans `app.dart`), limite quotidienne (0, 15… 90 min).
-- `PlayTimeKeeper` (dans `app.dart`) compte le temps du profil actif sur `/carte`, `/album`, `/tresor` et
-  `/histoire/*` (pas à l'accueil ni chez les parents), prévient 2 min avant, puis affiche `TimeUpScreen` par-dessus
+- `PlayTimeKeeper` (dans `app.dart`) compte le temps du profil actif sur `/carte`, `/album`, les trésors
+  (`/tresor`, `/coffre`, `/jardin`) et `/histoire/*` (pas à l'accueil ni chez les parents), prévient 2 min avant, puis affiche `TimeUpScreen` par-dessus
   tout ; la barrière y est intégrée (pas de boîte de dialogue : l'écran recouvre la navigation). Un parent ajoute
   15 ou 30 min (`grantExtraTime`). Dans les tests : `LumiereApp(trackPlaytime: false, …)` et `onTick()` à la main.
 - Politique de confidentialité : `lib/parents/privacy.dart` = `docs/confidentialite.md` = `web/confidentialite.html`
@@ -146,7 +150,7 @@ et ressources libres, ou produits par nous.
   Vérifier une histoire d'un coup d'œil : `flutter test tool/story_sheet_test.dart --dart-define=STORY=<id>`
   → `build/story_<id>.png` (scènes au début et terminées, zones à toucher, cache-cache, autocollant, memory).
 - Ajouter une histoire : dossier d'assets (+ deux lignes `assets` dans `pubspec.yaml`), dossier de code,
-  entrée dans `storyPacks`, île dans `lot1` ou `lot2` (`world.dart`), puis la narration. Le test
+  entrée dans `storyPacks`, île dans `lot1`, `lot2` ou `lot3` (`world.dart`), puis la narration. Le test
   `scripted_stories_test.dart` vérifie automatiquement chaque scène.
   Chaque décor (`StoryStage`) : dessine sa scène, dit où toucher (`hintTarget`, toujours au-dessus des
   sous-titres, < 85 % de la hauteur) et appelle `complete()` quand l'action est faite. `layout()` peut être
@@ -188,10 +192,13 @@ et ressources libres, ou produits par nous.
 - **L3 — Lot 1** ✅ : les 8 histoires de l'Ancien Testament jouables (La Création, Adam et
   Ève, Noé, Abraham, Joseph, Moïse, David, Jonas), six scènes chacune (huit pour Noé), cache-cache et memory
   propres à chaque histoire, versets, album d'autocollants, arche-trésor (un ami par histoire terminée).
-- **L4 — Parents et publication** ✅ (à valider par Uzziah) : espace parents (progression, réglages, à propos),
+- **L4 — Parents et publication** ✅ : espace parents (progression, réglages, à propos),
   limite de temps quotidienne, voix/bruitages/sous-titres/animations/grand texte réglables, politique de
   confidentialité (jeu, docs, web), jeu web hors ligne sur GitHub Pages, APK/AAB publiés sur étiquette.
-- **L5 — Nouveau Testament et musique** ✅ (à valider par Uzziah) : musique synthétisée sur chaque écran,
+- **L5 — Nouveau Testament et musique** ✅ : musique synthétisée sur chaque écran,
   10 histoires du Nouveau Testament (naissance, Temple, baptême, tempête, pains, Zachée, bon Samaritain,
   fils prodigue, Pâques, Pentecôte), deuxième partie de la carte, album de 18 autocollants, jardin-trésor.
-- **L6** : à définir avec Uzziah (lot 3 : Daniel, Jéricho, Gédéon, Ruth… ; voix réelles ; Play Store).
+- **L6 — Les héros de la foi** ✅ (à valider par Uzziah) : 7 histoires de l'Ancien Testament (Jéricho, Gédéon,
+  Ruth, Samuel, Élie, Daniel, Esther) entre les deux Testaments sur la carte, coffre au trésor, et les noces de
+  Cana dans le Nouveau Testament (11 histoires, jardin à 11 amis) ; 26 histoires en tout.
+- **L7** : à définir avec Uzziah (nouveaux types de jeux, Play Store, voix réelles, lot 4…).

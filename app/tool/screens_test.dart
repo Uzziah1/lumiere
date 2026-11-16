@@ -78,7 +78,7 @@ void main() {
       }
       s.earnSticker(id);
     }
-    for (final id in ['naissance', 'bapteme', 'tempete', 'paques']) {
+    for (final id in ['naissance', 'bapteme', 'tempete', 'paques', 'jericho', 'ruth', 'daniel']) {
       s.recordPart(id, StoryPart.recit);
       s.earnSticker(id);
     }

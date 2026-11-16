@@ -133,9 +133,12 @@ Naissance de Jésus · Jésus enfant au temple · Le baptême de Jésus · Jésu
 La multiplication des pains · Zachée · Le bon Samaritain · Le fils prodigue · Pâques (mort et résurrection) ·
 La Pentecôte
 
-### Lot 3 et suivants
-Daniel dans la fosse aux lions · Les murs de Jéricho · Gédéon · Ruth · Samuel appelé · Élie · Esther ·
-Néhémie · Les noces de Cana · Lazare · Paul sur le chemin de Damas · Paul et le naufrage…
+### Lot 3 — Les héros de la foi (fait en L6)
+Les murs de Jéricho · Gédéon · Ruth · Samuel appelé · Élie · Daniel dans la fosse aux lions · Esther
+(et les noces de Cana, ajoutées au lot 2).
+
+### Lot 4 et suivants
+Néhémie · Lazare · Paul sur le chemin de Damas · Paul et le naufrage…
 
 ### Format d'une histoire (données, pas de code)
 Chaque histoire est un dossier `content/stories/<id>/` : `story.json` (métadonnées, références bibliques,
@@ -205,12 +208,17 @@ Une étape à la fois, validée par Uzziah avant la suivante.
 | nov. 2026 | Lot 2 (Nouveau Testament) : six scènes par histoire ; versets Luc 2.11, Luc 2.52, Matthieu 3.17, Marc 4.41, Jean 6.35, Luc 19.10, Luc 10.27, Luc 15.24, Luc 24.6, Actes 1.8 (début) |
 | nov. 2026 | Pâques : la croix vue de loin, en silhouette, au crépuscule ; aucun détail de souffrance ; on termine sur le tombeau vide et Jésus vivant |
 | nov. 2026 | Le lot 2 s'ouvre dès le départ (sa première île est ouverte, comme celle du lot 1) |
-| nov. 2026 | Jardin-trésor : un ami par histoire du Nouveau Testament (étoile, rouleau, oiseau, bateau, pain, arbre, âne, cochon, fleur, flamme) ; on passe de l'arche au jardin par un bouton |
+| nov. 2026 | Jardin-trésor : un ami par histoire du Nouveau Testament (étoile, rouleau, oiseau, raisin, bateau, pain, arbre, âne, cochon, fleur, flamme) ; on passe d'un trésor à l'autre par des boutons |
+| nov. 2026 | Lot 3 « Les héros de la foi » : Jéricho, Gédéon, Ruth, Samuel, Élie, Daniel, Esther, placés entre l'Ancien et le Nouveau Testament sur la carte (ordre biblique) ; sa première île est ouverte d'emblée |
+| nov. 2026 | Les noces de Cana, choisies avec le lot 3, vont dans le Nouveau Testament, juste après le baptême |
+| nov. 2026 | Coffre au trésor du lot 3 : un souvenir par histoire (trompette, torche, épi, lampe, corbeau, lion, sceptre) |
+| nov. 2026 | Lot 3 : versets Josué 1.9, Juges 6.12, Ruth 1.16, 1 Samuel 3.10, 1 Rois 18.39, Daniel 6.23, Esther 4.14 ; Cana : Jean 2.5 |
 
 ## 14. Questions ouvertes
 
 - Nom définitif et disponibilité (stores, domaine).
 - Relecteur doctrinal (pasteur) pour les textes ; vérifier le texte exact des versets dans une Louis Segond 1910
   (en particulier Genèse 50.20 et Jonas 2.10 : citation partielle et numérotation ; Luc 2.11, Matthieu 3.17,
-  Luc 15.24 et Actes 1.8 sont des citations partielles, avec une majuscule au début).
+  Luc 15.24 et Actes 1.8 sont des citations partielles, avec une majuscule au début ; Josué 1.9 et Juges 6.12
+  aussi ; Daniel 6.23 suit la numérotation de la Segond, décalée d'un verset par rapport aux Bibles anglaises).
 - Bénévoles pour les voix réelles, plus tard.

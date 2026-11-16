@@ -75,6 +75,22 @@ void main() {
       expect(allIslands.where((i) => i.lot == 2), hasLength(lot2.length));
     });
 
+    test('les héros de la foi viennent entre les deux Testaments, et ouvrent leur propre chapitre', () {
+      final lots = [for (final i in allIslands) i.lot];
+      expect(lots.indexOf(3), lot1.length);
+      expect(lots.indexOf(2), lot1.length + lot3.length);
+      expect(allIslands.where((i) => i.lot == 3), hasLength(lot3.length));
+      final full = World(islands: allIslands, available: {'jonas', 'jericho', 'gedeon'});
+      Island at(String id) => allIslands.firstWhere((i) => i.id == id);
+      expect(full.status(at('jericho'), of), IslandStatus.open);
+      expect(full.status(at('gedeon'), of), IslandStatus.locked);
+      expect(islandFor('cana')?.lot, 2);
+      for (final lot in [1, 2, 3]) {
+        final friends = islandsOfLot(lot).map((i) => i.treasure).toList();
+        expect(friends.toSet(), hasLength(friends.length), reason: 'lot $lot');
+      }
+    });
+
     test('les îles sont dans l’ordre du voyage, bien réparties sur la carte', () {
       for (var i = 1; i < lot1.length; i++) {
         expect(lot1[i].position.dx, greaterThan(lot1[i - 1].position.dx));
