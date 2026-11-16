@@ -64,8 +64,9 @@ et ressources libres, ou produits par nous.
 
 - `main.dart`, `app.dart`, `router.dart`
 - `theme/` : palette et styles de texte
-- `art/` : dessin (papier, paysage, Colombe, personnages `people.dart`, animaux `animals.dart`, arche `ark.dart`,
-  météo `weather.dart`) — fonctions pures, testées sans écran. Planche de tous les dessins :
+- `art/` : dessin (papier, paysage, Colombe, personnages `people.dart` — tête nue, couronne, casque —,
+  animaux `animals.dart`, objets `objects.dart` (`paintThing` : objets et animaux par identifiant), arche
+  `ark.dart`, météo `weather.dart`, outils de décor `scenery.dart`) — fonctions pures, testées sans écran. Planche de tous les dessins :
   `flutter test tool/art_sheet_test.dart` → `build/art_sheet.png`
 - `home/` : accueil (`HomeScreen` + scène Flame `HomeScene`)
 - `story/` : moteur d'histoire, commun à toutes les histoires — modèle (`Story`, `NarratedText`, `AgeGroup`),
@@ -74,14 +75,16 @@ et ressources libres, ou produits par nous.
   jeux → `StoryReward`)
 - `games/` : mini-jeux génériques (`ChronologyGame`, `SeekGame`, `MemoryGame`, `VerseGame`) dans un `GameFrame`
 - `stories/` : le code propre à chaque histoire (`registry.dart` : `StoryPack` = décors, vignettes,
-  scène de cache-cache, autocollant) ; `stories/noe/` pour Noé
+  scène de cache-cache, autocollant, objets des mini-jeux) ; un dossier par histoire : `creation`, `eden`,
+  `noe`, `abraham`, `joseph`, `moise`, `david`, `jonas`
 - `audio/` : `Narrator` et `SoundEffects` (audioplayers ; versions muettes pour les tests), `AudioScope`
 - `save/` : `SaveData` (profils, profil actif, progression par profil et par histoire), `SaveStore`
   (`PrefsSaveStore`, `MemorySaveStore` pour les tests), `GameState` (ChangeNotifier, sauvegarde à chaque
   changement) et `GameScope` (`GameScope.of` pour l'affichage, `GameScope.read` pour les actions)
 - `profiles/` : « Qui joue ? » (`/profils`), création et modification (`/profils/nouveau`, `/profils/:id`)
-- `world/` : la carte du monde (`/carte`) — îles du lot 1 (`world.dart`, règles d'ouverture `World`),
-  monuments dessinés (`landmarks.dart`), écran `WorldMapScreen`
+- `world/` : la carte du monde (`/carte`) — îles du lot 1 (`world.dart` : règles d'ouverture `World`, ami de
+  l'arche de chaque île `treasure`), monuments dessinés (`landmarks.dart`), `WorldMapScreen`, l'album
+  (`/album`, `AlbumScreen`) et l'arche-trésor (`/tresor`, `TreasureScreen`)
 - `screens/` : autres écrans (`ComingSoonScreen` pour les rubriques à venir)
 - `widgets/` : composants d'interface réutilisables (`PaperButton`, `RoundPaperButton`, `ColombeBubble`,
   `AgeCard`, `ProfileAvatar`, `PaperBackdrop`, `showParentalGate`…)
@@ -105,6 +108,16 @@ et ressources libres, ou produits par nous.
   autocollant) + `audio/` (narration générée). Une phrase narrée est une chaîne (tous âges) ou un objet
   `{"all", "agneaux", "bergers", "explorateurs"}` ; clés audio : `<clé>.<variante>.mp3` (voir `Story.fromJson`).
 - Le code de l'histoire va dans `lib/stories/<id>/` et s'inscrit dans `storyPacks` (`lib/stories/registry.dart`).
+  **Nouvelles histoires : `StoryPack.scripted`** avec une `StageScript` par scène (`lib/story/scripted_stage.dart`) :
+  une fonction de dessin qui reçoit un `StageView` (temps, avancement, cibles touchées) et des zones à toucher
+  relatives. Interactions : `tapAll` (toucher chaque cible), `tapRepeat` (toucher N fois), `swipe` (glisser),
+  `tapThenWait` (toucher puis regarder). Les cartes de la chronologie portent l'identifiant de la scène ; leurs
+  vignettes et l'autocollant sont la scène terminée. Noé, plus ancien, garde ses décors Flame sur mesure.
+  Vérifier une histoire d'un coup d'œil : `flutter test tool/story_sheet_test.dart --dart-define=STORY=<id>`
+  → `build/story_<id>.png` (scènes au début et terminées, zones à toucher, cache-cache, autocollant, memory).
+- Ajouter une histoire : dossier d'assets (+ deux lignes `assets` dans `pubspec.yaml`), dossier de code,
+  entrée dans `storyPacks`, île dans `lot1` (`world.dart`), puis la narration. Le test
+  `scripted_stories_test.dart` vérifie automatiquement chaque scène.
   Chaque décor (`StoryStage`) : dessine sa scène, dit où toucher (`hintTarget`, toujours au-dessus des
   sous-titres, < 85 % de la hauteur) et appelle `complete()` quand l'action est faite. `layout()` peut être
   rappelé : ne remet rien à zéro si la taille ne change pas.
@@ -133,9 +146,11 @@ et ressources libres, ou produits par nous.
 - **L1 — Noé (tranche verticale)** ✅ : choix de l'âge, récit animé de 8 scènes interactives
   (Genèse 6–9) raconté par Piper (voix siwis) avec sous-titres et indices, 3 mini-jeux (chronologie,
   cache-cache, memory), verset Genèse 9.13 selon l'âge, 5 étoiles et autocollant, bruitages synthétisés.
-- **L2 — Carte, profils, sauvegarde** ✅ (à valider par Uzziah) : jusqu'à 4 profils (prénom, âge, avatar),
+- **L2 — Carte, profils, sauvegarde** ✅ : jusqu'à 4 profils (prénom, âge, avatar),
   « Qui joue ? », barrière parentale pour modifier/supprimer, carte du monde à 8 îles (Noé jouable, les autres
   « bientôt »), déblocage à 3 étoiles, étoiles et autocollants sauvegardés sur l'appareil.
-- **L3** : lot 1 (8 histoires de l'Ancien Testament), tous les mini-jeux, album, l'arche-trésor.
+- **L3 — Lot 1** ✅ (à valider par Uzziah) : les 8 histoires de l'Ancien Testament jouables (La Création, Adam et
+  Ève, Noé, Abraham, Joseph, Moïse, David, Jonas), six scènes chacune (huit pour Noé), cache-cache et memory
+  propres à chaque histoire, versets, album d'autocollants, arche-trésor (un ami par histoire terminée).
 - **L4** : espace parents, limites de temps, accessibilité, confidentialité, PWA et APK publics.
 - **L5** : Nouveau Testament.

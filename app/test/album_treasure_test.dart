@@ -81,4 +81,20 @@ void main() {
     await frames(tester);
     expect(find.byKey(const ValueKey('world-scroll')), findsOneWidget);
   });
+
+  testWidgets('passer directement d’une histoire à l’autre ouvre bien la nouvelle', (tester) async {
+    await open(tester, '/histoire/creation');
+    for (var i = 0; i < 40 && find.text('Genèse 1.1-5').evaluate().isEmpty; i++) {
+      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 50)));
+      await tester.pump(const Duration(milliseconds: 50));
+    }
+    expect(find.text('Genèse 1.1-5'), findsOneWidget);
+    GoRouter.of(tester.element(find.text('Genèse 1.1-5'))).go('/histoire/jonas');
+    for (var i = 0; i < 40 && find.text('Jonas 1.1-3').evaluate().isEmpty; i++) {
+      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 50)));
+      await tester.pump(const Duration(milliseconds: 50));
+    }
+    expect(find.text('Jonas 1.1-3'), findsOneWidget);
+    await frames(tester, 20);
+  });
 }

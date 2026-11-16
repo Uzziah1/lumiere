@@ -1,6 +1,5 @@
 import 'package:material_ui/material_ui.dart';
 
-import '../art/animals.dart';
 import '../art/weather.dart';
 import '../theme/lumiere_theme.dart';
 import '../theme/palette.dart';
@@ -227,9 +226,9 @@ class _HubIcon extends CustomPainter {
           size.shortestSide * 0.32,
           Paint()..color = const Color(0x55FFF6DC),
         );
-        paintAnimal(
+        session.pack.paintItem(
           canvas,
-          Animal.rabbit,
+          session.story.seek.items.first.id,
           Rect.fromCenter(
             center: size.center(Offset.zero),
             width: size.shortestSide * 0.6,
@@ -239,7 +238,8 @@ class _HubIcon extends CustomPainter {
       case memory:
         canvas.drawRect(Offset.zero & size, Paint()..color = const Color(0xFFDDEFD9));
         final w = size.width * 0.36;
-        for (final (i, a) in [Animal.lion, Animal.lion].indexed) {
+        final item = session.story.memory.pairs.first;
+        for (var i = 0; i < 2; i++) {
           final r = Rect.fromLTWH(
             size.width * 0.1 + i * size.width * 0.44,
             size.height * 0.15,
@@ -250,7 +250,7 @@ class _HubIcon extends CustomPainter {
             RRect.fromRectAndRadius(r, Radius.circular(w * 0.15)),
             Paint()..color = Palette.cream,
           );
-          paintAnimal(canvas, a, r.deflate(w * 0.12));
+          session.pack.paintItem(canvas, item, r.deflate(w * 0.12));
         }
       case verse:
         canvas.drawRect(Offset.zero & size, Paint()..color = const Color(0xFFDCE7F5));

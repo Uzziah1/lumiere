@@ -32,7 +32,11 @@ GoRouter buildRouter() {
       GoRoute(
         path: '/histoire/:id',
         redirect: (context, state) => storyPacks.containsKey(state.pathParameters['id']) ? null : '/',
-        pageBuilder: (context, state) => _fade(state, StoryScreen(storyId: state.pathParameters['id']!)),
+        pageBuilder: (context, state) {
+          final id = state.pathParameters['id']!;
+          // Une clé par histoire : passer d'une histoire à l'autre recrée bien l'écran.
+          return _fade(state, StoryScreen(key: ValueKey('story-$id'), storyId: id));
+        },
       ),
       GoRoute(
         path: '/bientot/:section',
@@ -47,7 +51,8 @@ GoRouter buildRouter() {
 
 CustomTransitionPage<void> _fade(GoRouterState state, Widget child) {
   return CustomTransitionPage<void>(
-    key: state.pageKey,
+    // Clé propre à l'adresse complète (et pas seulement au modèle de route).
+    key: ValueKey(state.uri.toString()),
     child: child,
     transitionDuration: const Duration(milliseconds: 450),
     transitionsBuilder: (context, animation, secondaryAnimation, child) => FadeTransition(
