@@ -1,0 +1,130 @@
+{
+  "id": "cana",
+  "title": "Les noces de Cana",
+  "reference": "Jean 2.1-11",
+  "intro": "Les noces de Cana. Une histoire de la Bible, dans le livre de Jean.",
+  "scenes": [
+    {
+      "id": "noces",
+      "stage": "noces",
+      "reference": "Jean 2.1-2",
+      "text": {
+        "agneaux": "À Cana, il y avait un beau mariage. Jésus, sa maman Marie et ses amis étaient invités à la fête.",
+        "bergers": "Dans le village de Cana, en Galilée, on célébrait un mariage. La fête durait plusieurs jours ! Marie, la mère de Jésus, était là, et Jésus et ses disciples étaient invités eux aussi.",
+        "explorateurs": "Le troisième jour, il y eut des noces à Cana en Galilée. La mère de Jésus était là, et Jésus fut aussi invité aux noces avec ses disciples."
+      },
+      "action": "Touche les invités pour qu'ils dansent !"
+    },
+    {
+      "id": "marie",
+      "stage": "marie",
+      "reference": "Jean 2.3-5",
+      "text": {
+        "agneaux": "Oh non, il n'y avait plus de vin pour la fête ! Marie dit aux serviteurs : « Faites tout ce que Jésus vous dira. »",
+        "bergers": "Au milieu de la fête, il n'y eut plus de vin. Quelle honte pour les mariés ! Marie dit à Jésus : « Ils n'ont plus de vin. » Puis elle dit aux serviteurs : « Faites ce qu'il vous dira. »",
+        "explorateurs": "Le vin ayant manqué, la mère de Jésus lui dit : « Ils n'ont plus de vin. » Jésus lui répondit : « Femme, qu'y a-t-il entre moi et toi ? Mon heure n'est pas encore venue. » Sa mère dit aux serviteurs : « Faites ce qu'il vous dira. »"
+      },
+      "action": "Touche Marie !"
+    },
+    {
+      "id": "jarres",
+      "stage": "jarres",
+      "reference": "Jean 2.6-7",
+      "text": {
+        "agneaux": "Jésus dit : « Remplissez d'eau ces six grandes jarres. » Les serviteurs les remplirent jusqu'en haut.",
+        "bergers": "Il y avait là six grandes jarres de pierre, qui servaient pour se laver. Jésus dit aux serviteurs : « Remplissez ces jarres d'eau. » Ils les remplirent jusqu'au bord.",
+        "explorateurs": "Or, il y avait là six vases de pierre, destinés aux purifications des Juifs, et contenant chacun deux ou trois mesures. Jésus leur dit : « Remplissez d'eau ces vases. » Et ils les remplirent jusqu'au bord."
+      },
+      "action": "Touche les jarres six fois pour les remplir d'eau !"
+    },
+    {
+      "id": "vin",
+      "stage": "vin",
+      "reference": "Jean 2.8-9",
+      "text": {
+        "agneaux": "Et l'eau devint du vin ! Jésus avait fait un miracle.",
+        "bergers": "Jésus dit : « Puisez maintenant, et portez-en au maître du repas. » Les serviteurs puisèrent… et l'eau était devenue du vin ! Eux savaient d'où il venait.",
+        "explorateurs": "Jésus leur dit : « Puisez maintenant, et portez-en à l'ordonnateur du repas. » Et ils lui en portèrent. Quand l'ordonnateur du repas eut goûté l'eau changée en vin, ne sachant d'où venait ce vin, tandis que les serviteurs qui avaient puisé l'eau le savaient bien…"
+      },
+      "action": "Touche les jarres pour voir le miracle !"
+    },
+    {
+      "id": "maitre",
+      "stage": "maitre",
+      "reference": "Jean 2.9-10",
+      "text": {
+        "agneaux": "Le chef de la fête goûta et dit au marié : « C'est le meilleur vin de toute la fête ! »",
+        "bergers": "Le maître du repas goûta et appela le marié : « D'habitude, on sert le bon vin au début. Mais toi, tu as gardé le meilleur pour la fin ! » La fête put continuer dans la joie.",
+        "explorateurs": "L'ordonnateur du repas appela l'époux, et lui dit : « Tout homme sert d'abord le bon vin, puis le moins bon après qu'on s'est enivré ; toi, tu as gardé le bon vin jusqu'à présent. »"
+      },
+      "action": "Touche le maître du repas pour qu'il goûte."
+    },
+    {
+      "id": "croire",
+      "stage": "croire",
+      "reference": "Jean 2.11",
+      "text": {
+        "agneaux": "C'était le premier miracle de Jésus. Ses amis crurent en lui.",
+        "bergers": "Ce fut le premier miracle de Jésus. Il montra ainsi sa gloire, et ses disciples crurent en lui.",
+        "explorateurs": "Tel fut, à Cana en Galilée, le premier des miracles que fit Jésus. Il manifesta sa gloire, et ses disciples crurent en lui."
+      },
+      "action": "Touche les disciples !",
+      "after": {
+        "all": "Quand on fait ce que Jésus dit, on voit de belles choses arriver."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "noces", "label": "Le mariage" },
+        { "id": "marie", "label": "Plus de vin !" },
+        { "id": "jarres", "label": "Les six jarres" },
+        { "id": "vin", "label": "L'eau devient vin" },
+        { "id": "maitre", "label": "Le meilleur vin" },
+        { "id": "croire", "label": "Le premier miracle" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "À la fête du mariage, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "grapes", "label": "le raisin" },
+        { "id": "jar", "label": "la jarre" },
+        { "id": "bread", "label": "le pain" },
+        { "id": "flower", "label": "la fleur" },
+        { "id": "fruit", "label": "le fruit" },
+        { "id": "dove", "label": "la colombe" },
+        { "id": "harp", "label": "la harpe" },
+        { "id": "mouse", "label": "la souris" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["grapes", "jar", "bread", "flower", "harp", "ring"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Faites ce qu'il vous dira.",
+    "reference": "Jean 2.5",
+    "spoken": "Jean, chapitre 2, verset 5 : Faites ce qu'il vous dira.",
+    "chunks": {
+      "bergers": ["Faites", "ce qu'il", "vous dira."],
+      "explorateurs": ["Faites", "ce", "qu'il", "vous", "dira."]
+    },
+    "referenceChoices": ["Jean 2.5", "Jean 5.2", "Luc 2.5"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "cana", "title": "Les jarres de Cana" },
+  "reward": "Bravo ! Tu as terminé l'histoire des noces de Cana. Voici ton autocollant pour ton album !"
+}

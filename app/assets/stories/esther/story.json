@@ -1,0 +1,130 @@
+{
+  "id": "esther",
+  "title": "La reine Esther",
+  "reference": "Esther 2 à 9",
+  "intro": "La reine Esther. Une histoire de la Bible, dans le livre d'Esther.",
+  "scenes": [
+    {
+      "id": "reine",
+      "stage": "reine",
+      "reference": "Esther 2.7-17",
+      "text": {
+        "agneaux": "Esther était une jeune fille juive. Son cousin Mardochée l'avait élevée. Un jour, le roi la choisit pour être reine !",
+        "bergers": "Dans le grand royaume de Perse vivait Esther, une jeune fille juive. Ses parents étaient morts, et son cousin Mardochée l'avait élevée comme sa fille. Le roi Assuérus cherchait une reine. Il vit Esther, l'aima plus que toutes les autres, et posa sur sa tête la couronne royale.",
+        "explorateurs": "Mardochée élevait Hadassa, qui est Esther, fille de son oncle ; car elle n'avait ni père ni mère. La jeune fille était belle de taille et belle de figure. Le roi aima Esther plus que toutes les femmes, et elle obtint grâce et faveur devant lui plus que toutes les autres jeunes filles. Il mit la couronne royale sur sa tête et la fit reine."
+      },
+      "action": "Touche Esther pour la couronner !"
+    },
+    {
+      "id": "complot",
+      "stage": "complot",
+      "reference": "Esther 3.1-11",
+      "text": {
+        "agneaux": "Un homme méchant, Haman, voulait faire du mal à tout le peuple d'Esther. Il fit signer au roi une très mauvaise loi.",
+        "bergers": "Haman était le premier ministre du roi. Il était très orgueilleux, et Mardochée refusait de se prosterner devant lui. Fou de colère, Haman décida de faire du mal à tout le peuple juif. Il trompa le roi, qui scella la loi avec son anneau. Le roi ne savait pas que la reine Esther était juive.",
+        "explorateurs": "Le roi Assuérus éleva Haman au-dessus de tous les chefs. Tous les serviteurs du roi se prosternaient devant Haman, mais Mardochée ne fléchissait point le genou. Haman, rempli de fureur, chercha à détruire tous les Juifs du royaume. Le roi ôta son anneau de la main et le remit à Haman, et des lettres furent envoyées dans toutes les provinces, scellées avec l'anneau du roi."
+      },
+      "action": "Touche le rouleau de la loi."
+    },
+    {
+      "id": "jeune",
+      "stage": "jeune",
+      "reference": "Esther 4.13-16",
+      "text": {
+        "agneaux": "Mardochée dit à Esther : « Tu es reine pour aider ton peuple ! » Esther demanda à tous de prier avec elle pendant trois jours.",
+        "bergers": "Mardochée fit dire à Esther : « Va supplier le roi ! Qui sait si ce n'est pas pour un moment comme celui-ci que tu es devenue reine ? » Mais aller chez le roi sans être appelé était très dangereux. Esther répondit : « Priez et jeûnez pour moi pendant trois jours. Puis j'irai chez le roi. »",
+        "explorateurs": "Mardochée fit répondre à Esther : « Ne t'imagine pas que tu échapperas seule d'entre tous les Juifs. Et qui sait si ce n'est pas pour un temps comme celui-ci que tu es parvenue à la royauté ? » Esther envoya dire à Mardochée : « Va, rassemble tous les Juifs, et jeûnez pour moi, sans manger ni boire pendant trois jours. Moi aussi, je jeûnerai, puis j'entrerai chez le roi. »"
+      },
+      "action": "Touche Esther trois fois : trois jours de prière."
+    },
+    {
+      "id": "sceptre",
+      "stage": "sceptre",
+      "reference": "Esther 5.1-3",
+      "text": {
+        "agneaux": "Esther entra chez le roi. Le roi tendit vers elle son sceptre d'or : elle était la bienvenue !",
+        "bergers": "Le troisième jour, Esther mit ses habits de reine et entra courageusement dans la grande salle. Allait-il se fâcher ? Le roi la vit et lui tendit son sceptre d'or : elle était accueillie ! « Que veux-tu, reine Esther ? »",
+        "explorateurs": "Le troisième jour, Esther mit ses vêtements royaux et se présenta dans la cour intérieure de la maison du roi. Lorsque le roi vit la reine Esther, elle trouva grâce à ses yeux, et le roi tendit à Esther le sceptre d'or qu'il tenait à la main. Le roi lui dit : « Qu'as-tu, reine Esther, et que demandes-tu ? »"
+      },
+      "action": "Touche le sceptre d'or !"
+    },
+    {
+      "id": "festin",
+      "stage": "festin",
+      "reference": "Esther 7.1-6",
+      "text": {
+        "agneaux": "Pendant un repas, Esther dit au roi : « Sauve mon peuple ! C'est Haman qui veut nous faire du mal. »",
+        "bergers": "Esther invita le roi et Haman à un grand repas. Là, elle dit au roi : « Si tu m'aimes, laisse-moi vivre, moi et mon peuple ! Quelqu'un veut nous faire disparaître. » « Qui ose faire cela ? » demanda le roi. « C'est Haman, ce méchant homme ! »",
+        "explorateurs": "Le roi et Haman allèrent au festin chez la reine Esther. La reine Esther répondit : « Si j'ai trouvé grâce à tes yeux, ô roi, accorde-moi la vie, voilà ma demande, et sauve mon peuple, voilà mon désir ! Car nous sommes vendus, moi et mon peuple, pour être exterminés. » Le roi dit : « Qui est-il et où est-il celui qui se propose d'agir ainsi ? » Esther répondit : « L'oppresseur, l'ennemi, c'est Haman, ce méchant-là ! »"
+      },
+      "action": "Touche Esther pendant qu'elle parle au roi."
+    },
+    {
+      "id": "sauve",
+      "stage": "sauve",
+      "reference": "Esther 8.1 à 9.22",
+      "text": {
+        "agneaux": "Le roi protégea le peuple d'Esther. Tout le monde fit une grande fête de joie !",
+        "bergers": "Le roi écouta Esther. Il donna à Mardochée son anneau et une nouvelle loi fut écrite pour protéger le peuple juif. Partout, ce fut la joie et la fête ! Depuis, chaque année, les Juifs fêtent Pourim pour se souvenir que Dieu les a sauvés.",
+        "explorateurs": "Le roi ôta son anneau et le donna à Mardochée, et on écrivit, au nom du roi, des lettres qui permettaient aux Juifs de se défendre. Il y eut pour les Juifs du bonheur et de la joie, de l'allégresse et de la gloire. Mardochée leur ordonna de célébrer chaque année ces jours de festin et de joie, appelés Pourim, en souvenir de leur délivrance."
+      },
+      "action": "Touche les gens pour faire la fête !",
+      "after": {
+        "all": "Dieu peut se servir de toi, là où tu es, pour faire du bien aux autres."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "reine", "label": "Esther devient reine" },
+        { "id": "complot", "label": "La mauvaise loi" },
+        { "id": "jeune", "label": "Trois jours de prière" },
+        { "id": "sceptre", "label": "Le sceptre d'or" },
+        { "id": "festin", "label": "Le festin" },
+        { "id": "sauve", "label": "Le peuple est sauvé" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Dans le palais du roi, des trésors se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "crown", "label": "la couronne" },
+        { "id": "scepter", "label": "le sceptre" },
+        { "id": "scroll", "label": "le rouleau" },
+        { "id": "ring", "label": "l'anneau" },
+        { "id": "grapes", "label": "le raisin" },
+        { "id": "jar", "label": "la jarre" },
+        { "id": "dove", "label": "la colombe" },
+        { "id": "mouse", "label": "la souris" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["crown", "scepter", "scroll", "ring", "grapes", "flower"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Et qui sait si ce n'est pas pour un temps comme celui-ci que tu es parvenue à la royauté ?",
+    "reference": "Esther 4.14",
+    "spoken": "Esther, chapitre 4, verset 14 : Et qui sait si ce n'est pas pour un temps comme celui-ci que tu es parvenue à la royauté ?",
+    "chunks": {
+      "bergers": ["Et qui sait", "si ce n'est pas pour un temps comme celui-ci", "que tu es parvenue à la royauté ?"],
+      "explorateurs": ["Et qui sait", "si ce n'est pas", "pour un temps", "comme celui-ci", "que tu es parvenue", "à la royauté ?"]
+    },
+    "referenceChoices": ["Esther 4.14", "Esther 14.4", "Ruth 4.14"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "esther", "title": "Le sceptre d'or" },
+  "reward": "Bravo ! Tu as terminé l'histoire de la reine Esther. Voici ton autocollant pour ton album !"
+}

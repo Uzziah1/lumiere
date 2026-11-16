@@ -26,6 +26,8 @@ import 'ruth/ruth.dart';
 import 'samuel/samuel.dart';
 import 'elie/elie.dart';
 import 'daniel/daniel.dart';
+import 'esther/esther.dart';
+import 'cana/cana.dart';
 import 'joseph/joseph.dart';
 import 'moise/moise.dart';
 import 'noe/noe_art.dart';
@@ -177,6 +179,8 @@ final Map<String, StoryPack> storyPacks = {
   'samuel': samuelPack,
   'elie': eliePack,
   'daniel': danielPack,
+  'esther': estherPack,
+  'cana': canaPack,
   'noe': StoryPack(
     stages: noeStages,
     paintThumb: paintNoeThumb,
