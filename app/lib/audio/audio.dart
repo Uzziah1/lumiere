@@ -196,12 +196,167 @@ class GatedSoundEffects implements SoundEffects {
   void dispose() => inner.dispose();
 }
 
+/// Les morceaux de musique (synthétisés par `tools/music/generate.py`).
+enum MusicTrack { home, map, story, games }
+
+/// La musique de fond : un morceau en boucle, plus discret quand la conteuse parle.
+abstract class MusicPlayer {
+  /// Joue [track] en boucle (null = silence). Ne recommence pas un morceau déjà en cours.
+  void play(MusicTrack? track);
+
+  /// Baisse le volume (pendant la narration).
+  void duck(bool ducked);
+
+  /// Réessaie après un geste de l'enfant (les navigateurs refusent le son avant).
+  void retry();
+
+  void dispose();
+}
+
+class AudioMusicPlayer implements MusicPlayer {
+  AudioMusicPlayer() : _player = AudioPlayer(playerId: 'music') {
+    _player.setReleaseMode(ReleaseMode.loop);
+  }
+
+  static const _volume = 0.3;
+  static const _duckedVolume = 0.1;
+
+  final AudioPlayer _player;
+  MusicTrack? _track;
+  bool _playing = false;
+  bool _ducked = false;
+
+  @override
+  void play(MusicTrack? track) {
+    if (track == _track && (_playing || track == null)) return;
+    _track = track;
+    _playing = false;
+    unawaited(() async {
+      try {
+        if (track == null) {
+          await _player.stop();
+          return;
+        }
+        await _player.stop();
+        await _player.play(
+          AssetSource('audio/music/${track.name}.mp3'),
+          volume: _ducked ? _duckedVolume : _volume,
+        );
+        _playing = _track == track;
+      } catch (_) {
+        // Sur le web, le son attend un premier geste : on réessaiera (retry).
+      }
+    }());
+  }
+
+  @override
+  void duck(bool ducked) {
+    if (ducked == _ducked) return;
+    _ducked = ducked;
+    unawaited(_player.setVolume(ducked ? _duckedVolume : _volume).catchError((_) {}));
+  }
+
+  @override
+  void retry() {
+    if (!_playing && _track != null) {
+      final track = _track;
+      _track = null;
+      play(track);
+    }
+  }
+
+  @override
+  void dispose() => _player.dispose();
+}
+
+class SilentMusicPlayer implements MusicPlayer {
+  final played = <MusicTrack?>[];
+  MusicTrack? current;
+  bool ducked = false;
+
+  @override
+  void play(MusicTrack? track) {
+    if (track == current) return;
+    current = track;
+    played.add(track);
+  }
+
+  @override
+  void duck(bool ducked) => this.ducked = ducked;
+
+  @override
+  void retry() {}
+
+  @override
+  void dispose() {}
+}
+
+/// Musique coupée par les parents : on joue le silence.
+class GatedMusicPlayer implements MusicPlayer {
+  GatedMusicPlayer(this.inner, this.enabled);
+
+  final MusicPlayer inner;
+  final bool Function() enabled;
+
+  @override
+  void play(MusicTrack? track) => inner.play(enabled() ? track : null);
+
+  @override
+  void duck(bool ducked) => inner.duck(ducked);
+
+  @override
+  void retry() {
+    if (enabled()) inner.retry();
+  }
+
+  @override
+  void dispose() => inner.dispose();
+}
+
+/// Narration qui baisse la musique le temps de parler.
+class DuckingNarrator implements Narrator {
+  DuckingNarrator(this.inner, this.music);
+
+  final Narrator inner;
+  final MusicPlayer music;
+  int _speech = 0;
+
+  @override
+  Future<void> play(String asset, {required String text}) async {
+    final token = ++_speech;
+    music.duck(true);
+    try {
+      await inner.play(asset, text: text);
+    } finally {
+      if (token == _speech) music.duck(false);
+    }
+  }
+
+  @override
+  Future<void> stop() {
+    music.duck(false);
+    return inner.stop();
+  }
+
+  @override
+  void dispose() => inner.dispose();
+}
+
 /// Donne accès à la narration et aux bruitages dans tout l'arbre de widgets.
 class AudioScope extends InheritedWidget {
-  const AudioScope({super.key, required this.narrator, required this.sfx, required super.child});
+  const AudioScope({
+    super.key,
+    required this.narrator,
+    required this.sfx,
+    required super.child,
+    this.musicOverride,
+  });
 
   final Narrator narrator;
   final SoundEffects sfx;
+
+  /// Un écran peut demander un autre morceau que celui de sa page (les mini-jeux).
+  final ValueNotifier<MusicTrack?>? musicOverride;
 
   static AudioScope of(BuildContext context) {
     final scope = context.dependOnInheritedWidgetOfExactType<AudioScope>();

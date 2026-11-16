@@ -82,6 +82,7 @@ class Settings {
   const Settings({
     this.narration = true,
     this.effects = true,
+    this.music = true,
     this.subtitles = SubtitleMode.auto,
     this.reduceMotion = false,
     this.largeText = false,
@@ -94,6 +95,7 @@ class Settings {
     return Settings(
       narration: json['narration'] != false,
       effects: json['effects'] != false,
+      music: json['music'] != false,
       subtitles: SubtitleMode.byName(json['subtitles']),
       reduceMotion: json['reduceMotion'] == true,
       largeText: json['largeText'] == true,
@@ -109,6 +111,9 @@ class Settings {
 
   /// Les bruitages.
   final bool effects;
+
+  /// La musique de fond.
+  final bool music;
   final SubtitleMode subtitles;
 
   /// Réduire les animations (en plus du réglage du téléphone).
@@ -133,6 +138,7 @@ class Settings {
   Settings copyWith({
     bool? narration,
     bool? effects,
+    bool? music,
     SubtitleMode? subtitles,
     bool? reduceMotion,
     bool? largeText,
@@ -140,6 +146,7 @@ class Settings {
   }) => Settings(
     narration: narration ?? this.narration,
     effects: effects ?? this.effects,
+    music: music ?? this.music,
     subtitles: subtitles ?? this.subtitles,
     reduceMotion: reduceMotion ?? this.reduceMotion,
     largeText: largeText ?? this.largeText,
@@ -149,6 +156,7 @@ class Settings {
   Map<String, dynamic> toJson() => {
     'narration': narration,
     'effects': effects,
+    'music': music,
     'subtitles': subtitles.name,
     'reduceMotion': reduceMotion,
     'largeText': largeText,

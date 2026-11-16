@@ -2,6 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 
 import 'audio/audio.dart';
+import 'audio/music_director.dart';
 import 'parents/play_time.dart';
 import 'router.dart';
 import 'save/game_state.dart';
@@ -9,7 +10,17 @@ import 'save/save_store.dart';
 import 'theme/lumiere_theme.dart';
 
 class LumiereApp extends StatefulWidget {
-  const LumiereApp({super.key, this.narrator, this.sfx, this.gameState, this.trackPlaytime = true});
+  const LumiereApp({
+    super.key,
+    this.narrator,
+    this.sfx,
+    this.music,
+    this.gameState,
+    this.trackPlaytime = true,
+  });
+
+  /// Musique de fond (remplaçable dans les tests).
+  final MusicPlayer? music;
 
   /// Compter le temps de jeu (faux dans la plupart des tests : pas de minuterie).
   final bool trackPlaytime;
@@ -29,10 +40,19 @@ class _LumiereAppState extends State<LumiereApp> {
   late final GoRouter _router = buildRouter();
   late final GameState _game = widget.gameState ?? GameState(MemorySaveStore());
   // La voix et les bruitages obéissent aux réglages des parents.
+  late final MusicPlayer _music = GatedMusicPlayer(
+    widget.music ?? _defaultMusic(),
+    () => _game.settings.music,
+  );
+  final _musicOverride = ValueNotifier<MusicTrack?>(null);
+  // La musique baisse quand la conteuse parle.
   late final Narrator _narrator = GatedNarrator(
-    widget.narrator ?? AudioNarrator(),
+    DuckingNarrator(widget.narrator ?? AudioNarrator(), _music),
     () => _game.settings.narration,
   );
+
+  // Dans les tests (narration muette fournie), pas de vraie musique non plus.
+  MusicPlayer _defaultMusic() => widget.narrator is SilentNarrator ? SilentMusicPlayer() : AudioMusicPlayer();
   late final SoundEffects _sfx = GatedSoundEffects(
     widget.sfx ?? AudioSoundEffects(),
     () => _game.settings.effects,
@@ -43,6 +63,8 @@ class _LumiereAppState extends State<LumiereApp> {
     _router.dispose();
     _narrator.dispose();
     _sfx.dispose();
+    _music.dispose();
+    _musicOverride.dispose();
     super.dispose();
   }
 
@@ -61,11 +83,18 @@ class _LumiereAppState extends State<LumiereApp> {
           child: AudioScope(
             narrator: _narrator,
             sfx: _sfx,
-            child: PlayTimeKeeper(
+            musicOverride: _musicOverride,
+            child: MusicDirector(
               router: _router,
               state: _game,
-              enabled: widget.trackPlaytime,
-              child: child!,
+              music: _music,
+              overrideTrack: _musicOverride,
+              child: PlayTimeKeeper(
+                router: _router,
+                state: _game,
+                enabled: widget.trackPlaytime,
+                child: child!,
+              ),
             ),
           ),
           builder: (context, child) {

@@ -69,7 +69,19 @@ class StoryScreenState extends State<StoryScreen> {
 
   void _save(StoryPart part) => GameScope.read(context).recordPart(widget.storyId, part);
 
+  /// Musique des mini-jeux pendant les jeux, celle de l'histoire sinon.
+  void _music(StoryPhase phase) {
+    AudioScope.of(context).musicOverride?.value = phase == StoryPhase.game ? MusicTrack.games : null;
+  }
+
+  @override
+  void deactivate() {
+    AudioScope.of(context).musicOverride?.value = null;
+    super.deactivate();
+  }
+
   void _go(StoryPhase next, {StoryPart? part}) {
+    _music(next);
     if (next == StoryPhase.reward) GameScope.read(context).earnSticker(widget.storyId);
     setState(() {
       phase = next;

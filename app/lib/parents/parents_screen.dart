@@ -371,6 +371,13 @@ class _SettingsTab extends StatelessWidget {
                 onChanged: (v) => set((c) => c.copyWith(narration: v)),
               ),
               _Toggle(
+                key: const ValueKey('set-music'),
+                title: 'Musique',
+                subtitle: 'Douce, et plus discrète quand la conteuse parle.',
+                value: s.music,
+                onChanged: (v) => set((c) => c.copyWith(music: v)),
+              ),
+              _Toggle(
                 key: const ValueKey('set-effects'),
                 title: 'Bruitages',
                 value: s.effects,
