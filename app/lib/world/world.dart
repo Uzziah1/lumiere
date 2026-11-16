@@ -10,6 +10,7 @@ class Island {
     required this.reference,
     required this.position,
     required this.landmark,
+    required this.treasure,
   });
 
   /// Identifiant de l'histoire (dossier `assets/stories/<id>/`).
@@ -22,6 +23,10 @@ class Island {
 
   /// Le petit monument dessiné sur l'île (voir `landmarks.dart`).
   final Landmark landmark;
+
+  /// L'animal (ou l'objet) qui rejoint l'arche-trésor quand l'histoire est
+  /// terminée (identifiant de `paintThing`).
+  final String treasure;
 }
 
 enum Landmark { creation, tree, ark, tent, pyramid, sea, harp, fish }
@@ -46,6 +51,7 @@ const lot1 = [
     reference: 'Genèse 1 à 2',
     position: Offset(0.07, 0.56),
     landmark: Landmark.creation,
+    treasure: 'giraffe',
   ),
   Island(
     id: 'eden',
@@ -53,6 +59,7 @@ const lot1 = [
     reference: 'Genèse 2 à 3',
     position: Offset(0.19, 0.30),
     landmark: Landmark.tree,
+    treasure: 'rabbit',
   ),
   Island(
     id: 'noe',
@@ -60,6 +67,7 @@ const lot1 = [
     reference: 'Genèse 6 à 9',
     position: Offset(0.31, 0.60),
     landmark: Landmark.ark,
+    treasure: 'dove',
   ),
   Island(
     id: 'abraham',
@@ -67,6 +75,7 @@ const lot1 = [
     reference: 'Genèse 12, 15 et 21',
     position: Offset(0.43, 0.30),
     landmark: Landmark.tent,
+    treasure: 'sheep',
   ),
   Island(
     id: 'joseph',
@@ -74,6 +83,7 @@ const lot1 = [
     reference: 'Genèse 37 à 45',
     position: Offset(0.55, 0.62),
     landmark: Landmark.pyramid,
+    treasure: 'camel',
   ),
   Island(
     id: 'moise',
@@ -81,6 +91,7 @@ const lot1 = [
     reference: 'Exode 2 à 14',
     position: Offset(0.67, 0.31),
     landmark: Landmark.sea,
+    treasure: 'frog',
   ),
   Island(
     id: 'david',
@@ -88,6 +99,7 @@ const lot1 = [
     reference: '1 Samuel 17',
     position: Offset(0.79, 0.60),
     landmark: Landmark.harp,
+    treasure: 'lion',
   ),
   Island(
     id: 'jonas',
@@ -95,6 +107,7 @@ const lot1 = [
     reference: 'Jonas 1 à 4',
     position: Offset(0.91, 0.33),
     landmark: Landmark.fish,
+    treasure: 'fish',
   ),
 ];
 
@@ -139,4 +152,12 @@ class World {
     }
     return lastOpen ?? islands.firstWhere((i) => available.contains(i.id), orElse: () => islands.first);
   }
+}
+
+/// L'île d'une histoire, s'il y en a une.
+Island? islandFor(String storyId) {
+  for (final island in lot1) {
+    if (island.id == storyId) return island;
+  }
+  return null;
 }

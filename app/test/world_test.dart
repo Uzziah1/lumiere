@@ -139,6 +139,7 @@ void main() {
     await tester.tap(find.text('Terminer'));
     await frames(tester, 40);
     expect(state.progress('noe').sticker, isTrue);
+    expect(find.text('Nouvel ami dans ton arche : la colombe'), findsOneWidget);
     await tester.tap(find.text('La carte'));
     await frames(tester, 30);
     expect(find.bySemanticsLabel('Noé et l’arche, 1 étoiles sur 5'), findsOneWidget);

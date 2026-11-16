@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:material_ui/material_ui.dart';
 
+import '../art/objects.dart';
 import '../audio/audio.dart';
 import '../theme/lumiere_theme.dart';
 import '../theme/palette.dart';
@@ -17,12 +18,16 @@ class StoryReward extends StatefulWidget {
     required this.onReplay,
     required this.onHome,
     this.homeLabel = 'Accueil',
+    this.friend,
   });
 
   final int stars;
 
   /// « La carte » quand on vient de la carte du monde.
   final String homeLabel;
+
+  /// L'ami qui rejoint l'arche-trésor (identifiant d'objet), s'il y en a un.
+  final String? friend;
   final VoidCallback onReplay;
   final VoidCallback onHome;
 
@@ -47,7 +52,9 @@ class _StoryRewardState extends State<StoryReward> with SingleTickerProviderStat
       }
       final session = StorySession.of(context);
       session.sfx.play(Sfx.star);
-      session.say('reward');
+      session.say('reward').then((_) {
+        if (mounted && widget.friend != null) session.say('new_friend');
+      });
     }
   }
 
@@ -117,6 +124,31 @@ class _StoryRewardState extends State<StoryReward> with SingleTickerProviderStat
                           ],
                         ),
                       ),
+                      if (widget.friend != null) ...[
+                        SizedBox(height: compact ? 6 : 12),
+                        Opacity(
+                          opacity: ((_reveal.value - 0.8) / 0.2).clamp(0.0, 1.0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              SizedBox(
+                                width: compact ? 40 : 56,
+                                height: compact ? 40 : 56,
+                                child: CustomPaint(painter: _Friend(widget.friend!)),
+                              ),
+                              const SizedBox(width: 8),
+                              Text(
+                                'Nouvel ami dans ton arche : ${thingLabel(widget.friend!)}',
+                                style: LumiereText.text(
+                                  compact ? 15 : 18,
+                                  bold: true,
+                                  color: Palette.lagoonDeep,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
                       SizedBox(height: compact ? 12 : 24),
                       Wrap(
                         spacing: 16,
@@ -146,6 +178,18 @@ class _StoryRewardState extends State<StoryReward> with SingleTickerProviderStat
       ),
     );
   }
+}
+
+class _Friend extends CustomPainter {
+  _Friend(this.id);
+
+  final String id;
+
+  @override
+  void paint(Canvas canvas, Size size) => paintThing(canvas, id, Offset.zero & size);
+
+  @override
+  bool shouldRepaint(_Friend oldDelegate) => oldDelegate.id != id;
 }
 
 class _Sticker extends CustomPainter {

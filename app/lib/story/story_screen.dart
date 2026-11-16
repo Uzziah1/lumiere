@@ -9,6 +9,7 @@ import '../games/memory_game.dart';
 import '../games/seek_game.dart';
 import '../games/verse_game.dart';
 import '../save/game_state.dart';
+import '../world/world.dart';
 import '../stories/registry.dart';
 import '../theme/lumiere_theme.dart';
 import '../theme/palette.dart';
@@ -187,6 +188,7 @@ class StoryScreenState extends State<StoryScreen> {
           child: StoryReward(
             stars: stars.length,
             homeLabel: _fromProfile ? 'La carte' : 'Accueil',
+            friend: _fromProfile ? islandFor(widget.storyId)?.treasure : null,
             onHome: _home,
             onReplay: () => _go(StoryPhase.hub),
           ),

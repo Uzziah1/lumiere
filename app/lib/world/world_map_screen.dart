@@ -224,6 +224,35 @@ class WorldMapScreenState extends State<WorldMapScreen> with SingleTickerProvide
                 ),
               ),
               Positioned(
+                right: 12,
+                top: 8,
+                child: SafeArea(
+                  child: Row(
+                    children: [
+                      RoundPaperButton(
+                        icon: Icons.auto_stories_rounded,
+                        label: 'Mon album d’autocollants',
+                        size: compact ? 44 : 54,
+                        face: Palette.gold,
+                        edge: Palette.goldDeep,
+                        foreground: Palette.ink,
+                        onPressed: () => context.go('/album'),
+                      ),
+                      const SizedBox(width: 10),
+                      RoundPaperButton(
+                        icon: Icons.sailing_rounded,
+                        label: 'Mon arche',
+                        size: compact ? 44 : 54,
+                        face: Palette.lagoon,
+                        edge: Palette.lagoonDeep,
+                        foreground: Palette.cream,
+                        onPressed: () => context.go('/tresor'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
                 left: 12,
                 bottom: 10,
                 right: selected == null ? 12 : null,

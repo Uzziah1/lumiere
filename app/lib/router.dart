@@ -7,6 +7,8 @@ import 'profiles/profiles_screen.dart';
 import 'screens/coming_soon_screen.dart';
 import 'stories/registry.dart';
 import 'story/story_screen.dart';
+import 'world/album_screen.dart';
+import 'world/treasure_screen.dart';
 import 'world/world_map_screen.dart';
 
 /// Les écrans de Lumière, avec un fondu doux entre chacun.
@@ -25,6 +27,8 @@ GoRouter buildRouter() {
             _fade(state, ProfileFormScreen(profileId: state.pathParameters['id'])),
       ),
       GoRoute(path: '/carte', pageBuilder: (context, state) => _fade(state, const WorldMapScreen())),
+      GoRoute(path: '/album', pageBuilder: (context, state) => _fade(state, const AlbumScreen())),
+      GoRoute(path: '/tresor', pageBuilder: (context, state) => _fade(state, const TreasureScreen())),
       GoRoute(
         path: '/histoire/:id',
         redirect: (context, state) => storyPacks.containsKey(state.pathParameters['id']) ? null : '/',

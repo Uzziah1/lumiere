@@ -15,5 +15,8 @@
   "new_profile": "Bonjour ! Comment t'appelles-tu ? Choisis aussi ton âge et ton animal.",
   "map": "Voici la carte du monde de la Bible ! Touche une île pour commencer une histoire.",
   "soon": "Cette histoire arrive bientôt ! Je la prépare pour toi.",
-  "locked": "Gagne au moins trois étoiles sur l'île d'avant pour ouvrir celle-ci !"
+  "locked": "Gagne au moins trois étoiles sur l'île d'avant pour ouvrir celle-ci !",
+  "album": "Voici ton album d'autocollants ! Chaque histoire terminée t'en donne un.",
+  "treasure": "Voici ton arche ! Chaque histoire terminée y fait entrer un nouvel ami.",
+  "new_friend": "Un nouvel ami est entré dans ton arche !"
 }
