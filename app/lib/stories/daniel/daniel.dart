@@ -41,7 +41,7 @@ final danielPack = StoryPack.scripted(
       paint: _fosse,
     ),
     'ange': StageScript(
-      targets: [for (final x in _lions) Rect.fromCenter(center: Offset(x, 0.78), width: 0.2, height: 0.24)],
+      targets: [for (final x in _lions) Rect.fromCenter(center: Offset(x, 0.72), width: 0.2, height: 0.24)],
       sfx: Sfx.chime,
       paint: _ange,
     ),
