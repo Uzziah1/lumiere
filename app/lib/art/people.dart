@@ -42,6 +42,20 @@ class PersonStyle {
 
   /// Casque de soldat (Goliath).
   final bool helmet;
+
+  /// Le même personnage, à une autre taille (un enfant qui grandit).
+  PersonStyle withScale(double value) => PersonStyle(
+    skin: skin,
+    robe: robe,
+    headcloth: headcloth,
+    sash: sash,
+    beard: beard,
+    veil: veil,
+    scale: value,
+    bareHead: bareHead,
+    crown: crown,
+    helmet: helmet,
+  );
 }
 
 /// La famille de Noé (Genèse 7.13) : peaux brunes de différents tons.

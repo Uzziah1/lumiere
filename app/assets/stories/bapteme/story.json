@@ -1,0 +1,130 @@
+{
+  "id": "bapteme",
+  "title": "Le baptême de Jésus",
+  "reference": "Matthieu 3 et 4",
+  "intro": "Le baptême de Jésus. Une histoire de la Bible, dans le livre de Matthieu.",
+  "scenes": [
+    {
+      "id": "desert",
+      "stage": "desert",
+      "reference": "Matthieu 3.1-6",
+      "text": {
+        "agneaux": "Dans le désert, un homme appelé Jean parlait aux gens : « Préparez-vous, Jésus va venir ! »",
+        "bergers": "Dans le désert, un homme appelé Jean annonçait : « Changez de vie, car le royaume des cieux est proche ! » Il portait un vêtement en poils de chameau et mangeait des sauterelles et du miel sauvage. Beaucoup de gens venaient l'écouter.",
+        "explorateurs": "En ce temps-là parut Jean-Baptiste, prêchant dans le désert de Judée. Il disait : « Repentez-vous, car le royaume des cieux est proche. » Jean avait un vêtement de poils de chameau, et une ceinture de cuir autour des reins. Il se nourrissait de sauterelles et de miel sauvage. Les habitants de Jérusalem, de toute la Judée et de tout le pays des environs du Jourdain, se rendaient auprès de lui."
+      },
+      "action": "Touche les gens pour qu'ils viennent écouter Jean !"
+    },
+    {
+      "id": "jourdain",
+      "stage": "jourdain",
+      "reference": "Matthieu 3.6",
+      "text": {
+        "agneaux": "Jean baptisait les gens dans l'eau du fleuve Jourdain.",
+        "bergers": "Les gens reconnaissaient le mal qu'ils avaient fait et demandaient pardon à Dieu. Puis Jean les baptisait dans l'eau du fleuve Jourdain.",
+        "explorateurs": "Confessant leurs péchés, ils se faisaient baptiser par lui dans le fleuve du Jourdain. Jean disait : « Moi, je vous baptise d'eau ; mais celui qui vient après moi est plus puissant que moi, et je ne suis pas digne de porter ses souliers. »"
+      },
+      "action": "Touche chaque personne pour qu'elle soit baptisée !"
+    },
+    {
+      "id": "arrivee",
+      "stage": "arrivee",
+      "reference": "Matthieu 3.13-15",
+      "text": {
+        "agneaux": "Un jour, Jésus vint au Jourdain. Il demanda à Jean : « Baptise-moi. »",
+        "bergers": "Un jour, Jésus vint de Galilée jusqu'au Jourdain pour être baptisé par Jean. Jean lui dit : « C'est moi qui ai besoin d'être baptisé par toi ! » Mais Jésus répondit : « Laisse faire, c'est ce que Dieu veut. »",
+        "explorateurs": "Alors Jésus vint de la Galilée au Jourdain vers Jean, pour être baptisé par lui. Mais Jean s'y opposait, en disant : « C'est moi qui ai besoin d'être baptisé par toi, et tu viens à moi ! » Jésus lui répondit : « Laisse faire maintenant, car il est convenable que nous accomplissions ainsi tout ce qui est juste. »"
+      },
+      "action": "Fais glisser ton doigt pour que Jésus marche jusqu'au fleuve."
+    },
+    {
+      "id": "bapteme",
+      "stage": "bapteme",
+      "reference": "Matthieu 3.15-16",
+      "text": {
+        "agneaux": "Jean baptisa Jésus dans l'eau du fleuve.",
+        "bergers": "Alors Jean accepta. Il baptisa Jésus dans l'eau du Jourdain, et Jésus sortit de l'eau.",
+        "explorateurs": "Et Jean ne lui résista plus. Dès que Jésus eut été baptisé, il sortit de l'eau."
+      },
+      "action": "Touche Jésus !"
+    },
+    {
+      "id": "colombe",
+      "stage": "colombe",
+      "reference": "Matthieu 3.16-17",
+      "text": {
+        "agneaux": "Le ciel s'ouvrit. L'Esprit de Dieu descendit comme une colombe. Et Dieu dit : « C'est mon Fils, je l'aime ! »",
+        "bergers": "À ce moment, le ciel s'ouvrit, et Jésus vit l'Esprit de Dieu descendre sur lui comme une colombe. Et une voix venant du ciel dit : « Celui-ci est mon Fils bien-aimé, en qui j'ai mis toute mon affection. »",
+        "explorateurs": "Et voici, les cieux s'ouvrirent, et il vit l'Esprit de Dieu descendre comme une colombe et venir sur lui. Et voici, une voix fit entendre des cieux ces paroles : « Celui-ci est mon Fils bien-aimé, en qui j'ai mis toute mon affection. »"
+      },
+      "action": "Fais glisser la colombe du ciel jusqu'à Jésus !"
+    },
+    {
+      "id": "pecheurs",
+      "stage": "pecheurs",
+      "reference": "Matthieu 4.18-22",
+      "text": {
+        "agneaux": "Au bord du lac, Jésus dit à des pêcheurs : « Venez avec moi ! » Et ils le suivirent.",
+        "bergers": "Plus tard, au bord du lac de Galilée, Jésus vit des pêcheurs : Pierre et André, puis Jacques et Jean. Il leur dit : « Suivez-moi, et je vous ferai pêcheurs d'hommes. » Aussitôt, ils laissèrent leurs filets et le suivirent.",
+        "explorateurs": "Comme il marchait le long de la mer de Galilée, il vit deux frères, Simon, appelé Pierre, et André, son frère, qui jetaient un filet dans la mer. Il leur dit : « Suivez-moi, et je vous ferai pêcheurs d'hommes. » Aussitôt, ils laissèrent les filets, et le suivirent. Il vit aussi Jacques et Jean, fils de Zébédée, qui le suivirent de même."
+      },
+      "action": "Touche les quatre pêcheurs pour qu'ils suivent Jésus !",
+      "after": {
+        "all": "Jésus t'appelle toi aussi : « Suis-moi ! »"
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "desert", "label": "Jean dans le désert" },
+        { "id": "jourdain", "label": "Le Jourdain" },
+        { "id": "arrivee", "label": "Jésus arrive" },
+        { "id": "bapteme", "label": "Le baptême" },
+        { "id": "colombe", "label": "La colombe" },
+        { "id": "pecheurs", "label": "Les pêcheurs" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Au bord du Jourdain, des animaux se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "fish", "label": "le poisson" },
+        { "id": "frog", "label": "la grenouille" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "dove", "label": "la colombe" },
+        { "id": "shell", "label": "le coquillage" },
+        { "id": "tortoise", "label": "la tortue" },
+        { "id": "ladybug", "label": "la coccinelle" },
+        { "id": "snail", "label": "l'escargot" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["dove", "fish", "boat", "reeds", "frog", "stone"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Celui-ci est mon Fils bien-aimé, en qui j'ai mis toute mon affection.",
+    "reference": "Matthieu 3.17",
+    "spoken": "Matthieu, chapitre 3, verset 17 : Celui-ci est mon Fils bien-aimé, en qui j'ai mis toute mon affection.",
+    "chunks": {
+      "bergers": ["Celui-ci est", "mon Fils bien-aimé,", "en qui j'ai mis toute mon affection."],
+      "explorateurs": ["Celui-ci", "est mon Fils", "bien-aimé,", "en qui j'ai mis", "toute mon affection."]
+    },
+    "referenceChoices": ["Matthieu 3.17", "Matthieu 17.3", "Marc 3.17"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "bapteme", "title": "La colombe" },
+  "reward": "Bravo ! Tu as terminé l'histoire du baptême de Jésus. Voici ton autocollant pour ton album !"
+}

@@ -1,0 +1,130 @@
+{
+  "id": "temple",
+  "title": "Jésus au Temple",
+  "reference": "Luc 2.41-52",
+  "intro": "Jésus au Temple. Une histoire de la Bible, dans le livre de Luc.",
+  "scenes": [
+    {
+      "id": "fete",
+      "stage": "fete",
+      "reference": "Luc 2.41-42",
+      "text": {
+        "agneaux": "Jésus avait douze ans. Avec Marie et Joseph, il alla à Jérusalem pour une grande fête.",
+        "bergers": "Chaque année, Marie et Joseph allaient à Jérusalem pour la fête de la Pâque. Quand Jésus eut douze ans, il fit le voyage avec eux, au milieu de beaucoup d'autres familles.",
+        "explorateurs": "Les parents de Jésus allaient chaque année à Jérusalem, à la fête de Pâque. Lorsqu'il fut âgé de douze ans, ils y montèrent, selon la coutume de la fête."
+      },
+      "action": "Touche la famille trois fois pour marcher jusqu'à Jérusalem !"
+    },
+    {
+      "id": "retour",
+      "stage": "retour",
+      "reference": "Luc 2.43-45",
+      "text": {
+        "agneaux": "Après la fête, Marie et Joseph repartirent. Mais Jésus n'était pas avec eux ! Ils le cherchèrent partout.",
+        "bergers": "Après la fête, Marie et Joseph reprirent le chemin de la maison. Ils pensaient que Jésus marchait avec leurs amis. Le soir, ils le cherchèrent parmi les voyageurs, mais personne ne l'avait vu !",
+        "explorateurs": "Puis, quand les jours furent écoulés, et qu'ils s'en retournèrent, l'enfant Jésus resta à Jérusalem. Son père et sa mère ne s'en aperçurent pas. Croyant qu'il était avec leurs compagnons de voyage, ils firent une journée de chemin, et le cherchèrent parmi leurs parents et leurs connaissances. Mais, ne l'ayant pas trouvé, ils retournèrent à Jérusalem pour le chercher."
+      },
+      "action": "Touche les voyageurs pour leur demander où est Jésus."
+    },
+    {
+      "id": "recherche",
+      "stage": "recherche",
+      "reference": "Luc 2.45-46",
+      "text": {
+        "agneaux": "Marie et Joseph retournèrent à Jérusalem. Ils cherchèrent Jésus pendant trois jours.",
+        "bergers": "Inquiets, Marie et Joseph retournèrent à Jérusalem. Ils cherchèrent Jésus dans les rues de la grande ville, un jour, deux jours, trois jours…",
+        "explorateurs": "Au bout de trois jours, ils le trouvèrent dans le temple. Pendant tout ce temps, Marie et Joseph l'avaient cherché avec angoisse dans la ville."
+      },
+      "action": "Touche le soleil trois fois pour les trois jours !"
+    },
+    {
+      "id": "docteurs",
+      "stage": "docteurs",
+      "reference": "Luc 2.46-47",
+      "text": {
+        "agneaux": "Enfin, ils trouvèrent Jésus dans le Temple ! Il parlait de Dieu avec les maîtres, qui étaient très étonnés.",
+        "bergers": "Enfin, ils trouvèrent Jésus dans le Temple. Il était assis au milieu des maîtres qui enseignaient la loi de Dieu. Il les écoutait et leur posait des questions. Tous étaient étonnés de son intelligence et de ses réponses.",
+        "explorateurs": "Ils le trouvèrent dans le temple, assis au milieu des docteurs, les écoutant et les interrogeant. Tous ceux qui l'entendaient étaient frappés de son intelligence et de ses réponses."
+      },
+      "action": "Touche les maîtres pour qu'ils écoutent Jésus !"
+    },
+    {
+      "id": "retrouve",
+      "stage": "retrouve",
+      "reference": "Luc 2.48-50",
+      "text": {
+        "agneaux": "Marie lui dit : « Nous t'avons tant cherché ! » Jésus répondit : « Je dois être dans la maison de mon Père. »",
+        "bergers": "Marie lui dit : « Mon enfant, pourquoi nous as-tu fait cela ? Ton père et moi, nous te cherchions, très inquiets ! » Jésus répondit : « Ne saviez-vous pas que je dois m'occuper des affaires de mon Père ? » Il parlait de Dieu, son Père.",
+        "explorateurs": "Quand ses parents le virent, ils furent saisis d'étonnement, et sa mère lui dit : « Mon enfant, pourquoi as-tu agi de la sorte avec nous ? Voici, ton père et moi, nous te cherchions avec angoisse. » Il leur dit : « Pourquoi me cherchiez-vous ? Ne saviez-vous pas qu'il faut que je m'occupe des affaires de mon Père ? »"
+      },
+      "action": "Touche Jésus !"
+    },
+    {
+      "id": "grandir",
+      "stage": "grandir",
+      "reference": "Luc 2.51-52",
+      "text": {
+        "agneaux": "Jésus rentra à Nazareth avec ses parents. Il leur obéissait, et il grandissait.",
+        "bergers": "Jésus rentra à Nazareth avec Marie et Joseph, et il leur obéissait. Il grandissait : il devenait plus sage, plus grand, et Dieu et les gens l'aimaient.",
+        "explorateurs": "Puis il descendit avec eux pour aller à Nazareth, et il leur était soumis. Sa mère gardait toutes ces choses dans son cœur. Et Jésus croissait en sagesse, en stature, et en grâce, devant Dieu et devant les hommes."
+      },
+      "action": "Touche Jésus trois fois pour le voir grandir !",
+      "after": {
+        "all": "Comme Jésus, tu peux grandir en écoutant Dieu et en obéissant à tes parents."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "fete", "label": "La fête à Jérusalem" },
+        { "id": "retour", "label": "Où est Jésus ?" },
+        { "id": "recherche", "label": "Trois jours" },
+        { "id": "docteurs", "label": "Au Temple" },
+        { "id": "retrouve", "label": "Retrouvé !" },
+        { "id": "grandir", "label": "Jésus grandit" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Dans la cour du Temple, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "scroll", "label": "le rouleau" },
+        { "id": "dove", "label": "la colombe" },
+        { "id": "jar", "label": "la jarre" },
+        { "id": "coin", "label": "la pièce" },
+        { "id": "basket", "label": "le panier" },
+        { "id": "bread", "label": "le pain" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "snail", "label": "l'escargot" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["scroll", "temple", "dove", "donkey", "bread", "jar"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Et Jésus croissait en sagesse, en stature, et en grâce, devant Dieu et devant les hommes.",
+    "reference": "Luc 2.52",
+    "spoken": "Luc, chapitre 2, verset 52 : Et Jésus croissait en sagesse, en stature, et en grâce, devant Dieu et devant les hommes.",
+    "chunks": {
+      "bergers": ["Et Jésus croissait", "en sagesse, en stature, et en grâce,", "devant Dieu et devant les hommes."],
+      "explorateurs": ["Et Jésus croissait", "en sagesse,", "en stature,", "et en grâce,", "devant Dieu", "et devant les hommes."]
+    },
+    "referenceChoices": ["Luc 2.52", "Luc 5.22", "Marc 2.52"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "temple", "title": "Jésus au Temple" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Jésus au Temple. Voici ton autocollant pour ton album !"
+}

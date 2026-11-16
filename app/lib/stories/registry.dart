@@ -11,6 +11,8 @@ import 'david/david.dart';
 import 'eden/eden.dart';
 import 'jonas/jonas.dart';
 import 'naissance/naissance.dart';
+import 'temple/temple.dart';
+import 'bapteme/bapteme.dart';
 import 'joseph/joseph.dart';
 import 'moise/moise.dart';
 import 'noe/noe_art.dart';
@@ -147,6 +149,8 @@ final Map<String, StoryPack> storyPacks = {
   'david': davidPack,
   'jonas': jonasPack,
   'naissance': naissancePack,
+  'temple': templePack,
+  'bapteme': baptemePack,
   'noe': StoryPack(
     stages: noeStages,
     paintThumb: paintNoeThumb,

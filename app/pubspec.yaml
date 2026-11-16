@@ -83,6 +83,10 @@ flutter:
     - assets/stories/jonas/audio/
     - assets/stories/naissance/
     - assets/stories/naissance/audio/
+    - assets/stories/temple/
+    - assets/stories/temple/audio/
+    - assets/stories/bapteme/
+    - assets/stories/bapteme/audio/
 
   fonts:
     - family: Fredoka
