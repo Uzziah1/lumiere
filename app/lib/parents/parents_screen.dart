@@ -16,10 +16,11 @@ import 'privacy.dart';
 /// L'espace parents : progression des enfants, réglages, à propos.
 /// On y entre par la barrière parentale.
 class ParentsScreen extends StatefulWidget {
-  const ParentsScreen({super.key, this.skipGate = false});
+  const ParentsScreen({super.key, this.skipGate = false, this.initialTab = ParentsTab.children});
 
   /// Pour les tests : entrer sans la barrière.
   final bool skipGate;
+  final ParentsTab initialTab;
 
   @override
   State<ParentsScreen> createState() => ParentsScreenState();
@@ -29,7 +30,7 @@ enum ParentsTab { children, settings, about }
 
 class ParentsScreenState extends State<ParentsScreen> {
   late bool unlocked = widget.skipGate;
-  ParentsTab tab = ParentsTab.children;
+  late ParentsTab tab = widget.initialTab;
 
   @override
   void initState() {
@@ -182,11 +183,15 @@ class _Card extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 14),
       child: Material(
+        type: MaterialType.card,
         color: Palette.cream,
         elevation: 3,
         shadowColor: Palette.shadow,
         borderRadius: BorderRadius.circular(20),
-        child: Padding(padding: const EdgeInsets.all(16), child: child),
+        child: SizedBox(
+          width: double.infinity,
+          child: Padding(padding: const EdgeInsets.all(16), child: child),
+        ),
       ),
     );
   }
@@ -356,6 +361,7 @@ class _SettingsTab extends StatelessWidget {
         const SizedBox(height: 10),
         _Card(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               _Toggle(
                 key: const ValueKey('set-narration'),
