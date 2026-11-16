@@ -14,6 +14,9 @@ class PersonStyle {
     this.beard,
     this.veil = false,
     this.scale = 1,
+    this.bareHead = false,
+    this.crown = false,
+    this.helmet = false,
   });
 
   final Color skin;
@@ -29,6 +32,16 @@ class PersonStyle {
 
   /// Taille relative (enfants, adultes).
   final double scale;
+
+  /// Tête nue : [headcloth] est alors la couleur des cheveux (avec [veil] :
+  /// cheveux longs).
+  final bool bareHead;
+
+  /// Couronne dorée (rois, pharaon).
+  final bool crown;
+
+  /// Casque de soldat (Goliath).
+  final bool helmet;
 }
 
 /// La famille de Noé (Genèse 7.13) : peaux brunes de différents tons.
@@ -190,7 +203,7 @@ void paintPerson(
       ..cubicTo(-headR * 1.6, headY + headR * 1.4, -headR * 1.8, headY - headR * 1.2, 0, headY - headR * 1.25)
       ..close();
     drawPaper(canvas, veil, style.headcloth, elevation: h * 0.015, light: 0.1);
-  } else {
+  } else if (!style.bareHead) {
     // Pan de la coiffe qui tombe sur les épaules.
     final drape = Path()
       ..moveTo(-headR * 1.05, headY)
@@ -261,7 +274,41 @@ void paintPerson(
     ..quadraticBezierTo(-headR * 0.9, headY - headR * 0.55, -headR * 1.08, headY + headR * 0.05)
     ..close();
   drawPaper(canvas, cap, style.headcloth, elevation: h * 0.01, light: 0.12);
-  if (!style.veil) {
+  if (style.helmet) {
+    final helmet = Path()
+      ..moveTo(-headR * 1.15, headY - headR * 0.2)
+      ..quadraticBezierTo(-headR * 1.2, headY - headR * 1.5, 0, headY - headR * 1.5)
+      ..quadraticBezierTo(headR * 1.2, headY - headR * 1.5, headR * 1.15, headY - headR * 0.2)
+      ..close();
+    drawPaper(canvas, helmet, const Color(0xFFA9B0B8), elevation: h * 0.01, light: 0.2);
+    drawPaper(
+      canvas,
+      Path()..addRRect(
+        RRect.fromRectAndRadius(
+          Rect.fromLTWH(-headR * 0.2, headY - headR * 2.1, headR * 0.4, headR * 0.7),
+          Radius.circular(headR * 0.2),
+        ),
+      ),
+      const Color(0xFFC0504D),
+      elevation: h * 0.006,
+      light: 0.1,
+    );
+  }
+  if (style.crown) {
+    final top = headY - headR * 1.15;
+    final w = headR * 0.95;
+    final crown = Path()
+      ..moveTo(-w, top + headR * 0.45)
+      ..lineTo(-w, top - headR * 0.15)
+      ..lineTo(-w * 0.5, top + headR * 0.15)
+      ..lineTo(0, top - headR * 0.35)
+      ..lineTo(w * 0.5, top + headR * 0.15)
+      ..lineTo(w, top - headR * 0.15)
+      ..lineTo(w, top + headR * 0.45)
+      ..close();
+    drawPaper(canvas, crown, const Color(0xFFF2C14E), elevation: h * 0.008, light: 0.25);
+  }
+  if (!style.veil && !style.bareHead && !style.helmet) {
     canvas.drawPath(
       Path()
         ..moveTo(-headR * 0.98, headY - headR * 0.45)

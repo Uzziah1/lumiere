@@ -109,13 +109,16 @@ class World {
 
   final List<Island> islands;
 
-  /// Histoires effectivement présentes dans le jeu.
+  /// Histoires effectivement présentes dans le jeu. Une île déjà commencée
+  /// reste toujours ouverte.
   final Set<String> available;
 
   static const starsToUnlock = 3;
 
   IslandStatus status(Island island, StoryProgress Function(String storyId) progress) {
     if (!available.contains(island.id)) return IslandStatus.soon;
+    // Une île déjà commencée reste ouverte (même si l'ordre des histoires change).
+    if (progress(island.id).stars > 0) return IslandStatus.open;
     final index = islands.indexOf(island);
     for (var i = index - 1; i >= 0; i--) {
       final previous = islands[i];

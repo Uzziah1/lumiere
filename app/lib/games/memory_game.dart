@@ -3,7 +3,7 @@ import 'dart:math' as math;
 
 import 'package:material_ui/material_ui.dart';
 
-import '../art/animals.dart';
+import '../art/objects.dart';
 import '../art/colombe.dart';
 import '../audio/audio.dart';
 import '../story/age_group.dart';
@@ -24,7 +24,7 @@ class MemoryGame extends StatefulWidget {
 }
 
 class MemoryGameState extends State<MemoryGame> {
-  late List<Animal> cards;
+  late List<String> cards;
   final matched = <int>{};
   final revealed = <int>[];
   bool preview = true;
@@ -42,7 +42,7 @@ class MemoryGameState extends State<MemoryGame> {
     super.didChangeDependencies();
     if (_timer != null || matched.isNotEmpty) return;
     final session = StorySession.of(context);
-    final pairs = session.story.memory.pairsFor(session.age).map(Animal.byName);
+    final pairs = session.story.memory.pairsFor(session.age);
     cards = [...pairs, ...pairs]..shuffle(math.Random(widget.seed));
     final wait = _previewTime[session.age]!;
     if (wait == Duration.zero) {
@@ -123,11 +123,16 @@ class MemoryGameState extends State<MemoryGame> {
                   height: h,
                   child: Semantics(
                     button: true,
-                    label: isFaceUp(i) ? cards[i].label : 'Carte cachée',
+                    label: isFaceUp(i) ? thingLabel(cards[i]) : 'Carte cachée',
                     child: GestureDetector(
                       key: ValueKey('memory-$i'),
                       onTap: () => flip(i),
-                      child: _FlipCard(faceUp: isFaceUp(i), matched: matched.contains(i), animal: cards[i]),
+                      child: _FlipCard(
+                        faceUp: isFaceUp(i),
+                        matched: matched.contains(i),
+                        item: cards[i],
+                        paintItem: StorySession.of(context).pack.paintItem,
+                      ),
                     ),
                   ),
                 ),
@@ -140,11 +145,12 @@ class MemoryGameState extends State<MemoryGame> {
 }
 
 class _FlipCard extends StatelessWidget {
-  const _FlipCard({required this.faceUp, required this.matched, required this.animal});
+  const _FlipCard({required this.faceUp, required this.matched, required this.item, required this.paintItem});
 
   final bool faceUp;
   final bool matched;
-  final Animal animal;
+  final String item;
+  final void Function(Canvas canvas, String id, Rect box) paintItem;
 
   @override
   Widget build(BuildContext context) {
@@ -172,7 +178,7 @@ class _FlipCard extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16),
               child: CustomPaint(
-                painter: showFront ? _FrontPainter(animal) : _BackPainter(),
+                painter: showFront ? _FrontPainter(item, paintItem) : _BackPainter(),
                 child: const SizedBox.expand(),
               ),
             ),
@@ -184,9 +190,10 @@ class _FlipCard extends StatelessWidget {
 }
 
 class _FrontPainter extends CustomPainter {
-  _FrontPainter(this.animal);
+  _FrontPainter(this.item, this.paintItem);
 
-  final Animal animal;
+  final String item;
+  final void Function(Canvas canvas, String id, Rect box) paintItem;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -200,11 +207,11 @@ class _FrontPainter extends CustomPainter {
         ).createShader(Offset.zero & size),
     );
     final pad = size.width * 0.12;
-    paintAnimal(canvas, animal, Rect.fromLTRB(pad, pad, size.width - pad, size.height - pad));
+    paintItem(canvas, item, Rect.fromLTRB(pad, pad, size.width - pad, size.height - pad));
   }
 
   @override
-  bool shouldRepaint(_FrontPainter oldDelegate) => oldDelegate.animal != animal;
+  bool shouldRepaint(_FrontPainter oldDelegate) => oldDelegate.item != item;
 }
 
 class _BackPainter extends CustomPainter {

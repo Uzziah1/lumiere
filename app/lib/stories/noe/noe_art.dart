@@ -5,6 +5,7 @@ import '../../art/animals.dart';
 import '../../art/ark.dart';
 import '../../art/colombe.dart';
 import '../../art/landscape.dart';
+import '../../art/objects.dart';
 import '../../art/paper.dart';
 import '../../art/people.dart';
 import '../../art/weather.dart';
@@ -157,7 +158,7 @@ class ArkInterior implements SeekScene {
   };
 
   @override
-  void paintItem(Canvas canvas, String id, Rect box) => paintAnimal(canvas, Animal.byName(id), box);
+  void paintItem(Canvas canvas, String id, Rect box) => paintThing(canvas, id, box);
 
   @override
   void paintBackground(Canvas canvas, Size s) {

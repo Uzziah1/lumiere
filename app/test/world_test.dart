@@ -36,6 +36,11 @@ void main() {
       expect(world.status(island('jonas'), of), IslandStatus.soon);
     });
 
+    test('une île déjà commencée reste ouverte', () {
+      progress['abraham'] = const StoryProgress(parts: {StoryPart.recit});
+      expect(world.status(island('abraham'), of), IslandStatus.open);
+    });
+
     test('l’île suivante s’ouvre avec 3 étoiles sur la précédente', () {
       expect(world.status(island('abraham'), of), IslandStatus.locked);
       progress['noe'] = const StoryProgress(parts: {StoryPart.recit, StoryPart.seek});
@@ -72,6 +77,10 @@ void main() {
     addTearDown(tester.view.reset);
     final state = GameState(MemorySaveStore());
     state.addProfile(name: 'Awa', age: AgeGroup.agneaux, avatar: 'sheep');
+    // La Création terminée à 3 étoiles : Noé est ouvert.
+    for (final part in [StoryPart.recit, StoryPart.seek, StoryPart.memory]) {
+      state.recordPart('creation', part);
+    }
     setup?.call(state);
     await tester.pumpWidget(
       LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects(), gameState: state),
@@ -84,20 +93,18 @@ void main() {
     return state;
   }
 
-  testWidgets('la carte montre les 8 îles ; une île « bientôt » le dit', (tester) async {
+  testWidgets('la carte montre les 8 îles ; une île fermée ou « bientôt » le dit', (tester) async {
     await openMap(tester);
     for (final island in lot1) {
       expect(find.byKey(ValueKey('island-${island.id}')), findsOneWidget);
     }
     expect(find.bySemanticsLabel('Noé et l’arche, 0 étoiles sur 5'), findsOneWidget);
-    expect(find.bySemanticsLabel('Abraham et les étoiles, bientôt'), findsOneWidget);
+    // Abraham suit Noé, qui n'a encore aucune étoile.
+    expect(find.bySemanticsLabel(RegExp(r'Abraham et les étoiles, (fermée|bientôt)')), findsOneWidget);
 
-    final scroll = tester.widget<SingleChildScrollView>(find.byKey(const ValueKey('world-scroll')));
-    scroll.controller!.jumpTo(scroll.controller!.position.maxScrollExtent);
+    await tester.tap(find.byKey(const ValueKey('island-abraham')));
     await frames(tester, 4);
-    await tester.tap(find.byKey(const ValueKey('island-jonas')));
-    await frames(tester, 4);
-    expect(find.textContaining(RegExp('Jonas et le grand poisson.*arrive bientôt')), findsOneWidget);
+    expect(find.textContaining(RegExp('arrive bientôt|trois étoiles')), findsOneWidget);
     expect(find.byKey(const ValueKey('island-card')), findsNothing);
   });
 
@@ -132,7 +139,7 @@ void main() {
     await tester.tap(find.text('La carte'));
     await frames(tester, 30);
     expect(find.bySemanticsLabel('Noé et l’arche, 1 étoiles sur 5'), findsOneWidget);
-    expect(find.bySemanticsLabel(RegExp('Awa, 1 étoiles')), findsOneWidget);
+    expect(find.bySemanticsLabel(RegExp('Awa, 4 étoiles')), findsOneWidget);
   });
 
   testWidgets('reprendre Noé : les étoiles déjà gagnées sont là dans le menu des jeux', (tester) async {

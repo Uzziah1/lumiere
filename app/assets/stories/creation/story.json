@@ -1,0 +1,131 @@
+{
+  "id": "creation",
+  "title": "La Création",
+  "reference": "Genèse 1 à 2",
+  "intro": "La Création. Une histoire de la Bible, au tout début du livre de la Genèse.",
+  "scenes": [
+    {
+      "id": "lumiere",
+      "stage": "light",
+      "reference": "Genèse 1.1-5",
+      "text": {
+        "agneaux": "Au commencement, tout était noir. Alors Dieu dit : « Que la lumière soit ! » Et la lumière fut.",
+        "bergers": "Au commencement, Dieu créa les cieux et la terre. Tout était sombre et vide. Dieu dit : « Que la lumière soit ! » Et la lumière fut. Ce fut le premier jour.",
+        "explorateurs": "Au commencement, Dieu créa les cieux et la terre. La terre était informe et vide, et les ténèbres couvraient l'eau profonde. Dieu dit : « Que la lumière soit ! » Et la lumière fut. Dieu vit que la lumière était bonne ; il appela la lumière jour, et les ténèbres nuit. Ce fut le premier jour."
+      },
+      "action": "Touche la petite lumière !"
+    },
+    {
+      "id": "terre",
+      "stage": "land",
+      "reference": "Genèse 1.6-10",
+      "text": {
+        "agneaux": "Dieu fit le ciel tout bleu. Puis il rassembla les eaux, et la terre apparut.",
+        "bergers": "Dieu fit le ciel au-dessus des eaux. Puis il rassembla les eaux en un seul lieu : ce furent les mers. Et la terre sèche apparut.",
+        "explorateurs": "Le deuxième jour, Dieu fit l'étendue du ciel au milieu des eaux. Le troisième jour, il dit : « Que les eaux qui sont au-dessous du ciel se rassemblent en un seul lieu, et que le sec paraisse. » Dieu appela le sec terre, et les eaux rassemblées mers. Et Dieu vit que cela était bon."
+      },
+      "action": "Glisse ton doigt vers le haut pour faire monter la terre !"
+    },
+    {
+      "id": "plantes",
+      "stage": "plants",
+      "reference": "Genèse 1.11-13",
+      "text": {
+        "agneaux": "Dieu fit pousser l'herbe, les fleurs et les arbres pleins de fruits.",
+        "bergers": "Dieu dit : « Que la terre produise de la verdure, des plantes et des arbres qui donnent des fruits ! » Et c'est ce qui arriva.",
+        "explorateurs": "Dieu dit : « Que la terre produise de la verdure, de l'herbe portant de la semence, des arbres fruitiers donnant du fruit selon leur espèce. » Et cela fut ainsi. Dieu vit que cela était bon. Ce fut le troisième jour."
+      },
+      "action": "Touche chaque graine pour la faire pousser !"
+    },
+    {
+      "id": "astres",
+      "stage": "lights",
+      "reference": "Genèse 1.14-19",
+      "text": {
+        "agneaux": "Dieu alluma le soleil pour le jour, et la lune et les étoiles pour la nuit.",
+        "bergers": "Dieu fit le soleil pour éclairer le jour, la lune pour éclairer la nuit, et il fit aussi les étoiles. Ce fut le quatrième jour.",
+        "explorateurs": "Le quatrième jour, Dieu fit les deux grands luminaires : le plus grand, le soleil, pour présider au jour, et le plus petit, la lune, pour présider à la nuit. Il fit aussi les étoiles. Ils servent de signes pour marquer les saisons, les jours et les années."
+      },
+      "action": "Touche le soleil, la lune et l'étoile pour les allumer !"
+    },
+    {
+      "id": "animaux",
+      "stage": "animals",
+      "reference": "Genèse 1.20-25",
+      "text": {
+        "agneaux": "Dieu fit les poissons dans la mer, les oiseaux dans le ciel, et tous les animaux sur la terre.",
+        "bergers": "Dieu remplit la mer de poissons et le ciel d'oiseaux. Puis il fit tous les animaux de la terre, les grands et les petits. Et Dieu vit que cela était bon.",
+        "explorateurs": "Le cinquième jour, Dieu créa les poissons et tous les êtres qui vivent dans l'eau, et les oiseaux qui volent dans le ciel ; il les bénit. Le sixième jour, il fit les animaux de la terre selon leur espèce : le bétail, les bêtes sauvages et tout ce qui rampe sur le sol. Et Dieu vit que cela était bon."
+      },
+      "action": "Touche la mer, le ciel et la terre pour les remplir d'animaux !"
+    },
+    {
+      "id": "homme",
+      "stage": "humans",
+      "reference": "Genèse 1.26 à 2.3",
+      "text": {
+        "agneaux": "Enfin, Dieu créa l'homme et la femme, et il les aima. Dieu regarda tout ce qu'il avait fait : c'était très bon !",
+        "bergers": "Enfin, Dieu créa l'homme et la femme à son image. Il les bénit et leur confia la terre. Dieu regarda tout ce qu'il avait fait, et c'était très bon. Le septième jour, Dieu se reposa.",
+        "explorateurs": "Le sixième jour, Dieu dit : « Faisons l'homme à notre image. » Dieu créa l'homme à son image : il créa l'homme et la femme. Il les bénit et leur confia la terre et les animaux. Dieu vit tout ce qu'il avait fait, et voici, cela était très bon. Le septième jour, Dieu se reposa de toute son œuvre, et il bénit ce jour."
+      },
+      "action": "Touche la lumière !",
+      "after": {
+        "all": "Le septième jour, Dieu se reposa. Tout ce qu'il avait fait était très bon !",
+        "explorateurs": "Dieu bénit le septième jour et en fit un jour à part, un jour de repos."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les jours de la Création dans l'ordre. Qu'est-ce que Dieu a fait en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce que Dieu a fait en premier ?"
+      },
+      "cards": [
+        { "id": "light", "label": "La lumière" },
+        { "id": "land", "label": "La mer et la terre" },
+        { "id": "plants", "label": "Les plantes" },
+        { "id": "lights", "label": "Le soleil et la lune" },
+        { "id": "animals", "label": "Les animaux" },
+        { "id": "humans", "label": "L'homme et la femme" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Des animaux se cachent dans le jardin ! Retrouve-les.",
+      "items": [
+        { "id": "rabbit", "label": "le lapin" },
+        { "id": "dove", "label": "la colombe" },
+        { "id": "frog", "label": "la grenouille" },
+        { "id": "tortoise", "label": "la tortue" },
+        { "id": "owl", "label": "le hibou" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "ladybug", "label": "la coccinelle" },
+        { "id": "snail", "label": "l'escargot" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de la Création.",
+      "pairs": ["sun", "moon", "star", "fish", "flower", "lion"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Au commencement, Dieu créa les cieux et la terre.",
+    "reference": "Genèse 1.1",
+    "spoken": "Genèse, chapitre 1, verset 1 : Au commencement, Dieu créa les cieux et la terre.",
+    "chunks": {
+      "bergers": ["Au commencement,", "Dieu créa", "les cieux", "et la terre."],
+      "explorateurs": ["Au", "commencement,", "Dieu", "créa", "les cieux", "et la terre."]
+    },
+    "referenceChoices": ["Genèse 1.1", "Jean 1.1", "Exode 1.1"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "creation", "title": "La Création" },
+  "reward": "Bravo ! Tu as terminé l'histoire de la Création. Voici ton autocollant pour ton album !"
+}

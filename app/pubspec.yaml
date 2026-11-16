@@ -64,6 +64,8 @@ flutter:
     - assets/lines/
     - assets/audio/lines/
     - assets/audio/sfx/
+    - assets/stories/creation/
+    - assets/stories/creation/audio/
     - assets/stories/noe/
     - assets/stories/noe/audio/
 
