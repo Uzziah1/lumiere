@@ -3,3 +3,5 @@
 *.ttf binary
 *.jar binary
 *.bat text eol=crlf
+*.mp3 binary
+*.onnx binary

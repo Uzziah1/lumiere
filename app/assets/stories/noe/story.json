@@ -1,0 +1,168 @@
+{
+  "id": "noe",
+  "title": "Noé et l'arche",
+  "reference": "Genèse 6 à 9",
+  "intro": "Noé et l'arche. Une histoire de la Bible, dans le livre de la Genèse.",
+  "scenes": [
+    {
+      "id": "village",
+      "stage": "noah_village",
+      "reference": "Genèse 6.5-10",
+      "text": {
+        "agneaux": "Il y a très longtemps vivait un homme qui aimait Dieu. Il s'appelait Noé.",
+        "bergers": "Il y a très longtemps, les hommes sur la terre faisaient beaucoup de mal. Mais un homme aimait Dieu et lui obéissait : il s'appelait Noé.",
+        "explorateurs": "Il y a très longtemps, la méchanceté des hommes était grande sur la terre, et cela attristait Dieu. Mais Noé était un homme juste, qui marchait avec Dieu. Il vivait avec sa femme et ses trois fils : Sem, Cham et Japhet."
+      },
+      "action": {
+        "all": "Touche Noé pour lui dire bonjour !",
+        "explorateurs": "Touche Noé pour faire sa connaissance."
+      }
+    },
+    {
+      "id": "appel",
+      "stage": "god_speaks",
+      "reference": "Genèse 6.13-18",
+      "text": {
+        "agneaux": "Un jour, Dieu parla à Noé : « Construis un grand bateau, une arche ! »",
+        "bergers": "Un jour, Dieu parla à Noé : « Un grand déluge va venir. Construis une arche en bois. Je te garderai en vie, toi et ta famille. »",
+        "explorateurs": "Dieu dit à Noé : « Je vais faire venir le déluge sur la terre. Fais-toi une arche de bois, avec des cellules, une fenêtre et une porte sur le côté. J'établis mon alliance avec toi : tu entreras dans l'arche, toi et tes fils, ta femme et les femmes de tes fils. »"
+      },
+      "action": {
+        "all": "Touche la lumière.",
+        "explorateurs": "Touche la lumière pour écouter Dieu."
+      }
+    },
+    {
+      "id": "construction",
+      "stage": "building",
+      "reference": "Genèse 6.14-22",
+      "text": {
+        "agneaux": "Noé obéit à Dieu. Toc, toc, toc ! Il construit l'arche.",
+        "bergers": "Noé fit tout ce que Dieu lui avait demandé. Planche après planche, l'arche devint immense.",
+        "explorateurs": "Noé exécuta tout ce que Dieu lui avait ordonné. L'arche était immense, avec trois étages. Noé l'enduisit de poix, dedans et dehors, pour que l'eau n'y entre pas."
+      },
+      "action": "Touche l'arche pour aider Noé à la construire !"
+    },
+    {
+      "id": "animaux",
+      "stage": "animals",
+      "reference": "Genèse 7.7-9",
+      "text": {
+        "agneaux": "Puis les animaux arrivèrent, deux par deux !",
+        "bergers": "Puis les animaux vinrent vers Noé, deux par deux, un mâle et une femelle, et ils entrèrent dans l'arche avec sa famille.",
+        "explorateurs": "Les animaux vinrent auprès de Noé dans l'arche, deux par deux, un mâle et une femelle, comme Dieu l'avait ordonné. Noé avait aussi rassemblé de la nourriture pour sa famille et pour tous les animaux."
+      },
+      "action": {
+        "all": "Touche chaque couple d'animaux pour le faire entrer dans l'arche.",
+        "agneaux": "Touche les animaux pour les faire entrer dans l'arche !"
+      }
+    },
+    {
+      "id": "pluie",
+      "stage": "rain",
+      "reference": "Genèse 7.12-23",
+      "text": {
+        "agneaux": "Dieu ferma la porte. Alors la pluie tomba, beaucoup, beaucoup ! Mais dans l'arche, tout le monde était à l'abri.",
+        "bergers": "L'Éternel ferma la porte derrière eux. Il plut sur la terre quarante jours et quarante nuits. Les eaux montèrent, et l'arche flottait, bien à l'abri.",
+        "explorateurs": "L'Éternel ferma la porte sur Noé. La pluie tomba sur la terre pendant quarante jours et quarante nuits. Les eaux grossirent tant qu'elles couvrirent les plus hautes montagnes. Mais dans l'arche, Noé et tous ceux qui étaient avec lui étaient en sécurité."
+      },
+      "action": "Touche l'arche pour la bercer sur les vagues."
+    },
+    {
+      "id": "colombe",
+      "stage": "dove",
+      "reference": "Genèse 8.1-11",
+      "text": {
+        "agneaux": "Un jour, la pluie s'arrêta. Noé ouvrit la fenêtre et laissa partir une colombe.",
+        "bergers": "Enfin, la pluie s'arrêta et les eaux baissèrent peu à peu. Noé ouvrit la fenêtre de l'arche et lâcha une colombe.",
+        "explorateurs": "Dieu se souvint de Noé. Il fit passer un vent sur la terre, les eaux baissèrent, et l'arche s'arrêta sur les montagnes d'Ararat. Noé lâcha d'abord un corbeau, puis une colombe. Elle ne trouva pas où se poser et revint. Sept jours plus tard, Noé ouvrit la fenêtre et la lâcha de nouveau."
+      },
+      "action": "Touche la fenêtre !",
+      "after": {
+        "agneaux": "La colombe revint avec une feuille d'olivier dans son bec. La terre séchait !",
+        "bergers": "Le soir, la colombe revint avec une feuille d'olivier dans son bec. Noé comprit que les eaux avaient baissé.",
+        "explorateurs": "Le soir, la colombe revint vers lui : elle tenait dans son bec une feuille d'olivier arrachée. Noé sut ainsi que les eaux avaient diminué sur la terre."
+      }
+    },
+    {
+      "id": "sortie",
+      "stage": "exit",
+      "reference": "Genèse 8.15-20",
+      "text": {
+        "agneaux": "Dieu dit : « Sortez de l'arche ! » Et tout le monde sortit, tout content.",
+        "bergers": "Quand la terre fut sèche, Dieu dit à Noé : « Sors de l'arche, avec ta famille et tous les animaux. »",
+        "explorateurs": "Quand la terre fut sèche, Dieu parla à Noé : « Sors de l'arche, toi et ta famille, et fais sortir avec toi tous les animaux. » Noé sortit, bâtit un autel et remercia l'Éternel."
+      },
+      "action": "Touche la porte pour l'ouvrir !",
+      "after": {
+        "all": "Les animaux et la famille de Noé sortent de l'arche. Quelle joie !"
+      }
+    },
+    {
+      "id": "arc-en-ciel",
+      "stage": "rainbow",
+      "reference": "Genèse 9.8-17",
+      "text": {
+        "agneaux": "Dieu fit une promesse : plus jamais de déluge sur toute la terre. Et il plaça un arc-en-ciel dans le ciel.",
+        "bergers": "Dieu fit une alliance avec Noé : « Plus jamais un déluge ne détruira la terre. » Et comme signe de sa promesse, il plaça un arc-en-ciel dans les nuages.",
+        "explorateurs": "Dieu bénit Noé et ses fils, et fit alliance avec eux et avec tous les êtres vivants : plus jamais un déluge ne détruirait la terre. Comme signe de cette alliance, il plaça son arc dans la nue."
+      },
+      "action": "Glisse ton doigt dans le ciel pour dessiner l'arc-en-ciel !",
+      "after": {
+        "all": "Chaque fois que tu vois un arc-en-ciel, souviens-toi : Dieu tient toujours ses promesses !"
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "build", "label": "Noé construit l'arche" },
+        { "id": "animals", "label": "Les animaux entrent" },
+        { "id": "rain", "label": "La pluie tombe" },
+        { "id": "dove", "label": "La colombe revient" },
+        { "id": "rainbow", "label": "L'arc-en-ciel" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 5 }
+    },
+    "seek": {
+      "instructions": "Des animaux se sont cachés dans l'arche ! Retrouve-les.",
+      "items": [
+        { "id": "dove", "label": "la colombe" },
+        { "id": "sheep", "label": "le mouton" },
+        { "id": "rabbit", "label": "le lapin" },
+        { "id": "tortoise", "label": "la tortue" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "owl", "label": "le hibou" },
+        { "id": "snail", "label": "l'escargot" },
+        { "id": "ladybug", "label": "la coccinelle" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les couples d'animaux.",
+      "pairs": ["lion", "elephant", "giraffe", "sheep", "rabbit", "tortoise"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "J'ai placé mon arc dans la nue, et il servira de signe d'alliance entre moi et la terre.",
+    "reference": "Genèse 9.13",
+    "spoken": "Genèse, chapitre 9, verset 13 : J'ai placé mon arc dans la nue, et il servira de signe d'alliance entre moi et la terre.",
+    "chunks": {
+      "bergers": ["J'ai placé mon arc", "dans la nue,", "et il servira de signe d'alliance", "entre moi et la terre."],
+      "explorateurs": ["J'ai placé", "mon arc", "dans la nue,", "et il servira", "de signe d'alliance", "entre moi", "et la terre."]
+    },
+    "referenceChoices": ["Genèse 9.13", "Genèse 1.3", "Exode 9.13"],
+    "instructions": {
+      "agneaux": "Touche les couleurs de l'arc-en-ciel pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "arche", "title": "L'arche de Noé" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Noé. Voici ton autocollant pour ton album !"
+}
