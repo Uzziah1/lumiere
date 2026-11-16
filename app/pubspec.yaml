@@ -109,6 +109,10 @@ flutter:
     - assets/stories/ruth/audio/
     - assets/stories/samuel/
     - assets/stories/samuel/audio/
+    - assets/stories/elie/
+    - assets/stories/elie/audio/
+    - assets/stories/daniel/
+    - assets/stories/daniel/audio/
 
   fonts:
     - family: Fredoka

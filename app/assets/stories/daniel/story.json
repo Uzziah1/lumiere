@@ -1,0 +1,130 @@
+{
+  "id": "daniel",
+  "title": "Daniel et les lions",
+  "reference": "Daniel 6",
+  "intro": "Daniel et les lions. Une histoire de la Bible, dans le livre de Daniel.",
+  "scenes": [
+    {
+      "id": "priere",
+      "stage": "priere",
+      "reference": "Daniel 6.1-4 et 6.11",
+      "text": {
+        "agneaux": "Daniel aimait Dieu. Trois fois par jour, il priait à sa fenêtre.",
+        "bergers": "Daniel vivait loin de son pays, à Babylone. Le roi Darius l'aimait beaucoup, car il était honnête et sage. Et trois fois par jour, Daniel se mettait à genoux devant sa fenêtre ouverte, tournée vers Jérusalem, pour prier Dieu et le remercier.",
+        "explorateurs": "Il plut à Darius d'établir sur le royaume cent vingt satrapes, et au-dessus d'eux trois chefs, au nombre desquels était Daniel. Daniel surpassait les chefs et les satrapes, parce qu'il y avait en lui un esprit supérieur. Trois fois le jour, il se mettait à genoux, il priait, et il louait son Dieu, comme il le faisait auparavant, les fenêtres de sa chambre ouvertes dans la direction de Jérusalem."
+      },
+      "action": "Touche Daniel trois fois : il prie trois fois par jour."
+    },
+    {
+      "id": "loi",
+      "stage": "loi",
+      "reference": "Daniel 6.5-10",
+      "text": {
+        "agneaux": "Des hommes jaloux voulaient du mal à Daniel. Ils firent écrire une loi : « Interdit de prier quelqu'un d'autre que le roi ! »",
+        "bergers": "D'autres chefs étaient jaloux de Daniel. Ils cherchaient une faute contre lui, mais n'en trouvaient aucune ! Alors ils dirent au roi : « Ô roi, fais une loi : pendant trente jours, celui qui priera un autre que toi sera jeté dans la fosse aux lions. » Le roi signa la loi.",
+        "explorateurs": "Les chefs et les satrapes cherchèrent une occasion d'accuser Daniel, mais ils ne purent trouver aucune occasion, ni aucune chose à reprendre, parce qu'il était fidèle. Ils dirent : « Nous ne trouverons aucune occasion contre ce Daniel, à moins de la trouver dans la loi de son Dieu. » Ils obtinrent du roi un édit : quiconque, dans l'espace de trente jours, adresserait des prières à quelque dieu ou à quelque homme, excepté au roi, serait jeté dans la fosse aux lions."
+      },
+      "action": "Touche le rouleau de la loi."
+    },
+    {
+      "id": "fidele",
+      "stage": "fidele",
+      "reference": "Daniel 6.11-14",
+      "text": {
+        "agneaux": "Daniel continua à prier Dieu, comme avant. Les hommes jaloux le virent et allèrent le dire au roi.",
+        "bergers": "Daniel savait que la loi était signée. Mais il continua à prier Dieu trois fois par jour, à sa fenêtre ouverte, comme avant. Les hommes jaloux l'épiaient : ils le virent prier, et coururent le dire au roi. Le roi fut très triste, car il aimait Daniel.",
+        "explorateurs": "Lorsque Daniel sut que l'écrit était signé, il se retira dans sa maison et continua de prier comme auparavant. Ces hommes entrèrent tumultueusement, et ils trouvèrent Daniel qui priait et invoquait son Dieu. Ils dirent au roi : « Daniel ne tient aucun compte de toi, ô roi ! » Le roi fut très affligé, et il eut à cœur de délivrer Daniel."
+      },
+      "action": "Touche les hommes jaloux qui épient Daniel."
+    },
+    {
+      "id": "fosse",
+      "stage": "fosse",
+      "reference": "Daniel 6.17-18",
+      "text": {
+        "agneaux": "Daniel fut mis dans la fosse avec les lions. Le roi lui dit : « Que ton Dieu te sauve ! »",
+        "bergers": "Le roi ne pouvait pas changer sa loi. On jeta Daniel dans la fosse aux lions, et une grosse pierre en ferma l'entrée. Le roi dit à Daniel : « Puisse ton Dieu, que tu sers avec tant de fidélité, te délivrer ! » Cette nuit-là, le roi ne put ni manger ni dormir.",
+        "explorateurs": "Alors le roi donna l'ordre qu'on amenât Daniel, et qu'on le jetât dans la fosse aux lions. Le roi prit la parole et dit à Daniel : « Puisse ton Dieu, que tu sers avec persévérance, te délivrer ! » On apporta une pierre, et on la mit sur l'ouverture de la fosse. Le roi passa la nuit à jeun, et le sommeil s'enfuit de lui."
+      },
+      "action": "Fais glisser la pierre."
+    },
+    {
+      "id": "ange",
+      "stage": "ange",
+      "reference": "Daniel 6.23",
+      "text": {
+        "agneaux": "Dieu envoya son ange. Il ferma la gueule des lions, et ils se couchèrent tranquillement, comme de gros chats !",
+        "bergers": "Mais dans la fosse, Daniel n'était pas seul : Dieu envoya son ange, qui ferma la gueule des lions. Les lions ne lui firent aucun mal ! Ils se couchèrent tranquillement autour de lui toute la nuit.",
+        "explorateurs": "Dieu envoya son ange et ferma la gueule des lions, qui ne firent aucun mal à Daniel, parce qu'il avait été trouvé innocent devant Dieu."
+      },
+      "action": "Touche les lions pour qu'ils s'endorment."
+    },
+    {
+      "id": "matin",
+      "stage": "matin",
+      "reference": "Daniel 6.20-28",
+      "text": {
+        "agneaux": "Au matin, le roi courut à la fosse : « Daniel ! » Daniel répondit : « Mon Dieu m'a protégé ! » Le roi était si content !",
+        "bergers": "Au lever du jour, le roi courut à la fosse et cria : « Daniel, ton Dieu a-t-il pu te délivrer des lions ? » Daniel répondit : « Mon Dieu a envoyé son ange et fermé la gueule des lions. » Le roi, rempli de joie, fit sortir Daniel. Il n'avait pas une seule égratignure ! Le roi dit à tout le royaume : « Le Dieu de Daniel est le Dieu vivant ! »",
+        "explorateurs": "Le roi se leva au point du jour, et il alla en hâte à la fosse aux lions. Il appela Daniel d'une voix triste : « Daniel, serviteur du Dieu vivant, ton Dieu que tu sers avec persévérance a-t-il pu te délivrer des lions ? » Daniel dit : « Mon Dieu a envoyé son ange et fermé la gueule des lions, qui ne m'ont fait aucun mal. » Daniel fut retiré de la fosse, et on ne trouva sur lui aucune blessure, parce qu'il avait eu confiance en son Dieu."
+      },
+      "action": "Touche Daniel !",
+      "after": {
+        "all": "Comme Daniel, reste fidèle à Dieu : il est avec toi, même quand tu as peur."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "priere", "label": "Daniel prie" },
+        { "id": "loi", "label": "La loi du roi" },
+        { "id": "fidele", "label": "Toujours fidèle" },
+        { "id": "fosse", "label": "La fosse aux lions" },
+        { "id": "ange", "label": "L'ange de Dieu" },
+        { "id": "matin", "label": "Daniel est sauvé" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Dans la maison de Daniel, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "lion", "label": "le lion" },
+        { "id": "scroll", "label": "le rouleau" },
+        { "id": "crown", "label": "la couronne" },
+        { "id": "lamp", "label": "la lampe" },
+        { "id": "stone", "label": "le caillou" },
+        { "id": "owl", "label": "le hibou" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "coin", "label": "la pièce" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["lion", "crown", "scroll", "stone", "lamp", "moon"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Mon Dieu a envoyé son ange et fermé la gueule des lions, qui ne m'ont fait aucun mal.",
+    "reference": "Daniel 6.23",
+    "spoken": "Daniel, chapitre 6, verset 23 : Mon Dieu a envoyé son ange et fermé la gueule des lions, qui ne m'ont fait aucun mal.",
+    "chunks": {
+      "bergers": ["Mon Dieu a envoyé son ange", "et fermé la gueule des lions,", "qui ne m'ont fait aucun mal."],
+      "explorateurs": ["Mon Dieu", "a envoyé son ange", "et fermé", "la gueule des lions,", "qui ne m'ont fait aucun mal."]
+    },
+    "referenceChoices": ["Daniel 6.23", "Daniel 23.6", "Ruth 6.23"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "daniel", "title": "Les lions endormis" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Daniel. Voici ton autocollant pour ton album !"
+}

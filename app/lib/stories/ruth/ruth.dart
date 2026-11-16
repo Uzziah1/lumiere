@@ -209,7 +209,7 @@ void _glaner(Canvas canvas, Size s, StageView v) {
     paintThing(
       canvas,
       'wheat',
-      Rect.fromCenter(center: Offset.zero, width: s.height * 0.06, height: s.height * 0.1),
+      Rect.fromCenter(center: Offset.zero, width: s.height * 0.09, height: s.height * 0.15),
     );
     canvas.restore();
   }

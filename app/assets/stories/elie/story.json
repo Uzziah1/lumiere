@@ -1,0 +1,130 @@
+{
+  "id": "elie",
+  "title": "Élie et le feu du ciel",
+  "reference": "1 Rois 17 et 18",
+  "intro": "Élie et le feu du ciel. Une histoire de la Bible, dans le premier livre des Rois.",
+  "scenes": [
+    {
+      "id": "secheresse",
+      "stage": "secheresse",
+      "reference": "1 Rois 17.1",
+      "text": {
+        "agneaux": "Le roi Achab n'obéissait pas à Dieu. Le prophète Élie lui dit : « Il ne pleuvra plus, jusqu'à ce que Dieu le décide. »",
+        "bergers": "Le roi Achab et son peuple adoraient une fausse divinité, Baal, au lieu du vrai Dieu. Le prophète Élie vint dire au roi : « Aussi vrai que l'Éternel est vivant, il n'y aura ni rosée ni pluie pendant ces années, sauf quand je le dirai. » Et la terre devint toute sèche.",
+        "explorateurs": "Élie, le Thischbite, dit à Achab : « L'Éternel est vivant, le Dieu d'Israël, dont je suis le serviteur ! il n'y aura ces années-ci ni rosée ni pluie, sinon à ma parole. » Achab avait fait ce qui est mal aux yeux de l'Éternel, et il servait Baal."
+      },
+      "action": "Touche Élie !"
+    },
+    {
+      "id": "corbeaux",
+      "stage": "corbeaux",
+      "reference": "1 Rois 17.2-6",
+      "text": {
+        "agneaux": "Dieu cacha Élie près d'un petit ruisseau. Chaque matin et chaque soir, des corbeaux lui apportaient à manger !",
+        "bergers": "Dieu dit à Élie d'aller se cacher près du torrent de Kerith. Il buvait l'eau du torrent, et Dieu avait donné un ordre aux corbeaux : chaque matin et chaque soir, ils apportaient du pain et de la viande à Élie !",
+        "explorateurs": "La parole de l'Éternel fut adressée à Élie : « Pars d'ici, et cache-toi près du torrent de Kerith. Tu boiras de l'eau du torrent, et j'ai ordonné aux corbeaux de te nourrir là. » Les corbeaux lui apportaient du pain et de la viande le matin, et du pain et de la viande le soir, et il buvait de l'eau du torrent."
+      },
+      "action": "Touche les corbeaux pour qu'ils apportent le pain !"
+    },
+    {
+      "id": "veuve",
+      "stage": "veuve",
+      "reference": "1 Rois 17.8-16",
+      "text": {
+        "agneaux": "Une maman pauvre n'avait presque plus de farine ni d'huile. Elle partagea avec Élie, et Dieu fit un miracle : il en restait toujours !",
+        "bergers": "À Sarepta, Élie rencontra une veuve très pauvre. Il ne lui restait qu'une poignée de farine et un peu d'huile pour elle et son fils. Élie lui dit : « N'aie pas peur. Fais-moi d'abord un petit pain. Dieu promet que ta farine et ton huile ne finiront pas. » Elle obéit, et chaque jour, il y en eut encore !",
+        "explorateurs": "Élie dit à la veuve : « Ne crains point, rentre, fais comme tu as dit. Seulement, prépare-moi d'abord avec cela un petit gâteau. Car ainsi parle l'Éternel, le Dieu d'Israël : La farine qui est dans le pot ne manquera point et l'huile qui est dans la cruche ne diminuera point, jusqu'au jour où l'Éternel fera tomber de la pluie. » Elle alla, et elle fit selon la parole d'Élie."
+      },
+      "action": "Touche la jarre trois fois : elle ne se vide jamais !"
+    },
+    {
+      "id": "eau",
+      "stage": "eau",
+      "reference": "1 Rois 18.20-35",
+      "text": {
+        "agneaux": "Sur une montagne, les prophètes de Baal appelèrent leur faux dieu toute la journée. Rien ! Élie fit verser de l'eau sur son autel, trois fois.",
+        "bergers": "Sur le mont Carmel, Élie proposa : « Chacun prépare un autel. Le Dieu qui répondra par le feu, c'est lui le vrai Dieu ! » Les prophètes de Baal crièrent toute la journée : personne ne répondit. Alors Élie fit verser beaucoup d'eau sur son autel, trois fois de suite, jusqu'à remplir le fossé autour !",
+        "explorateurs": "Élie dit au peuple : « Jusqu'à quand clocherez-vous des deux côtés ? Si l'Éternel est Dieu, allez après lui. » Les prophètes de Baal invoquèrent Baal depuis le matin jusqu'au soir, mais il n'y eut ni voix ni réponse. Élie rebâtit l'autel de l'Éternel avec douze pierres et dit : « Remplissez d'eau quatre cruches, et versez-les sur l'holocauste et sur le bois. » Il dit : « Faites-le une seconde fois. » « Faites-le une troisième fois. »"
+      },
+      "action": "Touche l'autel trois fois pour verser l'eau."
+    },
+    {
+      "id": "feu",
+      "stage": "feu",
+      "reference": "1 Rois 18.36-39",
+      "text": {
+        "agneaux": "Élie pria. Et le feu de Dieu tomba du ciel sur l'autel ! Tout le monde cria : « C'est l'Éternel qui est Dieu ! »",
+        "bergers": "Élie pria simplement : « Éternel, montre aujourd'hui que tu es Dieu ! » Aussitôt, le feu de l'Éternel tomba du ciel. Il brûla tout : le bois, les pierres, et même l'eau ! Le peuple tomba à genoux et cria : « C'est l'Éternel qui est Dieu ! »",
+        "explorateurs": "Au moment de la présentation de l'offrande, Élie s'avança et dit : « Éternel, Dieu d'Abraham, d'Isaac et d'Israël ! que l'on sache aujourd'hui que tu es Dieu en Israël. Réponds-moi, Éternel ! » Et le feu de l'Éternel tomba, et il consuma l'holocauste, le bois, les pierres et la terre, et il absorba l'eau qui était dans le fossé. Quand tout le peuple vit cela, ils tombèrent sur leur visage et dirent : « C'est l'Éternel qui est Dieu ! »"
+      },
+      "action": "Touche le ciel quand Élie prie !"
+    },
+    {
+      "id": "pluie",
+      "stage": "pluie",
+      "reference": "1 Rois 18.41-45",
+      "text": {
+        "agneaux": "Élie pria pour la pluie. Son serviteur regarda la mer sept fois. Un petit nuage… puis une grosse pluie !",
+        "bergers": "Élie monta prier au sommet du Carmel. Il dit à son serviteur : « Va regarder du côté de la mer. » « Il n'y a rien. » Sept fois, il alla regarder. La septième fois : « Je vois un petit nuage, grand comme une main ! » Bientôt, le ciel devint tout noir, et une grosse pluie tomba sur la terre.",
+        "explorateurs": "Élie dit à son serviteur : « Monte, regarde du côté de la mer. » Le serviteur monta, il regarda, et dit : « Il n'y a rien. » Élie dit sept fois : « Retourne. » À la septième fois, il dit : « Voici un petit nuage qui s'élève de la mer, et qui est comme la paume de la main d'un homme. » En peu d'instants, le ciel fut obscurci par des nuages, le vent souffla, et il y eut une forte pluie."
+      },
+      "action": "Touche le serviteur sept fois pour qu'il regarde la mer !",
+      "after": {
+        "all": "Dieu prend soin de ceux qui lui font confiance, et il répond à la prière."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "secheresse", "label": "Plus de pluie" },
+        { "id": "corbeaux", "label": "Les corbeaux" },
+        { "id": "veuve", "label": "La farine et l'huile" },
+        { "id": "eau", "label": "L'eau sur l'autel" },
+        { "id": "feu", "label": "Le feu du ciel" },
+        { "id": "pluie", "label": "La pluie revient" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Près du torrent, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "raven", "label": "le corbeau" },
+        { "id": "bread", "label": "le pain" },
+        { "id": "jar", "label": "la jarre d'huile" },
+        { "id": "flame", "label": "la flamme" },
+        { "id": "stone", "label": "le caillou" },
+        { "id": "fish", "label": "le poisson" },
+        { "id": "snail", "label": "l'escargot" },
+        { "id": "tortoise", "label": "la tortue" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["raven", "bread", "jar", "altar", "flame", "crown"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "C'est l'Éternel qui est Dieu ! C'est l'Éternel qui est Dieu !",
+    "reference": "1 Rois 18.39",
+    "spoken": "Premier livre des Rois, chapitre 18, verset 39 : C'est l'Éternel qui est Dieu ! C'est l'Éternel qui est Dieu !",
+    "chunks": {
+      "bergers": ["C'est l'Éternel", "qui est Dieu !", "C'est l'Éternel qui est Dieu !"],
+      "explorateurs": ["C'est l'Éternel", "qui est Dieu !", "C'est l'Éternel", "qui est Dieu !"]
+    },
+    "referenceChoices": ["1 Rois 18.39", "1 Rois 39.18", "2 Rois 18.39"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "elie", "title": "Le feu du Carmel" },
+  "reward": "Bravo ! Tu as terminé l'histoire d'Élie. Voici ton autocollant pour ton album !"
+}

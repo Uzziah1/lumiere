@@ -24,6 +24,8 @@ import 'jericho/jericho.dart';
 import 'gedeon/gedeon.dart';
 import 'ruth/ruth.dart';
 import 'samuel/samuel.dart';
+import 'elie/elie.dart';
+import 'daniel/daniel.dart';
 import 'joseph/joseph.dart';
 import 'moise/moise.dart';
 import 'noe/noe_art.dart';
@@ -173,6 +175,8 @@ final Map<String, StoryPack> storyPacks = {
   'gedeon': gedeonPack,
   'ruth': ruthPack,
   'samuel': samuelPack,
+  'elie': eliePack,
+  'daniel': danielPack,
   'noe': StoryPack(
     stages: noeStages,
     paintThumb: paintNoeThumb,
