@@ -14,6 +14,8 @@ import '../test/helpers.dart';
 
 void main() {
   const id = String.fromEnvironment('STORY', defaultValue: 'creation');
+  // --dart-define=TARGETS=false pour une planche sans les zones à toucher.
+  const showTargets = bool.fromEnvironment('TARGETS', defaultValue: true);
   test('planche $id', () async {
     final pack = storyPacks[id]!;
     final story = loadStory(id);
@@ -31,7 +33,7 @@ void main() {
         canvas.clipRect(Offset.zero & cell);
         stage.script.paint(canvas, cell, view);
         // Zones à toucher.
-        for (final t in stage.script.targets) {
+        for (final t in showTargets ? stage.script.targets : const <Rect>[]) {
           canvas.drawRect(
             Rect.fromLTRB(
               t.left * cell.width,
