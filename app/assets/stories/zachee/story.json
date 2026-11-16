@@ -1,0 +1,130 @@
+{
+  "id": "zachee",
+  "title": "Zachée",
+  "reference": "Luc 19.1-10",
+  "intro": "Zachée. Une histoire de la Bible, dans le livre de Luc.",
+  "scenes": [
+    {
+      "id": "jericho",
+      "stage": "jericho",
+      "reference": "Luc 19.1-2",
+      "text": {
+        "agneaux": "Dans la ville de Jéricho vivait Zachée. Il prenait l'argent des gens pour les impôts, et il était très riche.",
+        "bergers": "Dans la ville de Jéricho vivait un homme appelé Zachée. Il était le chef de ceux qui récoltaient les impôts, et il était très riche. Mais les gens ne l'aimaient pas : il prenait souvent plus d'argent qu'il ne fallait.",
+        "explorateurs": "Jésus, étant entré dans Jéricho, traversait la ville. Et voici, un homme riche, appelé Zachée, chef des publicains, cherchait à voir qui était Jésus. Les publicains récoltaient les impôts, et beaucoup d'entre eux s'enrichissaient injustement."
+      },
+      "action": "Touche les pièces de Zachée."
+    },
+    {
+      "id": "foule",
+      "stage": "foule",
+      "reference": "Luc 19.3",
+      "text": {
+        "agneaux": "Jésus arrivait ! Zachée voulait le voir. Mais il était tout petit, et il y avait trop de monde.",
+        "bergers": "Un jour, Jésus traversa Jéricho. Zachée voulait voir qui était Jésus. Mais il y avait une grande foule, et Zachée était petit de taille : il ne voyait rien du tout !",
+        "explorateurs": "Zachée cherchait à voir qui était Jésus ; mais il ne le pouvait, à cause de la foule, car il était de petite taille."
+      },
+      "action": "Touche Zachée trois fois pour qu'il saute !"
+    },
+    {
+      "id": "arbre",
+      "stage": "arbre",
+      "reference": "Luc 19.4",
+      "text": {
+        "agneaux": "Alors Zachée courut devant et grimpa dans un grand arbre. De là-haut, il allait voir Jésus !",
+        "bergers": "Alors Zachée eut une idée : il courut en avant et grimpa dans un sycomore, un grand arbre au bord du chemin. Jésus devait passer par là !",
+        "explorateurs": "Il courut en avant, et monta sur un sycomore pour le voir, parce qu'il devait passer par là."
+      },
+      "action": "Fais glisser ton doigt vers le haut pour que Zachée grimpe !"
+    },
+    {
+      "id": "appel",
+      "stage": "appel",
+      "reference": "Luc 19.5-6",
+      "text": {
+        "agneaux": "Jésus s'arrêta sous l'arbre et leva les yeux : « Zachée, descends vite ! Je viens chez toi aujourd'hui. »",
+        "bergers": "Quand Jésus arriva sous l'arbre, il s'arrêta, leva les yeux et dit : « Zachée, descends vite, car aujourd'hui je dois venir chez toi. » Zachée descendit en vitesse et accueillit Jésus avec joie.",
+        "explorateurs": "Lorsque Jésus fut arrivé à cet endroit, il leva les yeux et lui dit : « Zachée, hâte-toi de descendre ; car il faut que je demeure aujourd'hui dans ta maison. » Zachée se hâta de descendre, et le reçut avec joie."
+      },
+      "action": "Touche Jésus !"
+    },
+    {
+      "id": "repas",
+      "stage": "repas",
+      "reference": "Luc 19.7",
+      "text": {
+        "agneaux": "Jésus alla manger chez Zachée. Les gens n'étaient pas contents : « Pourquoi va-t-il chez cet homme-là ? »",
+        "bergers": "Jésus alla dans la maison de Zachée. Mais les gens murmuraient : « Il est allé chez un homme qui fait le mal ! » Jésus, lui, aimait Zachée tel qu'il était.",
+        "explorateurs": "Voyant cela, tous murmuraient, et disaient : « Il est allé loger chez un homme pécheur. »"
+      },
+      "action": "Touche la table pour le repas !"
+    },
+    {
+      "id": "change",
+      "stage": "change",
+      "reference": "Luc 19.8-10",
+      "text": {
+        "agneaux": "Zachée changea son cœur. Il dit : « Je donne la moitié de mes richesses aux pauvres, et je rends l'argent pris ! »",
+        "bergers": "Zachée se leva et dit : « Seigneur, je donne la moitié de mes biens aux pauvres. Et si j'ai pris trop d'argent à quelqu'un, je lui rends quatre fois plus ! » Jésus dit : « Aujourd'hui, le salut est entré dans cette maison. »",
+        "explorateurs": "Zachée, debout devant le Seigneur, lui dit : « Voici, Seigneur, je donne aux pauvres la moitié de mes biens, et, si j'ai fait tort de quelque chose à quelqu'un, je lui rends le quadruple. » Jésus lui dit : « Le salut est entré aujourd'hui dans cette maison. Car le Fils de l'homme est venu chercher et sauver ce qui était perdu. »"
+      },
+      "action": "Touche chaque personne pour que Zachée lui donne une pièce !",
+      "after": {
+        "all": "Jésus aime chacun, et il peut changer notre cœur."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "jericho", "label": "Zachée le riche" },
+        { "id": "foule", "label": "Trop petit !" },
+        { "id": "arbre", "label": "Dans l'arbre" },
+        { "id": "appel", "label": "« Descends vite ! »" },
+        { "id": "repas", "label": "Le repas" },
+        { "id": "change", "label": "Un cœur nouveau" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Dans la rue de Jéricho, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "coin", "label": "la pièce" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "fruit", "label": "le fruit" },
+        { "id": "owl", "label": "le hibou" },
+        { "id": "jar", "label": "la jarre" },
+        { "id": "basket", "label": "le panier" },
+        { "id": "snail", "label": "l'escargot" },
+        { "id": "ladybug", "label": "la coccinelle" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["coin", "tree", "bread", "palm", "fruit", "city"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Car le Fils de l'homme est venu chercher et sauver ce qui était perdu.",
+    "reference": "Luc 19.10",
+    "spoken": "Luc, chapitre 19, verset 10 : Car le Fils de l'homme est venu chercher et sauver ce qui était perdu.",
+    "chunks": {
+      "bergers": ["Car le Fils de l'homme", "est venu chercher et sauver", "ce qui était perdu."],
+      "explorateurs": ["Car le Fils", "de l'homme", "est venu chercher", "et sauver", "ce qui était perdu."]
+    },
+    "referenceChoices": ["Luc 19.10", "Luc 10.19", "Jean 19.10"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "zachee", "title": "Le sycomore" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Zachée. Voici ton autocollant pour ton album !"
+}

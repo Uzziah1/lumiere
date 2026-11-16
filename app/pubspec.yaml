@@ -91,6 +91,10 @@ flutter:
     - assets/stories/tempete/audio/
     - assets/stories/pains/
     - assets/stories/pains/audio/
+    - assets/stories/zachee/
+    - assets/stories/zachee/audio/
+    - assets/stories/samaritain/
+    - assets/stories/samaritain/audio/
 
   fonts:
     - family: Fredoka

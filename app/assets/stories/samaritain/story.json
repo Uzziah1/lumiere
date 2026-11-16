@@ -1,0 +1,130 @@
+{
+  "id": "samaritain",
+  "title": "Le bon Samaritain",
+  "reference": "Luc 10.25-37",
+  "intro": "Le bon Samaritain. Une histoire que Jésus a racontée, dans le livre de Luc.",
+  "scenes": [
+    {
+      "id": "question",
+      "stage": "question",
+      "reference": "Luc 10.25-29",
+      "text": {
+        "agneaux": "Un homme demanda à Jésus : « Qui dois-je aimer comme moi-même ? » Alors Jésus raconta une histoire.",
+        "bergers": "Un maître de la loi demanda à Jésus ce qu'il fallait faire pour avoir la vie éternelle. Jésus lui répondit : « Aime Dieu de tout ton cœur, et aime ton prochain comme toi-même. » L'homme demanda : « Mais qui est mon prochain ? » Alors Jésus raconta une histoire.",
+        "explorateurs": "Un docteur de la loi se leva, et dit à Jésus, pour l'éprouver : « Maître, que dois-je faire pour hériter la vie éternelle ? » Jésus lui dit : « Qu'est-il écrit dans la loi ? » Il répondit : « Tu aimeras le Seigneur, ton Dieu, de tout ton cœur, et ton prochain comme toi-même. » Mais lui, voulant se justifier, dit à Jésus : « Et qui est mon prochain ? » Jésus reprit la parole par une histoire."
+      },
+      "action": "Touche Jésus pour écouter son histoire."
+    },
+    {
+      "id": "chemin",
+      "stage": "chemin",
+      "reference": "Luc 10.30",
+      "text": {
+        "agneaux": "Un homme voyageait sur une route. Des voleurs lui prirent tout et le laissèrent blessé au bord du chemin.",
+        "bergers": "« Un homme descendait de Jérusalem à Jéricho. En chemin, des brigands l'attaquèrent. Ils lui prirent ses affaires et s'enfuirent, en le laissant blessé au bord de la route. »",
+        "explorateurs": "« Un homme descendait de Jérusalem à Jéricho. Il tomba au milieu des brigands, qui le dépouillèrent, le chargèrent de coups, et s'en allèrent, le laissant à demi mort. »"
+      },
+      "action": "Fais glisser le voyageur sur la route."
+    },
+    {
+      "id": "pretre",
+      "stage": "pretre",
+      "reference": "Luc 10.31",
+      "text": {
+        "agneaux": "Un prêtre passa par là. Il vit l'homme blessé… et passa de l'autre côté de la route.",
+        "bergers": "« Un prêtre descendait par le même chemin. Il vit l'homme blessé, mais il passa de l'autre côté de la route et continua son voyage. »",
+        "explorateurs": "« Un sacrificateur, qui par hasard descendait par le même chemin, ayant vu cet homme, passa outre. »"
+      },
+      "action": "Fais glisser ton doigt pour voir le prêtre passer."
+    },
+    {
+      "id": "levite",
+      "stage": "levite",
+      "reference": "Luc 10.32",
+      "text": {
+        "agneaux": "Puis un autre homme du Temple passa. Lui non plus ne s'arrêta pas.",
+        "bergers": "« Ensuite, un Lévite, qui servait au Temple, arriva au même endroit. Il regarda l'homme blessé, puis passa lui aussi de l'autre côté. »",
+        "explorateurs": "« Un Lévite, qui arriva aussi dans ce lieu, l'ayant vu, passa outre. »"
+      },
+      "action": "Fais glisser ton doigt pour voir le Lévite passer."
+    },
+    {
+      "id": "soin",
+      "stage": "soin",
+      "reference": "Luc 10.33-34",
+      "text": {
+        "agneaux": "Enfin, un Samaritain arriva. Il s'arrêta, il eut pitié de l'homme, et il soigna ses blessures.",
+        "bergers": "« Mais un Samaritain, un homme venu d'un autre peuple, passa près de lui. Quand il le vit, il eut pitié de lui. Il s'approcha, versa de l'huile et du vin sur ses blessures, et les entoura de bandes. »",
+        "explorateurs": "« Mais un Samaritain, qui voyageait, étant venu là, fut ému de compassion lorsqu'il le vit. Il s'approcha, et banda ses plaies, en y versant de l'huile et du vin. »"
+      },
+      "action": "Touche les blessures pour aider le Samaritain à les soigner !"
+    },
+    {
+      "id": "auberge",
+      "stage": "auberge",
+      "reference": "Luc 10.34-37",
+      "text": {
+        "agneaux": "Le Samaritain l'emmena sur son âne jusqu'à une auberge. Jésus dit : « Fais comme lui : aide les autres ! »",
+        "bergers": "« Il le mit sur son âne, l'emmena à une auberge et prit soin de lui. Le lendemain, il donna de l'argent à l'aubergiste : “Occupe-toi de lui.” » Jésus demanda : « Lequel des trois a été le prochain de l'homme blessé ? » « Celui qui a eu pitié de lui. » Jésus dit : « Va, et toi, fais de même. »",
+        "explorateurs": "« Puis il le mit sur sa propre monture, le conduisit à une hôtellerie, et prit soin de lui. Le lendemain, il tira deux deniers, les donna à l'hôte, et dit : “Aie soin de lui.” » « Lequel de ces trois te semble avoir été le prochain de celui qui était tombé au milieu des brigands ? » « C'est celui qui a exercé la miséricorde envers lui. » Et Jésus lui dit : « Va, et toi, fais de même. »"
+      },
+      "action": "Touche l'âne trois fois pour arriver à l'auberge !",
+      "after": {
+        "all": "Va, et toi, fais de même : aide ceux qui ont besoin de toi."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "question", "label": "Qui est mon prochain ?" },
+        { "id": "chemin", "label": "Sur la route" },
+        { "id": "pretre", "label": "Le prêtre" },
+        { "id": "levite", "label": "Le Lévite" },
+        { "id": "soin", "label": "Le Samaritain" },
+        { "id": "auberge", "label": "L'auberge" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Sur la route de Jéricho, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "donkey", "label": "l'âne" },
+        { "id": "jar", "label": "la jarre d'huile" },
+        { "id": "coin", "label": "la pièce" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "lion", "label": "le lion" },
+        { "id": "tortoise", "label": "la tortue" },
+        { "id": "snail", "label": "l'escargot" },
+        { "id": "stone", "label": "le caillou" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["donkey", "jar", "coin", "city", "palm", "stone"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Tu aimeras le Seigneur, ton Dieu, de tout ton cœur, de toute ton âme, de toute ta force, et de toute ta pensée ; et ton prochain comme toi-même.",
+    "reference": "Luc 10.27",
+    "spoken": "Luc, chapitre 10, verset 27 : Tu aimeras le Seigneur, ton Dieu, de tout ton cœur, de toute ton âme, de toute ta force, et de toute ta pensée ; et ton prochain comme toi-même.",
+    "chunks": {
+      "bergers": ["Tu aimeras le Seigneur, ton Dieu,", "de tout ton cœur, de toute ton âme,", "de toute ta force, et de toute ta pensée ;", "et ton prochain comme toi-même."],
+      "explorateurs": ["Tu aimeras le Seigneur, ton Dieu,", "de tout ton cœur,", "de toute ton âme,", "de toute ta force,", "et de toute ta pensée ;", "et ton prochain comme toi-même."]
+    },
+    "referenceChoices": ["Luc 10.27", "Luc 27.10", "Matthieu 10.27"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "samaritain", "title": "Le bon Samaritain" },
+  "reward": "Bravo ! Tu as terminé l'histoire du bon Samaritain. Voici ton autocollant pour ton album !"
+}
