@@ -106,7 +106,8 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                               child: PaperButton(
                                 label: 'Jouer',
                                 icon: Icons.play_arrow_rounded,
-                                onPressed: () => context.push('/bientot/carte'),
+                                // La carte du monde arrive à l'étape L2 : en attendant, Noé.
+                                onPressed: () => context.push('/histoire/noe'),
                               ),
                             ),
                           ),

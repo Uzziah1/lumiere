@@ -172,7 +172,7 @@ le web et l'APK téléchargeable sont gratuits.
 | Étape | Contenu | Livrable |
 |---|---|---|
 | **L0 — Socle** ✅ | Projet Flutter + Flame, structure, thème « papier découpé », typo, CI, page de démarrage animée avec Colombe | Appli qui s'ouvre, belle, sur Android et web |
-| **L1 — Noé (tranche verticale)** | Récit animé complet, 3 mini-jeux (chronologie, cherche et trouve, memory), verset, récompenses, narration Piper | Une histoire parfaite de bout en bout |
+| **L1 — Noé (tranche verticale)** ✅ | Récit animé complet, 3 mini-jeux (chronologie, cherche et trouve, memory), verset, récompenses, narration Piper | Une histoire parfaite de bout en bout |
 | **L2 — Carte et progression** | Carte du monde, îles, étoiles, profils, sauvegarde, trois âges | Le jeu « tient debout » |
 | **L3 — Lot 1** | 7 histoires de plus, tous les types de mini-jeux, album d'autocollants, l'arche-trésor | MVP jouable |
 | **L4 — Parents et publication** | Espace parents, limites de temps, accessibilité, page de confidentialité, PWA, APK | Bêta publique |
@@ -190,9 +190,13 @@ Une étape à la fois, validée par Uzziah avant la suivante.
 | nov. 2026 | Flutter + Flame, aucun serveur en V1 |
 | nov. 2026 | Style « papier découpé lumineux » dessiné en code ; Colombe porte le rameau d'olivier |
 | nov. 2026 | Jeu à l'horizontale ; polices Fredoka (titres) et Andika (texte) intégrées à l'appli |
+| nov. 2026 | Narration : voix Piper « siwis » (féminine, française), un peu ralentie ; sous-titres sauf pour les Agneaux |
+| nov. 2026 | Bruitages synthétisés en code (aucune banque de sons) ; pas encore de musique |
+| nov. 2026 | Noé : verset Genèse 9.13 ; en attendant les profils (L2), l'âge se choisit au début de l'histoire |
 
 ## 14. Questions ouvertes
 
 - Nom définitif et disponibilité (stores, domaine).
-- Relecteur doctrinal (pasteur) pour les textes.
+- Relecteur doctrinal (pasteur) pour les textes ; vérifier le texte exact des versets dans une Louis Segond 1910.
+- Musique d'ambiance libre (CC0) à choisir.
 - Bénévoles pour les voix réelles, plus tard.

@@ -64,24 +64,55 @@ et ressources libres, ou produits par nous.
 
 - `main.dart`, `app.dart`, `router.dart`
 - `theme/` : palette et styles de texte
-- `art/` : dessin (papier, paysage, Colombe) — fonctions pures, testées sans écran
+- `art/` : dessin (papier, paysage, Colombe, personnages `people.dart`, animaux `animals.dart`, arche `ark.dart`,
+  météo `weather.dart`) — fonctions pures, testées sans écran. Planche de tous les dessins :
+  `flutter test tool/art_sheet_test.dart` → `build/art_sheet.png`
 - `home/` : accueil (`HomeScreen` + scène Flame `HomeScene`)
+- `story/` : moteur d'histoire, commun à toutes les histoires — modèle (`Story`, `NarratedText`, `AgeGroup`),
+  chargement (`StoryRepository`), `StorySession` (histoire + âge + voix), théâtre Flame (`StoryGame`,
+  `StoryStage`, `HintRing`, `Sparkles`), écrans (`StoryScreen` : intro/âge → `RecitView` → `StoryHub` →
+  jeux → `StoryReward`)
+- `games/` : mini-jeux génériques (`ChronologyGame`, `SeekGame`, `MemoryGame`, `VerseGame`) dans un `GameFrame`
+- `stories/` : le code propre à chaque histoire (`registry.dart` : `StoryPack` = décors, vignettes,
+  scène de cache-cache, autocollant) ; `stories/noe/` pour Noé
+- `audio/` : `Narrator` et `SoundEffects` (audioplayers ; versions muettes pour les tests), `AudioScope`
 - `screens/` : autres écrans (`ComingSoonScreen` pour les rubriques à venir)
-- `widgets/` : composants d'interface réutilisables
+- `widgets/` : composants d'interface réutilisables (`PaperButton`, `RoundPaperButton`, `ColombeBubble`…)
+
+## Histoires : données, décors, narration
+
+- Une histoire = un dossier **`app/assets/stories/<id>/`** : `story.json` (scènes, textes par âge, jeux, verset,
+  autocollant) + `audio/` (narration générée). Une phrase narrée est une chaîne (tous âges) ou un objet
+  `{"all", "agneaux", "bergers", "explorateurs"}` ; clés audio : `<clé>.<variante>.mp3` (voir `Story.fromJson`).
+- Le code de l'histoire va dans `lib/stories/<id>/` et s'inscrit dans `storyPacks` (`lib/stories/registry.dart`).
+  Chaque décor (`StoryStage`) : dessine sa scène, dit où toucher (`hintTarget`, toujours au-dessus des
+  sous-titres, < 85 % de la hauteur) et appelle `complete()` quand l'action est faite. `layout()` peut être
+  rappelé : ne remet rien à zéro si la taille ne change pas.
+- **Narration** : `python tools/narration/generate.py --voice <fr_FR-siwis-medium.onnx>` (Piper + ffmpeg),
+  régénère seulement les phrases modifiées (`tools/narration/manifest.json`). À relancer après toute
+  modification d'un texte ; le test `story_data_test.dart` échoue si un fichier audio manque.
+- **Bruitages** : synthétisés par `python tools/sfx/generate.py` (numpy + ffmpeg), dans `app/assets/audio/sfx/`.
+- **Versets** : texte exact de la Louis Segond 1910, à vérifier dans une Bible papier avant publication.
+- Phrases communes de Colombe (encouragements, indices) : `app/assets/lines/common.json`.
 
 ## Tests
 
 - `flutter test` depuis `app/` : widgets (navigation, mise en page petit téléphone portrait/paysage,
   réduire les animations), scènes Flame (`flame_test`), fonctions de dessin.
 - Les écrans animés ne « se posent » jamais : avancer le temps avec `tester.pump(durée)`, pas `pumpAndSettle`.
+- Sons muets dans les tests : `LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects())`,
+  ou `inSession(...)` (`test/helpers.dart`) pour un jeu seul. Les tests qui chargent les assets font
+  `setUp(rootBundle.clear)`.
 - CI GitHub (`.github/workflows/ci.yml`) : analyse, tests, build web et APK à chaque push.
 
 ## Feuille de route
 
-- **L0 — Socle** ✅ (à valider par Uzziah) : projet Flutter + Flame, thème papier découpé, polices, accueil animé
+- **L0 — Socle** ✅ : projet Flutter + Flame, thème papier découpé, polices, accueil animé
   (aube, collines, palmiers, village, poussière dorée, Colombe qu'on peut toucher), icônes, CI.
-- **L1 — Noé (tranche verticale)** : récit animé, 3 mini-jeux (chronologie, cherche et trouve, memory), verset,
-  récompenses, narration Piper.
+- **L1 — Noé (tranche verticale)** ✅ (à valider par Uzziah) : choix de l'âge, récit animé de 8 scènes interactives
+  (Genèse 6–9) raconté par Piper avec sous-titres et indices, 3 mini-jeux (chronologie, cache-cache, memory),
+  verset Genèse 9.13 selon l'âge, 5 étoiles et autocollant, bruitages synthétisés. « Jouer » ouvre Noé en
+  attendant la carte (L2) ; rien n'est encore sauvegardé.
 - **L2** : carte du monde, îles, étoiles, profils, sauvegarde, trois âges.
 - **L3** : lot 1 (8 histoires de l'Ancien Testament), tous les mini-jeux, album, l'arche-trésor.
 - **L4** : espace parents, limites de temps, accessibilité, confidentialité, PWA et APK publics.

@@ -40,8 +40,25 @@ Les icônes (Android, iOS, web) sont dessinées à partir de Colombe :
 flutter test tool/render_icons_test.dart
 ```
 
+## Narration et bruitages
+
+La narration est générée hors ligne avec [Piper](https://github.com/rhasspy/piper) (voix libre
+`fr_FR-siwis-medium`) ; les bruitages sont synthétisés. Après avoir modifié un texte d'histoire :
+
+```bash
+pip install piper-tts numpy
+```
+
+```bash
+python tools/narration/generate.py --voice chemin/vers/fr_FR-siwis-medium.onnx
+```
+
+(Voix à télécharger depuis [piper-voices](https://huggingface.co/rhasspy/piper-voices/tree/main/fr/fr_FR/siwis/medium) ;
+ffmpeg doit être installé.)
+
 ## Licences et crédits
 
 - Polices : [Fredoka](https://fonts.google.com/specimen/Fredoka) et [Andika](https://software.sil.org/andika/)
   (SIL Open Font License, textes dans `app/assets/fonts/`).
 - Textes bibliques : Louis Segond 1910 (domaine public).
+- Voix : Piper, voix `fr_FR-siwis-medium` (jeu de données SIWIS, licence libre).

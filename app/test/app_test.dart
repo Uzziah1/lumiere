@@ -1,5 +1,8 @@
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:lumiere/app.dart';
+import 'package:lumiere/audio/audio.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lumiere/widgets/paper_button.dart';
 import 'package:material_ui/material_ui.dart';
 
@@ -12,6 +15,10 @@ Future<void> settle(WidgetTester tester, [int frames = 30]) async {
 }
 
 void main() {
+  // Le cache des assets garde des Futures nés dans la « fausse horloge » d'un
+  // test précédent : on le vide pour que chaque test relise les fichiers.
+  setUp(rootBundle.clear);
+
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
   });
@@ -20,7 +27,7 @@ void main() {
     tester.view.physicalSize = size;
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
-    await tester.pumpWidget(const LumiereApp());
+    await tester.pumpWidget(LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects()));
     await settle(tester);
   }
 
@@ -33,16 +40,31 @@ void main() {
     expect(find.widgetWithText(PaperButton, 'Parents'), findsOneWidget);
   });
 
-  testWidgets('« Jouer » mène à la carte (bientôt), « Retour » ramène à l’accueil', (tester) async {
+  testWidgets('« Jouer » ouvre l’histoire de Noé, la croix ramène à l’accueil', (tester) async {
     await openApp(tester);
 
     await tester.tap(find.text('Jouer'));
+    for (var i = 0; i < 40 && find.text('Noé et l\'arche').evaluate().isEmpty; i++) {
+      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 50)));
+      await tester.pump(const Duration(milliseconds: 50));
+    }
+    await settle(tester);
+    expect(find.text('Noé et l\'arche'), findsOneWidget);
+    expect(find.textContaining('Quel âge as-tu ?'), findsOneWidget);
+
+    await tester.tap(find.bySemanticsLabel('Retour à l’accueil'));
+    await settle(tester);
+    expect(find.text('Jouer'), findsOneWidget);
+  });
+
+  testWidgets('la carte (bientôt) reste accessible par son adresse', (tester) async {
+    await openApp(tester);
+    final router = GoRouter.of(tester.element(find.text('Jouer')));
+    router.push('/bientot/carte');
     await settle(tester);
     expect(find.text('Ton voyage se prépare !'), findsOneWidget);
-
     await tester.tap(find.text('Retour'));
     await settle(tester);
-    expect(find.text('Ton voyage se prépare !'), findsNothing);
     expect(find.text('Jouer'), findsOneWidget);
   });
 
@@ -69,7 +91,10 @@ void main() {
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
     await tester.pumpWidget(
-      const MediaQuery(data: MediaQueryData(disableAnimations: true), child: LumiereApp()),
+      MediaQuery(
+        data: const MediaQueryData(disableAnimations: true),
+        child: LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects()),
+      ),
     );
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 16));
