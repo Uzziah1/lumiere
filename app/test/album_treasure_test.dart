@@ -76,6 +76,33 @@ void main() {
     expect(find.textContaining(RegExp('Termine l’histoire .*David et Goliath')), findsOneWidget);
   });
 
+  testWidgets('le jardin du Nouveau Testament : ses amis, et le passage vers l’arche', (tester) async {
+    final state = await open(tester, '/jardin');
+    expect(find.text('Mon jardin'), findsOneWidget);
+    expect(find.textContaining('0 ami sur 10'), findsOneWidget);
+    state.earnSticker('naissance');
+    await frames(tester, 4);
+    expect(find.textContaining('1 ami sur 10'), findsOneWidget);
+
+    await tester.tap(find.byKey(const ValueKey('friend-naissance')));
+    await frames(tester, 12);
+    expect(find.textContaining('Voici l’étoile'), findsOneWidget);
+
+    await tester.tap(find.byKey(const ValueKey('friend-paques')));
+    await frames(tester, 4);
+    expect(find.textContaining(RegExp('Termine l’histoire .*Pâques')), findsOneWidget);
+
+    await tester.tap(find.byKey(const ValueKey('treasure-switch')));
+    await frames(tester);
+    expect(find.text('Mon arche'), findsOneWidget);
+  });
+
+  testWidgets('le jardin tient sur un petit téléphone', (tester) async {
+    await open(tester, '/jardin', size: const Size(640, 360));
+    expect(tester.takeException(), isNull);
+    expect(find.text('Mon jardin'), findsOneWidget);
+  });
+
   testWidgets('album et arche tiennent sur un petit téléphone, et ramènent à la carte', (tester) async {
     await open(tester, '/tresor', size: const Size(640, 360));
     expect(tester.takeException(), isNull);

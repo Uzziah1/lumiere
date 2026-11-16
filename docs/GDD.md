@@ -112,7 +112,7 @@ corps, plusieurs têtes, vêtements, accessoires), assemblés et animés dans le
 - **Narration** : voix française synthétisée hors ligne avec **Piper** (moteur libre, voix neuronales françaises),
   générée en fichiers audio au moment du build, donc aucun réseau nécessaire en jeu. Plus tard : remplacement
   progressif par de vraies voix bénévoles (conteuse d'église, enfants) enregistrées au téléphone.
-- **Musique** : morceaux libres de droits (CC0 / CC-BY, crédités dans « À propos »), douces, une par grand chapitre.
+- **Musique** : synthétisée en code (kalimba, balafon, shaker, nappes), douce, une boucle par type d'écran (accueil, carte, récit, jeux).
 - **Bruitages** : packs CC0 (Kenney, Freesound CC0).
 - Réglages séparés : narration, musique, effets.
 
@@ -191,7 +191,7 @@ Une étape à la fois, validée par Uzziah avant la suivante.
 | nov. 2026 | Style « papier découpé lumineux » dessiné en code ; Colombe porte le rameau d'olivier |
 | nov. 2026 | Jeu à l'horizontale ; polices Fredoka (titres) et Andika (texte) intégrées à l'appli |
 | nov. 2026 | Narration : voix Piper « siwis » (féminine, française), un peu ralentie ; sous-titres sauf pour les Agneaux |
-| nov. 2026 | Bruitages synthétisés en code (aucune banque de sons) ; pas encore de musique |
+| nov. 2026 | Bruitages synthétisés en code (aucune banque de sons) |
 | nov. 2026 | Noé : verset Genèse 9.13 |
 | nov. 2026 | Voix de narration définitive : Piper « siwis » |
 | nov. 2026 | Profils : 4 au plus, prénom + âge + animal ; modifier/supprimer derrière la barrière parentale |
@@ -201,11 +201,16 @@ Une étape à la fois, validée par Uzziah avant la suivante.
 | nov. 2026 | Espace parents : progression, réglages (voix, bruitages, sous-titres, animations, grand texte), limite quotidienne 15 à 90 min avec « À demain » et temps offert par un parent |
 | nov. 2026 | Publication gratuite : jeu web hors ligne sur GitHub Pages, APK sur les Releases GitHub ; Play Store plus tard (25 $) |
 | nov. 2026 | Récits délicats (la chute, Goliath, la mer qui se referme) racontés sans peur : on montre la chute de Goliath « face contre terre », jamais de violence |
+| nov. 2026 | Musique : quatre boucles synthétisées en code (kalimba, balafon, shaker), une par type d'écran ; elle baisse pendant la narration ; réglable chez les parents |
+| nov. 2026 | Lot 2 (Nouveau Testament) : six scènes par histoire ; versets Luc 2.11, Luc 2.52, Matthieu 3.17, Marc 4.41, Jean 6.35, Luc 19.10, Luc 10.27, Luc 15.24, Luc 24.6, Actes 1.8 (début) |
+| nov. 2026 | Pâques : la croix vue de loin, en silhouette, au crépuscule ; aucun détail de souffrance ; on termine sur le tombeau vide et Jésus vivant |
+| nov. 2026 | Le lot 2 s'ouvre dès le départ (sa première île est ouverte, comme celle du lot 1) |
+| nov. 2026 | Jardin-trésor : un ami par histoire du Nouveau Testament (étoile, rouleau, oiseau, bateau, pain, arbre, âne, cochon, fleur, flamme) ; on passe de l'arche au jardin par un bouton |
 
 ## 14. Questions ouvertes
 
 - Nom définitif et disponibilité (stores, domaine).
 - Relecteur doctrinal (pasteur) pour les textes ; vérifier le texte exact des versets dans une Louis Segond 1910
-  (en particulier Genèse 50.20 et Jonas 2.10 : citation partielle et numérotation).
-- Musique d'ambiance libre (CC0) à choisir.
+  (en particulier Genèse 50.20 et Jonas 2.10 : citation partielle et numérotation ; Luc 2.11, Matthieu 3.17,
+  Luc 15.24 et Actes 1.8 sont des citations partielles, avec une majuscule au début).
 - Bénévoles pour les voix réelles, plus tard.

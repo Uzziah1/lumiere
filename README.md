@@ -46,10 +46,11 @@ Les icônes (Android, iOS, web) sont dessinées à partir de Colombe :
 flutter test tool/render_icons_test.dart
 ```
 
-## Narration et bruitages
+## Narration, bruitages et musique
 
 La narration est générée hors ligne avec [Piper](https://github.com/rhasspy/piper) (voix libre
-`fr_FR-siwis-medium`) ; les bruitages sont synthétisés. Après avoir modifié un texte d'histoire :
+`fr_FR-siwis-medium`) ; les bruitages et la musique sont synthétisés en code
+(`tools/sfx/generate.py`, `tools/music/generate.py`). Après avoir modifié un texte d'histoire :
 
 ```bash
 pip install piper-tts numpy

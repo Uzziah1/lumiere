@@ -32,6 +32,10 @@ GoRouter buildRouter() {
       GoRoute(path: '/album', pageBuilder: (context, state) => _fade(state, const AlbumScreen())),
       GoRoute(path: '/tresor', pageBuilder: (context, state) => _fade(state, const TreasureScreen())),
       GoRoute(
+        path: '/jardin',
+        pageBuilder: (context, state) => _fade(state, const TreasureScreen(garden: true)),
+      ),
+      GoRoute(
         path: '/histoire/:id',
         redirect: (context, state) => storyPacks.containsKey(state.pathParameters['id']) ? null : '/',
         pageBuilder: (context, state) {

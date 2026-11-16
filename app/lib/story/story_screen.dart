@@ -201,6 +201,7 @@ class StoryScreenState extends State<StoryScreen> {
             stars: stars.length,
             homeLabel: _fromProfile ? 'La carte' : 'Accueil',
             friend: _fromProfile ? islandFor(widget.storyId)?.treasure : null,
+            inGarden: islandFor(widget.storyId)?.lot == 2,
             onHome: _home,
             onReplay: () => _go(StoryPhase.hub),
           ),

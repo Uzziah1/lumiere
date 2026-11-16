@@ -15,9 +15,13 @@ import '../widgets/colombe_bubble.dart';
 import '../widgets/round_button.dart';
 import 'world.dart';
 
-/// L'arche-trésor : chaque histoire terminée y fait entrer un nouvel ami.
+/// L'arche-trésor (Ancien Testament) et le jardin (Nouveau Testament) : chaque
+/// histoire terminée y fait venir un nouvel ami.
 class TreasureScreen extends StatefulWidget {
-  const TreasureScreen({super.key});
+  const TreasureScreen({super.key, this.garden = false});
+
+  /// Le jardin du Nouveau Testament plutôt que l'arche.
+  final bool garden;
 
   @override
   State<TreasureScreen> createState() => TreasureScreenState();
@@ -41,8 +45,10 @@ class TreasureScreenState extends State<TreasureScreen> with SingleTickerProvide
         return;
       }
       AudioScope.of(context).narrator.play(
-        commonAudioPath('treasure', 'all'),
-        text: 'Voici ton arche ! Chaque histoire terminée y fait entrer un nouvel ami.',
+        commonAudioPath(widget.garden ? 'garden' : 'treasure', 'all'),
+        text: widget.garden
+            ? 'Voici ton jardin ! Chaque histoire de Jésus terminée y fait venir un nouvel ami.'
+            : 'Voici ton arche ! Chaque histoire terminée y fait entrer un nouvel ami.',
       );
     });
   }
@@ -84,8 +90,11 @@ class TreasureScreenState extends State<TreasureScreen> with SingleTickerProvide
   Widget build(BuildContext context) {
     final state = GameScope.of(context);
     if (state.current == null) return const Scaffold(backgroundColor: Palette.paper);
-    final earned = {for (final i in lot1) i.id: state.progress(i.id).sticker};
+    final garden = widget.garden;
+    final islands = garden ? lot2 : lot1;
+    final earned = {for (final i in islands) i.id: state.progress(i.id).sticker};
     final count = earned.values.where((e) => e).length;
+    final place = garden ? 'ton jardin' : 'ton arche';
     return Scaffold(
       backgroundColor: const Color(0xFF8CCFE6),
       body: LayoutBuilder(
@@ -96,22 +105,22 @@ class TreasureScreenState extends State<TreasureScreen> with SingleTickerProvide
           final arkW = math.min(size.width * 0.9, size.height * 1.5);
           final arkH = arkW / Ark.aspectRatio;
           final ark = Rect.fromLTWH((size.width - arkW) / 2, size.height * 0.94 - arkH, arkW, arkH);
-          final cells = _cells(ark);
+          final cells = garden ? _gardenCells(size, compact) : _cells(ark);
           return Stack(
             children: [
-              Positioned.fill(child: CustomPaint(painter: _ArkInside(ark))),
-              for (var i = 0; i < lot1.length; i++)
+              Positioned.fill(child: CustomPaint(painter: garden ? _Garden(cells) : _ArkInside(ark))),
+              for (var i = 0; i < islands.length; i++)
                 Positioned.fromRect(
                   rect: cells[i],
                   child: AnimatedBuilder(
                     animation: _ambient,
                     builder: (context, _) => _Friend(
-                      key: ValueKey('friend-${lot1[i].id}'),
-                      island: lot1[i],
-                      earned: earned[lot1[i].id]!,
-                      hop: _hopping == lot1[i].id,
+                      key: ValueKey('friend-${islands[i].id}'),
+                      island: islands[i],
+                      earned: earned[islands[i].id]!,
+                      hop: _hopping == islands[i].id,
                       bob: math.sin(_ambient.value * math.pi * 2 + i) * 2,
-                      onTap: () => tapFriend(lot1[i], earned[lot1[i].id]!),
+                      onTap: () => tapFriend(islands[i], earned[islands[i].id]!),
                     ),
                   ),
                 ),
@@ -128,17 +137,33 @@ class TreasureScreenState extends State<TreasureScreen> with SingleTickerProvide
                 ),
               ),
               Positioned(
+                right: 12,
+                top: 8,
+                child: SafeArea(
+                  child: RoundPaperButton(
+                    key: const ValueKey('treasure-switch'),
+                    icon: garden ? Icons.sailing_rounded : Icons.local_florist_rounded,
+                    label: garden ? 'Mon arche' : 'Mon jardin',
+                    size: compact ? 44 : 54,
+                    onPressed: () => context.go(garden ? '/tresor' : '/jardin'),
+                  ),
+                ),
+              ),
+              Positioned(
                 left: 80,
-                right: 16,
+                right: 80,
                 top: 10,
                 child: SafeArea(
                   child: Column(
                     children: [
-                      Text('Mon arche', style: LumiereText.title(compact ? 24 : 34, color: Palette.ink)),
+                      Text(
+                        garden ? 'Mon jardin' : 'Mon arche',
+                        style: LumiereText.title(compact ? 24 : 34, color: Palette.ink),
+                      ),
                       const SizedBox(height: 4),
                       ColombeBubble(
                         text:
-                            _bubble ?? '$count ami${count > 1 ? 's' : ''} sur ${lot1.length} dans ton arche',
+                            _bubble ?? '$count ami${count > 1 ? 's' : ''} sur ${islands.length} dans $place',
                         size: compact ? 30 : 40,
                       ),
                     ],
@@ -150,6 +175,17 @@ class TreasureScreenState extends State<TreasureScreen> with SingleTickerProvide
         },
       ),
     );
+  }
+
+  /// Dix massifs : deux rangées de cinq, sous le titre.
+  static List<Rect> _gardenCells(Size size, bool compact) {
+    final cell = math.min(size.width / 7, size.height * (compact ? 0.24 : 0.22));
+    final gap = (size.width - cell * 5) / 6;
+    final rows = [size.height * 0.5, size.height * 0.78];
+    return [
+      for (final y in rows)
+        for (var k = 0; k < 5; k++) Rect.fromLTWH(gap + k * (cell + gap), y - cell / 2, cell, cell),
+    ];
   }
 
   /// Huit cabines : deux étages de quatre, dans la coque et la cabine de l'arche.
@@ -228,6 +264,95 @@ class _FriendPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_FriendPainter oldDelegate) => oldDelegate.id != id || oldDelegate.earned != earned;
+}
+
+/// Le jardin : ciel du matin, collines, allée et un massif sous chaque ami.
+class _Garden extends CustomPainter {
+  _Garden(this.cells);
+
+  final List<Rect> cells;
+  final _grain = PaperGrain(opacity: 0.05);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawRect(
+      Offset.zero & size,
+      Paint()
+        ..shader = const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Color(0xFFFFD9A8), Color(0xFFCDE8EE), Color(0xFFBFE3B4)],
+        ).createShader(Offset.zero & size),
+    );
+    canvas.drawCircle(
+      Offset(size.width * 0.86, size.height * 0.18),
+      size.height * 0.08,
+      Paint()..color = Palette.sun,
+    );
+    for (final (top, color) in [(0.3, const Color(0xFF9BCB7A)), (0.38, const Color(0xFF7DB860))]) {
+      drawPaper(
+        canvas,
+        Path()
+          ..moveTo(0, size.height)
+          ..lineTo(0, size.height * (top + 0.06))
+          ..quadraticBezierTo(
+            size.width * 0.3,
+            size.height * (top - 0.06),
+            size.width * 0.6,
+            size.height * top,
+          )
+          ..quadraticBezierTo(size.width * 0.85, size.height * (top + 0.05), size.width, size.height * top)
+          ..lineTo(size.width, size.height)
+          ..close(),
+        color,
+        elevation: 4,
+      );
+    }
+    // L'allée de sable entre les deux rangées.
+    drawPaper(
+      canvas,
+      Path()..addRect(Rect.fromLTWH(0, size.height * 0.62, size.width, size.height * 0.05)),
+      const Color(0xFFEBD3A0),
+      elevation: 2,
+    );
+    for (final fx in [0.03, 0.97]) {
+      paintThing(
+        canvas,
+        fx < 0.5 ? 'palm' : 'tree',
+        Rect.fromCenter(
+          center: Offset(size.width * fx, size.height * 0.46),
+          width: size.height * 0.24,
+          height: size.height * 0.34,
+        ),
+      );
+    }
+    // Un massif de terre fleurie sous chaque ami.
+    for (final c in cells) {
+      final bed = Rect.fromCenter(
+        center: Offset(c.center.dx, c.bottom - c.height * 0.06),
+        width: c.width * 1.1,
+        height: c.height * 0.3,
+      );
+      drawPaper(canvas, Path()..addOval(bed), const Color(0xFF8A5A36), elevation: 3);
+      drawPaper(
+        canvas,
+        Path()..addOval(bed.deflate(bed.height * 0.12)),
+        const Color(0xFF5E9B45),
+        elevation: 1,
+      );
+      for (final dx in [-0.42, 0.42]) {
+        canvas.drawCircle(
+          Offset(bed.center.dx + bed.width * dx, bed.center.dy),
+          bed.height * 0.14,
+          Paint()..color = const Color(0xFFF28FB0),
+        );
+      }
+    }
+    _grain.paint(canvas, size);
+  }
+
+  @override
+  bool shouldRepaint(_Garden oldDelegate) => oldDelegate.cells != cells;
 }
 
 class _ArkInside extends CustomPainter {

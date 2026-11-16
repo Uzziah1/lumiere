@@ -19,6 +19,7 @@ class StoryReward extends StatefulWidget {
     required this.onHome,
     this.homeLabel = 'Accueil',
     this.friend,
+    this.inGarden = false,
   });
 
   final int stars;
@@ -28,6 +29,9 @@ class StoryReward extends StatefulWidget {
 
   /// L'ami qui rejoint l'arche-trésor (identifiant d'objet), s'il y en a un.
   final String? friend;
+
+  /// L'ami va dans le jardin (Nouveau Testament) plutôt que dans l'arche.
+  final bool inGarden;
   final VoidCallback onReplay;
   final VoidCallback onHome;
 
@@ -53,7 +57,9 @@ class _StoryRewardState extends State<StoryReward> with SingleTickerProviderStat
       final session = StorySession.of(context);
       session.sfx.play(Sfx.star);
       session.say('reward').then((_) {
-        if (mounted && widget.friend != null) session.say('new_friend');
+        if (mounted && widget.friend != null) {
+          session.say(widget.inGarden ? 'new_friend_garden' : 'new_friend');
+        }
       });
     }
   }
@@ -138,7 +144,7 @@ class _StoryRewardState extends State<StoryReward> with SingleTickerProviderStat
                               ),
                               const SizedBox(width: 8),
                               Text(
-                                'Nouvel ami dans ton arche : ${thingLabel(widget.friend!)}',
+                                'Nouvel ami dans ton ${widget.inGarden ? 'jardin' : 'arche'} : ${thingLabel(widget.friend!)}',
                                 style: LumiereText.text(
                                   compact ? 15 : 18,
                                   bold: true,

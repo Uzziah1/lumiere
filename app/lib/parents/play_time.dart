@@ -15,7 +15,11 @@ import '../widgets/parental_gate.dart';
 
 /// Les écrans où l'on compte le temps de jeu (pas l'accueil ni l'espace parents).
 bool countsAsPlay(String path) =>
-    path == '/carte' || path == '/album' || path == '/tresor' || path.startsWith('/histoire/');
+    path == '/carte' ||
+    path == '/album' ||
+    path == '/tresor' ||
+    path == '/jardin' ||
+    path.startsWith('/histoire/');
 
 /// Compte le temps de jeu de l'enfant actif et, si les parents ont fixé une
 /// limite, prévient deux minutes avant puis affiche « À demain ! ».

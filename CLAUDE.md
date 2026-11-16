@@ -76,15 +76,22 @@ et ressources libres, ou produits par nous.
 - `games/` : mini-jeux génériques (`ChronologyGame`, `SeekGame`, `MemoryGame`, `VerseGame`) dans un `GameFrame`
 - `stories/` : le code propre à chaque histoire (`registry.dart` : `StoryPack` = décors, vignettes,
   scène de cache-cache, autocollant, objets des mini-jeux) ; un dossier par histoire : `creation`, `eden`,
-  `noe`, `abraham`, `joseph`, `moise`, `david`, `jonas`
-- `audio/` : `Narrator` et `SoundEffects` (audioplayers ; versions muettes pour les tests), `AudioScope`
+  `noe`, `abraham`, `joseph`, `moise`, `david`, `jonas` (Ancien Testament), `naissance`, `temple`, `bapteme`,
+  `tempete`, `pains`, `zachee`, `samaritain`, `prodigue`, `paques`, `pentecote` (Nouveau Testament) ;
+  `nt/nt.dart` : personnages et décors communs au Nouveau Testament (`NT.jesus`, `NT.mary`, `NT.disciples`,
+  `paintAngel`, `paintCrowd`, `paintGalilee`, `paintJerusalem`, `paintHouse`, `paintRoad`, `paintBaby`)
+- `audio/` : `Narrator`, `SoundEffects` et `MusicPlayer` (audioplayers ; versions muettes pour les tests),
+  `AudioScope`, `MusicDirector` (musique choisie selon l'écran, `trackFor`), `DuckingNarrator` (la musique
+  baisse quand la conteuse parle)
 - `save/` : `SaveData` (profils, profil actif, progression par profil et par histoire), `SaveStore`
   (`PrefsSaveStore`, `MemorySaveStore` pour les tests), `GameState` (ChangeNotifier, sauvegarde à chaque
   changement) et `GameScope` (`GameScope.of` pour l'affichage, `GameScope.read` pour les actions)
 - `profiles/` : « Qui joue ? » (`/profils`), création et modification (`/profils/nouveau`, `/profils/:id`)
-- `world/` : la carte du monde (`/carte`) — îles du lot 1 (`world.dart` : règles d'ouverture `World`, ami de
-  l'arche de chaque île `treasure`), monuments dessinés (`landmarks.dart`), `WorldMapScreen`, l'album
-  (`/album`, `AlbumScreen`) et l'arche-trésor (`/tresor`, `TreasureScreen`)
+- `world/` : la carte du monde (`/carte`) — îles `lot1` (Ancien Testament) et `lot2` (Nouveau Testament),
+  `allIslands` (`world.dart` : règles d'ouverture `World`, ami de chaque île `treasure`), monuments dessinés
+  (`landmarks.dart`), `WorldMapScreen` (un panneau au début de chaque Testament), l'album (`/album`,
+  `AlbumScreen`, 18 autocollants), l'arche-trésor (`/tresor`, amis du lot 1) et le jardin (`/jardin`, amis du
+  lot 2), tous deux dans `TreasureScreen`
 - `parents/` : espace parents (`/parents`, `ParentsScreen` : enfants, réglages, à propos), politique de
   confidentialité et crédits (`privacy.dart`), temps de jeu et écran « À demain » (`play_time.dart`)
 - `screens/` : autres écrans (`ComingSoonScreen` pour les rubriques à venir)
@@ -139,7 +146,7 @@ et ressources libres, ou produits par nous.
   Vérifier une histoire d'un coup d'œil : `flutter test tool/story_sheet_test.dart --dart-define=STORY=<id>`
   → `build/story_<id>.png` (scènes au début et terminées, zones à toucher, cache-cache, autocollant, memory).
 - Ajouter une histoire : dossier d'assets (+ deux lignes `assets` dans `pubspec.yaml`), dossier de code,
-  entrée dans `storyPacks`, île dans `lot1` (`world.dart`), puis la narration. Le test
+  entrée dans `storyPacks`, île dans `lot1` ou `lot2` (`world.dart`), puis la narration. Le test
   `scripted_stories_test.dart` vérifie automatiquement chaque scène.
   Chaque décor (`StoryStage`) : dessine sa scène, dit où toucher (`hintTarget`, toujours au-dessus des
   sous-titres, < 85 % de la hauteur) et appelle `complete()` quand l'action est faite. `layout()` peut être
@@ -148,6 +155,12 @@ et ressources libres, ou produits par nous.
   régénère seulement les phrases modifiées (`tools/narration/manifest.json`). À relancer après toute
   modification d'un texte ; le test `story_data_test.dart` échoue si un fichier audio manque.
 - **Bruitages** : synthétisés par `python tools/sfx/generate.py` (numpy + ffmpeg), dans `app/assets/audio/sfx/`.
+- **Musique** : quatre morceaux en boucle (`home`, `map`, `story`, `games`) synthétisés par
+  `python tools/music/generate.py` (kalimba, balafon, shaker, nappes ; numpy + ffmpeg), dans
+  `app/assets/audio/music/`. Réglage « musique » chez les parents ; silence quand le temps de jeu est écoulé.
+- Le Nouveau Testament : Jésus toujours digne et doux ; la croix est une silhouette au loin, au crépuscule,
+  sans souffrance montrée, et l'histoire se termine sur la résurrection. L'Esprit saint : vent, flammes,
+  colombe — jamais un personnage.
 - **Versets** : texte exact de la Louis Segond 1910, à vérifier dans une Bible papier avant publication.
 - Phrases communes de Colombe (encouragements, indices) : `app/assets/lines/common.json`.
 
@@ -178,4 +191,7 @@ et ressources libres, ou produits par nous.
 - **L4 — Parents et publication** ✅ (à valider par Uzziah) : espace parents (progression, réglages, à propos),
   limite de temps quotidienne, voix/bruitages/sous-titres/animations/grand texte réglables, politique de
   confidentialité (jeu, docs, web), jeu web hors ligne sur GitHub Pages, APK/AAB publiés sur étiquette.
-- **L5** : Nouveau Testament.
+- **L5 — Nouveau Testament et musique** ✅ (à valider par Uzziah) : musique synthétisée sur chaque écran,
+  10 histoires du Nouveau Testament (naissance, Temple, baptême, tempête, pains, Zachée, bon Samaritain,
+  fils prodigue, Pâques, Pentecôte), deuxième partie de la carte, album de 18 autocollants, jardin-trésor.
+- **L6** : à définir avec Uzziah (lot 3 : Daniel, Jéricho, Gédéon, Ruth… ; voix réelles ; Play Store).

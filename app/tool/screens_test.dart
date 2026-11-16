@@ -6,6 +6,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:lumiere/audio/audio.dart';
 import 'package:lumiere/parents/parents_screen.dart';
 import 'package:lumiere/parents/play_time.dart';
 import 'package:lumiere/save/game_state.dart';
@@ -13,6 +14,9 @@ import 'package:lumiere/save/save_store.dart';
 import 'package:lumiere/story/age_group.dart';
 import 'package:lumiere/story/story_part.dart';
 import 'package:lumiere/theme/lumiere_theme.dart';
+import 'package:lumiere/world/album_screen.dart';
+import 'package:lumiere/world/treasure_screen.dart';
+import 'package:lumiere/world/world_map_screen.dart';
 import 'package:material_ui/material_ui.dart';
 
 Future<void> loadFont(String family, List<String> files) async {
@@ -45,7 +49,12 @@ void main() {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: buildLumiereTheme(),
-          home: RepaintBoundary(key: key, child: screen),
+          home: AudioScope(
+            narrator: SilentNarrator(instant: true),
+            sfx: SilentSoundEffects(),
+            musicOverride: ValueNotifier(null),
+            child: RepaintBoundary(key: key, child: screen),
+          ),
         ),
       ),
     );
@@ -69,12 +78,22 @@ void main() {
       }
       s.earnSticker(id);
     }
+    for (final id in ['naissance', 'bapteme', 'tempete', 'paques']) {
+      s.recordPart(id, StoryPart.recit);
+      s.earnSticker(id);
+    }
     s.recordPart('abraham', StoryPart.recit);
     s.addPlaytime(25 * 60);
     s.addProfile(name: 'Ibrahim', age: AgeGroup.agneaux, avatar: 'sheep');
     s.recordPart('creation', StoryPart.recit);
     s.addPlaytime(12 * 60);
     s.updateSettings(s.settings.copyWith(dailyLimit: 45));
+    return s;
+  }
+
+  GameState awa() {
+    final s = sample();
+    s.select(s.profiles.first.id);
     return s;
   }
 
@@ -95,5 +114,17 @@ void main() {
 
   testWidgets('à demain', (tester) async {
     await capture(tester, TimeUpScreen(onHome: () {}, onExtra: (_) {}), 'a-demain');
+  });
+
+  testWidgets('jardin', (tester) async {
+    await capture(tester, const TreasureScreen(garden: true), 'jardin', state: awa());
+  });
+
+  testWidgets('album', (tester) async {
+    await capture(tester, const AlbumScreen(), 'album', state: awa());
+  });
+
+  testWidgets('carte', (tester) async {
+    await capture(tester, const WorldMapScreen(), 'carte', state: awa());
   });
 }
