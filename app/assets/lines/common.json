@@ -10,5 +10,10 @@
   "reference": "Où se trouve ce verset dans la Bible ?",
   "choose_age": "Bonjour ! Je suis Colombe. Quel âge as-tu ?",
   "games": "Bravo ! Maintenant, on joue ! Choisis un jeu.",
-  "continue": "Touche la flèche pour continuer."
+  "continue": "Touche la flèche pour continuer.",
+  "who": "Qui joue aujourd'hui ?",
+  "new_profile": "Bonjour ! Comment t'appelles-tu ? Choisis aussi ton âge et ton animal.",
+  "map": "Voici la carte du monde de la Bible ! Touche une île pour commencer une histoire.",
+  "soon": "Cette histoire arrive bientôt ! Je la prépare pour toi.",
+  "locked": "Gagne au moins trois étoiles sur l'île d'avant pour ouvrir celle-ci !"
 }

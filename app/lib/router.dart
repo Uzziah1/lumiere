@@ -2,15 +2,29 @@ import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 
 import 'home/home_screen.dart';
+import 'profiles/profile_form_screen.dart';
+import 'profiles/profiles_screen.dart';
 import 'screens/coming_soon_screen.dart';
 import 'stories/registry.dart';
 import 'story/story_screen.dart';
+import 'world/world_map_screen.dart';
 
 /// Les écrans de Lumière, avec un fondu doux entre chacun.
 GoRouter buildRouter() {
   return GoRouter(
     routes: [
       GoRoute(path: '/', pageBuilder: (context, state) => _fade(state, const HomeScreen())),
+      GoRoute(path: '/profils', pageBuilder: (context, state) => _fade(state, const ProfilesScreen())),
+      GoRoute(
+        path: '/profils/nouveau',
+        pageBuilder: (context, state) => _fade(state, const ProfileFormScreen()),
+      ),
+      GoRoute(
+        path: '/profils/:id',
+        pageBuilder: (context, state) =>
+            _fade(state, ProfileFormScreen(profileId: state.pathParameters['id'])),
+      ),
+      GoRoute(path: '/carte', pageBuilder: (context, state) => _fade(state, const WorldMapScreen())),
       GoRoute(
         path: '/histoire/:id',
         redirect: (context, state) => storyPacks.containsKey(state.pathParameters['id']) ? null : '/',

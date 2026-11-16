@@ -11,9 +11,18 @@ import 'story_session.dart';
 
 /// La fin de l'histoire : les étoiles gagnées et l'autocollant pour l'album.
 class StoryReward extends StatefulWidget {
-  const StoryReward({super.key, required this.stars, required this.onReplay, required this.onHome});
+  const StoryReward({
+    super.key,
+    required this.stars,
+    required this.onReplay,
+    required this.onHome,
+    this.homeLabel = 'Accueil',
+  });
 
   final int stars;
+
+  /// « La carte » quand on vient de la carte du monde.
+  final String homeLabel;
   final VoidCallback onReplay;
   final VoidCallback onHome;
 
@@ -120,8 +129,8 @@ class _StoryRewardState extends State<StoryReward> with SingleTickerProviderStat
                             onPressed: widget.onReplay,
                           ),
                           PaperButton(
-                            label: 'Accueil',
-                            icon: Icons.home_rounded,
+                            label: widget.homeLabel,
+                            icon: widget.homeLabel == 'Accueil' ? Icons.home_rounded : Icons.map_rounded,
                             size: PaperButtonSize.small,
                             onPressed: widget.onHome,
                           ),

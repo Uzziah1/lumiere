@@ -8,6 +8,7 @@ import '../games/game_frame.dart';
 import '../games/memory_game.dart';
 import '../games/seek_game.dart';
 import '../games/verse_game.dart';
+import '../save/game_state.dart';
 import '../stories/registry.dart';
 import '../theme/lumiere_theme.dart';
 import '../theme/palette.dart';
@@ -16,6 +17,7 @@ import 'common_lines.dart';
 import 'recit_view.dart';
 import 'story.dart';
 import 'story_hub.dart';
+import 'story_part.dart';
 import 'story_intro.dart';
 import 'story_repository.dart';
 import 'story_reward.dart';
@@ -47,7 +49,27 @@ class StoryScreenState extends State<StoryScreen> {
   Future<(Story, CommonLines)> _load() async =>
       (await _repository.story(widget.storyId), await _repository.common());
 
+  bool _fromProfile = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (age != null || _fromProfile) return;
+    // Avec un profil, l'âge est connu et les étoiles déjà gagnées sont reprises.
+    final state = GameScope.read(context);
+    final profile = state.current;
+    if (profile != null) {
+      _fromProfile = true;
+      age = profile.age;
+      phase = StoryPhase.recit;
+      stars.addAll(state.progress(widget.storyId).parts);
+    }
+  }
+
+  void _save(StoryPart part) => GameScope.read(context).recordPart(widget.storyId, part);
+
   void _go(StoryPhase next, {StoryPart? part}) {
+    if (next == StoryPhase.reward) GameScope.read(context).earnSticker(widget.storyId);
     setState(() {
       phase = next;
       game = part;
@@ -55,6 +77,7 @@ class StoryScreenState extends State<StoryScreen> {
   }
 
   void _earn(StoryPart part) {
+    _save(part);
     setState(() => stars.add(part));
     _go(StoryPhase.hub);
   }
@@ -123,6 +146,7 @@ class StoryScreenState extends State<StoryScreen> {
         return RecitView(
           onExit: _home,
           onFinished: () {
+            _save(StoryPart.recit);
             stars.add(StoryPart.recit);
             _go(StoryPhase.hub);
           },
@@ -160,7 +184,12 @@ class StoryScreenState extends State<StoryScreen> {
       case StoryPhase.reward:
         return CustomPaint(
           painter: _Backdrop(),
-          child: StoryReward(stars: stars.length, onHome: _home, onReplay: () => _go(StoryPhase.hub)),
+          child: StoryReward(
+            stars: stars.length,
+            homeLabel: _fromProfile ? 'La carte' : 'Accueil',
+            onHome: _home,
+            onReplay: () => _go(StoryPhase.hub),
+          ),
         );
     }
   }

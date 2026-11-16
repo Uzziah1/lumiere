@@ -43,7 +43,7 @@ et ressources libres, ou produits par nous.
   - **go_router** pour la navigation (fondu entre écrans, `lib/router.dart`).
 - Jeu **à l'horizontale** (verrouillé sur téléphone dans `main.dart`, Android `sensorLandscape`) ;
   les écrans restent lisibles en vertical sur le web.
-- Aucun serveur en V1. Sauvegardes locales uniquement (à venir).
+- Aucun serveur en V1. Sauvegarde locale uniquement (`shared_preferences`, clé `lumiere.save`, une chaîne JSON).
 
 ## Direction artistique — « papier découpé lumineux »
 
@@ -76,8 +76,28 @@ et ressources libres, ou produits par nous.
 - `stories/` : le code propre à chaque histoire (`registry.dart` : `StoryPack` = décors, vignettes,
   scène de cache-cache, autocollant) ; `stories/noe/` pour Noé
 - `audio/` : `Narrator` et `SoundEffects` (audioplayers ; versions muettes pour les tests), `AudioScope`
+- `save/` : `SaveData` (profils, profil actif, progression par profil et par histoire), `SaveStore`
+  (`PrefsSaveStore`, `MemorySaveStore` pour les tests), `GameState` (ChangeNotifier, sauvegarde à chaque
+  changement) et `GameScope` (`GameScope.of` pour l'affichage, `GameScope.read` pour les actions)
+- `profiles/` : « Qui joue ? » (`/profils`), création et modification (`/profils/nouveau`, `/profils/:id`)
+- `world/` : la carte du monde (`/carte`) — îles du lot 1 (`world.dart`, règles d'ouverture `World`),
+  monuments dessinés (`landmarks.dart`), écran `WorldMapScreen`
 - `screens/` : autres écrans (`ComingSoonScreen` pour les rubriques à venir)
-- `widgets/` : composants d'interface réutilisables (`PaperButton`, `RoundPaperButton`, `ColombeBubble`…)
+- `widgets/` : composants d'interface réutilisables (`PaperButton`, `RoundPaperButton`, `ColombeBubble`,
+  `AgeCard`, `ProfileAvatar`, `PaperBackdrop`, `showParentalGate`…)
+
+## Profils, carte et progression
+
+- Parcours : Accueil → « Jouer » → `/profils` (sans profil : création directe) → `/carte` → île → `/histoire/:id`.
+- Profil : prénom ou surnom (16 caractères), âge (`AgeGroup`), avatar (animal de `avatarChoices`) ; 4 au plus.
+  Tout reste sur l'appareil. Une sauvegarde abîmée ne plante jamais : on repart de zéro.
+- Modifier ou supprimer un profil passe par la **barrière parentale** (`showParentalGate` : multiplication
+  écrite en lettres, réutilisée pour l'espace parents en L4).
+- Une île est **ouverte** si son histoire existe (`storyPacks`) et si l'histoire existante précédente a au moins
+  3 étoiles (`World.starsToUnlock`) ; sinon **fermée** ; une histoire pas encore construite est **bientôt**.
+- Avec un profil, l'histoire prend l'âge du profil (pas d'écran de choix), reprend les étoiles déjà gagnées,
+  sauvegarde chaque étoile aussitôt (`recordPart`) et l'autocollant à la fin (`earnSticker`).
+- Textes affichés : `frenchSpacing` (espace insécable avant ! ? ; : et dans les guillemets).
 
 ## Histoires : données, décors, narration
 
@@ -100,6 +120,7 @@ et ressources libres, ou produits par nous.
 - `flutter test` depuis `app/` : widgets (navigation, mise en page petit téléphone portrait/paysage,
   réduire les animations), scènes Flame (`flame_test`), fonctions de dessin.
 - Les écrans animés ne « se posent » jamais : avancer le temps avec `tester.pump(durée)`, pas `pumpAndSettle`.
+- Profils dans les tests : `LumiereApp(gameState: GameState(MemorySaveStore()))` (sinon : en mémoire).
 - Sons muets dans les tests : `LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects())`,
   ou `inSession(...)` (`test/helpers.dart`) pour un jeu seul. Les tests qui chargent les assets font
   `setUp(rootBundle.clear)`.
@@ -109,11 +130,12 @@ et ressources libres, ou produits par nous.
 
 - **L0 — Socle** ✅ : projet Flutter + Flame, thème papier découpé, polices, accueil animé
   (aube, collines, palmiers, village, poussière dorée, Colombe qu'on peut toucher), icônes, CI.
-- **L1 — Noé (tranche verticale)** ✅ (à valider par Uzziah) : choix de l'âge, récit animé de 8 scènes interactives
-  (Genèse 6–9) raconté par Piper avec sous-titres et indices, 3 mini-jeux (chronologie, cache-cache, memory),
-  verset Genèse 9.13 selon l'âge, 5 étoiles et autocollant, bruitages synthétisés. « Jouer » ouvre Noé en
-  attendant la carte (L2) ; rien n'est encore sauvegardé.
-- **L2** : carte du monde, îles, étoiles, profils, sauvegarde, trois âges.
+- **L1 — Noé (tranche verticale)** ✅ : choix de l'âge, récit animé de 8 scènes interactives
+  (Genèse 6–9) raconté par Piper (voix siwis) avec sous-titres et indices, 3 mini-jeux (chronologie,
+  cache-cache, memory), verset Genèse 9.13 selon l'âge, 5 étoiles et autocollant, bruitages synthétisés.
+- **L2 — Carte, profils, sauvegarde** ✅ (à valider par Uzziah) : jusqu'à 4 profils (prénom, âge, avatar),
+  « Qui joue ? », barrière parentale pour modifier/supprimer, carte du monde à 8 îles (Noé jouable, les autres
+  « bientôt »), déblocage à 3 étoiles, étoiles et autocollants sauvegardés sur l'appareil.
 - **L3** : lot 1 (8 histoires de l'Ancien Testament), tous les mini-jeux, album, l'arche-trésor.
 - **L4** : espace parents, limites de temps, accessibilité, confidentialité, PWA et APK publics.
 - **L5** : Nouveau Testament.

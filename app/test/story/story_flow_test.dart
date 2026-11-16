@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lumiere/app.dart';
 import 'package:lumiere/audio/audio.dart';
 import 'package:lumiere/games/chronology_game.dart';
@@ -38,8 +39,8 @@ void main() {
     await tester.pumpWidget(LumiereApp(narrator: narrator, sfx: sfx));
     await frames(tester);
 
-    // Accueil → « Jouer » ouvre l'histoire de Noé.
-    await tester.tap(find.text('Jouer'));
+    // Sans profil, l'histoire s'ouvre par le choix de l'âge.
+    GoRouter.of(tester.element(find.text('Jouer'))).push('/histoire/noe');
     await waitForStory(tester);
     await frames(tester);
     expect(find.text('Noé et l\'arche'), findsWidgets);
@@ -133,7 +134,7 @@ void main() {
     addTearDown(tester.view.reset);
     await tester.pumpWidget(LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects()));
     await frames(tester);
-    await tester.tap(find.text('Jouer'));
+    GoRouter.of(tester.element(find.text('Jouer'))).push('/histoire/noe');
     await waitForStory(tester);
     await frames(tester);
     expect(tester.takeException(), isNull);

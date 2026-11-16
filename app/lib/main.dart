@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:material_ui/material_ui.dart';
 
 import 'app.dart';
+import 'save/game_state.dart';
+import 'save/save_store.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,5 +16,8 @@ Future<void> main() async {
     ]);
     await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
   }
-  runApp(const LumiereApp());
+  // Profils et progression : sauvegardés sur l'appareil uniquement.
+  final game = GameState(PrefsSaveStore());
+  await game.load();
+  runApp(LumiereApp(gameState: game));
 }

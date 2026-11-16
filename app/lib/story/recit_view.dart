@@ -316,10 +316,13 @@ class _Subtitle extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(text, style: LumiereText.text(size)),
+                Text(frenchSpacing(text), style: LumiereText.text(size)),
                 if (action != null) ...[
                   const SizedBox(height: 4),
-                  Text(action!, style: LumiereText.text(size, bold: true, color: Palette.lagoonDeep)),
+                  Text(
+                    frenchSpacing(action!),
+                    style: LumiereText.text(size, bold: true, color: Palette.lagoonDeep),
+                  ),
                 ],
               ],
             ),

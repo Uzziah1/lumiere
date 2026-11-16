@@ -173,7 +173,7 @@ le web et l'APK téléchargeable sont gratuits.
 |---|---|---|
 | **L0 — Socle** ✅ | Projet Flutter + Flame, structure, thème « papier découpé », typo, CI, page de démarrage animée avec Colombe | Appli qui s'ouvre, belle, sur Android et web |
 | **L1 — Noé (tranche verticale)** ✅ | Récit animé complet, 3 mini-jeux (chronologie, cherche et trouve, memory), verset, récompenses, narration Piper | Une histoire parfaite de bout en bout |
-| **L2 — Carte et progression** | Carte du monde, îles, étoiles, profils, sauvegarde, trois âges | Le jeu « tient debout » |
+| **L2 — Carte et progression** ✅ | Carte du monde, îles, étoiles, profils, sauvegarde, trois âges | Le jeu « tient debout » |
 | **L3 — Lot 1** | 7 histoires de plus, tous les types de mini-jeux, album d'autocollants, l'arche-trésor | MVP jouable |
 | **L4 — Parents et publication** | Espace parents, limites de temps, accessibilité, page de confidentialité, PWA, APK | Bêta publique |
 | **L5 — Nouveau Testament** | Lot 2, jardin-trésor | V1 |
@@ -192,7 +192,10 @@ Une étape à la fois, validée par Uzziah avant la suivante.
 | nov. 2026 | Jeu à l'horizontale ; polices Fredoka (titres) et Andika (texte) intégrées à l'appli |
 | nov. 2026 | Narration : voix Piper « siwis » (féminine, française), un peu ralentie ; sous-titres sauf pour les Agneaux |
 | nov. 2026 | Bruitages synthétisés en code (aucune banque de sons) ; pas encore de musique |
-| nov. 2026 | Noé : verset Genèse 9.13 ; en attendant les profils (L2), l'âge se choisit au début de l'histoire |
+| nov. 2026 | Noé : verset Genèse 9.13 |
+| nov. 2026 | Voix de narration définitive : Piper « siwis » |
+| nov. 2026 | Profils : 4 au plus, prénom + âge + animal ; modifier/supprimer derrière la barrière parentale |
+| nov. 2026 | Carte : une mer et 8 îles (lot 1) ; une île s'ouvre avec 3 étoiles sur la précédente ; histoires pas encore faites affichées « bientôt » |
 
 ## 14. Questions ouvertes
 

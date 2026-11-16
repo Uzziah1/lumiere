@@ -40,19 +40,14 @@ void main() {
     expect(find.widgetWithText(PaperButton, 'Parents'), findsOneWidget);
   });
 
-  testWidgets('« Jouer » ouvre l’histoire de Noé, la croix ramène à l’accueil', (tester) async {
+  testWidgets('« Jouer » sans profil ouvre la création d’un joueur', (tester) async {
     await openApp(tester);
 
     await tester.tap(find.text('Jouer'));
-    for (var i = 0; i < 40 && find.text('Noé et l\'arche').evaluate().isEmpty; i++) {
-      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 50)));
-      await tester.pump(const Duration(milliseconds: 50));
-    }
-    await settle(tester);
-    expect(find.text('Noé et l\'arche'), findsOneWidget);
-    expect(find.textContaining('Quel âge as-tu ?'), findsOneWidget);
+    await settle(tester, 40);
+    expect(find.text('Nouveau joueur'), findsOneWidget);
 
-    await tester.tap(find.bySemanticsLabel('Retour à l’accueil'));
+    await tester.tap(find.bySemanticsLabel('Retour'));
     await settle(tester);
     expect(find.text('Jouer'), findsOneWidget);
   });
