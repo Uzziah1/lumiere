@@ -73,7 +73,13 @@ et ressources libres, ou produits par nous.
   chargement (`StoryRepository`), `StorySession` (histoire + âge + voix), théâtre Flame (`StoryGame`,
   `StoryStage`, `HintRing`, `Sparkles`), écrans (`StoryScreen` : intro/âge → `RecitView` → `StoryHub` →
   jeux → `StoryReward`)
-- `games/` : mini-jeux génériques (`ChronologyGame`, `SeekGame`, `MemoryGame`, `VerseGame`) dans un `GameFrame`
+- `games/` : mini-jeux génériques (`ChronologyGame`, `SeekGame`, `MemoryGame`, `PuzzleGame`, `QuizGame`,
+  `VerseGame`) dans un `GameFrame`. Chaque histoire propose **3 jeux sur 5** (`games.lineup` du `story.json`,
+  `Story.lineup` ; chaque jeu revient dans 3 histoires sur 5, en rotation le long de la carte) plus le verset :
+  toujours 5 étoiles (`StoryProgress.stars` plafonné à 5, une étoile d'un jeu retiré reste comptée).
+  Puzzle : la scène `StoryPack.puzzleScene` (l'autocollant des histoires scénarisées) en 4/6/9 pièces à échanger
+  d'une touche, modèle à côté. Quiz : `games.quiz` (questions lues `quiz.N`, 3 réponses en images `paintThing`,
+  la bonne en premier dans les données, `counts` par âge). Captures : `flutter test tool/games_screens_test.dart`
 - `stories/` : le code propre à chaque histoire (`registry.dart` : `StoryPack` = décors, vignettes,
   scène de cache-cache, autocollant, objets des mini-jeux) ; un dossier par histoire : `creation`, `eden`,
   `noe`, `abraham`, `joseph`, `moise`, `david`, `jonas` (Ancien Testament), `naissance`, `temple`, `bapteme`,
@@ -198,7 +204,9 @@ et ressources libres, ou produits par nous.
 - **L5 — Nouveau Testament et musique** ✅ : musique synthétisée sur chaque écran,
   10 histoires du Nouveau Testament (naissance, Temple, baptême, tempête, pains, Zachée, bon Samaritain,
   fils prodigue, Pâques, Pentecôte), deuxième partie de la carte, album de 18 autocollants, jardin-trésor.
-- **L6 — Les héros de la foi** ✅ (à valider par Uzziah) : 7 histoires de l'Ancien Testament (Jéricho, Gédéon,
+- **L6 — Les héros de la foi** ✅ : 7 histoires de l'Ancien Testament (Jéricho, Gédéon,
   Ruth, Samuel, Élie, Daniel, Esther) entre les deux Testaments sur la carte, coffre au trésor, et les noces de
   Cana dans le Nouveau Testament (11 histoires, jardin à 11 amis) ; 26 histoires en tout.
-- **L7** : à définir avec Uzziah (nouveaux types de jeux, Play Store, voix réelles, lot 4…).
+- **L7 — Des jeux variés** ✅ (à valider par Uzziah) : puzzle de la scène et quiz illustré (61 questions dans
+  16 histoires), rotation de 3 jeux sur 5 par histoire, toujours 5 étoiles.
+- **L8** : à définir avec Uzziah (Play Store, voix réelles, lot 4, coloriage…).
