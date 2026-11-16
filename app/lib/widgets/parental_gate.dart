@@ -21,9 +21,21 @@ Future<bool> showParentalGate(BuildContext context, {math.Random? random}) async
 const _words = ['zéro', 'un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf'];
 
 class ParentalGate extends StatefulWidget {
-  const ParentalGate({super.key, required this.random});
+  const ParentalGate({super.key, required this.random, this.onResult});
 
   final math.Random random;
+
+  /// Si donné, la barrière est affichée dans un écran (pas une boîte de
+  /// dialogue) et prévient ici au lieu de fermer la boîte.
+  final void Function(bool ok)? onResult;
+
+  void _close(BuildContext context, bool ok) {
+    if (onResult != null) {
+      onResult!(ok);
+    } else {
+      Navigator.of(context).pop(ok);
+    }
+  }
 
   @override
   State<ParentalGate> createState() => ParentalGateState();
@@ -61,7 +73,7 @@ class ParentalGateState extends State<ParentalGate> {
 
   void submit() {
     if (int.tryParse(typed) == a * b) {
-      Navigator.of(context).pop(true);
+      widget._close(context, true);
     } else {
       setState(() {
         wrong = true;
@@ -119,7 +131,7 @@ class ParentalGateState extends State<ParentalGate> {
                           icon: Icons.close_rounded,
                           label: 'Fermer',
                           size: 40,
-                          onPressed: () => Navigator.of(context).pop(false),
+                          onPressed: () => widget._close(context, false),
                         ),
                       ],
                     ),

@@ -151,6 +151,51 @@ class SilentSoundEffects implements SoundEffects {
   void dispose() {}
 }
 
+/// Narration qui se tait quand les parents l'ont coupée : on laisse alors le
+/// temps de lire le sous-titre, sans jouer de son.
+class GatedNarrator implements Narrator {
+  GatedNarrator(this.inner, this.enabled);
+
+  final Narrator inner;
+  final bool Function() enabled;
+  final _silent = SilentNarrator();
+
+  @override
+  Future<void> play(String asset, {required String text}) {
+    if (enabled()) return inner.play(asset, text: text);
+    inner.stop();
+    return _silent.play(asset, text: text);
+  }
+
+  @override
+  Future<void> stop() async {
+    await _silent.stop();
+    await inner.stop();
+  }
+
+  @override
+  void dispose() {
+    _silent.dispose();
+    inner.dispose();
+  }
+}
+
+/// Bruitages qui se taisent quand les parents les ont coupés.
+class GatedSoundEffects implements SoundEffects {
+  GatedSoundEffects(this.inner, this.enabled);
+
+  final SoundEffects inner;
+  final bool Function() enabled;
+
+  @override
+  void play(Sfx effect) {
+    if (enabled()) inner.play(effect);
+  }
+
+  @override
+  void dispose() => inner.dispose();
+}
+
 /// Donne accès à la narration et aux bruitages dans tout l'arbre de widgets.
 class AudioScope extends InheritedWidget {
   const AudioScope({super.key, required this.narrator, required this.sfx, required super.child});

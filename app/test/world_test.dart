@@ -86,7 +86,12 @@ void main() {
     }
     setup?.call(state);
     await tester.pumpWidget(
-      LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects(), gameState: state),
+      LumiereApp(
+        trackPlaytime: false,
+        narrator: SilentNarrator(instant: true),
+        sfx: SilentSoundEffects(),
+        gameState: state,
+      ),
     );
     await frames(tester);
     await tester.tap(find.text('Jouer'));
@@ -166,7 +171,9 @@ void main() {
     tester.view.physicalSize = const Size(1280, 720);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
-    await tester.pumpWidget(LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects()));
+    await tester.pumpWidget(
+      LumiereApp(trackPlaytime: false, narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects()),
+    );
     await frames(tester);
     GoRouter.of(tester.element(find.text('Jouer'))).go('/carte');
     await frames(tester, 40);

@@ -5,6 +5,7 @@ import 'package:flame/game.dart';
 import 'package:material_ui/material_ui.dart';
 
 import '../audio/audio.dart';
+import '../save/game_state.dart';
 import '../theme/lumiere_theme.dart';
 import '../theme/palette.dart';
 import '../widgets/paper_button.dart';
@@ -179,7 +180,8 @@ class RecitViewState extends State<RecitView> {
                         onPressed: replay,
                       ),
                     ),
-                    if (session.age.showsSubtitles)
+                    if (GameScope.maybeOf(context)?.settings.subtitlesFor(session.age) ??
+                        session.age.showsSubtitles)
                       Positioned(
                         left: buttonSize + 24,
                         right: buttonSize * 2.6 + 24,

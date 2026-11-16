@@ -25,7 +25,12 @@ void main() {
     await state.load();
     setup?.call(state);
     await tester.pumpWidget(
-      LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects(), gameState: state),
+      LumiereApp(
+        trackPlaytime: false,
+        narrator: SilentNarrator(instant: true),
+        sfx: SilentSoundEffects(),
+        gameState: state,
+      ),
     );
     await frames(tester);
     return state;
@@ -172,7 +177,12 @@ void main() {
       state.addProfile(name: 'Enfant numéro $i', age: AgeGroup.bergers, avatar: 'giraffe');
     }
     await tester.pumpWidget(
-      LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects(), gameState: state),
+      LumiereApp(
+        trackPlaytime: false,
+        narrator: SilentNarrator(instant: true),
+        sfx: SilentSoundEffects(),
+        gameState: state,
+      ),
     );
     await frames(tester);
     await tester.tap(find.text('Jouer'));

@@ -12,9 +12,10 @@ import 'save_store.dart';
 /// L'état du jeu sur l'appareil : profils, profil actif, progression.
 /// Chaque changement est sauvegardé aussitôt.
 class GameState extends ChangeNotifier {
-  GameState(this._store);
+  GameState(this._store, {DateTime Function()? clock}) : _clock = clock ?? DateTime.now;
 
   final SaveStore _store;
+  final DateTime Function() _clock;
   SaveData _data = SaveData();
   final _random = math.Random();
 
@@ -70,6 +71,8 @@ class GameState extends ChangeNotifier {
   void deleteProfile(String id) {
     _data.profiles.removeWhere((p) => p.id == id);
     _data.progress.remove(id);
+    _data.playtime.remove(id);
+    _data.extraTime.remove(id);
     if (_data.currentId == id) _data.currentId = null;
     _changed();
   }
@@ -107,6 +110,65 @@ class GameState extends ChangeNotifier {
     _changed();
   }
 
+  // ── Réglages ────────────────────────────────────────────────────────────
+
+  Settings get settings => _data.settings;
+
+  void updateSettings(Settings settings) {
+    _data.settings = settings;
+    _changed();
+  }
+
+  // ── Temps de jeu ────────────────────────────────────────────────────────
+
+  /// Ajoute du temps de jeu au profil actif (aujourd'hui) ; garde 14 jours.
+  void addPlaytime(int seconds) {
+    final id = _data.currentId;
+    if (id == null || seconds <= 0) return;
+    final days = _data.playtime[id] ??= {};
+    final today = dayKey(_clock());
+    days[today] = (days[today] ?? 0) + seconds;
+    final oldest = dayKey(_clock().subtract(const Duration(days: 14)));
+    days.removeWhere((key, _) => key.compareTo(oldest) < 0);
+    _data.extraTime[id]?.removeWhere((key, _) => key != today);
+    _changed();
+  }
+
+  Duration playtimeToday(String profileId) =>
+      Duration(seconds: _data.playtime[profileId]?[dayKey(_clock())] ?? 0);
+
+  /// Temps de jeu des 7 derniers jours (aujourd'hui compris).
+  Duration playtimeWeek(String profileId) {
+    final days = _data.playtime[profileId] ?? const {};
+    var total = 0;
+    for (var i = 0; i < 7; i++) {
+      total += days[dayKey(_clock().subtract(Duration(days: i)))] ?? 0;
+    }
+    return Duration(seconds: total);
+  }
+
+  /// Un parent offre [minutes] de plus aujourd'hui au profil actif.
+  void grantExtraTime(int minutes) {
+    final id = _data.currentId;
+    if (id == null) return;
+    final days = _data.extraTime[id] ??= {};
+    final today = dayKey(_clock());
+    days[today] = (days[today] ?? 0) + minutes;
+    _changed();
+  }
+
+  /// Temps qu'il reste aujourd'hui au profil actif, ou null s'il n'y a pas de limite.
+  Duration? get remainingToday {
+    final id = _data.currentId;
+    final limit = _data.settings.dailyLimit;
+    if (id == null || limit == 0) return null;
+    final extra = _data.extraTime[id]?[dayKey(_clock())] ?? 0;
+    final left = Duration(minutes: limit + extra) - playtimeToday(id);
+    return left.isNegative ? Duration.zero : left;
+  }
+
+  bool get timeIsUp => remainingToday == Duration.zero;
+
   /// Prénom propre : espaces superflus retirés, longueur limitée.
   static String cleanName(String name) {
     final trimmed = name.trim().replaceAll(RegExp(r'\s+'), ' ');
@@ -132,6 +194,10 @@ class GameScope extends InheritedNotifier<GameState> {
     assert(scope != null, 'GameScope manquant au-dessus de ce widget.');
     return scope!.notifier!;
   }
+
+  /// Le [GameState] s'il y en a un (les tests d'un jeu seul n'en ont pas).
+  static GameState? maybeOf(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<GameScope>()?.notifier;
 
   /// Sans s'abonner aux changements (pour les actions).
   static GameState read(BuildContext context) =>

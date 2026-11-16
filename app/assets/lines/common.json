@@ -18,5 +18,7 @@
   "locked": "Gagne au moins trois étoiles sur l'île d'avant pour ouvrir celle-ci !",
   "album": "Voici ton album d'autocollants ! Chaque histoire terminée t'en donne un.",
   "treasure": "Voici ton arche ! Chaque histoire terminée y fait entrer un nouvel ami.",
-  "new_friend": "Un nouvel ami est entré dans ton arche !"
+  "new_friend": "Un nouvel ami est entré dans ton arche !",
+  "time_soon": "Encore deux minutes, et on fera une pause !",
+  "time_up": "C'est l'heure de se reposer. Tu as bien joué aujourd'hui. On se retrouve demain !"
 }

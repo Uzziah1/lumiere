@@ -2,6 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:material_ui/material_ui.dart';
 
 import 'home/home_screen.dart';
+import 'parents/parents_screen.dart';
 import 'profiles/profile_form_screen.dart';
 import 'profiles/profiles_screen.dart';
 import 'screens/coming_soon_screen.dart';
@@ -27,6 +28,7 @@ GoRouter buildRouter() {
             _fade(state, ProfileFormScreen(profileId: state.pathParameters['id'])),
       ),
       GoRoute(path: '/carte', pageBuilder: (context, state) => _fade(state, const WorldMapScreen())),
+      GoRoute(path: '/parents', pageBuilder: (context, state) => _fade(state, const ParentsScreen())),
       GoRoute(path: '/album', pageBuilder: (context, state) => _fade(state, const AlbumScreen())),
       GoRoute(path: '/tresor', pageBuilder: (context, state) => _fade(state, const TreasureScreen())),
       GoRoute(

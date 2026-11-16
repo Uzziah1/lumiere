@@ -122,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                           child: PaperButton.secondary(
                             label: 'Parents',
                             icon: Icons.lock_rounded,
-                            onPressed: () => context.push('/bientot/parents'),
+                            onPressed: () => context.push('/parents'),
                           ),
                         ),
                       ),

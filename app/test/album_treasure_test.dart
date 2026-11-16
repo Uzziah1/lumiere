@@ -29,7 +29,12 @@ void main() {
     state.earnSticker('noe');
     state.earnSticker('jonas');
     await tester.pumpWidget(
-      LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects(), gameState: state),
+      LumiereApp(
+        trackPlaytime: false,
+        narrator: SilentNarrator(instant: true),
+        sfx: SilentSoundEffects(),
+        gameState: state,
+      ),
     );
     await frames(tester, 10);
     GoRouter.of(tester.element(find.text('Jouer'))).go(route);

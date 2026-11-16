@@ -36,7 +36,7 @@ void main() {
     addTearDown(tester.view.reset);
     final narrator = SilentNarrator(instant: true);
     final sfx = SilentSoundEffects();
-    await tester.pumpWidget(LumiereApp(narrator: narrator, sfx: sfx));
+    await tester.pumpWidget(LumiereApp(trackPlaytime: false, narrator: narrator, sfx: sfx));
     await frames(tester);
 
     // Sans profil, l'histoire s'ouvre par le choix de l'âge.
@@ -132,7 +132,9 @@ void main() {
     tester.view.physicalSize = const Size(640, 360);
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
-    await tester.pumpWidget(LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects()));
+    await tester.pumpWidget(
+      LumiereApp(trackPlaytime: false, narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects()),
+    );
     await frames(tester);
     GoRouter.of(tester.element(find.text('Jouer'))).push('/histoire/noe');
     await waitForStory(tester);

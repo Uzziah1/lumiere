@@ -27,7 +27,9 @@ void main() {
     tester.view.physicalSize = size;
     tester.view.devicePixelRatio = 1;
     addTearDown(tester.view.reset);
-    await tester.pumpWidget(LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects()));
+    await tester.pumpWidget(
+      LumiereApp(trackPlaytime: false, narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects()),
+    );
     await settle(tester);
   }
 
@@ -63,12 +65,12 @@ void main() {
     expect(find.text('Jouer'), findsOneWidget);
   });
 
-  testWidgets('« Parents » mène à l’espace parents (bientôt)', (tester) async {
+  testWidgets('« Parents » ouvre la barrière parentale', (tester) async {
     await openApp(tester);
 
     await tester.tap(find.text('Parents'));
     await settle(tester);
-    expect(find.text('Espace parents'), findsOneWidget);
+    expect(find.text('Pour les parents'), findsOneWidget);
   });
 
   testWidgets("l'accueil tient sur un petit téléphone, à l'horizontale comme à la verticale", (tester) async {
@@ -88,7 +90,11 @@ void main() {
     await tester.pumpWidget(
       MediaQuery(
         data: const MediaQueryData(disableAnimations: true),
-        child: LumiereApp(narrator: SilentNarrator(instant: true), sfx: SilentSoundEffects()),
+        child: LumiereApp(
+          trackPlaytime: false,
+          narrator: SilentNarrator(instant: true),
+          sfx: SilentSoundEffects(),
+        ),
       ),
     );
     await tester.pump();

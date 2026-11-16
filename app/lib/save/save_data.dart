@@ -66,11 +66,126 @@ class StoryProgress {
   };
 }
 
+/// Quand afficher les sous-titres du récit.
+enum SubtitleMode {
+  /// Selon l'âge (pas pour les Agneaux), et toujours si la narration est coupée.
+  auto,
+  always,
+  never;
+
+  static SubtitleMode byName(Object? name) =>
+      values.firstWhere((m) => m.name == name, orElse: () => SubtitleMode.auto);
+}
+
+/// Réglages de l'appareil, choisis par les parents.
+class Settings {
+  const Settings({
+    this.narration = true,
+    this.effects = true,
+    this.subtitles = SubtitleMode.auto,
+    this.reduceMotion = false,
+    this.largeText = false,
+    this.dailyLimit = 0,
+  });
+
+  factory Settings.fromJson(Object? json) {
+    if (json is! Map<String, dynamic>) return const Settings();
+    final limit = json['dailyLimit'];
+    return Settings(
+      narration: json['narration'] != false,
+      effects: json['effects'] != false,
+      subtitles: SubtitleMode.byName(json['subtitles']),
+      reduceMotion: json['reduceMotion'] == true,
+      largeText: json['largeText'] == true,
+      dailyLimit: limit is int && dailyLimitChoices.contains(limit) ? limit : 0,
+    );
+  }
+
+  /// Limites de temps proposées, en minutes (0 = pas de limite).
+  static const dailyLimitChoices = [0, 15, 30, 45, 60, 90];
+
+  /// La voix qui raconte.
+  final bool narration;
+
+  /// Les bruitages.
+  final bool effects;
+  final SubtitleMode subtitles;
+
+  /// Réduire les animations (en plus du réglage du téléphone).
+  final bool reduceMotion;
+
+  /// Textes un peu plus grands.
+  final bool largeText;
+
+  /// Temps de jeu quotidien par enfant, en minutes (0 = pas de limite).
+  final int dailyLimit;
+
+  /// Faut-il des sous-titres pour [age] ? Toujours quand la voix est coupée.
+  bool subtitlesFor(AgeGroup age) {
+    if (!narration) return true;
+    return switch (subtitles) {
+      SubtitleMode.always => true,
+      SubtitleMode.never => false,
+      SubtitleMode.auto => age.showsSubtitles,
+    };
+  }
+
+  Settings copyWith({
+    bool? narration,
+    bool? effects,
+    SubtitleMode? subtitles,
+    bool? reduceMotion,
+    bool? largeText,
+    int? dailyLimit,
+  }) => Settings(
+    narration: narration ?? this.narration,
+    effects: effects ?? this.effects,
+    subtitles: subtitles ?? this.subtitles,
+    reduceMotion: reduceMotion ?? this.reduceMotion,
+    largeText: largeText ?? this.largeText,
+    dailyLimit: dailyLimit ?? this.dailyLimit,
+  );
+
+  Map<String, dynamic> toJson() => {
+    'narration': narration,
+    'effects': effects,
+    'subtitles': subtitles.name,
+    'reduceMotion': reduceMotion,
+    'largeText': largeText,
+    'dailyLimit': dailyLimit,
+  };
+}
+
+/// Clé d'un jour local, ex. « 2026-11-16 ».
+String dayKey(DateTime t) =>
+    '${t.year.toString().padLeft(4, '0')}-${t.month.toString().padLeft(2, '0')}-${t.day.toString().padLeft(2, '0')}';
+
+Map<String, Map<String, int>> _perDay(Object? json) {
+  final result = <String, Map<String, int>>{};
+  if (json is! Map<String, dynamic>) return result;
+  for (final MapEntry(key: profileId, value: days) in json.entries) {
+    if (days is! Map<String, dynamic>) continue;
+    result[profileId] = {
+      for (final MapEntry(:key, :value) in days.entries)
+        if (value is int) key: value,
+    };
+  }
+  return result;
+}
+
 /// Toute la sauvegarde de l'appareil.
 class SaveData {
-  SaveData({List<Profile>? profiles, this.currentId, Map<String, Map<String, StoryProgress>>? progress})
-    : profiles = profiles ?? [],
-      progress = progress ?? {};
+  SaveData({
+    List<Profile>? profiles,
+    this.currentId,
+    Map<String, Map<String, StoryProgress>>? progress,
+    this.settings = const Settings(),
+    Map<String, Map<String, int>>? playtime,
+    Map<String, Map<String, int>>? extraTime,
+  }) : profiles = profiles ?? [],
+       progress = progress ?? {},
+       playtime = playtime ?? {},
+       extraTime = extraTime ?? {};
 
   /// Lit une sauvegarde ; une sauvegarde abîmée ne bloque jamais le jeu
   /// (on repart de zéro plutôt que de planter).
@@ -94,19 +209,30 @@ class SaveData {
         profiles: profiles,
         currentId: profiles.any((p) => p.id == current) ? current : null,
         progress: progress,
+        settings: Settings.fromJson(json['settings']),
+        playtime: _perDay(json['playtime']),
+        extraTime: _perDay(json['extraTime']),
       );
     } catch (_) {
       return SaveData();
     }
   }
 
-  static const version = 1;
+  static const version = 2;
 
   final List<Profile> profiles;
   String? currentId;
 
   /// Progression par profil puis par histoire.
   final Map<String, Map<String, StoryProgress>> progress;
+
+  Settings settings;
+
+  /// Secondes de jeu par profil et par jour (14 derniers jours).
+  final Map<String, Map<String, int>> playtime;
+
+  /// Minutes de jeu offertes par un parent, par profil et par jour.
+  final Map<String, Map<String, int>> extraTime;
 
   Map<String, dynamic> toJson() => {
     'version': version,
@@ -116,5 +242,8 @@ class SaveData {
       for (final MapEntry(key: profileId, value: stories) in progress.entries)
         profileId: {for (final MapEntry(:key, :value) in stories.entries) key: value.toJson()},
     },
+    'settings': settings.toJson(),
+    'playtime': playtime,
+    'extraTime': extraTime,
   };
 }
