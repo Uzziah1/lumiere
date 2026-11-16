@@ -10,6 +10,7 @@ import 'creation/creation.dart';
 import 'david/david.dart';
 import 'eden/eden.dart';
 import 'jonas/jonas.dart';
+import 'naissance/naissance.dart';
 import 'joseph/joseph.dart';
 import 'moise/moise.dart';
 import 'noe/noe_art.dart';
@@ -42,8 +43,7 @@ class StoryPack {
       stages: {for (final MapEntry(:key, :value) in scripts.entries) key: () => ScriptedStage(value)},
       paintThumb: paintFinished,
       seekScene: seekScene,
-      paintSticker: (canvas, size) =>
-          paintStickerFrame(canvas, size, (c, s) => paintFinished(c, s, stickerScene)),
+      paintSticker: (canvas, size) => paintStickerFrame(canvas, size, (c, s) => paintFinished(c, s, stickerScene)),
     );
   }
 
@@ -145,6 +145,7 @@ final Map<String, StoryPack> storyPacks = {
   'moise': moisePack,
   'david': davidPack,
   'jonas': jonasPack,
+  'naissance': naissancePack,
   'noe': StoryPack(
     stages: noeStages,
     paintThumb: paintNoeThumb,

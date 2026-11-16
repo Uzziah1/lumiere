@@ -278,13 +278,7 @@ void _humans(Canvas canvas, Size s, StageView v) {
   for (final (fx, fy) in const [(0.3, 0.92), (0.7, 0.94), (0.24, 0.84)]) {
     paintThing(canvas, 'flower', boxAt(s, fx, fy, 0.1));
   }
-  paintHeavenlyLight(
-    canvas,
-    s,
-    Offset(s.width * 0.5, -s.height * 0.05),
-    v.time,
-    intensity: 0.5 + 0.5 * v.eased,
-  );
+  paintHeavenlyLight(canvas, s, Offset(s.width * 0.5, -s.height * 0.05), v.time, intensity: 0.5 + 0.5 * v.eased);
   final t = v.eased;
   if (t > 0) {
     canvas.saveLayer(Offset.zero & s, Paint()..color = Color.fromRGBO(0, 0, 0, t));
@@ -334,11 +328,7 @@ void _seekForeground(Canvas canvas, Size s) {
   drawPaper(
     canvas,
     Path()..addOval(
-      Rect.fromCenter(
-        center: Offset(s.width * 0.36, s.height * 0.95),
-        width: s.width * 0.12,
-        height: s.height * 0.12,
-      ),
+      Rect.fromCenter(center: Offset(s.width * 0.36, s.height * 0.95), width: s.width * 0.12, height: s.height * 0.12),
     ),
     const Color(0xFFB8B3AA),
     elevation: 5,
@@ -346,11 +336,7 @@ void _seekForeground(Canvas canvas, Size s) {
   drawPaper(
     canvas,
     Path()..addOval(
-      Rect.fromCenter(
-        center: Offset(s.width * 0.66, s.height * 0.92),
-        width: s.width * 0.08,
-        height: s.height * 0.1,
-      ),
+      Rect.fromCenter(center: Offset(s.width * 0.66, s.height * 0.92), width: s.width * 0.08, height: s.height * 0.1),
     ),
     const Color(0xFFA9A49A),
     elevation: 5,

@@ -1,0 +1,130 @@
+{
+  "id": "naissance",
+  "title": "La naissance de Jésus",
+  "reference": "Luc 1 et 2, Matthieu 2",
+  "intro": "La naissance de Jésus. Une histoire de la Bible, dans les livres de Luc et de Matthieu.",
+  "scenes": [
+    {
+      "id": "annonce",
+      "stage": "annonce",
+      "reference": "Luc 1.26-38",
+      "text": {
+        "agneaux": "Dieu envoya l'ange Gabriel chez Marie, à Nazareth. L'ange lui dit : « Tu vas avoir un bébé. Tu l'appelleras Jésus. »",
+        "bergers": "Dieu envoya l'ange Gabriel dans la petite ville de Nazareth, chez une jeune fille appelée Marie. L'ange lui dit : « N'aie pas peur, Marie ! Tu auras un fils, et tu l'appelleras Jésus. Il sera appelé Fils de Dieu. » Marie répondit : « Je suis la servante du Seigneur. »",
+        "explorateurs": "L'ange Gabriel fut envoyé par Dieu dans une ville de Galilée appelée Nazareth, auprès d'une vierge fiancée à Joseph, de la maison de David. Le nom de la vierge était Marie. L'ange lui dit : « Ne crains point, Marie ; car tu as trouvé grâce devant Dieu. Tu enfanteras un fils, et tu lui donneras le nom de Jésus. » Marie dit : « Je suis la servante du Seigneur ; qu'il me soit fait selon ta parole. »"
+      },
+      "action": "Touche la lumière !"
+    },
+    {
+      "id": "voyage",
+      "stage": "voyage",
+      "reference": "Luc 2.1-5",
+      "text": {
+        "agneaux": "Marie et Joseph firent un long voyage jusqu'à Bethléhem. Marie était assise sur un âne.",
+        "bergers": "L'empereur romain voulait compter tous les habitants du pays. Chacun devait aller dans la ville de sa famille. Joseph et Marie partirent donc de Nazareth pour Bethléhem, la ville du roi David. Le chemin était long, et le bébé allait bientôt naître.",
+        "explorateurs": "En ce temps-là parut un édit de César Auguste, ordonnant un recensement de toute la terre. Tous allaient se faire inscrire, chacun dans sa ville. Joseph aussi monta de la Galilée, de la ville de Nazareth, pour se rendre en Judée, dans la ville de David, appelée Bethléhem, parce qu'il était de la maison et de la famille de David, afin de se faire inscrire avec Marie, sa fiancée, qui était enceinte."
+      },
+      "action": "Touche l'âne trois fois pour avancer !"
+    },
+    {
+      "id": "etable",
+      "stage": "etable",
+      "reference": "Luc 2.6-7",
+      "text": {
+        "agneaux": "À Bethléhem, il n'y avait plus de place pour dormir. Alors Jésus est né dans une étable. Marie le coucha dans une crèche.",
+        "bergers": "À Bethléhem, il y avait beaucoup de monde, et il n'y avait plus de place pour eux dans l'hôtellerie. C'est là, au milieu des animaux, que Marie mit au monde son fils. Elle l'emmaillota et le coucha dans une crèche, la mangeoire des animaux.",
+        "explorateurs": "Pendant qu'ils étaient là, le temps où Marie devait accoucher arriva, et elle enfanta son fils premier-né. Elle l'emmaillota, et le coucha dans une crèche, parce qu'il n'y avait pas de place pour eux dans l'hôtellerie."
+      },
+      "action": "Touche l'étable !"
+    },
+    {
+      "id": "bergers",
+      "stage": "bergers",
+      "reference": "Luc 2.8-14",
+      "text": {
+        "agneaux": "La nuit, des bergers gardaient leurs moutons. Tout à coup, des anges apparurent : « Bonne nouvelle ! Le Sauveur est né ! »",
+        "bergers": "Dans les champs, des bergers gardaient leurs troupeaux pendant la nuit. Soudain, un ange du Seigneur leur apparut, et une grande lumière les entoura. « N'ayez pas peur ! Je vous annonce une bonne nouvelle : aujourd'hui, un Sauveur vous est né. » Puis beaucoup d'anges chantèrent : « Gloire à Dieu ! »",
+        "explorateurs": "Il y avait, dans cette même contrée, des bergers qui passaient dans les champs les veilles de la nuit pour garder leurs troupeaux. Un ange du Seigneur leur apparut, et la gloire du Seigneur resplendit autour d'eux. L'ange leur dit : « Ne craignez point ; car je vous annonce une bonne nouvelle, qui sera pour tout le peuple le sujet d'une grande joie. » Et soudain une multitude de l'armée céleste louait Dieu : « Gloire à Dieu dans les lieux très hauts, et paix sur la terre ! »"
+      },
+      "action": "Touche les trois lumières dans le ciel !"
+    },
+    {
+      "id": "visite",
+      "stage": "visite",
+      "reference": "Luc 2.15-20",
+      "text": {
+        "agneaux": "Les bergers coururent à Bethléhem. Ils trouvèrent le bébé Jésus dans la crèche. Ils étaient tout joyeux !",
+        "bergers": "Les bergers se dirent : « Allons à Bethléhem voir ce qui est arrivé ! » Ils se dépêchèrent et trouvèrent Marie, Joseph, et le bébé couché dans la crèche. Puis ils repartirent en remerciant Dieu pour tout ce qu'ils avaient vu et entendu.",
+        "explorateurs": "Les bergers se dirent les uns aux autres : « Allons jusqu'à Bethléhem, et voyons ce qui est arrivé. » Ils y allèrent en hâte, et ils trouvèrent Marie et Joseph, et le petit enfant couché dans la crèche. Marie gardait toutes ces choses, et les repassait dans son cœur. Et les bergers s'en retournèrent, glorifiant et louant Dieu."
+      },
+      "action": "Touche chaque berger pour qu'il aille voir Jésus !"
+    },
+    {
+      "id": "mages",
+      "stage": "mages",
+      "reference": "Matthieu 2.1-11",
+      "text": {
+        "agneaux": "Des sages venus de loin virent une étoile brillante. Ils la suivirent jusqu'à Jésus et lui offrirent de beaux cadeaux.",
+        "bergers": "Loin à l'est, des mages virent une étoile nouvelle dans le ciel. Ils comprirent qu'un grand roi était né et partirent pour l'adorer. L'étoile les guida jusqu'à la maison où était l'enfant. Ils se prosternèrent devant Jésus et lui offrirent de l'or, de l'encens et de la myrrhe.",
+        "explorateurs": "Des mages d'Orient arrivèrent à Jérusalem et dirent : « Où est le roi des Juifs qui vient de naître ? car nous avons vu son étoile en Orient, et nous sommes venus pour l'adorer. » L'étoile marchait devant eux jusqu'à ce qu'elle s'arrêta au-dessus du lieu où était le petit enfant. Ils entrèrent, se prosternèrent et l'adorèrent ; puis ils lui offrirent en présent de l'or, de l'encens et de la myrrhe."
+      },
+      "action": "Fais glisser l'étoile pour guider les mages !",
+      "after": {
+        "all": "Jésus est le plus beau cadeau que Dieu ait fait au monde."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "annonce", "label": "L'ange et Marie" },
+        { "id": "voyage", "label": "Le voyage" },
+        { "id": "etable", "label": "Jésus est né" },
+        { "id": "bergers", "label": "Les anges et les bergers" },
+        { "id": "visite", "label": "Les bergers à l'étable" },
+        { "id": "mages", "label": "Les mages" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Dans la maison de Bethléhem, des amis se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "sheep", "label": "le mouton" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "owl", "label": "le hibou" },
+        { "id": "dove", "label": "la colombe" },
+        { "id": "rabbit", "label": "le lapin" },
+        { "id": "ladybug", "label": "la coccinelle" },
+        { "id": "snail", "label": "l'escargot" },
+        { "id": "star", "label": "l'étoile" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de Noël.",
+      "pairs": ["star", "sheep", "donkey", "manger", "camel", "dove"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Aujourd'hui, dans la ville de David, il vous est né un Sauveur, qui est le Christ, le Seigneur.",
+    "reference": "Luc 2.11",
+    "spoken": "Luc, chapitre 2, verset 11 : Aujourd'hui, dans la ville de David, il vous est né un Sauveur, qui est le Christ, le Seigneur.",
+    "chunks": {
+      "bergers": ["Aujourd'hui, dans la ville de David,", "il vous est né un Sauveur,", "qui est le Christ, le Seigneur."],
+      "explorateurs": ["Aujourd'hui,", "dans la ville de David,", "il vous est né", "un Sauveur,", "qui est le Christ,", "le Seigneur."]
+    },
+    "referenceChoices": ["Luc 2.11", "Luc 11.2", "Jean 2.11"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "naissance", "title": "La crèche" },
+  "reward": "Bravo ! Tu as terminé l'histoire de la naissance de Jésus. Voici ton autocollant pour ton album !"
+}

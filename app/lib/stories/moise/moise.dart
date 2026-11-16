@@ -114,46 +114,15 @@ const _miriam = PersonStyle(
 );
 
 const _people = [
-  PersonStyle(
-    skin: Color(0xFF7D4A30),
-    robe: Color(0xFFE0A35A),
-    headcloth: Color(0xFFF6E7C8),
-    veil: true,
-    scale: 0.9,
-  ),
-  PersonStyle(
-    skin: Color(0xFF9C6440),
-    robe: Color(0xFF5F9E7E),
-    headcloth: Color(0xFFF0E2C8),
-    beard: Color(0xFF3E2A1E),
-  ),
+  PersonStyle(skin: Color(0xFF7D4A30), robe: Color(0xFFE0A35A), headcloth: Color(0xFFF6E7C8), veil: true, scale: 0.9),
+  PersonStyle(skin: Color(0xFF9C6440), robe: Color(0xFF5F9E7E), headcloth: Color(0xFFF0E2C8), beard: Color(0xFF3E2A1E)),
   PersonStyle(skin: Color(0xFF6E4029), robe: Color(0xFF8C79B5), headcloth: Color(0xFFEADBC0), scale: 0.7),
-  PersonStyle(
-    skin: Color(0xFFA9714B),
-    robe: Color(0xFFB0563A),
-    headcloth: Color(0xFFF3E2C0),
-    beard: Color(0xFF4A3323),
-  ),
-  PersonStyle(
-    skin: Color(0xFF8E5A3B),
-    robe: Color(0xFF6FA8A3),
-    headcloth: Color(0xFFF2D6B8),
-    veil: true,
-    scale: 0.88,
-  ),
+  PersonStyle(skin: Color(0xFFA9714B), robe: Color(0xFFB0563A), headcloth: Color(0xFFF3E2C0), beard: Color(0xFF4A3323)),
+  PersonStyle(skin: Color(0xFF8E5A3B), robe: Color(0xFF6FA8A3), headcloth: Color(0xFFF2D6B8), veil: true, scale: 0.88),
   PersonStyle(skin: Color(0xFF7D4A30), robe: Color(0xFFD08A47), headcloth: Color(0xFFE8D6B3), scale: 0.65),
 ];
 
-void _moses(
-  Canvas canvas,
-  Size s,
-  double fx,
-  double fy,
-  double h,
-  double time, {
-  bool left = false,
-  double raise = 0,
-}) {
+void _moses(Canvas canvas, Size s, double fx, double fy, double h, double time, {bool left = false, double raise = 0}) {
   final feet = feetAt(s, fx, fy);
   paintPerson(
     canvas,
@@ -166,12 +135,7 @@ void _moses(
     blink: blinkAt(time, fx * 3),
   );
   final dir = left ? -1 : 1;
-  final staff = Rect.fromLTWH(
-    feet.dx + dir * h * 0.2 - h * 0.25,
-    feet.dy - h * (1.05 + raise * 0.25),
-    h * 0.5,
-    h,
-  );
+  final staff = Rect.fromLTWH(feet.dx + dir * h * 0.2 - h * 0.25, feet.dy - h * (1.05 + raise * 0.25), h * 0.5, h);
   paintThing(canvas, 'staff', staff, glow: raise);
 }
 
@@ -281,11 +245,7 @@ void _pillar(Canvas canvas, Size s, StageView v) {
     drawPaper(
       canvas,
       Path()..addOval(
-        Rect.fromCenter(
-          center: Offset(c.dx + math.sin(v.time + k) * 4, y),
-          width: w * 1.6,
-          height: s.height * 0.12,
-        ),
+        Rect.fromCenter(center: Offset(c.dx + math.sin(v.time + k) * 4, y), width: w * 1.6, height: s.height * 0.12),
       ),
       const Color(0xFFFFFBF2),
       elevation: 2,
@@ -344,10 +304,7 @@ void _parting(Canvas canvas, Size s, double open, double time) {
     canvas.drawRect(
       Offset.zero & s,
       Paint()
-        ..shader = Gradient.linear(Offset(0, top), Offset(0, s.height), const [
-          Color(0xFF7CC7DD),
-          Color(0xFF2E78A3),
-        ]),
+        ..shader = Gradient.linear(Offset(0, top), Offset(0, s.height), const [Color(0xFF7CC7DD), Color(0xFF2E78A3)]),
     );
     final foam = Paint()
       ..color = const Color(0x55FFFFFF)
@@ -355,11 +312,7 @@ void _parting(Canvas canvas, Size s, double open, double time) {
       ..style = PaintingStyle.stroke;
     for (var k = 0; k < 6; k++) {
       final y = top + s.height * (0.06 + k * 0.07);
-      canvas.drawLine(
-        Offset(0, y + math.sin(time + k) * 3),
-        Offset(s.width, y + math.cos(time + k) * 3),
-        foam,
-      );
+      canvas.drawLine(Offset(0, y + math.sin(time + k) * 3), Offset(s.width, y + math.cos(time + k) * 3), foam);
     }
     canvas.restore();
     canvas.drawPath(
@@ -416,15 +369,7 @@ void _cross(Canvas canvas, Size s, StageView v) {
   }
   if (v.done) {
     final dance = math.sin(v.time * 5) * s.height * 0.01;
-    paintPerson(
-      canvas,
-      feetAt(s, 0.9, 0.9),
-      s.height * 0.3,
-      _miriam,
-      raisedBoth: true,
-      wave: 0.8,
-      bob: dance.abs(),
-    );
+    paintPerson(canvas, feetAt(s, 0.9, 0.9), s.height * 0.3, _miriam, raisedBoth: true, wave: 0.8, bob: dance.abs());
     paintThing(canvas, 'tambourine', boxAt(s, 0.95, 0.66 - dance / s.height, 0.08), time: v.time);
   }
 }
@@ -461,11 +406,7 @@ void _seekForeground(Canvas canvas, Size s) {
   drawPaper(
     canvas,
     Path()..addOval(
-      Rect.fromCenter(
-        center: Offset(s.width * 0.3, s.height * 0.5),
-        width: s.width * 0.1,
-        height: s.height * 0.07,
-      ),
+      Rect.fromCenter(center: Offset(s.width * 0.3, s.height * 0.5), width: s.width * 0.1, height: s.height * 0.07),
     ),
     const Color(0xFF6FA84F),
     elevation: 3,
