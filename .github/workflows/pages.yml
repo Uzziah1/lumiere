@@ -1,0 +1,50 @@
+name: Site web (GitHub Pages)
+
+# Publie la version web du jeu, jouable hors ligne, à chaque push sur main.
+# Prérequis (une seule fois) : Settings → Pages → Source : « GitHub Actions ».
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Construire le site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.50.0
+          channel: stable
+          cache: true
+      - name: Construire la version web
+        working-directory: app
+        run: flutter build web --release --no-web-resources-cdn --base-href "/${{ github.event.repository.name }}/"
+      - name: Préparer le hors ligne
+        run: python3 tools/web/precache.py app/build/web
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: app/build/web
+
+  deploy:
+    name: Publier
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

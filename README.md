@@ -9,6 +9,12 @@ se vit (récit animé et raconté), se joue (mini-jeux) et se retient (verset, a
 - Conception du jeu : [`docs/GDD.md`](docs/GDD.md)
 - Application Flutter : [`app/`](app/)
 
+## Jouer
+
+- Sur le web (hors ligne après la première visite) : `https://uzziah1.github.io/lumiere/` (une fois GitHub Pages activé).
+- Sur Android : l'APK de la dernière [Release](https://github.com/Uzziah1/lumiere/releases).
+- Publier : voir [`docs/PUBLICATION.md`](docs/PUBLICATION.md). Confidentialité : [`docs/confidentialite.md`](docs/confidentialite.md).
+
 ## Lancer le jeu
 
 Prérequis : [Flutter](https://docs.flutter.dev/get-started/install) stable 3.50 ou plus récent.

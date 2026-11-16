@@ -85,6 +85,8 @@ et ressources libres, ou produits par nous.
 - `world/` : la carte du monde (`/carte`) — îles du lot 1 (`world.dart` : règles d'ouverture `World`, ami de
   l'arche de chaque île `treasure`), monuments dessinés (`landmarks.dart`), `WorldMapScreen`, l'album
   (`/album`, `AlbumScreen`) et l'arche-trésor (`/tresor`, `TreasureScreen`)
+- `parents/` : espace parents (`/parents`, `ParentsScreen` : enfants, réglages, à propos), politique de
+  confidentialité et crédits (`privacy.dart`), temps de jeu et écran « À demain » (`play_time.dart`)
 - `screens/` : autres écrans (`ComingSoonScreen` pour les rubriques à venir)
 - `widgets/` : composants d'interface réutilisables (`PaperButton`, `RoundPaperButton`, `ColombeBubble`,
   `AgeCard`, `ProfileAvatar`, `PaperBackdrop`, `showParentalGate`…)
@@ -101,6 +103,27 @@ et ressources libres, ou produits par nous.
 - Avec un profil, l'histoire prend l'âge du profil (pas d'écran de choix), reprend les étoiles déjà gagnées,
   sauvegarde chaque étoile aussitôt (`recordPart`) et l'autocollant à la fin (`earnSticker`).
 - Textes affichés : `frenchSpacing` (espace insécable avant ! ? ; : et dans les guillemets).
+
+## Espace parents, réglages, temps de jeu
+
+- `/parents` s'ouvre par la barrière parentale. Réglages (`Settings` dans la sauvegarde, version 2) : voix
+  (`GatedNarrator` : sans voix, attente du temps de lecture), bruitages (`GatedSoundEffects`), sous-titres
+  (`Settings.subtitlesFor` : selon l'âge, toujours, jamais ; toujours sans voix), réduire les animations et
+  textes plus grands (appliqués à `MediaQuery` dans `app.dart`), limite quotidienne (0, 15… 90 min).
+- `PlayTimeKeeper` (dans `app.dart`) compte le temps du profil actif sur `/carte`, `/album`, `/tresor` et
+  `/histoire/*` (pas à l'accueil ni chez les parents), prévient 2 min avant, puis affiche `TimeUpScreen` par-dessus
+  tout ; la barrière y est intégrée (pas de boîte de dialogue : l'écran recouvre la navigation). Un parent ajoute
+  15 ou 30 min (`grantExtraTime`). Dans les tests : `LumiereApp(trackPlaytime: false, …)` et `onTick()` à la main.
+- Politique de confidentialité : `lib/parents/privacy.dart` = `docs/confidentialite.md` = `web/confidentialite.html`
+  (vérifié par `privacy_test.dart`). Aucune autorisation Android (vérifié aussi).
+
+## Publication (voir `docs/PUBLICATION.md`)
+
+- Web : `sw.js` (service worker maison : préchargement ~5 Mo listé par `tools/web/precache.py`, narration gardée
+  à l'écoute, moteur d'affichage signalé par la page), publié sur GitHub Pages par `.github/workflows/pages.yml`.
+- Android : `.github/workflows/release.yml` sur une étiquette `v*` → Release GitHub avec APK et AAB ; signature de
+  publication si les secrets `ANDROID_KEYSTORE_*` existent (`android/key.properties`, jamais commité).
+- Version : `pubspec.yaml` (`version`) et `lib/version.dart` (affichée chez les parents).
 
 ## Histoires : données, décors, narration
 
@@ -149,8 +172,10 @@ et ressources libres, ou produits par nous.
 - **L2 — Carte, profils, sauvegarde** ✅ : jusqu'à 4 profils (prénom, âge, avatar),
   « Qui joue ? », barrière parentale pour modifier/supprimer, carte du monde à 8 îles (Noé jouable, les autres
   « bientôt »), déblocage à 3 étoiles, étoiles et autocollants sauvegardés sur l'appareil.
-- **L3 — Lot 1** ✅ (à valider par Uzziah) : les 8 histoires de l'Ancien Testament jouables (La Création, Adam et
+- **L3 — Lot 1** ✅ : les 8 histoires de l'Ancien Testament jouables (La Création, Adam et
   Ève, Noé, Abraham, Joseph, Moïse, David, Jonas), six scènes chacune (huit pour Noé), cache-cache et memory
   propres à chaque histoire, versets, album d'autocollants, arche-trésor (un ami par histoire terminée).
-- **L4** : espace parents, limites de temps, accessibilité, confidentialité, PWA et APK publics.
+- **L4 — Parents et publication** ✅ (à valider par Uzziah) : espace parents (progression, réglages, à propos),
+  limite de temps quotidienne, voix/bruitages/sous-titres/animations/grand texte réglables, politique de
+  confidentialité (jeu, docs, web), jeu web hors ligne sur GitHub Pages, APK/AAB publiés sur étiquette.
 - **L5** : Nouveau Testament.

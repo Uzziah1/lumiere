@@ -142,7 +142,14 @@ class RecitViewState extends State<RecitView> {
     final scenes = session.story.scenes.length;
     return Stack(
       children: [
-        Positioned.fill(child: GameWidget(game: game)),
+        Positioned.fill(
+          // Pour les lecteurs d'écran : ce que raconte la scène et ce qu'il faut faire.
+          child: Semantics(
+            label: '${session.text('scene.${scene.id}')} ${session.text('scene.${scene.id}.action')}',
+            liveRegion: true,
+            child: GameWidget(game: game),
+          ),
+        ),
         Positioned.fill(
           child: SafeArea(
             child: LayoutBuilder(

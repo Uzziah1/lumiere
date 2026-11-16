@@ -41,6 +41,9 @@ jobs:
           channel: stable
           cache: true
       - run: flutter build web --release --no-web-resources-cdn
+      - name: Préparer le hors ligne
+        working-directory: .
+        run: python3 tools/web/precache.py app/build/web
       - uses: actions/upload-artifact@v4
         with:
           name: lumiere-web

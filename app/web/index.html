@@ -48,6 +48,21 @@
       var loader = document.getElementById('lumiere-loader');
       loader.classList.add('done');
       setTimeout(function () { loader.remove(); }, 600);
+      // Puis on installe le service worker (jeu jouable hors ligne), sans
+      // ralentir le premier chargement.
+      if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+        navigator.serviceWorker.register('sw.js').then(function () {
+          return navigator.serviceWorker.ready;
+        }).then(function (registration) {
+          // On signale les fichiers déjà chargés (dont le moteur d'affichage).
+          var keep = performance.getEntriesByType('resource')
+            .map(function (entry) { return entry.name; })
+            .filter(function (url) { return url.indexOf(location.origin) === 0 && !/\.mp3($|\?)/.test(url); });
+          registration.active.postMessage({ keep: keep });
+        }).catch(function (error) {
+          console.warn('Lumière : service worker indisponible', error);
+        });
+      }
     });
   </script>
   <script src="flutter_bootstrap.js" async></script>
