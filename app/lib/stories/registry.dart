@@ -9,6 +9,7 @@ import 'abraham/abraham.dart';
 import 'creation/creation.dart';
 import 'david/david.dart';
 import 'eden/eden.dart';
+import 'jonas/jonas.dart';
 import 'joseph/joseph.dart';
 import 'moise/moise.dart';
 import 'noe/noe_art.dart';
@@ -143,6 +144,7 @@ final Map<String, StoryPack> storyPacks = {
   'joseph': josephPack,
   'moise': moisePack,
   'david': davidPack,
+  'jonas': jonasPack,
   'noe': StoryPack(
     stages: noeStages,
     paintThumb: paintNoeThumb,

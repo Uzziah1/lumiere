@@ -1,0 +1,130 @@
+{
+  "id": "jonas",
+  "title": "Jonas et le grand poisson",
+  "reference": "Jonas 1 à 4",
+  "intro": "Jonas et le grand poisson. Une histoire de la Bible, dans le livre de Jonas.",
+  "scenes": [
+    {
+      "id": "fuite",
+      "stage": "flee",
+      "reference": "Jonas 1.1-3",
+      "text": {
+        "agneaux": "Dieu dit à Jonas : « Va dans la grande ville de Ninive. » Mais Jonas ne voulait pas ! Il monta sur un bateau qui partait très loin.",
+        "bergers": "Dieu dit à Jonas : « Va à Ninive, la grande ville, et dis aux habitants d'arrêter de faire le mal. » Mais Jonas ne voulait pas y aller. Il prit un bateau qui partait dans la direction opposée, vers Tarsis.",
+        "explorateurs": "La parole de l'Éternel fut adressée à Jonas : « Lève-toi, va à Ninive, la grande ville, et crie contre elle, car sa méchanceté est montée jusqu'à moi. » Mais Jonas se leva pour s'enfuir à Tarsis, loin de la face de l'Éternel. Il trouva à Japho un navire qui allait à Tarsis et y monta."
+      },
+      "action": "Touche le bateau."
+    },
+    {
+      "id": "tempete",
+      "stage": "storm",
+      "reference": "Jonas 1.4-12",
+      "text": {
+        "agneaux": "Dieu envoya une grosse tempête. Les marins avaient très peur ! Ils jetèrent les caisses à la mer.",
+        "bergers": "Dieu envoya un grand vent sur la mer, et une terrible tempête secoua le bateau. Les marins avaient peur et jetèrent la cargaison par-dessus bord. Jonas, lui, dormait au fond du bateau. Il leur dit : « C'est à cause de moi. Jetez-moi à la mer, et elle se calmera. »",
+        "explorateurs": "L'Éternel fit souffler sur la mer un vent impétueux, et le navire menaçait de se briser. Les mariniers eurent peur, crièrent chacun à son dieu, et jetèrent les objets du navire dans la mer pour l'alléger. Jonas, descendu au fond du navire, dormait profondément. Il finit par avouer : « C'est moi qui attire sur vous cette grande tempête. Prenez-moi et jetez-moi dans la mer. »"
+      },
+      "action": "Touche les caisses pour aider les marins !"
+    },
+    {
+      "id": "poisson",
+      "stage": "fish",
+      "reference": "Jonas 1.15 à 2.1",
+      "text": {
+        "agneaux": "Les marins mirent Jonas dans la mer, et la mer se calma. Alors Dieu envoya un très grand poisson qui avala Jonas !",
+        "bergers": "Les marins jetèrent Jonas à la mer, et aussitôt la tempête s'arrêta. Mais Dieu n'abandonna pas Jonas : il envoya un grand poisson qui l'avala. Jonas resta dans le ventre du poisson trois jours et trois nuits.",
+        "explorateurs": "Ils prirent Jonas et le jetèrent dans la mer, et la fureur de la mer s'apaisa. Les marins furent saisis d'une grande crainte de l'Éternel. L'Éternel fit venir un grand poisson pour engloutir Jonas, et Jonas fut dans le ventre du poisson trois jours et trois nuits."
+      },
+      "action": "Touche le grand poisson !"
+    },
+    {
+      "id": "priere",
+      "stage": "prayer",
+      "reference": "Jonas 2.2-11",
+      "text": {
+        "agneaux": "Dans le ventre du poisson, Jonas pria Dieu : « Pardon, Seigneur ! » Et Dieu l'entendit.",
+        "bergers": "Dans le ventre du poisson, Jonas pria : « Dans ma détresse, j'ai crié vers l'Éternel, et il m'a répondu ! Le salut vient de l'Éternel. » Alors Dieu parla au poisson, et le poisson déposa Jonas sur la plage.",
+        "explorateurs": "Du ventre du poisson, Jonas pria l'Éternel : « Dans ma détresse, j'ai invoqué l'Éternel, et il m'a exaucé. Je t'offrirai des sacrifices avec un cri d'actions de grâces. Le salut vient de l'Éternel. » L'Éternel parla au poisson, et le poisson vomit Jonas sur la terre."
+      },
+      "action": "Touche Jonas trois fois pour les trois jours où il pria !"
+    },
+    {
+      "id": "ninive",
+      "stage": "nineveh",
+      "reference": "Jonas 3.1-10",
+      "text": {
+        "agneaux": "Cette fois, Jonas obéit. Il alla à Ninive et dit : « Arrêtez de faire le mal ! » Les habitants écoutèrent, et Dieu leur pardonna.",
+        "bergers": "Dieu parla une seconde fois à Jonas, et cette fois, il obéit. À Ninive, il annonça : « Encore quarante jours, et Ninive sera détruite ! » Tous les habitants, du plus grand au plus petit, regrettèrent leur méchanceté et prièrent Dieu. Et Dieu eut pitié d'eux.",
+        "explorateurs": "La parole de l'Éternel fut adressée à Jonas une seconde fois, et Jonas se rendit à Ninive. Il cria : « Encore quarante jours, et Ninive est détruite ! » Les gens de Ninive crurent à Dieu ; ils publièrent un jeûne et se revêtirent de sacs, depuis les plus grands jusqu'aux plus petits. Dieu vit qu'ils revenaient de leur mauvaise voie, et il eut pitié d'eux."
+      },
+      "action": "Touche les maisons pour que les habitants écoutent Jonas !"
+    },
+    {
+      "id": "plante",
+      "stage": "plant",
+      "reference": "Jonas 4.5-11",
+      "text": {
+        "agneaux": "Jonas boudait. Dieu fit pousser une plante pour lui donner de l'ombre, puis il lui expliqua : « J'aime tous les habitants de Ninive, et même leurs animaux. »",
+        "bergers": "Jonas était fâché que Dieu ait pardonné à Ninive. Il s'assit hors de la ville. Dieu fit pousser une plante pour lui faire de l'ombre, et Jonas fut très content. Puis Dieu lui dit : « Tu tiens à cette plante. Et moi, je ne tiendrais pas à Ninive, avec tous ses habitants et ses animaux ? »",
+        "explorateurs": "Jonas fut très fâché : il savait que Dieu est compatissant et miséricordieux, lent à la colère et riche en bonté. Il s'assit à l'orient de la ville. L'Éternel fit croître un ricin au-dessus de Jonas pour donner de l'ombre à sa tête. Puis l'Éternel dit : « Tu as pitié du ricin, et moi, je n'aurais pas pitié de Ninive, la grande ville, où il y a plus de cent vingt mille personnes, et des animaux en grand nombre ? »"
+      },
+      "action": "Touche la petite plante pour la faire pousser !",
+      "after": {
+        "all": "Dieu aime tous les gens de la terre, et il est toujours prêt à pardonner."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "flee", "label": "Jonas s'enfuit" },
+        { "id": "storm", "label": "La tempête" },
+        { "id": "fish", "label": "Le grand poisson" },
+        { "id": "prayer", "label": "La prière de Jonas" },
+        { "id": "nineveh", "label": "À Ninive" },
+        { "id": "plant", "label": "La plante" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Au fond de la mer, des trésors se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "fish", "label": "le poisson" },
+        { "id": "tortoise", "label": "la tortue" },
+        { "id": "jar", "label": "la jarre" },
+        { "id": "crate", "label": "la caisse" },
+        { "id": "shell", "label": "le coquillage" },
+        { "id": "star", "label": "l'étoile de mer" },
+        { "id": "plant", "label": "l'algue" },
+        { "id": "snail", "label": "l'escargot de mer" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire de Jonas.",
+      "pairs": ["fish", "boat", "plant", "sheep", "dove", "shell"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Le salut vient de l'Éternel.",
+    "reference": "Jonas 2.10",
+    "spoken": "Jonas, chapitre 2, verset 10 : Le salut vient de l'Éternel.",
+    "chunks": {
+      "bergers": ["Le salut", "vient", "de l'Éternel."],
+      "explorateurs": ["Le", "salut", "vient", "de", "l'Éternel."]
+    },
+    "referenceChoices": ["Jonas 2.10", "Jonas 10.2", "Jean 2.10"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "jonas", "title": "Le grand poisson" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Jonas. Voici ton autocollant pour ton album !"
+}

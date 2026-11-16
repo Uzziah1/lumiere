@@ -15,7 +15,10 @@ import '../registry.dart';
 final davidPack = StoryPack.scripted(
   scripts: {
     'shepherd': StageScript(
-      targets: [for (final (x, y) in _sheepHomes) Rect.fromCenter(center: Offset(x, y - 0.06), width: 0.12, height: 0.16)],
+      targets: [
+        for (final (x, y) in _sheepHomes)
+          Rect.fromCenter(center: Offset(x, y - 0.06), width: 0.12, height: 0.16),
+      ],
       paint: _shepherd,
     ),
     'anoint': const StageScript(
@@ -32,7 +35,9 @@ final davidPack = StoryPack.scripted(
       paint: _goliath,
     ),
     'stones': StageScript(
-      targets: [for (final x in _stoneSpots) Rect.fromCenter(center: Offset(x, 0.74), width: 0.1, height: 0.14)],
+      targets: [
+        for (final x in _stoneSpots) Rect.fromCenter(center: Offset(x, 0.74), width: 0.1, height: 0.14),
+      ],
       paint: _stones,
     ),
     'sling': const StageScript(
@@ -106,9 +111,27 @@ const _goliathStyle = PersonStyle(
 );
 
 const _soldiers = [
-  PersonStyle(skin: Color(0xFF7D4A30), robe: Color(0xFFB0563A), headcloth: Color(0xFFE8D6B3), beard: Color(0xFF2E1E15), helmet: true),
-  PersonStyle(skin: Color(0xFF9C6440), robe: Color(0xFF5F9E7E), headcloth: Color(0xFFF0E2C8), beard: Color(0xFF3E2A1E), helmet: true),
-  PersonStyle(skin: Color(0xFF6E4029), robe: Color(0xFF6E8FB8), headcloth: Color(0xFFEADBC0), beard: Color(0xFF2A1A12), helmet: true),
+  PersonStyle(
+    skin: Color(0xFF7D4A30),
+    robe: Color(0xFFB0563A),
+    headcloth: Color(0xFFE8D6B3),
+    beard: Color(0xFF2E1E15),
+    helmet: true,
+  ),
+  PersonStyle(
+    skin: Color(0xFF9C6440),
+    robe: Color(0xFF5F9E7E),
+    headcloth: Color(0xFFF0E2C8),
+    beard: Color(0xFF3E2A1E),
+    helmet: true,
+  ),
+  PersonStyle(
+    skin: Color(0xFF6E4029),
+    robe: Color(0xFF6E8FB8),
+    headcloth: Color(0xFFEADBC0),
+    beard: Color(0xFF2A1A12),
+    helmet: true,
+  ),
 ];
 
 void _hills(Canvas canvas, Size s, double time, {List<Color> sky = Skies.day}) {
@@ -131,30 +154,65 @@ void _shepherd(Canvas canvas, Size s, StageView v) {
     final at = Offset.lerp(home, near, t)!;
     final h = s.height * 0.16;
     final hop = v.pulse[i] * s.height * 0.03;
-    paintAnimal(canvas, Animal.sheep, Rect.fromLTWH(at.dx - h / 2, at.dy - h - hop, h, h),
-        walk: t > 0 && t < 1 ? v.time : 0, facingLeft: at.dx > center.dx, blink: blinkAt(v.time, i * 1.1));
+    paintAnimal(
+      canvas,
+      Animal.sheep,
+      Rect.fromLTWH(at.dx - h / 2, at.dy - h - hop, h, h),
+      walk: t > 0 && t < 1 ? v.time : 0,
+      facingLeft: at.dx > center.dx,
+      blink: blinkAt(v.time, i * 1.1),
+    );
   }
 }
 
 // 2. Le prophète Samuel verse l'huile sur la tête de David.
 void _anoint(Canvas canvas, Size s, StageView v) {
   _hills(canvas, s, v.time, sky: Skies.dawn);
-  paintPerson(canvas, feetAt(s, 0.36, 0.92), s.height * 0.46, _samuel, wave: 0.7, blink: blinkAt(v.time, 0.8));
+  paintPerson(
+    canvas,
+    feetAt(s, 0.36, 0.92),
+    s.height * 0.46,
+    _samuel,
+    wave: 0.7,
+    blink: blinkAt(v.time, 0.8),
+  );
   final horn = boxAt(s, 0.46, 0.52, 0.12);
   paintThing(canvas, 'horn', horn, glow: v.eased);
   final head = Offset(s.width * 0.56, s.height * 0.92 - s.height * 0.4 * 0.86 * 0.8);
   if (v.eased > 0) {
     for (var k = 0; k < 4; k++) {
       final y = horn.top + (head.dy - horn.top) * ((v.time * 0.8 + k / 4) % 1);
-      canvas.drawCircle(Offset(head.dx - s.width * 0.02, y), s.height * 0.008, Paint()..color = const Color(0xFFF2C14E));
+      canvas.drawCircle(
+        Offset(head.dx - s.width * 0.02, y),
+        s.height * 0.008,
+        Paint()..color = const Color(0xFFF2C14E),
+      );
     }
-    canvas.drawCircle(head, s.height * 0.22 * v.eased,
-        Paint()..color = Palette.sun.withValues(alpha: 0.4 * v.eased)..maskFilter = MaskFilter.blur(BlurStyle.normal, s.height * 0.07));
+    canvas.drawCircle(
+      head,
+      s.height * 0.22 * v.eased,
+      Paint()
+        ..color = Palette.sun.withValues(alpha: 0.4 * v.eased)
+        ..maskFilter = MaskFilter.blur(BlurStyle.normal, s.height * 0.07),
+    );
   }
-  paintPerson(canvas, feetAt(s, 0.56, 0.92), s.height * 0.4, david, facingLeft: true, blink: blinkAt(v.time, 1.7));
+  paintPerson(
+    canvas,
+    feetAt(s, 0.56, 0.92),
+    s.height * 0.4,
+    david,
+    facingLeft: true,
+    blink: blinkAt(v.time, 1.7),
+  );
   for (var k = 0; k < 3; k++) {
-    paintPerson(canvas, feetAt(s, 0.74 + k * 0.08, 0.9), s.height * 0.38, _soldiers[k].copyWithoutHelmet(), facingLeft: true,
-        blink: blinkAt(v.time, k.toDouble()));
+    paintPerson(
+      canvas,
+      feetAt(s, 0.74 + k * 0.08, 0.9),
+      s.height * 0.38,
+      _soldiers[k].copyWithoutHelmet(),
+      facingLeft: true,
+      blink: blinkAt(v.time, k.toDouble()),
+    );
   }
 }
 
@@ -162,14 +220,34 @@ void _anoint(Canvas canvas, Size s, StageView v) {
 void _goliath(Canvas canvas, Size s, StageView v) {
   _hills(canvas, s, v.time, sky: Skies.desert);
   final shout = math.sin(v.time * 1.5) > 0.6 ? math.sin(v.time * 30) * s.height * 0.004 : 0.0;
-  paintPerson(canvas, feetAt(s, 0.78, 0.92), s.height * 0.64, _goliathStyle, facingLeft: true, bob: shout, wave: 0.4,
-      blink: blinkAt(v.time, 0.3));
+  paintPerson(
+    canvas,
+    feetAt(s, 0.78, 0.92),
+    s.height * 0.64,
+    _goliathStyle,
+    facingLeft: true,
+    bob: shout,
+    wave: 0.4,
+    blink: blinkAt(v.time, 0.3),
+  );
   for (var k = 0; k < 3; k++) {
-    paintPerson(canvas, feetAt(s, 0.36 + k * 0.08, 0.9), s.height * 0.34, _soldiers[k], blink: blinkAt(v.time, k * 1.4));
+    paintPerson(
+      canvas,
+      feetAt(s, 0.36 + k * 0.08, 0.9),
+      s.height * 0.34,
+      _soldiers[k],
+      blink: blinkAt(v.time, k * 1.4),
+    );
   }
   final step = v.eased * s.width * 0.12;
-  paintPerson(canvas, feetAt(s, 0.2, 0.92) + Offset(step, 0), s.height * 0.38, david, blink: blinkAt(v.time, 1.1),
-      wave: v.done ? 0.8 : 0);
+  paintPerson(
+    canvas,
+    feetAt(s, 0.2, 0.92) + Offset(step, 0),
+    s.height * 0.38,
+    david,
+    blink: blinkAt(v.time, 1.1),
+    wave: v.done ? 0.8 : 0,
+  );
 }
 
 // 4. David choisit cinq pierres bien lisses dans le torrent.
@@ -188,14 +266,33 @@ void _stones(Canvas canvas, Size s, StageView v) {
     final bag = Offset(s.width * 0.12, s.height * 0.62);
     final at = Offset.lerp(home, bag, t)!;
     if (t < 0.98) {
-      paintThing(canvas, 'stone', Rect.fromCenter(center: at, width: s.height * 0.16 * (1 - t * 0.5), height: s.height * 0.16 * (1 - t * 0.5)));
+      paintThing(
+        canvas,
+        'stone',
+        Rect.fromCenter(
+          center: at,
+          width: s.height * 0.16 * (1 - t * 0.5),
+          height: s.height * 0.16 * (1 - t * 0.5),
+        ),
+      );
     }
   }
-  paintPerson(canvas, feetAt(s, 0.1, 0.95), s.height * 0.42, david, blink: blinkAt(v.time, 0.7), wave: v.pulse.reduce(math.max) * 0.6);
+  paintPerson(
+    canvas,
+    feetAt(s, 0.1, 0.95),
+    s.height * 0.42,
+    david,
+    blink: blinkAt(v.time, 0.7),
+    wave: v.pulse.reduce(math.max) * 0.6,
+  );
   // Le petit sac de berger se remplit.
   final count = (v.progress * 5).round();
   for (var k = 0; k < count; k++) {
-    canvas.drawCircle(Offset(s.width * (0.14 + k * 0.012), s.height * 0.62), s.height * 0.012, Paint()..color = const Color(0xFFB8B3AA));
+    canvas.drawCircle(
+      Offset(s.width * (0.14 + k * 0.012), s.height * 0.62),
+      s.height * 0.012,
+      Paint()..color = const Color(0xFFB8B3AA),
+    );
   }
 }
 
@@ -211,22 +308,50 @@ void _sling(Canvas canvas, Size s, StageView v) {
   // Il tombe le visage contre terre (1 Samuel 17.49), vers David.
   canvas.rotate(-fall * 1.4);
   canvas.translate(-feet.dx, -feet.dy);
-  paintPerson(canvas, feet, s.height * 0.64, _goliathStyle, facingLeft: true, blink: fall > 0 ? 1 : blinkAt(v.time, 0.3));
+  paintPerson(
+    canvas,
+    feet,
+    s.height * 0.64,
+    _goliathStyle,
+    facingLeft: true,
+    blink: fall > 0 ? 1 : blinkAt(v.time, 0.3),
+  );
   canvas.restore();
   if (fall >= 1) {
     for (var k = 0; k < 3; k++) {
       final a = v.time * 3 + k * 2.1;
-      paintThing(canvas, 'star', Rect.fromCenter(center: Offset(s.width * 0.5 + math.cos(a) * s.width * 0.03, s.height * 0.8 + math.sin(a) * s.height * 0.03),
-          width: s.height * 0.04, height: s.height * 0.04));
+      paintThing(
+        canvas,
+        'star',
+        Rect.fromCenter(
+          center: Offset(
+            s.width * 0.5 + math.cos(a) * s.width * 0.03,
+            s.height * 0.8 + math.sin(a) * s.height * 0.03,
+          ),
+          width: s.height * 0.04,
+          height: s.height * 0.04,
+        ),
+      );
     }
   }
-  paintPerson(canvas, feetAt(s, 0.22, 0.92), s.height * 0.38, david, raisedBoth: t > 0 && t < 0.55, wave: t > 0 ? 0.9 : 0,
-      blink: blinkAt(v.time, 1.5));
+  paintPerson(
+    canvas,
+    feetAt(s, 0.22, 0.92),
+    s.height * 0.38,
+    david,
+    raisedBoth: t > 0 && t < 0.55,
+    wave: t > 0 ? 0.9 : 0,
+    blink: blinkAt(v.time, 1.5),
+  );
   if (t > 0 && t < 0.55) {
     // La fronde tourne, puis la pierre file vers le géant.
     final spin = v.time * 18;
     final hand = Offset(s.width * 0.22, s.height * 0.92 - s.height * 0.38 * 0.86 * 1.05);
-    canvas.drawCircle(hand + Offset(math.cos(spin), math.sin(spin) * 0.5) * s.height * 0.05, s.height * 0.012, Paint()..color = const Color(0xFFB8B3AA));
+    canvas.drawCircle(
+      hand + Offset(math.cos(spin), math.sin(spin) * 0.5) * s.height * 0.05,
+      s.height * 0.012,
+      Paint()..color = const Color(0xFFB8B3AA),
+    );
   }
   if (t >= 0.25 && t < 0.6) {
     final k = ((t - 0.25) / 0.35).clamp(0.0, 1.0);
@@ -237,8 +362,15 @@ void _sling(Canvas canvas, Size s, StageView v) {
   }
   if (v.done) {
     for (var k = 0; k < 3; k++) {
-      paintPerson(canvas, feetAt(s, 0.36 + k * 0.08, 0.9), s.height * 0.34, _soldiers[k], raisedBoth: true,
-          wave: 0.6 + 0.4 * math.sin(v.time * 4 + k), blink: blinkAt(v.time, k.toDouble()));
+      paintPerson(
+        canvas,
+        feetAt(s, 0.36 + k * 0.08, 0.9),
+        s.height * 0.34,
+        _soldiers[k],
+        raisedBoth: true,
+        wave: 0.6 + 0.4 * math.sin(v.time * 4 + k),
+        blink: blinkAt(v.time, k.toDouble()),
+      );
     }
   }
 }
@@ -249,9 +381,21 @@ void _psalm(Canvas canvas, Size s, StageView v) {
   paintStarField(canvas, s, v.time, count: 30, opacity: 0.8);
   paintHills(canvas, s, v.time, baselines: const [0.66, 0.78, 0.88], colors: Lands.green, seed: 137);
   for (final (fx, i) in const [(0.18, 0), (0.28, 1), (0.82, 2)]) {
-    paintAnimal(canvas, Animal.sheep, boxAt(s, fx, 0.94, 0.11), facingLeft: fx > 0.5, blink: blinkAt(v.time, i * 1.3));
+    paintAnimal(
+      canvas,
+      Animal.sheep,
+      boxAt(s, fx, 0.94, 0.11),
+      facingLeft: fx > 0.5,
+      blink: blinkAt(v.time, i * 1.3),
+    );
   }
-  paintPerson(canvas, feetAt(s, 0.48, 0.94), s.height * 0.44, v.eased > 0.5 ? _king : david, blink: blinkAt(v.time, 0.6));
+  paintPerson(
+    canvas,
+    feetAt(s, 0.48, 0.94),
+    s.height * 0.44,
+    v.eased > 0.5 ? _king : david,
+    blink: blinkAt(v.time, 0.6),
+  );
   paintThing(canvas, 'harp', boxAt(s, 0.58, 0.74, 0.2));
   if (v.eased > 0) {
     // Des notes de musique qui s'envolent.
@@ -260,7 +404,11 @@ void _psalm(Canvas canvas, Size s, StageView v) {
       final p = Offset(s.width * (0.6 + 0.05 * math.sin(phase * 6 + k)), s.height * (0.56 - phase * 0.4));
       final note = Paint()..color = Palette.sun.withValues(alpha: (1 - phase) * v.eased);
       canvas.drawCircle(p, s.height * 0.014, note);
-      canvas.drawLine(p + Offset(s.height * 0.012, 0), p + Offset(s.height * 0.012, -s.height * 0.05), note..strokeWidth = 2.5);
+      canvas.drawLine(
+        p + Offset(s.height * 0.012, 0),
+        p + Offset(s.height * 0.012, -s.height * 0.05),
+        note..strokeWidth = 2.5,
+      );
     }
   }
 }
@@ -277,11 +425,16 @@ void _seekForeground(Canvas canvas, Size s) {
   paintThing(canvas, 'stone', boxAt(s, 0.6, 1.0, 0.1, aspect: 1.3));
   paintThing(canvas, 'bush', boxAt(s, 0.76, 1.0, 0.13, aspect: 1.4));
   paintThing(canvas, 'stone', boxAt(s, 0.47, 1.0, 0.07, aspect: 1.4));
-  drawPaper(canvas, Path()..addRect(Rect.fromLTWH(s.width * 0.84, s.height * 0.34, s.width * 0.12, s.height * 0.04)), const Color(0xFF8A5634),
-      elevation: 3);
+  drawPaper(
+    canvas,
+    Path()..addRect(Rect.fromLTWH(s.width * 0.84, s.height * 0.34, s.width * 0.12, s.height * 0.04)),
+    const Color(0xFF8A5634),
+    elevation: 3,
+  );
 }
 
 extension on PersonStyle {
   /// Les frères de David, sans casque.
-  PersonStyle copyWithoutHelmet() => PersonStyle(skin: skin, robe: robe, headcloth: headcloth, sash: sash, beard: beard, scale: 0.95);
+  PersonStyle copyWithoutHelmet() =>
+      PersonStyle(skin: skin, robe: robe, headcloth: headcloth, sash: sash, beard: beard, scale: 0.95);
 }
