@@ -71,7 +71,7 @@ class _AlbumScreenState extends State<AlbumScreen> {
     final state = GameScope.of(context);
     final profile = state.current;
     if (profile == null) return const Scaffold(backgroundColor: Palette.paper);
-    final earned = lot1.where((i) => state.progress(i.id).sticker).length;
+    final earned = allIslands.where((i) => state.progress(i.id).sticker).length;
     return Scaffold(
       body: PaperBackdrop(
         child: SafeArea(
@@ -105,7 +105,7 @@ class _AlbumScreenState extends State<AlbumScreen> {
                           Text('L’album de ${profile.name}', style: LumiereText.title(compact ? 24 : 34)),
                           SizedBox(height: compact ? 4 : 8),
                           ColombeBubble(
-                            text: '$earned autocollant${earned > 1 ? 's' : ''} sur ${lot1.length}',
+                            text: '$earned autocollant${earned > 1 ? 's' : ''} sur ${allIslands.length}',
                             size: compact ? 30 : 40,
                           ),
                           SizedBox(height: compact ? 8 : 18),
@@ -114,7 +114,7 @@ class _AlbumScreenState extends State<AlbumScreen> {
                             runSpacing: 10,
                             alignment: WrapAlignment.center,
                             children: [
-                              for (final island in lot1)
+                              for (final island in allIslands)
                                 _Slot(
                                   key: ValueKey('album-${island.id}'),
                                   island: island,

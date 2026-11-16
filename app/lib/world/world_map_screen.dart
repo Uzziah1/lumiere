@@ -43,7 +43,7 @@ class WorldMapScreenState extends State<WorldMapScreen> with SingleTickerProvide
   String _bubble = 'Touche une île pour commencer une histoire !';
   bool _scrolled = false;
 
-  World get world => widget.world ?? World(islands: lot1, available: storyPacks.keys.toSet());
+  World get world => widget.world ?? World(islands: allIslands, available: storyPacks.keys.toSet());
 
   @override
   void initState() {
@@ -118,7 +118,8 @@ class WorldMapScreenState extends State<WorldMapScreen> with SingleTickerProvide
       body: LayoutBuilder(
         builder: (context, constraints) {
           final h = constraints.maxHeight;
-          final width = math.max(constraints.maxWidth * 2.2, h * 3.2);
+          // Environ 0,42 hauteur d'écran par île (la carte grandit avec les histoires).
+          final width = math.max(constraints.maxWidth * 2.2, h * 0.42 * w.islands.length);
           final compact = h < 420;
           if (!_scrolled) {
             _scrolled = true;
@@ -548,15 +549,12 @@ class _MapPainter extends CustomPainter {
         wave,
       );
     }
-    // Îlots décoratifs avec un palmier.
-    for (final (fx, fy) in const [
-      (0.13, 0.84),
-      (0.37, 0.14),
-      (0.49, 0.86),
-      (0.73, 0.84),
-      (0.86, 0.12),
-      (0.97, 0.78),
-    ]) {
+    // Îlots décoratifs avec un palmier, entre les îles.
+    final n = world.islands.length;
+    for (var i = 0; i < n - 1; i++) {
+      if (i % 2 == 1) continue;
+      final fx = (i + 1) / n;
+      final fy = i % 4 == 0 ? 0.86 : 0.13;
       final c = Offset(fx * size.width, fy * h);
       drawPaper(
         canvas,
@@ -566,16 +564,47 @@ class _MapPainter extends CustomPainter {
       );
       drawPaper(
         canvas,
-        palmPath(c, h * 0.1, lean: fx > 0.5 ? -0.1 : 0.1),
+        palmPath(c, h * 0.1, lean: i.isEven ? 0.1 : -0.1),
         const Color(0xFF5E8A3A),
         elevation: 3,
       );
+    }
+    // Un panneau au début de chaque partie : Ancien et Nouveau Testament.
+    for (final lot in [1, 2]) {
+      final first = world.islands.indexWhere((i) => i.lot == lot);
+      if (first < 0) continue;
+      final x = (first + 0.05) / n * size.width + h * 0.02;
+      _sign(canvas, Offset(x, h * 0.9), h, lot == 1 ? 'Ancien Testament' : 'Nouveau Testament');
     }
     _path(canvas, size);
     for (final island in world.islands) {
       _island(canvas, size, island, statuses[island.id]!);
     }
     _grain.paint(canvas, size);
+  }
+
+  void _sign(Canvas canvas, Offset foot, double h, String text) {
+    final post = Paint()..color = const Color(0xFF7E4A2A);
+    canvas.drawRect(Rect.fromLTWH(foot.dx - h * 0.006, foot.dy - h * 0.16, h * 0.012, h * 0.16), post);
+    final painter = TextPainter(
+      text: TextSpan(
+        text: text,
+        style: LumiereText.title(h * 0.035, color: Palette.cream),
+      ),
+      textDirection: TextDirection.ltr,
+    )..layout();
+    final board = Rect.fromCenter(
+      center: Offset(foot.dx, foot.dy - h * 0.16),
+      width: painter.width + h * 0.05,
+      height: painter.height + h * 0.03,
+    );
+    drawPaper(
+      canvas,
+      Path()..addRRect(RRect.fromRectAndRadius(board, Radius.circular(h * 0.015))),
+      const Color(0xFFA86A3E),
+      elevation: 4,
+    );
+    painter.paint(canvas, board.center - Offset(painter.width / 2, painter.height / 2));
   }
 
   void _path(Canvas canvas, Size size) {

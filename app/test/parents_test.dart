@@ -10,6 +10,7 @@ import 'package:lumiere/save/save_store.dart';
 import 'package:lumiere/story/age_group.dart';
 import 'package:lumiere/story/story_part.dart';
 import 'package:lumiere/widgets/parental_gate.dart';
+import 'package:lumiere/world/world.dart';
 import 'package:material_ui/material_ui.dart';
 
 Future<void> frames(WidgetTester tester, [int count = 30]) async {
@@ -159,7 +160,7 @@ void main() {
     // Enfants : progression.
     expect(find.text('Les enfants'), findsOneWidget);
     expect(find.text('Awa'), findsOneWidget);
-    expect(find.text('1 étoiles sur 40'), findsOneWidget);
+    expect(find.text('1 étoiles sur ${allIslands.length * 5}'), findsOneWidget);
     expect(find.bySemanticsLabel('La Création : 1 étoiles'), findsOneWidget);
 
     // Réglages.

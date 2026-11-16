@@ -52,7 +52,7 @@ void main() {
   testWidgets('l’album montre les autocollants gagnés et les places à gagner', (tester) async {
     await open(tester, '/album');
     expect(find.text('L’album de Awa'), findsOneWidget);
-    expect(find.textContaining('2 autocollants sur 8'), findsOneWidget);
+    expect(find.textContaining('2 autocollants sur ${allIslands.length}'), findsOneWidget);
     expect(find.bySemanticsLabel('Autocollant : Noé et l’arche'), findsOneWidget);
     expect(find.bySemanticsLabel('La Création, autocollant à gagner'), findsOneWidget);
 

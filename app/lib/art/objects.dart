@@ -75,6 +75,18 @@ const _labels = {
   'city': 'la ville',
   'reeds': 'les roseaux',
   'bird': 'l’oiseau',
+  'bread': 'le pain',
+  'donkey': 'l’âne',
+  'scroll': 'le rouleau',
+  'pig': 'le cochon',
+  'coin': 'la pièce',
+  'stable': 'l’étable',
+  'manger': 'la crèche',
+  'temple': 'le temple',
+  'tomb': 'le tombeau',
+  'cross': 'la croix',
+  'ring': 'la bague',
+  'palm': 'la palme',
 };
 
 typedef _ThingPainter = void Function(Canvas c, double t, double glow);
@@ -865,5 +877,273 @@ final Map<String, _ThingPainter> _things = {
       ..quadraticBezierTo(30, 44, 10, 50)
       ..close();
     _p(c, wing, const Color(0xFF4F86C6), 1.5);
+  },
+  'bread': (c, t, g) {
+    for (final (dx, dy) in const [(0.0, 0.0), (-20.0, 14.0), (20.0, 14.0)]) {
+      _p(c, ellipse(Offset(50 + dx, 66 + dy), 46, 26), const Color(0xFFD9A55E), 2, 0.25);
+      final score = Paint()
+        ..color = const Color(0xFFB07A3A)
+        ..strokeWidth = 2
+        ..strokeCap = StrokeCap.round;
+      c.drawLine(Offset(40 + dx, 60 + dy), Offset(46 + dx, 70 + dy), score);
+      c.drawLine(Offset(52 + dx, 58 + dy), Offset(58 + dx, 68 + dy), score);
+    }
+  },
+  'donkey': (c, t, g) {
+    const fur = Color(0xFF9C948C);
+    for (final x in [32.0, 40.0, 62.0, 70.0]) {
+      _p(
+        c,
+        capsule(Offset(x, 66), Offset(x, 96), 3.6),
+        x == 40 || x == 70 ? const Color(0xFF857D76) : fur,
+        1,
+      );
+    }
+    _p(c, ellipse(const Offset(50, 60), 56, 28), fur, 2);
+    c.drawPath(
+      Path()
+        ..moveTo(22, 56)
+        ..quadraticBezierTo(12, 62, 14, 76),
+      Paint()
+        ..color = fur
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3
+        ..strokeCap = StrokeCap.round,
+    );
+    _p(
+      c,
+      Path()
+        ..moveTo(70, 56)
+        ..quadraticBezierTo(76, 40, 80, 32)
+        ..lineTo(92, 40)
+        ..quadraticBezierTo(86, 54, 78, 64)
+        ..close(),
+      fur,
+      1.5,
+    );
+    _p(c, ellipse(const Offset(88, 42), 18, 14), fur, 1);
+    _p(c, ellipse(const Offset(94, 46), 8, 7), const Color(0xFFD8CFC6), 0.5);
+    for (final (x, a) in const [(80.0, -0.3), (86.0, 0.2)]) {
+      c.save();
+      c.translate(x, 30);
+      c.rotate(a);
+      _p(c, ellipse(Offset.zero, 6, 18), fur, 1);
+      c.restore();
+    }
+    c.drawCircle(const Offset(88, 39), 1.8, Paint()..color = const Color(0xFF2A1A12));
+  },
+  'scroll': (c, t, g) {
+    _p(c, _rrect(22, 30, 78, 86, 2), const Color(0xFFF3E2C0), 2, 0.1);
+    for (final y in [30.0, 86.0]) {
+      _p(c, capsule(Offset(16, y), Offset(84, y), 6), const Color(0xFFC9A066), 1.5);
+    }
+    final line = Paint()
+      ..color = const Color(0xFF9A7442)
+      ..strokeWidth = 2;
+    for (var y = 44.0; y < 80; y += 8) {
+      c.drawLine(Offset(30, y), Offset(70, y), line);
+    }
+  },
+  'pig': (c, t, g) {
+    const skin = Color(0xFFF2B3B0);
+    for (final x in [32.0, 40.0, 60.0, 68.0]) {
+      _p(c, capsule(Offset(x, 74), Offset(x, 96), 4), const Color(0xFFE59C99), 1);
+    }
+    _p(c, ellipse(const Offset(50, 66), 60, 40), skin, 2);
+    _p(c, circle(const Offset(76, 58), 16), skin, 1.5);
+    _p(c, ellipse(const Offset(88, 62), 12, 10), const Color(0xFFE88F8C), 0.5);
+    c.drawCircle(const Offset(86, 62), 1.5, Paint()..color = const Color(0xFF8A4A48));
+    c.drawCircle(const Offset(90, 62), 1.5, Paint()..color = const Color(0xFF8A4A48));
+    _p(
+      c,
+      Path()
+        ..moveTo(70, 44)
+        ..lineTo(66, 34)
+        ..lineTo(78, 42)
+        ..close(),
+      const Color(0xFFE59C99),
+      0.5,
+    );
+    c.drawCircle(const Offset(78, 52), 2.2, Paint()..color = const Color(0xFF2A1A12));
+    c.drawPath(
+      Path()
+        ..moveTo(20, 62)
+        ..cubicTo(12, 54, 22, 50, 16, 46),
+      Paint()
+        ..color = const Color(0xFFE59C99)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2.5
+        ..strokeCap = StrokeCap.round,
+    );
+  },
+  'coin': (c, t, g) {
+    _p(c, circle(const Offset(50, 60), 30), const Color(0xFFF2C14E), 2, 0.35);
+    c.drawCircle(
+      const Offset(50, 60),
+      22,
+      Paint()
+        ..color = const Color(0xFFD9A43A)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3,
+    );
+    _p(c, _star(const Offset(50, 60), 10), const Color(0xFFD9A43A), 0, 0);
+  },
+  'stable': (c, t, g) {
+    _p(c, _rrect(14, 44, 86, 98, 3), const Color(0xFFB57B4E), 3);
+    _p(
+      c,
+      Path()
+        ..moveTo(6, 48)
+        ..lineTo(50, 18)
+        ..lineTo(94, 48)
+        ..close(),
+      const Color(0xFFD9B27A),
+      3,
+      0.2,
+    );
+    final straw = Paint()
+      ..color = const Color(0xFFC79B35)
+      ..strokeWidth = 2;
+    for (var x = 14.0; x < 88; x += 7) {
+      c.drawLine(Offset(x, 46), Offset(x + 4, 38 - (x - 50).abs() * 0.4), straw);
+    }
+    _p(c, _rrect(34, 62, 66, 98, 4), const Color(0xFF6B4630), 0, 0);
+    if (g > 0) {
+      c.drawCircle(
+        const Offset(50, 80),
+        18 * g,
+        Paint()
+          ..color = Color.fromRGBO(255, 230, 150, 0.7 * g)
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 8),
+      );
+    }
+  },
+  'manger': (c, t, g) {
+    final leg = Paint()
+      ..color = const Color(0xFF7E4A2A)
+      ..strokeWidth = 5
+      ..strokeCap = StrokeCap.round;
+    c.drawLine(const Offset(26, 98), const Offset(40, 60), leg);
+    c.drawLine(const Offset(74, 98), const Offset(60, 60), leg);
+    c.drawLine(const Offset(40, 98), const Offset(26, 60), leg);
+    c.drawLine(const Offset(60, 98), const Offset(74, 60), leg);
+    _p(
+      c,
+      Path()
+        ..moveTo(14, 56)
+        ..lineTo(86, 56)
+        ..lineTo(76, 76)
+        ..lineTo(24, 76)
+        ..close(),
+      const Color(0xFFA86A3E),
+      2,
+    );
+    _p(c, ellipse(const Offset(50, 56), 70, 12), const Color(0xFFE6C15A), 1, 0.2);
+  },
+  'temple': (c, t, g) {
+    _p(c, _rrect(8, 86, 92, 98, 2), const Color(0xFFE6D3A8), 2);
+    _p(c, _rrect(14, 40, 86, 88, 2), const Color(0xFFF1E0B8), 3);
+    for (var x = 20.0; x < 84; x += 13) {
+      c.drawLine(
+        Offset(x, 44),
+        Offset(x, 86),
+        Paint()
+          ..color = const Color(0xFFD9C08A)
+          ..strokeWidth = 4,
+      );
+    }
+    _p(
+      c,
+      Path()
+        ..moveTo(8, 42)
+        ..lineTo(50, 18)
+        ..lineTo(92, 42)
+        ..close(),
+      const Color(0xFFE2BC72),
+      3,
+      0.2,
+    );
+    _p(c, _rrect(42, 62, 58, 88, 8), const Color(0xFF8C5A3C), 0, 0);
+  },
+  'tomb': (c, t, g) {
+    _p(
+      c,
+      Path()
+        ..moveTo(4, 98)
+        ..quadraticBezierTo(10, 26, 54, 24)
+        ..quadraticBezierTo(96, 26, 96, 98)
+        ..close(),
+      const Color(0xFFA9A49A),
+      3,
+      0.15,
+    );
+    _p(c, Path()..addOval(Rect.fromLTWH(30, 50, 36, 48)), const Color(0xFF3A3530), 0, 0);
+    if (g > 0) {
+      c.drawCircle(
+        const Offset(48, 76),
+        20 * g,
+        Paint()
+          ..color = Color.fromRGBO(255, 246, 220, 0.8 * g)
+          ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 10),
+      );
+    }
+    // La pierre roulée sur le côté (g = 1) ou devant l'entrée (g = 0).
+    final x = 48 + 34 * g;
+    _p(c, circle(Offset(x, 74), 24), const Color(0xFF8E897F), 3, 0.2);
+  },
+  'cross': (c, t, g) {
+    _p(c, _rrect(44, 14, 56, 98, 2), const Color(0xFF7E4A2A), 2);
+    _p(c, _rrect(22, 30, 78, 40, 2), const Color(0xFF7E4A2A), 2);
+  },
+  'ring': (c, t, g) {
+    c.drawCircle(
+      const Offset(50, 68),
+      22,
+      Paint()
+        ..color = const Color(0xFFF2C14E)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 8,
+    );
+    _p(
+      c,
+      Path()
+        ..moveTo(42, 46)
+        ..lineTo(50, 34)
+        ..lineTo(58, 46)
+        ..lineTo(50, 52)
+        ..close(),
+      const Color(0xFF4FA8D8),
+      1,
+      0.4,
+    );
+  },
+  'palm': (c, t, g) {
+    c.save();
+    c.translate(50, 96);
+    c.rotate(-0.25 + math.sin(t * 3) * 0.08);
+    c.drawLine(
+      Offset.zero,
+      const Offset(0, -80),
+      Paint()
+        ..color = const Color(0xFF5E8A3A)
+        ..strokeWidth = 3,
+    );
+    for (var k = 0; k < 9; k++) {
+      final y = -20.0 - k * 7;
+      final len = 28 - k * 2.0;
+      for (final side in [-1.0, 1.0]) {
+        _p(
+          c,
+          Path()
+            ..moveTo(0, y)
+            ..quadraticBezierTo(side * len * 0.6, y - 10, side * len, y - 4)
+            ..quadraticBezierTo(side * len * 0.5, y - 2, 0, y + 3)
+            ..close(),
+          const Color(0xFF6FA24C),
+          0.5,
+        );
+      }
+    }
+    c.restore();
   },
 };

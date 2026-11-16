@@ -57,6 +57,24 @@ void main() {
       expect(world.currentIsland(of).id, 'abraham', reason: 'tout est fini : la dernière île ouverte');
     });
 
+    test('le Nouveau Testament est un chapitre à part : sa première île est ouverte d’emblée', () {
+      final full = World(islands: allIslands, available: {'creation', 'jonas', 'naissance', 'temple'});
+      Island at(String id) => allIslands.firstWhere((i) => i.id == id);
+      expect(full.status(at('jonas'), of), IslandStatus.locked);
+      expect(full.status(at('naissance'), of), IslandStatus.open);
+      expect(full.status(at('temple'), of), IslandStatus.locked);
+      progress['naissance'] = const StoryProgress(parts: {StoryPart.recit, StoryPart.seek, StoryPart.verse});
+      expect(full.status(at('temple'), of), IslandStatus.open);
+    });
+
+    test('toutes les îles sont réparties de gauche à droite, Ancien puis Nouveau Testament', () {
+      for (var i = 1; i < allIslands.length; i++) {
+        expect(allIslands[i].position.dx, greaterThan(allIslands[i - 1].position.dx));
+      }
+      expect(allIslands.map((i) => i.id).toSet(), hasLength(allIslands.length));
+      expect(allIslands.where((i) => i.lot == 2), hasLength(lot2.length));
+    });
+
     test('les îles sont dans l’ordre du voyage, bien réparties sur la carte', () {
       for (var i = 1; i < lot1.length; i++) {
         expect(lot1[i].position.dx, greaterThan(lot1[i - 1].position.dx));

@@ -234,7 +234,7 @@ class _ChildCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final state = GameScope.of(context);
-    final stickers = lot1.where((i) => state.progress(i.id, profileId: profile.id).sticker).length;
+    final stickers = allIslands.where((i) => state.progress(i.id, profileId: profile.id).sticker).length;
     return _Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -277,9 +277,9 @@ class _ChildCard extends StatelessWidget {
               ),
               _Fact(
                 icon: Icons.star_rounded,
-                text: '${state.totalStars(profile.id)} étoiles sur ${lot1.length * 5}',
+                text: '${state.totalStars(profile.id)} étoiles sur ${allIslands.length * 5}',
               ),
-              _Fact(icon: Icons.verified_rounded, text: '$stickers autocollants sur ${lot1.length}'),
+              _Fact(icon: Icons.verified_rounded, text: '$stickers autocollants sur ${allIslands.length}'),
             ],
           ),
           const SizedBox(height: 10),
@@ -287,7 +287,7 @@ class _ChildCard extends StatelessWidget {
             spacing: 10,
             runSpacing: 6,
             children: [
-              for (final island in lot1)
+              for (final island in allIslands)
                 Semantics(
                   label:
                       '${island.title} : ${state.progress(island.id, profileId: profile.id).stars} étoiles',

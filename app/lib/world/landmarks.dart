@@ -4,6 +4,7 @@ import 'dart:ui';
 
 import '../art/animals.dart';
 import '../art/ark.dart';
+import '../art/objects.dart';
 import '../art/paper.dart';
 import '../art/shapes.dart';
 import '../art/weather.dart';
@@ -32,8 +33,37 @@ void paintLandmark(Canvas canvas, Landmark landmark, Rect box) {
       _harp(canvas);
     case Landmark.fish:
       _fish(canvas);
+    case Landmark.stable:
+      _things(canvas, [('stable', 10, 6, 74), ('star', 64, -2, 30)]);
+    case Landmark.temple:
+      _things(canvas, [('temple', 6, 10, 88)]);
+    case Landmark.dove:
+      paintWaves(canvas, const Size(100, 100), 74, 0.3, from: 0, to: 2);
+      _things(canvas, [('dove', 22, 10, 56)]);
+    case Landmark.storm:
+      _things(canvas, [('boat', 14, 12, 70)]);
+      paintWaves(canvas, const Size(100, 100), 80, 1.2, from: 2, to: 4);
+    case Landmark.loaves:
+      _things(canvas, [('basket', 8, 40, 60), ('bread', 30, 18, 46), ('fish', 52, 42, 42)]);
+    case Landmark.sycamore:
+      _things(canvas, [('tree', 8, 0, 96)]);
+    case Landmark.donkey:
+      _things(canvas, [('donkey', 6, 16, 84)]);
+    case Landmark.homecoming:
+      _things(canvas, [('ring', 54, 30, 40), ('pig', 4, 34, 60)]);
+    case Landmark.tomb:
+      _things(canvas, [('tomb', 6, 10, 88)], glow: 1);
+    case Landmark.flames:
+      _things(canvas, [('flame', 8, 30, 46), ('flame', 30, 8, 60), ('flame', 54, 30, 46)]);
   }
   canvas.restore();
+}
+
+/// Plusieurs objets dans la boîte 100 × 100 : (id, gauche, haut, taille).
+void _things(Canvas c, List<(String, double, double, double)> items, {double glow = 0}) {
+  for (final (id, x, y, size) in items) {
+    paintThing(c, id, Rect.fromLTWH(x, y, size, size), glow: glow);
+  }
 }
 
 void _p(Canvas c, Path path, Color color, [double e = 2]) =>
