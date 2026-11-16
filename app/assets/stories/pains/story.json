@@ -1,0 +1,130 @@
+{
+  "id": "pains",
+  "title": "Les pains et les poissons",
+  "reference": "Jean 6.1-14",
+  "intro": "Les pains et les poissons. Une histoire de la Bible, dans le livre de Jean.",
+  "scenes": [
+    {
+      "id": "foule",
+      "stage": "foule",
+      "reference": "Jean 6.1-3",
+      "text": {
+        "agneaux": "Une très grande foule suivait Jésus. Les gens voulaient l'écouter et voir ses miracles.",
+        "bergers": "Jésus traversa le lac de Galilée. Une très grande foule le suivait, parce que les gens avaient vu les malades qu'il guérissait. Jésus monta sur une colline et s'assit avec ses disciples.",
+        "explorateurs": "Après cela, Jésus s'en alla de l'autre côté de la mer de Galilée. Une grande foule le suivait, parce qu'elle voyait les miracles qu'il opérait sur les malades. Jésus monta sur la montagne, et là il s'assit avec ses disciples."
+      },
+      "action": "Touche les familles pour qu'elles viennent écouter Jésus !"
+    },
+    {
+      "id": "soir",
+      "stage": "soir",
+      "reference": "Jean 6.5-7",
+      "text": {
+        "agneaux": "Le soir arriva, et les gens avaient faim. Jésus demanda à Philippe : « Où trouver du pain pour tout le monde ? »",
+        "bergers": "La journée passait, et les gens commençaient à avoir faim. Jésus demanda à son disciple Philippe : « Où pourrons-nous acheter du pain pour que tous ces gens mangent ? » Philippe répondit : « Même avec beaucoup d'argent, ce ne serait pas assez ! »",
+        "explorateurs": "Ayant levé les yeux, et voyant qu'une grande foule venait à lui, Jésus dit à Philippe : « Où achèterons-nous des pains, pour que ces gens aient à manger ? » Il disait cela pour l'éprouver, car il savait ce qu'il allait faire. Philippe lui répondit : « Les pains qu'on aurait pour deux cents deniers ne suffiraient pas pour que chacun en reçût un peu. »"
+      },
+      "action": "Fais glisser le soleil pour que le soir arrive."
+    },
+    {
+      "id": "garcon",
+      "stage": "garcon",
+      "reference": "Jean 6.8-9",
+      "text": {
+        "agneaux": "Un petit garçon avait cinq pains et deux poissons. Il les donna à Jésus.",
+        "bergers": "André, un autre disciple, dit : « Il y a ici un petit garçon qui a cinq pains et deux poissons. Mais qu'est-ce que c'est, pour tant de monde ? » Le garçon donna tout ce qu'il avait à Jésus.",
+        "explorateurs": "Un de ses disciples, André, frère de Simon Pierre, lui dit : « Il y a ici un jeune garçon qui a cinq pains d'orge et deux poissons ; mais qu'est-ce que cela pour tant de gens ? »"
+      },
+      "action": "Touche le petit garçon !"
+    },
+    {
+      "id": "merci",
+      "stage": "merci",
+      "reference": "Jean 6.10-11",
+      "text": {
+        "agneaux": "Jésus fit asseoir tout le monde dans l'herbe. Il prit les pains et dit merci à Dieu.",
+        "bergers": "Jésus dit : « Faites asseoir les gens. » Il y avait beaucoup d'herbe, et ils s'assirent : il y avait environ cinq mille hommes. Alors Jésus prit les pains et remercia Dieu.",
+        "explorateurs": "Jésus dit : « Faites-les asseoir. » Il y avait dans ce lieu beaucoup d'herbe. Ils s'assirent donc, au nombre d'environ cinq mille hommes. Jésus prit les pains, rendit grâces, et les distribua à ceux qui étaient assis."
+      },
+      "action": "Touche Jésus pendant qu'il remercie Dieu."
+    },
+    {
+      "id": "partage",
+      "stage": "partage",
+      "reference": "Jean 6.11",
+      "text": {
+        "agneaux": "Les disciples donnèrent du pain et du poisson à tout le monde. Et il y en avait assez pour tous !",
+        "bergers": "Les disciples distribuèrent le pain et le poisson. Ils en donnaient, et il en restait toujours ! Tout le monde mangea autant qu'il voulait.",
+        "explorateurs": "Il leur donna de même des poissons, autant qu'ils en voulurent. Et tous furent rassasiés."
+      },
+      "action": "Touche chaque famille pour lui donner à manger !"
+    },
+    {
+      "id": "paniers",
+      "stage": "paniers",
+      "reference": "Jean 6.12-14",
+      "text": {
+        "agneaux": "Quand tout le monde eut mangé, il restait encore douze paniers pleins !",
+        "bergers": "Quand tout le monde fut rassasié, Jésus dit : « Ramassez les morceaux qui restent, pour que rien ne soit perdu. » Ils remplirent douze paniers avec les restes des cinq pains ! Les gens disaient : « Cet homme est vraiment le prophète qui devait venir ! »",
+        "explorateurs": "Lorsqu'ils furent rassasiés, Jésus dit à ses disciples : « Ramassez les morceaux qui restent, afin que rien ne se perde. » Ils les ramassèrent donc, et ils remplirent douze paniers avec les morceaux qui restèrent des cinq pains d'orge. Ces gens, ayant vu le miracle, disaient : « Celui-ci est vraiment le prophète qui doit venir dans le monde. »"
+      },
+      "action": "Touche les paniers trois fois pour les remplir !",
+      "after": {
+        "all": "Quand on donne à Jésus le peu qu'on a, il peut en faire de grandes choses."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "foule", "label": "La grande foule" },
+        { "id": "soir", "label": "Le soir" },
+        { "id": "garcon", "label": "Le petit garçon" },
+        { "id": "merci", "label": "Merci, Dieu !" },
+        { "id": "partage", "label": "Le partage" },
+        { "id": "paniers", "label": "Douze paniers" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Sur la colline, des choses se cachent dans l'herbe ! Retrouve-les.",
+      "items": [
+        { "id": "bread", "label": "le pain" },
+        { "id": "fish", "label": "le poisson" },
+        { "id": "basket", "label": "le panier" },
+        { "id": "sheep", "label": "le mouton" },
+        { "id": "flower", "label": "la fleur" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "rabbit", "label": "le lapin" },
+        { "id": "ladybug", "label": "la coccinelle" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["bread", "fish", "basket", "boat", "flower", "sheep"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Je suis le pain de vie. Celui qui vient à moi n'aura jamais faim, et celui qui croit en moi n'aura jamais soif.",
+    "reference": "Jean 6.35",
+    "spoken": "Jean, chapitre 6, verset 35 : Je suis le pain de vie. Celui qui vient à moi n'aura jamais faim, et celui qui croit en moi n'aura jamais soif.",
+    "chunks": {
+      "bergers": ["Je suis le pain de vie.", "Celui qui vient à moi n'aura jamais faim,", "et celui qui croit en moi n'aura jamais soif."],
+      "explorateurs": ["Je suis", "le pain de vie.", "Celui qui vient à moi", "n'aura jamais faim,", "et celui qui croit en moi", "n'aura jamais soif."]
+    },
+    "referenceChoices": ["Jean 6.35", "Jean 3.65", "Luc 6.35"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "pains", "title": "Douze paniers" },
+  "reward": "Bravo ! Tu as terminé l'histoire des pains et des poissons. Voici ton autocollant pour ton album !"
+}

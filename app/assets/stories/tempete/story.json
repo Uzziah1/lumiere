@@ -1,0 +1,130 @@
+{
+  "id": "tempete",
+  "title": "Jésus calme la tempête",
+  "reference": "Marc 4.35-41",
+  "intro": "Jésus calme la tempête. Une histoire de la Bible, dans le livre de Marc.",
+  "scenes": [
+    {
+      "id": "traversee",
+      "stage": "traversee",
+      "reference": "Marc 4.35-36",
+      "text": {
+        "agneaux": "Un soir, Jésus dit à ses amis : « Allons de l'autre côté du lac. » Ils montèrent dans un bateau.",
+        "bergers": "Toute la journée, Jésus avait parlé à la foule au bord du lac. Le soir venu, il dit à ses disciples : « Passons de l'autre côté du lac. » Ils montèrent tous dans le bateau et partirent.",
+        "explorateurs": "Ce même jour, sur le soir, Jésus dit à ses disciples : « Passons à l'autre bord. » Après avoir renvoyé la foule, ils l'emmenèrent dans la barque où il se trouvait ; il y avait aussi d'autres barques avec lui."
+      },
+      "action": "Fais glisser le bateau sur le lac !"
+    },
+    {
+      "id": "orage",
+      "stage": "orage",
+      "reference": "Marc 4.37",
+      "text": {
+        "agneaux": "Tout à coup, un grand vent souffla. Les vagues entraient dans le bateau ! Les amis de Jésus avaient très peur.",
+        "bergers": "Soudain, un vent très fort se leva. De grosses vagues frappaient le bateau et l'eau entrait dedans. Le bateau se remplissait ! Les disciples avaient très peur.",
+        "explorateurs": "Il s'éleva un grand tourbillon, et les flots se jetaient dans la barque, au point qu'elle se remplissait déjà."
+      },
+      "action": "Touche les vagues pour les repousser !"
+    },
+    {
+      "id": "sommeil",
+      "stage": "sommeil",
+      "reference": "Marc 4.38",
+      "text": {
+        "agneaux": "Et Jésus ? Il dormait sur un coussin ! Ses amis le réveillèrent : « Maître, aide-nous ! »",
+        "bergers": "Pendant ce temps, Jésus dormait à l'arrière du bateau, la tête sur un coussin. Les disciples le réveillèrent : « Maître, nous allons couler ! Cela ne te fait rien ? »",
+        "explorateurs": "Et lui, il dormait à la poupe sur le coussin. Ils le réveillèrent, et lui dirent : « Maître, ne t'inquiètes-tu pas de ce que nous périssons ? »"
+      },
+      "action": "Touche Jésus trois fois pour le réveiller."
+    },
+    {
+      "id": "calme",
+      "stage": "calme",
+      "reference": "Marc 4.39",
+      "text": {
+        "agneaux": "Jésus se leva. Il dit au vent : « Arrête ! » et à la mer : « Calme-toi ! » Et tout devint calme.",
+        "bergers": "Jésus se leva. Il parla au vent avec autorité, et il dit à la mer : « Silence ! Tais-toi ! » Aussitôt, le vent s'arrêta, et il y eut un grand calme.",
+        "explorateurs": "S'étant réveillé, il menaça le vent, et dit à la mer : « Silence ! tais-toi ! » Et le vent cessa, et il y eut un grand calme."
+      },
+      "action": "Fais glisser ton doigt sur la mer pour la calmer !"
+    },
+    {
+      "id": "question",
+      "stage": "question",
+      "reference": "Marc 4.40-41",
+      "text": {
+        "agneaux": "Jésus dit à ses amis : « Pourquoi avez-vous peur ? Ayez confiance en moi ! » Ses amis étaient tout étonnés.",
+        "bergers": "Puis Jésus dit à ses disciples : « Pourquoi avez-vous si peur ? N'avez-vous pas encore confiance ? » Les disciples, remplis d'étonnement, se demandaient : « Qui est donc cet homme, pour que même le vent et la mer lui obéissent ? »",
+        "explorateurs": "Puis il leur dit : « Pourquoi avez-vous ainsi peur ? Comment n'avez-vous point de foi ? » Ils furent saisis d'une grande frayeur, et ils se dirent les uns aux autres : « Quel est donc celui-ci, à qui obéissent même le vent et la mer ? »"
+      },
+      "action": "Touche les disciples pour voir ce qu'ils pensent."
+    },
+    {
+      "id": "rivage",
+      "stage": "rivage",
+      "reference": "Marc 5.1",
+      "text": {
+        "agneaux": "Le bateau arriva tranquillement de l'autre côté du lac. Avec Jésus, ils étaient en sécurité.",
+        "bergers": "Sur la mer redevenue calme, le bateau arriva de l'autre côté du lac. Les disciples avaient appris quelque chose d'important : avec Jésus, ils n'avaient rien à craindre.",
+        "explorateurs": "Ils arrivèrent à l'autre bord de la mer. Les disciples avaient vu de leurs yeux que Jésus a autorité même sur le vent et sur la mer."
+      },
+      "action": "Touche le bateau pour qu'il arrive au rivage.",
+      "after": {
+        "all": "Quand tu as peur, tu peux prier Jésus : il est toujours avec toi."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "traversee", "label": "Le départ" },
+        { "id": "orage", "label": "La tempête" },
+        { "id": "sommeil", "label": "Jésus dort" },
+        { "id": "calme", "label": "« Silence ! »" },
+        { "id": "question", "label": "Qui est-il ?" },
+        { "id": "rivage", "label": "L'autre rive" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Sur la plage du lac, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "fish", "label": "le poisson" },
+        { "id": "shell", "label": "le coquillage" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "crate", "label": "la caisse" },
+        { "id": "basket", "label": "le panier" },
+        { "id": "jar", "label": "la jarre" },
+        { "id": "star", "label": "l'étoile de mer" },
+        { "id": "tortoise", "label": "la tortue" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["boat", "fish", "moon", "star", "shell", "bird"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Quel est donc celui-ci, à qui obéissent même le vent et la mer ?",
+    "reference": "Marc 4.41",
+    "spoken": "Marc, chapitre 4, verset 41 : Quel est donc celui-ci, à qui obéissent même le vent et la mer ?",
+    "chunks": {
+      "bergers": ["Quel est donc celui-ci,", "à qui obéissent", "même le vent et la mer ?"],
+      "explorateurs": ["Quel est donc", "celui-ci,", "à qui obéissent", "même le vent", "et la mer ?"]
+    },
+    "referenceChoices": ["Marc 4.41", "Marc 14.1", "Matthieu 4.41"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "tempete", "title": "Le grand calme" },
+  "reward": "Bravo ! Tu as terminé l'histoire de la tempête. Voici ton autocollant pour ton album !"
+}
