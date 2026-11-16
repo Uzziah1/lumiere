@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Couleur de l'horizon à l'aube, affichée pendant le démarrage. -->
+    <color name="lumiere_dawn">#FFE6BE</color>
+</resources>

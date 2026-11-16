@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Lumière : la Bible en jeux pour les enfants de 4 à 12 ans. Gratuit, sans publicité, hors ligne.">
+  <meta name="theme-color" content="#FF9C7A">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Lumière">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="manifest" href="manifest.json">
+  <title>Lumière</title>
+
+  <style>
+    /* Écran de chargement, affiché le temps que le jeu démarre. */
+    html, body { margin: 0; height: 100%; background: #FFE6BE; overflow: hidden; }
+    #lumiere-loader {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 28px;
+      background: linear-gradient(#FF9C7A, #FFC498 50%, #FFE6BE);
+      font-family: "Trebuchet MS", system-ui, sans-serif; color: #7A3F25;
+      transition: opacity .5s ease;
+    }
+    #lumiere-loader.done { opacity: 0; pointer-events: none; }
+    #lumiere-loader .sun {
+      width: 96px; height: 96px; border-radius: 50%; background: #FFF6DC;
+      box-shadow: 0 0 0 18px rgba(255, 214, 126, .45), 0 0 80px 40px rgba(255, 214, 126, .55);
+      animation: rise 2.4s ease-in-out infinite;
+    }
+    #lumiere-loader p { margin: 0; font-size: 20px; letter-spacing: .02em; }
+    @keyframes rise { 50% { transform: translateY(-10px) scale(1.04); } }
+    @media (prefers-reduced-motion: reduce) { #lumiere-loader .sun { animation: none; } }
+  </style>
+</head>
+<body>
+  <div id="lumiere-loader" role="status" aria-live="polite">
+    <div class="sun"></div>
+    <p>Lumière se lève…</p>
+  </div>
+  <script>
+    // Le jeu affiche sa première image : on retire l'écran de chargement.
+    window.addEventListener('flutter-first-frame', function () {
+      var loader = document.getElementById('lumiere-loader');
+      loader.classList.add('done');
+      setTimeout(function () { loader.remove(); }, 600);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

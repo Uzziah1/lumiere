@@ -1,0 +1,5 @@
+package org.lumiere.lumiere
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()
