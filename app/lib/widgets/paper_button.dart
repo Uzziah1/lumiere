@@ -132,7 +132,16 @@ class _PaperButtonState extends State<PaperButton> {
                         Icon(widget.icon, color: widget.foreground, size: s.fontSize * 1.25),
                         SizedBox(width: s.fontSize * 0.35),
                       ],
-                      Text(widget.label, style: LumiereText.title(s.fontSize, color: widget.foreground)),
+                      // Le libellé rétrécit plutôt que de déborder sur un petit écran.
+                      Flexible(
+                        child: FittedBox(
+                          fit: BoxFit.scaleDown,
+                          child: Text(
+                            widget.label,
+                            style: LumiereText.title(s.fontSize, color: widget.foreground),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),

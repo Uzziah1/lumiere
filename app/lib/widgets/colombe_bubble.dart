@@ -66,7 +66,7 @@ class _ColombeBubbleState extends State<ColombeBubble> with SingleTickerProvider
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
-                  child: Text(widget.text, style: LumiereText.text(18, color: Palette.ink)),
+                  child: Text(frenchSpacing(widget.text), style: LumiereText.text(18, color: Palette.ink)),
                 ),
               ),
             ),

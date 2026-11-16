@@ -37,6 +37,11 @@ abstract final class LumiereText {
   }
 }
 
+/// Typographie française : espace insécable avant « ! ? ; : » et à l'intérieur
+/// des guillemets, pour qu'un signe ne parte jamais seul à la ligne.
+String frenchSpacing(String text) =>
+    text.replaceAllMapped(RegExp(r' ([!?;:»])'), (m) => '\u00A0${m[1]}').replaceAll('« ', '«\u00A0');
+
 ThemeData buildLumiereTheme() {
   final scheme = ColorScheme.fromSeed(
     seedColor: Palette.lagoon,
