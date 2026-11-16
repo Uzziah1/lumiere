@@ -117,7 +117,11 @@ void main() {
   });
 
   testWidgets('jardin', (tester) async {
-    await capture(tester, const TreasureScreen(garden: true), 'jardin', state: awa());
+    await capture(tester, const TreasureScreen(lot: 2), 'jardin', state: awa());
+  });
+
+  testWidgets('coffre', (tester) async {
+    await capture(tester, const TreasureScreen(lot: 3), 'coffre', state: awa());
   });
 
   testWidgets('album', (tester) async {

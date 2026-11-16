@@ -55,6 +55,22 @@ void paintLandmark(Canvas canvas, Landmark landmark, Rect box) {
       _things(canvas, [('tomb', 6, 10, 88)], glow: 1);
     case Landmark.flames:
       _things(canvas, [('flame', 8, 30, 46), ('flame', 30, 8, 60), ('flame', 54, 30, 46)]);
+    case Landmark.walls:
+      _things(canvas, [('wall', 4, 24, 72), ('horn', 60, 40, 40)]);
+    case Landmark.torches:
+      _things(canvas, [('torch', 4, 24, 52), ('torch', 46, 14, 56)]);
+    case Landmark.sheaves:
+      _things(canvas, [('wheat', 10, 14, 50), ('wheat', 34, 6, 58), ('wheat', 58, 14, 50)]);
+    case Landmark.lamp:
+      _things(canvas, [('lamp', 10, 20, 80)], glow: 1);
+    case Landmark.raven:
+      _things(canvas, [('altar', 8, 30, 64), ('flame', 20, 2, 40), ('raven', 54, 4, 44)]);
+    case Landmark.lions:
+      _things(canvas, [('lion', 4, 20, 76), ('stone', 62, 56, 34)]);
+    case Landmark.scepter:
+      _things(canvas, [('crown', 6, 34, 54), ('scepter', 52, 6, 46)], glow: 1);
+    case Landmark.jars:
+      _things(canvas, [('jar', 4, 34, 46), ('jar', 34, 26, 52), ('grapes', 64, 30, 34)]);
   }
   canvas.restore();
 }

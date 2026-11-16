@@ -41,7 +41,8 @@ class Island {
   /// Testament, le jardin pour le Nouveau.
   final String treasure;
 
-  /// 1 : Ancien Testament ; 2 : Nouveau Testament.
+  /// 1 : Ancien Testament (les origines) ; 3 : les héros de la foi (Ancien
+  /// Testament, placés avant le Nouveau sur la carte) ; 2 : Nouveau Testament.
   final int lot;
 }
 
@@ -64,6 +65,14 @@ enum Landmark {
   homecoming,
   tomb,
   flames,
+  walls,
+  torches,
+  sheaves,
+  lamp,
+  raven,
+  lions,
+  scepter,
+  jars,
 }
 
 /// État d'une île pour un enfant.
@@ -152,7 +161,7 @@ const lot2 = [
     id: 'naissance',
     title: 'La naissance de Jésus',
     reference: 'Luc 1 et 2 ; Matthieu 2',
-    position: Offset(0, 0.58),
+    position: Offset(0, 0.30),
     landmark: Landmark.stable,
     treasure: 'star',
     lot: 2,
@@ -161,7 +170,7 @@ const lot2 = [
     id: 'temple',
     title: 'Jésus enfant au temple',
     reference: 'Luc 2.41-52',
-    position: Offset(0, 0.30),
+    position: Offset(0, 0.60),
     landmark: Landmark.temple,
     treasure: 'scroll',
     lot: 2,
@@ -170,16 +179,25 @@ const lot2 = [
     id: 'bapteme',
     title: 'Le baptême de Jésus',
     reference: 'Matthieu 3 et 4',
-    position: Offset(0, 0.60),
+    position: Offset(0, 0.32),
     landmark: Landmark.dove,
     treasure: 'bird',
+    lot: 2,
+  ),
+  Island(
+    id: 'cana',
+    title: 'Les noces de Cana',
+    reference: 'Jean 2.1-11',
+    position: Offset(0, 0.62),
+    landmark: Landmark.jars,
+    treasure: 'grapes',
     lot: 2,
   ),
   Island(
     id: 'tempete',
     title: 'Jésus calme la tempête',
     reference: 'Marc 4.35-41',
-    position: Offset(0, 0.32),
+    position: Offset(0, 0.30),
     landmark: Landmark.storm,
     treasure: 'boat',
     lot: 2,
@@ -188,7 +206,7 @@ const lot2 = [
     id: 'pains',
     title: 'Les pains et les poissons',
     reference: 'Jean 6.1-14',
-    position: Offset(0, 0.62),
+    position: Offset(0, 0.60),
     landmark: Landmark.loaves,
     treasure: 'bread',
     lot: 2,
@@ -197,7 +215,7 @@ const lot2 = [
     id: 'zachee',
     title: 'Zachée',
     reference: 'Luc 19.1-10',
-    position: Offset(0, 0.30),
+    position: Offset(0, 0.32),
     landmark: Landmark.sycamore,
     treasure: 'tree',
     lot: 2,
@@ -215,7 +233,7 @@ const lot2 = [
     id: 'prodigue',
     title: 'Le fils prodigue',
     reference: 'Luc 15.11-32',
-    position: Offset(0, 0.32),
+    position: Offset(0, 0.34),
     landmark: Landmark.homecoming,
     treasure: 'pig',
     lot: 2,
@@ -224,7 +242,7 @@ const lot2 = [
     id: 'paques',
     title: 'Pâques : Jésus est vivant',
     reference: 'Luc 19 à 24',
-    position: Offset(0, 0.60),
+    position: Offset(0, 0.58),
     landmark: Landmark.tomb,
     treasure: 'flower',
     lot: 2,
@@ -233,17 +251,93 @@ const lot2 = [
     id: 'pentecote',
     title: 'La Pentecôte',
     reference: 'Actes 1 et 2',
-    position: Offset(0, 0.34),
+    position: Offset(0, 0.32),
     landmark: Landmark.flames,
     treasure: 'flame',
     lot: 2,
   ),
 ];
 
-/// Toutes les îles de la carte, dans l'ordre du voyage, réparties sur la largeur.
-final allIslands = [
-  for (final (i, island) in [...lot1, ...lot2].indexed) island.at((i + 0.5) / (lot1.length + lot2.length)),
+/// Le troisième lot : les héros de la foi (Ancien Testament), entre les deux Testaments sur la carte.
+const lot3 = [
+  Island(
+    id: 'jericho',
+    title: 'Les murs de Jéricho',
+    reference: 'Josué 6',
+    position: Offset(0, 0.58),
+    landmark: Landmark.walls,
+    treasure: 'horn',
+    lot: 3,
+  ),
+  Island(
+    id: 'gedeon',
+    title: 'Gédéon et les trois cents',
+    reference: 'Juges 6 et 7',
+    position: Offset(0, 0.30),
+    landmark: Landmark.torches,
+    treasure: 'torch',
+    lot: 3,
+  ),
+  Island(
+    id: 'ruth',
+    title: 'Ruth et Naomi',
+    reference: 'Ruth 1 à 4',
+    position: Offset(0, 0.60),
+    landmark: Landmark.sheaves,
+    treasure: 'wheat',
+    lot: 3,
+  ),
+  Island(
+    id: 'samuel',
+    title: 'Samuel entend Dieu',
+    reference: '1 Samuel 3',
+    position: Offset(0, 0.32),
+    landmark: Landmark.lamp,
+    treasure: 'lamp',
+    lot: 3,
+  ),
+  Island(
+    id: 'elie',
+    title: 'Élie et le feu du ciel',
+    reference: '1 Rois 17 et 18',
+    position: Offset(0, 0.60),
+    landmark: Landmark.raven,
+    treasure: 'raven',
+    lot: 3,
+  ),
+  Island(
+    id: 'daniel',
+    title: 'Daniel et les lions',
+    reference: 'Daniel 6',
+    position: Offset(0, 0.30),
+    landmark: Landmark.lions,
+    treasure: 'lion',
+    lot: 3,
+  ),
+  Island(
+    id: 'esther',
+    title: 'La reine Esther',
+    reference: 'Esther 2 à 8',
+    position: Offset(0, 0.58),
+    landmark: Landmark.scepter,
+    treasure: 'scepter',
+    lot: 3,
+  ),
 ];
+
+/// Toutes les îles de la carte, dans l'ordre du voyage, réparties sur la largeur :
+/// les origines, les héros de la foi, puis le Nouveau Testament.
+final allIslands = [
+  for (final (i, island) in [...lot1, ...lot3, ...lot2].indexed)
+    island.at((i + 0.5) / (lot1.length + lot3.length + lot2.length)),
+];
+
+/// Les îles d'un lot.
+List<Island> islandsOfLot(int lot) => switch (lot) {
+  1 => lot1,
+  3 => lot3,
+  _ => lot2,
+};
 
 /// Règles d'ouverture des îles.
 ///

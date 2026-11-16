@@ -87,6 +87,12 @@ const _labels = {
   'cross': 'la croix',
   'ring': 'la bague',
   'palm': 'la palme',
+  'torch': 'la torche',
+  'lamp': 'la lampe',
+  'raven': 'le corbeau',
+  'wall': 'la muraille',
+  'scepter': 'le sceptre',
+  'grapes': 'le raisin',
 };
 
 typedef _ThingPainter = void Function(Canvas c, double t, double glow);
@@ -1145,5 +1151,168 @@ final Map<String, _ThingPainter> _things = {
       }
     }
     c.restore();
+  },
+  // Une cruche d'où sort une torche (Gédéon) ; [g] : la cruche est brisée.
+  'torch': (c, t, g) {
+    final flame = Path()
+      ..moveTo(50, 48)
+      ..cubicTo(30, 38, 38, 18, 50, 4 + math.sin(t * 7) * 3)
+      ..cubicTo(62, 18, 70, 38, 50, 48)
+      ..close();
+    c.drawCircle(const Offset(50, 30), 26, Paint()..color = const Color(0x55FFD36B));
+    _p(c, _rrect(45, 40, 55, 70, 3), const Color(0xFF8A5A36), 1);
+    _p(c, flame, const Color(0xFFF29A45), 0, 0.3);
+    _p(c, ellipse(const Offset(50, 36), 10, 18), const Color(0xFFFFE08A), 0, 0.2);
+    if (g < 1) {
+      _p(
+        c,
+        Path()
+          ..moveTo(30, 58)
+          ..lineTo(70, 58)
+          ..quadraticBezierTo(86, 74, 74, 92)
+          ..quadraticBezierTo(50, 102, 26, 92)
+          ..quadraticBezierTo(14, 74, 30, 58)
+          ..close(),
+        const Color(0xFFC8744A),
+        3,
+      );
+    } else {
+      for (final (x, r) in [(28.0, 0.4), (72.0, -0.5)]) {
+        c.save();
+        c.translate(x, 90);
+        c.rotate(r);
+        _p(c, _rrect(-12, -6, 12, 6, 3), const Color(0xFFC8744A), 2);
+        c.restore();
+      }
+    }
+  },
+  // La petite lampe à huile du temple (Samuel) ; [g] : flamme allumée.
+  'lamp': (c, t, g) {
+    final body = Path()
+      ..moveTo(14, 70)
+      ..quadraticBezierTo(40, 54, 72, 64)
+      ..lineTo(90, 60)
+      ..quadraticBezierTo(88, 70, 76, 76)
+      ..quadraticBezierTo(44, 96, 14, 70)
+      ..close();
+    final flame = Path()
+      ..moveTo(86, 58)
+      ..cubicTo(76, 50, 82, 36, 86, 26 + math.sin(t * 6) * 2)
+      ..cubicTo(92, 36, 96, 50, 86, 58)
+      ..close();
+    c.drawCircle(
+      const Offset(86, 44),
+      20 + 6 * g,
+      Paint()..color = Color.fromRGBO(255, 211, 107, 0.25 + 0.3 * g),
+    );
+    _p(c, flame, const Color(0xFFF29A45), 0, 0.3);
+    _p(c, body, const Color(0xFFC8744A), 3);
+    c.drawCircle(const Offset(40, 66), 5, Paint()..color = const Color(0xFF8E4F2E));
+  },
+  'raven': (c, t, g) {
+    final wing = math.sin(t * 8) * 6;
+    _p(c, ellipse(const Offset(48, 62), 54, 30), const Color(0xFF2E2A33), 3, 0.1);
+    _p(
+      c,
+      Path()
+        ..moveTo(36, 56)
+        ..quadraticBezierTo(50, 30 - wing, 74, 34 - wing)
+        ..quadraticBezierTo(62, 52, 46, 64)
+        ..close(),
+      const Color(0xFF3F3A47),
+      2,
+      0.15,
+    );
+    _p(c, circle(const Offset(78, 52), 13), const Color(0xFF2E2A33), 2, 0.1);
+    _p(
+      c,
+      Path()
+        ..moveTo(88, 50)
+        ..lineTo(100, 56)
+        ..lineTo(88, 58)
+        ..close(),
+      const Color(0xFFE9B949),
+      1,
+    );
+    c.drawCircle(const Offset(81, 49), 2.5, Paint()..color = const Color(0xFFFFFBF0));
+    _p(
+      c,
+      Path()
+        ..moveTo(22, 60)
+        ..lineTo(4, 54)
+        ..lineTo(8, 68)
+        ..close(),
+      const Color(0xFF2E2A33),
+      1,
+    );
+    if (g > 0) _p(c, ellipse(const Offset(96, 64), 12, 8), const Color(0xFFE6C15A), 1);
+  },
+  // Un pan de muraille (Jéricho) ; [g] : elle s'écroule.
+  'wall': (c, t, g) {
+    const color = Color(0xFFE6CFA3);
+    for (var row = 0; row < 4; row++) {
+      for (var k = 0; k < 4; k++) {
+        final x = 8.0 + k * 21 + (row.isOdd ? 10 : 0);
+        if (x > 82) continue;
+        final y = 76.0 - row * 18;
+        final fall = g * (row + 1) * 6;
+        c.save();
+        c.translate(x + 10 + g * (k - 1.5) * 8, y + 8 + fall * (row / 3) * 3);
+        c.rotate(g * (k.isEven ? 0.5 : -0.4) * (row / 3));
+        _p(c, _rrect(-10, -8, 10, 8, 2), row.isEven ? color : const Color(0xFFD9BC88), 2);
+        c.restore();
+      }
+    }
+    if (g < 0.5) {
+      for (var k = 0; k < 3; k++) {
+        _p(c, _rrect(10.0 + k * 30, 14, 26.0 + k * 30, 24, 1), color, 1);
+      }
+    }
+  },
+  'scepter': (c, t, g) {
+    c.drawCircle(
+      const Offset(50, 20),
+      18 + 8 * g,
+      Paint()..color = Color.fromRGBO(255, 211, 107, 0.2 + 0.3 * g),
+    );
+    _p(c, _rrect(46, 26, 54, 96, 3), const Color(0xFFE9B949), 2, 0.25);
+    _p(c, circle(const Offset(50, 20), 11), const Color(0xFFF2C14E), 2, 0.3);
+    _p(c, circle(const Offset(50, 20), 5), const Color(0xFFB0413E), 1, 0.2);
+  },
+  'grapes': (c, t, g) {
+    c.drawLine(
+      const Offset(50, 22),
+      const Offset(56, 8),
+      Paint()
+        ..color = const Color(0xFF6B4226)
+        ..strokeWidth = 3,
+    );
+    _p(
+      c,
+      Path()
+        ..moveTo(54, 18)
+        ..quadraticBezierTo(74, 4, 86, 18)
+        ..quadraticBezierTo(70, 26, 54, 18)
+        ..close(),
+      const Color(0xFF6FA24C),
+      1,
+    );
+    for (final (x, y) in [
+      (38.0, 32.0),
+      (52.0, 30.0),
+      (66.0, 32.0),
+      (32.0, 46.0),
+      (46.0, 46.0),
+      (60.0, 46.0),
+      (74.0, 46.0),
+      (40.0, 60.0),
+      (54.0, 60.0),
+      (68.0, 60.0),
+      (46.0, 74.0),
+      (60.0, 74.0),
+      (53.0, 88.0),
+    ]) {
+      _p(c, circle(Offset(x, y), 8), const Color(0xFF7A4E9C), 1.5, 0.25);
+    }
   },
 };

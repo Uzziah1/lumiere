@@ -15,13 +15,14 @@ import '../widgets/colombe_bubble.dart';
 import '../widgets/round_button.dart';
 import 'world.dart';
 
-/// L'arche-trésor (Ancien Testament) et le jardin (Nouveau Testament) : chaque
-/// histoire terminée y fait venir un nouvel ami.
+/// Les trois trésors : l'arche (les origines), le coffre (les héros de la foi)
+/// et le jardin (Nouveau Testament). Chaque histoire terminée y fait venir un
+/// nouvel ami.
 class TreasureScreen extends StatefulWidget {
-  const TreasureScreen({super.key, this.garden = false});
+  const TreasureScreen({super.key, this.lot = 1});
 
-  /// Le jardin du Nouveau Testament plutôt que l'arche.
-  final bool garden;
+  /// Le lot d'histoires dont on montre le trésor (1, 3 ou 2).
+  final int lot;
 
   @override
   State<TreasureScreen> createState() => TreasureScreenState();
@@ -44,12 +45,7 @@ class TreasureScreenState extends State<TreasureScreen> with SingleTickerProvide
         context.go('/profils');
         return;
       }
-      AudioScope.of(context).narrator.play(
-        commonAudioPath(widget.garden ? 'garden' : 'treasure', 'all'),
-        text: widget.garden
-            ? 'Voici ton jardin ! Chaque histoire de Jésus terminée y fait venir un nouvel ami.'
-            : 'Voici ton arche ! Chaque histoire terminée y fait entrer un nouvel ami.',
-      );
+      AudioScope.of(context).narrator.play(commonAudioPath(_place.line, 'all'), text: _place.intro);
     });
   }
 
@@ -90,11 +86,12 @@ class TreasureScreenState extends State<TreasureScreen> with SingleTickerProvide
   Widget build(BuildContext context) {
     final state = GameScope.of(context);
     if (state.current == null) return const Scaffold(backgroundColor: Palette.paper);
-    final garden = widget.garden;
-    final islands = garden ? lot2 : lot1;
+    final place = _place;
+    final garden = widget.lot == 2;
+    final chest = widget.lot == 3;
+    final islands = islandsOfLot(widget.lot);
     final earned = {for (final i in islands) i.id: state.progress(i.id).sticker};
     final count = earned.values.where((e) => e).length;
-    final place = garden ? 'ton jardin' : 'ton arche';
     return Scaffold(
       backgroundColor: const Color(0xFF8CCFE6),
       body: LayoutBuilder(
@@ -105,10 +102,22 @@ class TreasureScreenState extends State<TreasureScreen> with SingleTickerProvide
           final arkW = math.min(size.width * 0.9, size.height * 1.5);
           final arkH = arkW / Ark.aspectRatio;
           final ark = Rect.fromLTWH((size.width - arkW) / 2, size.height * 0.94 - arkH, arkW, arkH);
-          final cells = garden ? _gardenCells(size, compact) : _cells(ark);
+          final cells = garden
+              ? _gardenCells(size, compact)
+              : chest
+              ? _chestCells(size, compact)
+              : _cells(ark);
           return Stack(
             children: [
-              Positioned.fill(child: CustomPaint(painter: garden ? _Garden(cells) : _ArkInside(ark))),
+              Positioned.fill(
+                child: CustomPaint(
+                  painter: garden
+                      ? _Garden(cells)
+                      : chest
+                      ? _Chest(cells)
+                      : _ArkInside(ark),
+                ),
+              ),
               for (var i = 0; i < islands.length; i++)
                 Positioned.fromRect(
                   rect: cells[i],
@@ -140,30 +149,35 @@ class TreasureScreenState extends State<TreasureScreen> with SingleTickerProvide
                 right: 12,
                 top: 8,
                 child: SafeArea(
-                  child: RoundPaperButton(
-                    key: const ValueKey('treasure-switch'),
-                    icon: garden ? Icons.sailing_rounded : Icons.local_florist_rounded,
-                    label: garden ? 'Mon arche' : 'Mon jardin',
-                    size: compact ? 44 : 54,
-                    onPressed: () => context.go(garden ? '/tresor' : '/jardin'),
+                  child: Row(
+                    children: [
+                      for (final other in _places.where((p) => p.lot != widget.lot)) ...[
+                        const SizedBox(width: 8),
+                        RoundPaperButton(
+                          key: ValueKey('treasure-${other.route.substring(1)}'),
+                          icon: other.icon,
+                          label: other.title,
+                          size: compact ? 44 : 54,
+                          onPressed: () => context.go(other.route),
+                        ),
+                      ],
+                    ],
                   ),
                 ),
               ),
               Positioned(
                 left: 80,
-                right: 80,
+                right: compact ? 120 : 140,
                 top: 10,
                 child: SafeArea(
                   child: Column(
                     children: [
-                      Text(
-                        garden ? 'Mon jardin' : 'Mon arche',
-                        style: LumiereText.title(compact ? 24 : 34, color: Palette.ink),
-                      ),
+                      Text(place.title, style: LumiereText.title(compact ? 24 : 34, color: Palette.ink)),
                       const SizedBox(height: 4),
                       ColombeBubble(
                         text:
-                            _bubble ?? '$count ami${count > 1 ? 's' : ''} sur ${islands.length} dans $place',
+                            _bubble ??
+                            '$count ${chest ? 'souvenir' : 'ami'}${count > 1 ? 's' : ''} sur ${islands.length} dans ${place.where}',
                         size: compact ? 30 : 40,
                       ),
                     ],
@@ -177,15 +191,31 @@ class TreasureScreenState extends State<TreasureScreen> with SingleTickerProvide
     );
   }
 
-  /// Dix massifs : deux rangées de cinq, sous le titre.
+  _Place get _place => _places.firstWhere((p) => p.lot == widget.lot);
+
+  /// Onze massifs : six en haut, cinq en bas, sous le titre.
   static List<Rect> _gardenCells(Size size, bool compact) {
-    final cell = math.min(size.width / 7, size.height * (compact ? 0.24 : 0.22));
-    final gap = (size.width - cell * 5) / 6;
-    final rows = [size.height * 0.5, size.height * 0.78];
-    return [
-      for (final y in rows)
-        for (var k = 0; k < 5; k++) Rect.fromLTWH(gap + k * (cell + gap), y - cell / 2, cell, cell),
-    ];
+    final cell = math.min(size.width / 8, size.height * (compact ? 0.22 : 0.2));
+    Iterable<Rect> row(int n, double y) {
+      final gap = (size.width - cell * n) / (n + 1);
+      return [for (var k = 0; k < n; k++) Rect.fromLTWH(gap + k * (cell + gap), y - cell / 2, cell, cell)];
+    }
+
+    return [...row(6, size.height * 0.5), ...row(5, size.height * 0.78)];
+  }
+
+  /// Sept cases dans le coffre ouvert : quatre devant, trois derrière.
+  static List<Rect> _chestCells(Size size, bool compact) {
+    final cell = math.min(size.width / 8, size.height * (compact ? 0.22 : 0.2));
+    final box = _Chest.box(size);
+    Iterable<Rect> row(int n, double y) {
+      final gap = (box.width - cell * n) / (n + 1);
+      return [
+        for (var k = 0; k < n; k++) Rect.fromLTWH(box.left + gap + k * (cell + gap), y - cell, cell, cell),
+      ];
+    }
+
+    return [...row(3, box.top + box.height * 0.42), ...row(4, box.top + box.height * 0.86)];
   }
 
   /// Huit cabines : deux étages de quatre, dans la coque et la cabine de l'arche.
@@ -264,6 +294,139 @@ class _FriendPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_FriendPainter oldDelegate) => oldDelegate.id != id || oldDelegate.earned != earned;
+}
+
+/// Un des trois lieux du trésor.
+class _Place {
+  const _Place(this.lot, this.title, this.where, this.route, this.icon, this.line, this.intro);
+
+  final int lot;
+  final String title;
+  final String where;
+  final String route;
+  final IconData icon;
+
+  /// Phrase commune de Colombe (voir `assets/lines/common.json`).
+  final String line;
+  final String intro;
+}
+
+const _places = [
+  _Place(
+    1,
+    'Mon arche',
+    'ton arche',
+    '/tresor',
+    Icons.sailing_rounded,
+    'treasure',
+    'Voici ton arche ! Chaque histoire terminée y fait entrer un nouvel ami.',
+  ),
+  _Place(
+    3,
+    'Mon coffre',
+    'ton coffre',
+    '/coffre',
+    Icons.inventory_2_rounded,
+    'chest',
+    'Voici ton coffre au trésor ! Chaque histoire des héros de la foi y range un souvenir.',
+  ),
+  _Place(
+    2,
+    'Mon jardin',
+    'ton jardin',
+    '/jardin',
+    Icons.local_florist_rounded,
+    'garden',
+    'Voici ton jardin ! Chaque histoire de Jésus terminée y fait venir un nouvel ami.',
+  ),
+];
+
+/// Le coffre au trésor des héros de la foi, ouvert, dans une salle aux tapis.
+class _Chest extends CustomPainter {
+  _Chest(this.cells);
+
+  final List<Rect> cells;
+  final _grain = PaperGrain(opacity: 0.05);
+
+  /// Le corps du coffre (les cases sont dedans).
+  static Rect box(Size size) {
+    final w = math.min(size.width * 0.76, size.height * 1.3);
+    final h = size.height * 0.52;
+    return Rect.fromLTWH((size.width - w) / 2, size.height * 0.44, w, h);
+  }
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    canvas.drawRect(
+      Offset.zero & size,
+      Paint()
+        ..shader = const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Color(0xFF6E4A7E), Color(0xFFB0718C), Color(0xFFF2C9A0)],
+        ).createShader(Offset.zero & size),
+    );
+    final b = box(size);
+    // Rayons dorés qui sortent du coffre.
+    for (var k = 0; k < 9; k++) {
+      final a = -math.pi / 2 + (k - 4) * 0.2;
+      final from = Offset(b.center.dx, b.top);
+      final path = Path()
+        ..moveTo(from.dx, from.dy)
+        ..lineTo(from.dx + math.cos(a - 0.05) * size.height, from.dy + math.sin(a - 0.05) * size.height)
+        ..lineTo(from.dx + math.cos(a + 0.05) * size.height, from.dy + math.sin(a + 0.05) * size.height)
+        ..close();
+      canvas.drawPath(path, Paint()..color = const Color(0x22FFE08A));
+    }
+    // Couvercle ouvert, basculé vers l'arrière.
+    final lid = Path()
+      ..moveTo(b.left + b.width * 0.03, b.top)
+      ..lineTo(b.left + b.width * 0.08, b.top - b.height * 0.2)
+      ..quadraticBezierTo(
+        b.center.dx,
+        b.top - b.height * 0.36,
+        b.right - b.width * 0.08,
+        b.top - b.height * 0.2,
+      )
+      ..lineTo(b.right - b.width * 0.03, b.top)
+      ..close();
+    drawPaper(canvas, lid, const Color(0xFF7E4A2A), elevation: 4);
+    drawPaper(
+      canvas,
+      Path()..addRRect(RRect.fromRectAndRadius(b, Radius.circular(b.height * 0.05))),
+      const Color(0xFF8A5634),
+      elevation: 6,
+    );
+    // Ferrures dorées sur le bois.
+    final metal = Paint()..color = const Color(0xFFD9B27A);
+    for (final fx in [0.02, 0.98]) {
+      canvas.drawRect(
+        Rect.fromLTWH(b.left + b.width * fx - b.width * 0.012, b.top, b.width * 0.024, b.height),
+        metal,
+      );
+    }
+    // Intérieur de velours rouge et deux étagères dorées.
+    final inside = b.deflate(b.height * 0.06);
+    canvas.drawRRect(
+      RRect.fromRectAndRadius(inside, Radius.circular(b.height * 0.03)),
+      Paint()
+        ..shader = LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: const [Color(0xFFD77A6A), Color(0xFFB5574E)],
+        ).createShader(inside),
+    );
+    final shelf = Paint()..color = const Color(0xFFE9B949);
+    for (final f in [0.42, 0.86]) {
+      canvas.drawRect(Rect.fromLTWH(inside.left, b.top + b.height * f, inside.width, b.height * 0.03), shelf);
+    }
+    // Serrure.
+    canvas.drawCircle(Offset(b.center.dx, b.bottom - b.height * 0.03), b.height * 0.035, metal);
+    _grain.paint(canvas, size);
+  }
+
+  @override
+  bool shouldRepaint(_Chest oldDelegate) => oldDelegate.cells != cells;
 }
 
 /// Le jardin : ciel du matin, collines, allée et un massif sous chaque ami.

@@ -20,6 +20,8 @@
   "treasure": "Voici ton arche ! Chaque histoire terminée y fait entrer un nouvel ami.",
   "new_friend": "Un nouvel ami est entré dans ton arche !",
   "new_friend_garden": "Un nouvel ami est arrivé dans ton jardin !",
+  "new_friend_chest": "Un nouveau souvenir est rangé dans ton coffre !",
+  "chest": "Voici ton coffre au trésor ! Chaque histoire des héros de la foi y range un souvenir.",
   "garden": "Voici ton jardin ! Chaque histoire de Jésus terminée y fait venir un nouvel ami.",
   "time_soon": "Encore deux minutes, et on fera une pause !",
   "time_up": "C'est l'heure de se reposer. Tu as bien joué aujourd'hui. On se retrouve demain !"

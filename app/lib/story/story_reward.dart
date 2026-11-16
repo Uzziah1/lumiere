@@ -19,7 +19,7 @@ class StoryReward extends StatefulWidget {
     required this.onHome,
     this.homeLabel = 'Accueil',
     this.friend,
-    this.inGarden = false,
+    this.lot = 1,
   });
 
   final int stars;
@@ -30,8 +30,8 @@ class StoryReward extends StatefulWidget {
   /// L'ami qui rejoint l'arche-trésor (identifiant d'objet), s'il y en a un.
   final String? friend;
 
-  /// L'ami va dans le jardin (Nouveau Testament) plutôt que dans l'arche.
-  final bool inGarden;
+  /// Le lot de l'histoire : l'ami va dans l'arche (1), le coffre (3) ou le jardin (2).
+  final int lot;
   final VoidCallback onReplay;
   final VoidCallback onHome;
 
@@ -58,7 +58,11 @@ class _StoryRewardState extends State<StoryReward> with SingleTickerProviderStat
       session.sfx.play(Sfx.star);
       session.say('reward').then((_) {
         if (mounted && widget.friend != null) {
-          session.say(widget.inGarden ? 'new_friend_garden' : 'new_friend');
+          session.say(switch (widget.lot) {
+            2 => 'new_friend_garden',
+            3 => 'new_friend_chest',
+            _ => 'new_friend',
+          });
         }
       });
     }
@@ -144,7 +148,11 @@ class _StoryRewardState extends State<StoryReward> with SingleTickerProviderStat
                               ),
                               const SizedBox(width: 8),
                               Text(
-                                'Nouvel ami dans ton ${widget.inGarden ? 'jardin' : 'arche'} : ${thingLabel(widget.friend!)}',
+                                switch (widget.lot) {
+                                  2 => 'Nouvel ami dans ton jardin : ${thingLabel(widget.friend!)}',
+                                  3 => 'Nouveau souvenir dans ton coffre : ${thingLabel(widget.friend!)}',
+                                  _ => 'Nouvel ami dans ton arche : ${thingLabel(widget.friend!)}',
+                                },
                                 style: LumiereText.text(
                                   compact ? 15 : 18,
                                   bold: true,

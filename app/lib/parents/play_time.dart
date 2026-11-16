@@ -19,6 +19,7 @@ bool countsAsPlay(String path) =>
     path == '/album' ||
     path == '/tresor' ||
     path == '/jardin' ||
+    path == '/coffre' ||
     path.startsWith('/histoire/');
 
 /// Compte le temps de jeu de l'enfant actif et, si les parents ont fixé une

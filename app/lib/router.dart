@@ -31,10 +31,8 @@ GoRouter buildRouter() {
       GoRoute(path: '/parents', pageBuilder: (context, state) => _fade(state, const ParentsScreen())),
       GoRoute(path: '/album', pageBuilder: (context, state) => _fade(state, const AlbumScreen())),
       GoRoute(path: '/tresor', pageBuilder: (context, state) => _fade(state, const TreasureScreen())),
-      GoRoute(
-        path: '/jardin',
-        pageBuilder: (context, state) => _fade(state, const TreasureScreen(garden: true)),
-      ),
+      GoRoute(path: '/coffre', pageBuilder: (context, state) => _fade(state, const TreasureScreen(lot: 3))),
+      GoRoute(path: '/jardin', pageBuilder: (context, state) => _fade(state, const TreasureScreen(lot: 2))),
       GoRoute(
         path: '/histoire/:id',
         redirect: (context, state) => storyPacks.containsKey(state.pathParameters['id']) ? null : '/',

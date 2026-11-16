@@ -570,14 +570,18 @@ class _MapPainter extends CustomPainter {
       );
     }
     // Un panneau au début de chaque partie : Ancien et Nouveau Testament.
-    for (final lot in [1, 2]) {
+    for (final (lot, title) in [
+      (1, 'Ancien Testament'),
+      (3, 'Les héros de la foi'),
+      (2, 'Nouveau Testament'),
+    ]) {
       final first = world.islands.indexWhere((i) => i.lot == lot);
       if (first < 0) continue;
       // Entre deux îles, en haut de la carte : ni sur une île ni sous la bulle de Colombe.
       final a = world.islands[first == 0 ? 0 : first - 1].position.dx;
       final b = world.islands[math.min(first + (first == 0 ? 1 : 0), world.islands.length - 1)].position.dx;
       final x = (a + b) / 2 * size.width;
-      _sign(canvas, Offset(x, h * 0.3), h, lot == 1 ? 'Ancien Testament' : 'Nouveau Testament');
+      _sign(canvas, Offset(x, h * 0.3), h, title);
     }
     _path(canvas, size);
     for (final island in world.islands) {
