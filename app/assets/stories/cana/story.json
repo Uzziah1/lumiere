@@ -75,39 +75,138 @@
     }
   ],
   "games": {
+    "lineup": [
+      "quiz",
+      "memory",
+      "seek"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "noces", "label": "Le mariage" },
-        { "id": "marie", "label": "Plus de vin !" },
-        { "id": "jarres", "label": "Les six jarres" },
-        { "id": "vin", "label": "L'eau devient vin" },
-        { "id": "maitre", "label": "Le meilleur vin" },
-        { "id": "croire", "label": "Le premier miracle" }
+        {
+          "id": "noces",
+          "label": "Le mariage"
+        },
+        {
+          "id": "marie",
+          "label": "Plus de vin !"
+        },
+        {
+          "id": "jarres",
+          "label": "Les six jarres"
+        },
+        {
+          "id": "vin",
+          "label": "L'eau devient vin"
+        },
+        {
+          "id": "maitre",
+          "label": "Le meilleur vin"
+        },
+        {
+          "id": "croire",
+          "label": "Le premier miracle"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "À la fête du mariage, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "grapes", "label": "le raisin" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "bread", "label": "le pain" },
-        { "id": "flower", "label": "la fleur" },
-        { "id": "fruit", "label": "le fruit" },
-        { "id": "dove", "label": "la colombe" },
-        { "id": "harp", "label": "la harpe" },
-        { "id": "mouse", "label": "la souris" }
+        {
+          "id": "grapes",
+          "label": "le raisin"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "bread",
+          "label": "le pain"
+        },
+        {
+          "id": "flower",
+          "label": "la fleur"
+        },
+        {
+          "id": "fruit",
+          "label": "le fruit"
+        },
+        {
+          "id": "dove",
+          "label": "la colombe"
+        },
+        {
+          "id": "harp",
+          "label": "la harpe"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["grapes", "jar", "bread", "flower", "harp", "ring"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "grapes",
+        "jar",
+        "bread",
+        "flower",
+        "harp",
+        "ring"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Qu'est-ce que les serviteurs ont rempli d'eau ?",
+          "choices": [
+            "jar",
+            "basket",
+            "boat"
+          ]
+        },
+        {
+          "question": "L'eau est devenue du vin. Avec quel fruit fait-on le vin ?",
+          "choices": [
+            "grapes",
+            "wheat",
+            "fish"
+          ]
+        },
+        {
+          "question": "Quelle fête avait lieu à Cana ? Un mariage ! Qu'est-ce que les mariés se donnent ?",
+          "choices": [
+            "ring",
+            "crown",
+            "star"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 3
+      }
     }
   },
   "verse": {
@@ -115,16 +214,33 @@
     "reference": "Jean 2.5",
     "spoken": "Jean, chapitre 2, verset 5 : Faites ce qu'il vous dira.",
     "chunks": {
-      "bergers": ["Faites", "ce qu'il", "vous dira."],
-      "explorateurs": ["Faites", "ce", "qu'il", "vous", "dira."]
+      "bergers": [
+        "Faites",
+        "ce qu'il",
+        "vous dira."
+      ],
+      "explorateurs": [
+        "Faites",
+        "ce",
+        "qu'il",
+        "vous",
+        "dira."
+      ]
     },
-    "referenceChoices": ["Jean 2.5", "Jean 5.2", "Luc 2.5"],
+    "referenceChoices": [
+      "Jean 2.5",
+      "Jean 5.2",
+      "Luc 2.5"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "cana", "title": "Les jarres de Cana" },
+  "sticker": {
+    "id": "cana",
+    "title": "Les jarres de Cana"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire des noces de Cana. Voici ton autocollant pour ton album !"
 }

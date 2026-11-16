@@ -75,39 +75,105 @@
     }
   ],
   "games": {
+    "lineup": [
+      "puzzle",
+      "chronology",
+      "memory"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "reine", "label": "Esther devient reine" },
-        { "id": "complot", "label": "La mauvaise loi" },
-        { "id": "jeune", "label": "Trois jours de prière" },
-        { "id": "sceptre", "label": "Le sceptre d'or" },
-        { "id": "festin", "label": "Le festin" },
-        { "id": "sauve", "label": "Le peuple est sauvé" }
+        {
+          "id": "reine",
+          "label": "Esther devient reine"
+        },
+        {
+          "id": "complot",
+          "label": "La mauvaise loi"
+        },
+        {
+          "id": "jeune",
+          "label": "Trois jours de prière"
+        },
+        {
+          "id": "sceptre",
+          "label": "Le sceptre d'or"
+        },
+        {
+          "id": "festin",
+          "label": "Le festin"
+        },
+        {
+          "id": "sauve",
+          "label": "Le peuple est sauvé"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Dans le palais du roi, des trésors se cachent ! Retrouve-les.",
       "items": [
-        { "id": "crown", "label": "la couronne" },
-        { "id": "scepter", "label": "le sceptre" },
-        { "id": "scroll", "label": "le rouleau" },
-        { "id": "ring", "label": "l'anneau" },
-        { "id": "grapes", "label": "le raisin" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "dove", "label": "la colombe" },
-        { "id": "mouse", "label": "la souris" }
+        {
+          "id": "crown",
+          "label": "la couronne"
+        },
+        {
+          "id": "scepter",
+          "label": "le sceptre"
+        },
+        {
+          "id": "scroll",
+          "label": "le rouleau"
+        },
+        {
+          "id": "ring",
+          "label": "l'anneau"
+        },
+        {
+          "id": "grapes",
+          "label": "le raisin"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "dove",
+          "label": "la colombe"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["crown", "scepter", "scroll", "ring", "grapes", "flower"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "crown",
+        "scepter",
+        "scroll",
+        "ring",
+        "grapes",
+        "flower"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     }
   },
   "verse": {
@@ -115,16 +181,34 @@
     "reference": "Esther 4.14",
     "spoken": "Esther, chapitre 4, verset 14 : Et qui sait si ce n'est pas pour un temps comme celui-ci que tu es parvenue à la royauté ?",
     "chunks": {
-      "bergers": ["Et qui sait", "si ce n'est pas pour un temps comme celui-ci", "que tu es parvenue à la royauté ?"],
-      "explorateurs": ["Et qui sait", "si ce n'est pas", "pour un temps", "comme celui-ci", "que tu es parvenue", "à la royauté ?"]
+      "bergers": [
+        "Et qui sait",
+        "si ce n'est pas pour un temps comme celui-ci",
+        "que tu es parvenue à la royauté ?"
+      ],
+      "explorateurs": [
+        "Et qui sait",
+        "si ce n'est pas",
+        "pour un temps",
+        "comme celui-ci",
+        "que tu es parvenue",
+        "à la royauté ?"
+      ]
     },
-    "referenceChoices": ["Esther 4.14", "Esther 14.4", "Ruth 4.14"],
+    "referenceChoices": [
+      "Esther 4.14",
+      "Esther 14.4",
+      "Ruth 4.14"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "esther", "title": "Le sceptre d'or" },
+  "sticker": {
+    "id": "esther",
+    "title": "Le sceptre d'or"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de la reine Esther. Voici ton autocollant pour ton album !"
 }

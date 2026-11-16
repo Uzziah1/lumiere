@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "quiz",
+      "memory",
+      "seek"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "call", "label": "Dieu appelle Abram" },
-        { "id": "journey", "label": "Le voyage" },
-        { "id": "tent", "label": "La tente et l'autel" },
-        { "id": "stars", "label": "Les étoiles" },
-        { "id": "promise", "label": "Les trois visiteurs" },
-        { "id": "isaac", "label": "Isaac est né" }
+        {
+          "id": "call",
+          "label": "Dieu appelle Abram"
+        },
+        {
+          "id": "journey",
+          "label": "Le voyage"
+        },
+        {
+          "id": "tent",
+          "label": "La tente et l'autel"
+        },
+        {
+          "id": "stars",
+          "label": "Les étoiles"
+        },
+        {
+          "id": "promise",
+          "label": "Les trois visiteurs"
+        },
+        {
+          "id": "isaac",
+          "label": "Isaac est né"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Des animaux et des objets se cachent dans le camp d'Abraham ! Retrouve-les.",
       "items": [
-        { "id": "sheep", "label": "le mouton" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "owl", "label": "le hibou" },
-        { "id": "rabbit", "label": "le lapin" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "snail", "label": "l'escargot" }
+        {
+          "id": "sheep",
+          "label": "le mouton"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "owl",
+          "label": "le hibou"
+        },
+        {
+          "id": "rabbit",
+          "label": "le lapin"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire d'Abraham.",
-      "pairs": ["star", "tent", "camel", "sheep", "altar", "moon"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "star",
+        "tent",
+        "camel",
+        "sheep",
+        "altar",
+        "moon"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Dieu a dit à Abraham de regarder le ciel. Qu'est-ce qu'il ne pouvait pas compter ?",
+          "choices": [
+            "star",
+            "sheep",
+            "coin"
+          ]
+        },
+        {
+          "question": "Où habitait Abraham pendant son long voyage ?",
+          "choices": [
+            "tent",
+            "city",
+            "boat"
+          ]
+        },
+        {
+          "question": "Quel animal portait les bagages dans le désert ?",
+          "choices": [
+            "camel",
+            "frog",
+            "owl"
+          ]
+        },
+        {
+          "question": "Abraham a construit quelque chose pour adorer Dieu. Qu'est-ce que c'est ?",
+          "choices": [
+            "altar",
+            "boat",
+            "harp"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,35 @@
     "reference": "Genèse 15.6",
     "spoken": "Genèse, chapitre 15, verset 6 : Abram eut confiance en l'Éternel, qui le lui imputa à justice.",
     "chunks": {
-      "bergers": ["Abram eut confiance", "en l'Éternel,", "qui le lui imputa", "à justice."],
-      "explorateurs": ["Abram", "eut confiance", "en l'Éternel,", "qui le lui", "imputa", "à justice."]
+      "bergers": [
+        "Abram eut confiance",
+        "en l'Éternel,",
+        "qui le lui imputa",
+        "à justice."
+      ],
+      "explorateurs": [
+        "Abram",
+        "eut confiance",
+        "en l'Éternel,",
+        "qui le lui",
+        "imputa",
+        "à justice."
+      ]
     },
-    "referenceChoices": ["Genèse 15.6", "Genèse 6.15", "Romains 15.6"],
+    "referenceChoices": [
+      "Genèse 15.6",
+      "Genèse 6.15",
+      "Romains 15.6"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "abraham", "title": "Les étoiles d'Abraham" },
+  "sticker": {
+    "id": "abraham",
+    "title": "Les étoiles d'Abraham"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire d'Abraham. Voici ton autocollant pour ton album !"
 }

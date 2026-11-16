@@ -6,6 +6,8 @@ import '../audio/audio.dart';
 import '../games/chronology_game.dart';
 import '../games/game_frame.dart';
 import '../games/memory_game.dart';
+import '../games/puzzle_game.dart';
+import '../games/quiz_game.dart';
 import '../games/seek_game.dart';
 import '../games/verse_game.dart';
 import '../save/game_state.dart';
@@ -180,6 +182,8 @@ class StoryScreenState extends State<StoryScreen> {
           StoryPart.chronology => ('Dans l’ordre', 'game.chronology'),
           StoryPart.seek => ('Cache-cache', 'game.seek'),
           StoryPart.memory => ('Les paires', 'game.memory'),
+          StoryPart.puzzle => ('Le puzzle', 'puzzle_help'),
+          StoryPart.quiz => ('Le quiz', 'quiz.1'),
           _ => ('Le verset', 'game.verse'),
         };
         return GameFrame(
@@ -191,6 +195,8 @@ class StoryScreenState extends State<StoryScreen> {
             StoryPart.chronology => ChronologyGame(complete: complete, say: say),
             StoryPart.seek => SeekGame(complete: complete, say: say),
             StoryPart.memory => MemoryGame(complete: complete, say: say),
+            StoryPart.puzzle => PuzzleGame(complete: complete, say: say),
+            StoryPart.quiz => QuizGame(complete: complete, say: say),
             _ => VerseGame(complete: complete, say: say),
           },
         );

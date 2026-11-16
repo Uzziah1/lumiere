@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "quiz",
+      "memory",
+      "seek"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "promesse", "label": "Dieu parle à Josué" },
-        { "id": "tour", "label": "Six jours de marche" },
-        { "id": "trompettes", "label": "Les trompettes" },
-        { "id": "septieme", "label": "Sept tours" },
-        { "id": "cri", "label": "Les murs tombent" },
-        { "id": "rahab", "label": "Rahab est sauvée" }
+        {
+          "id": "promesse",
+          "label": "Dieu parle à Josué"
+        },
+        {
+          "id": "tour",
+          "label": "Six jours de marche"
+        },
+        {
+          "id": "trompettes",
+          "label": "Les trompettes"
+        },
+        {
+          "id": "septieme",
+          "label": "Sept tours"
+        },
+        {
+          "id": "cri",
+          "label": "Les murs tombent"
+        },
+        {
+          "id": "rahab",
+          "label": "Rahab est sauvée"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Dans les pierres des murs tombés, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "horn", "label": "la trompette" },
-        { "id": "stone", "label": "le caillou" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "palm", "label": "la palme" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "snail", "label": "l'escargot" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "ladybug", "label": "la coccinelle" }
+        {
+          "id": "horn",
+          "label": "la trompette"
+        },
+        {
+          "id": "stone",
+          "label": "le caillou"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "palm",
+          "label": "la palme"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["horn", "wall", "city", "palm", "sheep", "jar"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "horn",
+        "wall",
+        "city",
+        "palm",
+        "sheep",
+        "jar"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Dans quoi les prêtres ont-ils soufflé autour de la ville ?",
+          "choices": [
+            "horn",
+            "harp",
+            "tambourine"
+          ]
+        },
+        {
+          "question": "Qu'est-ce qui est tombé quand le peuple a crié ?",
+          "choices": [
+            "wall",
+            "tree",
+            "star"
+          ]
+        },
+        {
+          "question": "Jéricho était une grande…",
+          "choices": [
+            "city",
+            "boat",
+            "tent"
+          ]
+        },
+        {
+          "question": "La Bible appelle Jéricho « la ville des… »",
+          "choices": [
+            "palm",
+            "flower",
+            "wheat"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,33 @@
     "reference": "Josué 1.9",
     "spoken": "Josué, chapitre 1, verset 9 : Ne t'effraie point et ne t'épouvante point, car l'Éternel, ton Dieu, est avec toi dans tout ce que tu entreprendras.",
     "chunks": {
-      "bergers": ["Ne t'effraie point et ne t'épouvante point,", "car l'Éternel, ton Dieu, est avec toi", "dans tout ce que tu entreprendras."],
-      "explorateurs": ["Ne t'effraie point", "et ne t'épouvante point,", "car l'Éternel, ton Dieu,", "est avec toi", "dans tout ce que tu entreprendras."]
+      "bergers": [
+        "Ne t'effraie point et ne t'épouvante point,",
+        "car l'Éternel, ton Dieu, est avec toi",
+        "dans tout ce que tu entreprendras."
+      ],
+      "explorateurs": [
+        "Ne t'effraie point",
+        "et ne t'épouvante point,",
+        "car l'Éternel, ton Dieu,",
+        "est avec toi",
+        "dans tout ce que tu entreprendras."
+      ]
     },
-    "referenceChoices": ["Josué 1.9", "Josué 9.1", "Juges 1.9"],
+    "referenceChoices": [
+      "Josué 1.9",
+      "Josué 9.1",
+      "Juges 1.9"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "jericho", "title": "Les murs de Jéricho" },
+  "sticker": {
+    "id": "jericho",
+    "title": "Les murs de Jéricho"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire des murs de Jéricho. Voici ton autocollant pour ton album !"
 }

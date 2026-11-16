@@ -75,39 +75,105 @@
     }
   ],
   "games": {
+    "lineup": [
+      "puzzle",
+      "chronology",
+      "memory"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "traversee", "label": "Le départ" },
-        { "id": "orage", "label": "La tempête" },
-        { "id": "sommeil", "label": "Jésus dort" },
-        { "id": "calme", "label": "« Silence ! »" },
-        { "id": "question", "label": "Qui est-il ?" },
-        { "id": "rivage", "label": "L'autre rive" }
+        {
+          "id": "traversee",
+          "label": "Le départ"
+        },
+        {
+          "id": "orage",
+          "label": "La tempête"
+        },
+        {
+          "id": "sommeil",
+          "label": "Jésus dort"
+        },
+        {
+          "id": "calme",
+          "label": "« Silence ! »"
+        },
+        {
+          "id": "question",
+          "label": "Qui est-il ?"
+        },
+        {
+          "id": "rivage",
+          "label": "L'autre rive"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Sur la plage du lac, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "fish", "label": "le poisson" },
-        { "id": "shell", "label": "le coquillage" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "crate", "label": "la caisse" },
-        { "id": "basket", "label": "le panier" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "star", "label": "l'étoile de mer" },
-        { "id": "tortoise", "label": "la tortue" }
+        {
+          "id": "fish",
+          "label": "le poisson"
+        },
+        {
+          "id": "shell",
+          "label": "le coquillage"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "crate",
+          "label": "la caisse"
+        },
+        {
+          "id": "basket",
+          "label": "le panier"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "star",
+          "label": "l'étoile de mer"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["boat", "fish", "moon", "star", "shell", "bird"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "boat",
+        "fish",
+        "moon",
+        "star",
+        "shell",
+        "bird"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     }
   },
   "verse": {
@@ -115,16 +181,33 @@
     "reference": "Marc 4.41",
     "spoken": "Marc, chapitre 4, verset 41 : Quel est donc celui-ci, à qui obéissent même le vent et la mer ?",
     "chunks": {
-      "bergers": ["Quel est donc celui-ci,", "à qui obéissent", "même le vent et la mer ?"],
-      "explorateurs": ["Quel est donc", "celui-ci,", "à qui obéissent", "même le vent", "et la mer ?"]
+      "bergers": [
+        "Quel est donc celui-ci,",
+        "à qui obéissent",
+        "même le vent et la mer ?"
+      ],
+      "explorateurs": [
+        "Quel est donc",
+        "celui-ci,",
+        "à qui obéissent",
+        "même le vent",
+        "et la mer ?"
+      ]
     },
-    "referenceChoices": ["Marc 4.41", "Marc 14.1", "Matthieu 4.41"],
+    "referenceChoices": [
+      "Marc 4.41",
+      "Marc 14.1",
+      "Matthieu 4.41"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "tempete", "title": "Le grand calme" },
+  "sticker": {
+    "id": "tempete",
+    "title": "Le grand calme"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de la tempête. Voici ton autocollant pour ton album !"
 }

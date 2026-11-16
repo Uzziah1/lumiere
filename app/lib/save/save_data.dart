@@ -51,7 +51,9 @@ class StoryProgress {
   /// Vrai quand l'enfant a terminé l'histoire et gagné l'autocollant.
   final bool sticker;
 
-  int get stars => parts.length;
+  /// Étoiles gagnées, 5 au plus : une étoile gagnée à un jeu qui n'est plus
+  /// proposé par l'histoire reste comptée.
+  int get stars => parts.length > 5 ? 5 : parts.length;
 
   StoryProgress withPart(StoryPart part) => StoryProgress(parts: {...parts, part}, sticker: sticker);
 

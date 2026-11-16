@@ -57,6 +57,8 @@ def story_lines(story: dict) -> dict[str, dict[str, str]]:
     games = story["games"]
     for name in ("chronology", "seek", "memory"):
         lines[f"game.{name}"] = variants(games[name]["instructions"])
+    for i, question in enumerate(games.get("quiz", {}).get("questions", [])):
+        lines[f"quiz.{i + 1}"] = variants(question["question"])
     lines["verse.reading"] = variants(story["verse"]["spoken"])
     lines["game.verse"] = variants(story["verse"]["instructions"])
     lines["reward"] = variants(story["reward"])

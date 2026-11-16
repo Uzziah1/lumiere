@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "memory",
+      "puzzle",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "fete", "label": "La fête à Jérusalem" },
-        { "id": "retour", "label": "Où est Jésus ?" },
-        { "id": "recherche", "label": "Trois jours" },
-        { "id": "docteurs", "label": "Au Temple" },
-        { "id": "retrouve", "label": "Retrouvé !" },
-        { "id": "grandir", "label": "Jésus grandit" }
+        {
+          "id": "fete",
+          "label": "La fête à Jérusalem"
+        },
+        {
+          "id": "retour",
+          "label": "Où est Jésus ?"
+        },
+        {
+          "id": "recherche",
+          "label": "Trois jours"
+        },
+        {
+          "id": "docteurs",
+          "label": "Au Temple"
+        },
+        {
+          "id": "retrouve",
+          "label": "Retrouvé !"
+        },
+        {
+          "id": "grandir",
+          "label": "Jésus grandit"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Dans la cour du Temple, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "scroll", "label": "le rouleau" },
-        { "id": "dove", "label": "la colombe" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "coin", "label": "la pièce" },
-        { "id": "basket", "label": "le panier" },
-        { "id": "bread", "label": "le pain" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "snail", "label": "l'escargot" }
+        {
+          "id": "scroll",
+          "label": "le rouleau"
+        },
+        {
+          "id": "dove",
+          "label": "la colombe"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "coin",
+          "label": "la pièce"
+        },
+        {
+          "id": "basket",
+          "label": "le panier"
+        },
+        {
+          "id": "bread",
+          "label": "le pain"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["scroll", "temple", "dove", "donkey", "bread", "jar"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "scroll",
+        "temple",
+        "dove",
+        "donkey",
+        "bread",
+        "jar"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Où Marie et Joseph ont-ils retrouvé Jésus ?",
+          "choices": [
+            "temple",
+            "boat",
+            "tent"
+          ]
+        },
+        {
+          "question": "Les maîtres lisaient la loi de Dieu écrite sur des…",
+          "choices": [
+            "scroll",
+            "coin",
+            "bread"
+          ]
+        },
+        {
+          "question": "Pour la fête de la Pâque, quel animal mangeait-on en famille ?",
+          "choices": [
+            "sheep",
+            "fish",
+            "bird"
+          ]
+        },
+        {
+          "question": "Après la fête, Jésus est rentré grandir dans sa…",
+          "choices": [
+            "city",
+            "boat",
+            "tent"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,34 @@
     "reference": "Luc 2.52",
     "spoken": "Luc, chapitre 2, verset 52 : Et Jésus croissait en sagesse, en stature, et en grâce, devant Dieu et devant les hommes.",
     "chunks": {
-      "bergers": ["Et Jésus croissait", "en sagesse, en stature, et en grâce,", "devant Dieu et devant les hommes."],
-      "explorateurs": ["Et Jésus croissait", "en sagesse,", "en stature,", "et en grâce,", "devant Dieu", "et devant les hommes."]
+      "bergers": [
+        "Et Jésus croissait",
+        "en sagesse, en stature, et en grâce,",
+        "devant Dieu et devant les hommes."
+      ],
+      "explorateurs": [
+        "Et Jésus croissait",
+        "en sagesse,",
+        "en stature,",
+        "et en grâce,",
+        "devant Dieu",
+        "et devant les hommes."
+      ]
     },
-    "referenceChoices": ["Luc 2.52", "Luc 5.22", "Marc 2.52"],
+    "referenceChoices": [
+      "Luc 2.52",
+      "Luc 5.22",
+      "Marc 2.52"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "temple", "title": "Jésus au Temple" },
+  "sticker": {
+    "id": "temple",
+    "title": "Jésus au Temple"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Jésus au Temple. Voici ton autocollant pour ton album !"
 }

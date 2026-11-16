@@ -2,6 +2,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:lumiere/audio/audio.dart';
 import 'package:lumiere/games/chronology_game.dart';
 import 'package:lumiere/games/memory_game.dart';
+import 'package:lumiere/games/puzzle_game.dart';
+import 'package:lumiere/games/quiz_game.dart';
 import 'package:lumiere/games/seek_game.dart';
 import 'package:lumiere/games/verse_game.dart';
 import 'package:lumiere/stories/registry.dart';
@@ -251,6 +253,87 @@ void main() {
     });
   });
 
+  group('Puzzle', () {
+    testWidgets('échanger les pièces jusqu’à l’image complète termine le jeu', (tester) async {
+      await big(tester);
+      var done = 0;
+      await tester.pumpWidget(inSession(PuzzleGame(complete: () => done++, say: (_) {}, seed: 3)));
+      await tester.pump(const Duration(milliseconds: 100));
+      final s = tester.state<PuzzleGameState>(find.byType(PuzzleGame));
+      expect(s.slots, hasLength(6));
+      expect(s.solved, isFalse);
+      for (var i = 0; i < s.slots.length; i++) {
+        if (s.slots[i] == i) continue;
+        await tester.tap(find.byKey(ValueKey('puzzle-${s.slots.indexOf(i)}')));
+        await tester.pump(const Duration(milliseconds: 300));
+        await tester.tap(find.byKey(ValueKey('puzzle-$i')));
+        await tester.pump(const Duration(milliseconds: 300));
+      }
+      expect(s.solved, isTrue);
+      expect(done, 1);
+    });
+
+    testWidgets('4 pièces pour les Agneaux, 9 pour les Explorateurs ; une pièce bien placée ne bouge plus', (
+      tester,
+    ) async {
+      await big(tester);
+      await tester.pumpWidget(
+        inSession(
+          PuzzleGame(complete: () {}, say: (_) {}, seed: 1),
+          age: AgeGroup.agneaux,
+        ),
+      );
+      expect(tester.state<PuzzleGameState>(find.byType(PuzzleGame)).slots, hasLength(4));
+      await tester.pumpWidget(
+        inSession(
+          PuzzleGame(key: const ValueKey('grand'), complete: () {}, say: (_) {}, seed: 2),
+          age: AgeGroup.explorateurs,
+        ),
+      );
+      final s = tester.state<PuzzleGameState>(find.byType(PuzzleGame));
+      expect(s.slots, hasLength(9));
+      final placed = [
+        for (var i = 0; i < 9; i++)
+          if (s.slots[i] == i) i,
+      ];
+      if (placed.isNotEmpty) {
+        s.tap(placed.first);
+        expect(s.selected, isNull);
+      }
+    });
+  });
+
+  group('Quiz', () {
+    testWidgets('la bonne image fait avancer ; une erreur efface l’image et Colombe encourage', (
+      tester,
+    ) async {
+      await big(tester);
+      var done = 0;
+      final said = <String>[];
+      await tester.pumpWidget(
+        inSession(
+          QuizGame(complete: () => done++, say: said.add, seed: 1),
+          storyId: 'david',
+        ),
+      );
+      await tester.pump(const Duration(milliseconds: 100));
+      final s = tester.state<QuizGameState>(find.byType(QuizGame));
+      expect(s.questions, hasLength(3));
+      final wrong = s.question.choices.last;
+      await tester.tap(find.byKey(ValueKey('quiz-$wrong')));
+      await tester.pump(const Duration(milliseconds: 300));
+      expect(s.wrong, contains(wrong));
+      expect(s.index, 0);
+      expect(said, contains('again'));
+      for (var q = 0; q < 3; q++) {
+        await tester.tap(find.byKey(ValueKey('quiz-${s.question.answer}')));
+        await tester.pump(const Duration(milliseconds: 1700));
+      }
+      expect(done, 1);
+      expect(said, containsAll(['super', 'quiz.2', 'quiz.3']));
+    });
+  });
+
   testWidgets('chaque jeu tient sur un petit téléphone, pour chaque âge', (tester) async {
     tester.view.physicalSize = const Size(640, 360);
     tester.view.devicePixelRatio = 1;
@@ -261,8 +344,10 @@ void main() {
         SeekGame(complete: () {}, say: (_) {}),
         MemoryGame(complete: () {}, say: (_) {}, seed: 1),
         VerseGame(complete: () {}, say: (_) {}, seed: 1),
+        PuzzleGame(complete: () {}, say: (_) {}, seed: 1),
+        QuizGame(complete: () {}, say: (_) {}, seed: 1),
       ]) {
-        await tester.pumpWidget(inSession(game, age: age));
+        await tester.pumpWidget(inSession(game, age: age, storyId: game is QuizGame ? 'david' : 'noe'));
         await tester.pump(const Duration(milliseconds: 100));
         expect(tester.takeException(), isNull, reason: '${game.runtimeType} / ${age.name}');
       }

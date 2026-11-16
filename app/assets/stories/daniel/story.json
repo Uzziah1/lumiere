@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "quiz",
+      "memory",
+      "seek"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "priere", "label": "Daniel prie" },
-        { "id": "loi", "label": "La loi du roi" },
-        { "id": "fidele", "label": "Toujours fidèle" },
-        { "id": "fosse", "label": "La fosse aux lions" },
-        { "id": "ange", "label": "L'ange de Dieu" },
-        { "id": "matin", "label": "Daniel est sauvé" }
+        {
+          "id": "priere",
+          "label": "Daniel prie"
+        },
+        {
+          "id": "loi",
+          "label": "La loi du roi"
+        },
+        {
+          "id": "fidele",
+          "label": "Toujours fidèle"
+        },
+        {
+          "id": "fosse",
+          "label": "La fosse aux lions"
+        },
+        {
+          "id": "ange",
+          "label": "L'ange de Dieu"
+        },
+        {
+          "id": "matin",
+          "label": "Daniel est sauvé"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Dans la maison de Daniel, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "lion", "label": "le lion" },
-        { "id": "scroll", "label": "le rouleau" },
-        { "id": "crown", "label": "la couronne" },
-        { "id": "lamp", "label": "la lampe" },
-        { "id": "stone", "label": "le caillou" },
-        { "id": "owl", "label": "le hibou" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "coin", "label": "la pièce" }
+        {
+          "id": "lion",
+          "label": "le lion"
+        },
+        {
+          "id": "scroll",
+          "label": "le rouleau"
+        },
+        {
+          "id": "crown",
+          "label": "la couronne"
+        },
+        {
+          "id": "lamp",
+          "label": "la lampe"
+        },
+        {
+          "id": "stone",
+          "label": "le caillou"
+        },
+        {
+          "id": "owl",
+          "label": "le hibou"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "coin",
+          "label": "la pièce"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["lion", "crown", "scroll", "stone", "lamp", "moon"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "lion",
+        "crown",
+        "scroll",
+        "stone",
+        "lamp",
+        "moon"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Dans quelle fosse Daniel a-t-il été jeté ?",
+          "choices": [
+            "lion",
+            "fish",
+            "snake"
+          ]
+        },
+        {
+          "question": "Qu'est-ce qu'on a roulé devant la fosse ?",
+          "choices": [
+            "stone",
+            "crate",
+            "boat"
+          ]
+        },
+        {
+          "question": "La loi du roi était écrite sur un…",
+          "choices": [
+            "scroll",
+            "coin",
+            "flower"
+          ]
+        },
+        {
+          "question": "Au matin, qui a couru vers la fosse, tout inquiet ? Celui qui porte une…",
+          "choices": [
+            "crown",
+            "sling",
+            "basket"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,33 @@
     "reference": "Daniel 6.23",
     "spoken": "Daniel, chapitre 6, verset 23 : Mon Dieu a envoyé son ange et fermé la gueule des lions, qui ne m'ont fait aucun mal.",
     "chunks": {
-      "bergers": ["Mon Dieu a envoyé son ange", "et fermé la gueule des lions,", "qui ne m'ont fait aucun mal."],
-      "explorateurs": ["Mon Dieu", "a envoyé son ange", "et fermé", "la gueule des lions,", "qui ne m'ont fait aucun mal."]
+      "bergers": [
+        "Mon Dieu a envoyé son ange",
+        "et fermé la gueule des lions,",
+        "qui ne m'ont fait aucun mal."
+      ],
+      "explorateurs": [
+        "Mon Dieu",
+        "a envoyé son ange",
+        "et fermé",
+        "la gueule des lions,",
+        "qui ne m'ont fait aucun mal."
+      ]
     },
-    "referenceChoices": ["Daniel 6.23", "Daniel 23.6", "Ruth 6.23"],
+    "referenceChoices": [
+      "Daniel 6.23",
+      "Daniel 23.6",
+      "Ruth 6.23"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "daniel", "title": "Les lions endormis" },
+  "sticker": {
+    "id": "daniel",
+    "title": "Les lions endormis"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Daniel. Voici ton autocollant pour ton album !"
 }

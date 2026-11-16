@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'age_group.dart';
 import 'narrated_text.dart';
+import 'story_part.dart';
 
 /// Une histoire de la Bible, décrite entièrement par des données
 /// (`assets/stories/<id>/story.json`) : ajouter une histoire = ajouter un dossier.
@@ -18,7 +19,12 @@ class Story {
     required this.verse,
     required this.sticker,
     required this.lines,
+    this.lineup = defaultLineup,
+    this.quiz,
   });
+
+  /// Les trois jeux proposés quand l'histoire n'en choisit pas.
+  static const defaultLineup = [StoryPart.chronology, StoryPart.seek, StoryPart.memory];
 
   factory Story.fromJson(Map<String, dynamic> json) {
     final id = json['id'] as String;
@@ -48,6 +54,10 @@ class Story {
     final chronology = games['chronology'] as Map<String, dynamic>;
     final seek = games['seek'] as Map<String, dynamic>;
     final memory = games['memory'] as Map<String, dynamic>;
+    final quiz = games['quiz'] as Map<String, dynamic>?;
+    final lineup = [
+      for (final name in (games['lineup'] as List? ?? const []).cast<String>()) StoryPart.byName(name)!,
+    ];
     final verse = json['verse'] as Map<String, dynamic>;
     final sticker = json['sticker'] as Map<String, dynamic>;
 
@@ -91,6 +101,20 @@ class Story {
       ),
       sticker: Sticker(id: sticker['id'] as String, title: sticker['title'] as String),
       lines: lines,
+      lineup: lineup.isEmpty ? defaultLineup : lineup,
+      quiz: quiz == null
+          ? null
+          : QuizConfig(
+              questions: [
+                for (final (i, q) in (quiz['questions'] as List).cast<Map<String, dynamic>>().indexed)
+                  QuizQuestion(
+                    key: 'quiz.${i + 1}',
+                    text: line('quiz.${i + 1}', q['question']),
+                    choices: (q['choices'] as List).cast<String>(),
+                  ),
+              ],
+              counts: _counts(quiz['counts']),
+            ),
     );
     line('reward', json['reward']);
     return story;
@@ -114,6 +138,12 @@ class Story {
   final MemoryConfig memory;
   final Verse verse;
   final Sticker sticker;
+
+  /// Les trois mini-jeux de cette histoire, dans l'ordre du menu (le verset vient en plus).
+  final List<StoryPart> lineup;
+
+  /// Le quiz illustré (seulement si l'histoire le propose).
+  final QuizConfig? quiz;
 
   /// Toutes les phrases narrées de l'histoire, par clé (`scene.village`, `game.seek`…).
   final Map<String, NarratedText> lines;
@@ -207,6 +237,28 @@ class MemoryConfig {
   final NarratedText instructions;
 
   List<String> pairsFor(AgeGroup age) => pairs.take(counts[age]!).toList();
+}
+
+class QuizQuestion {
+  const QuizQuestion({required this.key, required this.text, required this.choices});
+
+  /// Clé de la phrase narrée (`quiz.1`…).
+  final String key;
+  final NarratedText text;
+
+  /// Réponses en images (identifiants de `paintThing`) : la bonne en premier dans les données.
+  final List<String> choices;
+
+  String get answer => choices.first;
+}
+
+class QuizConfig {
+  const QuizConfig({required this.questions, required this.counts});
+
+  final List<QuizQuestion> questions;
+  final Map<AgeGroup, int> counts;
+
+  List<QuizQuestion> questionsFor(AgeGroup age) => questions.take(counts[age]!).toList();
 }
 
 class Verse {

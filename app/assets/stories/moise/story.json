@@ -76,39 +76,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "basket", "label": "Le panier sur le Nil" },
-        { "id": "bush", "label": "Le buisson en feu" },
-        { "id": "plagues", "label": "Devant Pharaon" },
-        { "id": "pillar", "label": "La colonne de nuée" },
-        { "id": "sea", "label": "La mer s'ouvre" },
-        { "id": "cross", "label": "La traversée" }
+        {
+          "id": "basket",
+          "label": "Le panier sur le Nil"
+        },
+        {
+          "id": "bush",
+          "label": "Le buisson en feu"
+        },
+        {
+          "id": "plagues",
+          "label": "Devant Pharaon"
+        },
+        {
+          "id": "pillar",
+          "label": "La colonne de nuée"
+        },
+        {
+          "id": "sea",
+          "label": "La mer s'ouvre"
+        },
+        {
+          "id": "cross",
+          "label": "La traversée"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Des animaux se cachent au bord du Nil ! Retrouve-les.",
       "items": [
-        { "id": "frog", "label": "la grenouille" },
-        { "id": "fish", "label": "le poisson" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "shell", "label": "le coquillage" },
-        { "id": "snail", "label": "l'escargot" },
-        { "id": "ladybug", "label": "la coccinelle" }
+        {
+          "id": "frog",
+          "label": "la grenouille"
+        },
+        {
+          "id": "fish",
+          "label": "le poisson"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "shell",
+          "label": "le coquillage"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire de Moïse.",
-      "pairs": ["basket", "staff", "frog", "tambourine", "flame", "sheep"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "basket",
+        "staff",
+        "frog",
+        "tambourine",
+        "flame",
+        "sheep"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Où le bébé Moïse a-t-il été caché, au bord du fleuve ?",
+          "choices": [
+            "basket",
+            "crate",
+            "jar"
+          ]
+        },
+        {
+          "question": "Dieu a parlé à Moïse depuis un buisson qui brûlait sans se consumer. Lequel ?",
+          "choices": [
+            "bush",
+            "tree",
+            "plant"
+          ]
+        },
+        {
+          "question": "Qu'est-ce que Moïse a levé au-dessus de la mer ?",
+          "choices": [
+            "staff",
+            "sling",
+            "harp"
+          ]
+        },
+        {
+          "question": "Quel petit animal a envahi tout le pays d'Égypte ?",
+          "choices": [
+            "frog",
+            "lion",
+            "camel"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -116,16 +223,35 @@
     "reference": "Exode 14.14",
     "spoken": "Exode, chapitre 14, verset 14 : L'Éternel combattra pour vous ; et vous, gardez le silence.",
     "chunks": {
-      "bergers": ["L'Éternel combattra", "pour vous ;", "et vous,", "gardez le silence."],
-      "explorateurs": ["L'Éternel", "combattra", "pour vous ;", "et vous,", "gardez", "le silence."]
+      "bergers": [
+        "L'Éternel combattra",
+        "pour vous ;",
+        "et vous,",
+        "gardez le silence."
+      ],
+      "explorateurs": [
+        "L'Éternel",
+        "combattra",
+        "pour vous ;",
+        "et vous,",
+        "gardez",
+        "le silence."
+      ]
     },
-    "referenceChoices": ["Exode 14.14", "Exode 4.14", "Matthieu 14.14"],
+    "referenceChoices": [
+      "Exode 14.14",
+      "Exode 4.14",
+      "Matthieu 14.14"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "moise", "title": "La mer ouverte" },
+  "sticker": {
+    "id": "moise",
+    "title": "La mer ouverte"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Moïse. Voici ton autocollant pour ton album !"
 }

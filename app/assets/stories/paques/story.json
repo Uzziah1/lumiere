@@ -75,39 +75,105 @@
     }
   ],
   "games": {
+    "lineup": [
+      "puzzle",
+      "chronology",
+      "memory"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "rameaux", "label": "Les palmes" },
-        { "id": "cene", "label": "Le dernier repas" },
-        { "id": "croix", "label": "La croix" },
-        { "id": "tombeau", "label": "Le tombeau" },
-        { "id": "matin", "label": "La pierre roulée" },
-        { "id": "vivant", "label": "Jésus est vivant !" }
+        {
+          "id": "rameaux",
+          "label": "Les palmes"
+        },
+        {
+          "id": "cene",
+          "label": "Le dernier repas"
+        },
+        {
+          "id": "croix",
+          "label": "La croix"
+        },
+        {
+          "id": "tombeau",
+          "label": "Le tombeau"
+        },
+        {
+          "id": "matin",
+          "label": "La pierre roulée"
+        },
+        {
+          "id": "vivant",
+          "label": "Jésus est vivant !"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Dans le jardin du matin de Pâques, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "flower", "label": "la fleur" },
-        { "id": "palm", "label": "la palme" },
-        { "id": "dove", "label": "la colombe" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "jar", "label": "le vase de parfum" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "rabbit", "label": "le lapin" },
-        { "id": "ladybug", "label": "la coccinelle" }
+        {
+          "id": "flower",
+          "label": "la fleur"
+        },
+        {
+          "id": "palm",
+          "label": "la palme"
+        },
+        {
+          "id": "dove",
+          "label": "la colombe"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "jar",
+          "label": "le vase de parfum"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "rabbit",
+          "label": "le lapin"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["palm", "donkey", "bread", "tomb", "flower", "dove"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "palm",
+        "donkey",
+        "bread",
+        "tomb",
+        "flower",
+        "dove"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     }
   },
   "verse": {
@@ -115,16 +181,33 @@
     "reference": "Luc 24.6",
     "spoken": "Luc, chapitre 24, verset 6 : Il n'est point ici, mais il est ressuscité.",
     "chunks": {
-      "bergers": ["Il n'est point ici,", "mais il est", "ressuscité."],
-      "explorateurs": ["Il n'est", "point ici,", "mais", "il est", "ressuscité."]
+      "bergers": [
+        "Il n'est point ici,",
+        "mais il est",
+        "ressuscité."
+      ],
+      "explorateurs": [
+        "Il n'est",
+        "point ici,",
+        "mais",
+        "il est",
+        "ressuscité."
+      ]
     },
-    "referenceChoices": ["Luc 24.6", "Luc 6.24", "Jean 24.6"],
+    "referenceChoices": [
+      "Luc 24.6",
+      "Luc 6.24",
+      "Jean 24.6"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "paques", "title": "Le tombeau vide" },
+  "sticker": {
+    "id": "paques",
+    "title": "Le tombeau vide"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Pâques. Jésus est vivant ! Voici ton autocollant pour ton album !"
 }

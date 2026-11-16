@@ -42,6 +42,7 @@ class StoryPack {
     required this.seekScene,
     required this.paintSticker,
     this.paintItem = paintThing,
+    this.puzzleScene,
   });
 
   /// Une histoire faite de scènes scénarisées ([StageScript]) : les vignettes
@@ -62,6 +63,7 @@ class StoryPack {
       seekScene: seekScene,
       paintSticker: (canvas, size) =>
           paintStickerFrame(canvas, size, (c, s) => paintFinished(c, s, stickerScene)),
+      puzzleScene: stickerScene,
     );
   }
 
@@ -77,6 +79,9 @@ class StoryPack {
 
   /// Dessine un objet ou un animal des mini-jeux (memory, cache-cache).
   final void Function(Canvas canvas, String id, Rect box) paintItem;
+
+  /// La vignette découpée en pièces dans le puzzle (sinon : la dernière scène).
+  final String? puzzleScene;
 }
 
 /// Autocollant rond : bord blanc découpé, ombre, reflet ; [inner] dessine la scène.

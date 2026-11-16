@@ -1,11 +1,13 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:lumiere/art/objects.dart';
 import 'package:lumiere/audio/audio.dart';
 import 'package:lumiere/stories/registry.dart';
 import 'package:lumiere/story/age_group.dart';
 import 'package:lumiere/story/narrated_text.dart';
 import 'package:lumiere/story/story.dart';
+import 'package:lumiere/story/story_part.dart';
 
 import '../helpers.dart';
 
@@ -53,6 +55,31 @@ void main() {
         }
         for (final item in story.seek.items) {
           expect(pack.seekScene.spots, contains(item.id));
+        }
+      });
+
+      test('trois jeux différents, et un quiz complet s’il est proposé', () {
+        expect(story.lineup, hasLength(3));
+        expect(story.lineup.toSet(), hasLength(3));
+        expect(story.lineup, everyElement(isIn(StoryPart.games)));
+        final quiz = story.quiz;
+        expect(quiz != null, story.lineup.contains(StoryPart.quiz));
+        if (quiz == null) return;
+        for (final age in AgeGroup.values) {
+          expect(quiz.questionsFor(age).length, quiz.counts[age]);
+          expect(quiz.counts[age], greaterThanOrEqualTo(2));
+        }
+        for (final q in quiz.questions) {
+          expect(q.choices, hasLength(3), reason: q.key);
+          expect(q.choices.toSet(), hasLength(3), reason: q.key);
+          for (final id in q.choices) {
+            expect(isThing(id), isTrue, reason: '${q.key} : $id');
+          }
+          expect(
+            q.text.textFor(AgeGroup.agneaux),
+            anyOf(endsWith('?'), endsWith('…'), endsWith('»')),
+            reason: q.key,
+          );
         }
       });
 

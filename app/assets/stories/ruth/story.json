@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "promesse", "label": "« Ton Dieu sera mon Dieu »" },
-        { "id": "voyage", "label": "Vers Bethléhem" },
-        { "id": "glaner", "label": "Les épis" },
-        { "id": "boaz", "label": "Boaz est bon" },
-        { "id": "mariage", "label": "Le mariage" },
-        { "id": "obed", "label": "Le bébé Obed" }
+        {
+          "id": "promesse",
+          "label": "« Ton Dieu sera mon Dieu »"
+        },
+        {
+          "id": "voyage",
+          "label": "Vers Bethléhem"
+        },
+        {
+          "id": "glaner",
+          "label": "Les épis"
+        },
+        {
+          "id": "boaz",
+          "label": "Boaz est bon"
+        },
+        {
+          "id": "mariage",
+          "label": "Le mariage"
+        },
+        {
+          "id": "obed",
+          "label": "Le bébé Obed"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Dans le champ d'orge, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "wheat", "label": "l'épi" },
-        { "id": "basket", "label": "le panier" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "bread", "label": "le pain" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "rabbit", "label": "le lapin" },
-        { "id": "ladybug", "label": "la coccinelle" }
+        {
+          "id": "wheat",
+          "label": "l'épi"
+        },
+        {
+          "id": "basket",
+          "label": "le panier"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "bread",
+          "label": "le pain"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "rabbit",
+          "label": "le lapin"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["wheat", "basket", "bread", "city", "flower", "harp"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "wheat",
+        "basket",
+        "bread",
+        "city",
+        "flower",
+        "harp"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Qu'est-ce que Ruth ramassait dans le champ de Boaz ?",
+          "choices": [
+            "wheat",
+            "flower",
+            "stone"
+          ]
+        },
+        {
+          "question": "Au repas, qu'est-ce que Boaz a donné à manger à Ruth ?",
+          "choices": [
+            "bread",
+            "fish",
+            "grapes"
+          ]
+        },
+        {
+          "question": "Le petit-fils d'Obed, le fils de Ruth, est devenu le roi David. Qu'est-ce qu'il portera sur la tête ?",
+          "choices": [
+            "crown",
+            "basket",
+            "jar"
+          ]
+        },
+        {
+          "question": "Dans quoi Ruth rapportait-elle l'orge à Naomi ?",
+          "choices": [
+            "basket",
+            "boat",
+            "harp"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,35 @@
     "reference": "Ruth 1.16",
     "spoken": "Ruth, chapitre 1, verset 16 : Où tu iras j'irai, où tu demeureras je demeurerai ; ton peuple sera mon peuple, et ton Dieu sera mon Dieu.",
     "chunks": {
-      "bergers": ["Où tu iras j'irai,", "où tu demeureras je demeurerai ;", "ton peuple sera mon peuple,", "et ton Dieu sera mon Dieu."],
-      "explorateurs": ["Où tu iras", "j'irai,", "où tu demeureras", "je demeurerai ;", "ton peuple sera mon peuple,", "et ton Dieu sera mon Dieu."]
+      "bergers": [
+        "Où tu iras j'irai,",
+        "où tu demeureras je demeurerai ;",
+        "ton peuple sera mon peuple,",
+        "et ton Dieu sera mon Dieu."
+      ],
+      "explorateurs": [
+        "Où tu iras",
+        "j'irai,",
+        "où tu demeureras",
+        "je demeurerai ;",
+        "ton peuple sera mon peuple,",
+        "et ton Dieu sera mon Dieu."
+      ]
     },
-    "referenceChoices": ["Ruth 1.16", "Ruth 16.1", "Rois 1.16"],
+    "referenceChoices": [
+      "Ruth 1.16",
+      "Ruth 16.1",
+      "Rois 1.16"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "ruth", "title": "Le champ de Boaz" },
+  "sticker": {
+    "id": "ruth",
+    "title": "Le champ de Boaz"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Ruth. Voici ton autocollant pour ton album !"
 }

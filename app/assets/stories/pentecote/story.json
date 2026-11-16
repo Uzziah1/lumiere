@@ -75,39 +75,138 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "ascension", "label": "Jésus monte au ciel" },
-        { "id": "priere", "label": "Ils prient" },
-        { "id": "vent", "label": "Le grand vent" },
-        { "id": "flammes", "label": "Les flammes" },
-        { "id": "langues", "label": "Toutes les langues" },
-        { "id": "eglise", "label": "L'Église est née" }
+        {
+          "id": "ascension",
+          "label": "Jésus monte au ciel"
+        },
+        {
+          "id": "priere",
+          "label": "Ils prient"
+        },
+        {
+          "id": "vent",
+          "label": "Le grand vent"
+        },
+        {
+          "id": "flammes",
+          "label": "Les flammes"
+        },
+        {
+          "id": "langues",
+          "label": "Toutes les langues"
+        },
+        {
+          "id": "eglise",
+          "label": "L'Église est née"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Dans la chambre haute, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "flame", "label": "la flamme" },
-        { "id": "scroll", "label": "le rouleau" },
-        { "id": "bread", "label": "le pain" },
-        { "id": "dove", "label": "la colombe" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "basket", "label": "le panier" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "coin", "label": "la pièce" }
+        {
+          "id": "flame",
+          "label": "la flamme"
+        },
+        {
+          "id": "scroll",
+          "label": "le rouleau"
+        },
+        {
+          "id": "bread",
+          "label": "le pain"
+        },
+        {
+          "id": "dove",
+          "label": "la colombe"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "basket",
+          "label": "le panier"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "coin",
+          "label": "la pièce"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["flame", "dove", "scroll", "bread", "city", "basket"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "flame",
+        "dove",
+        "scroll",
+        "bread",
+        "city",
+        "basket"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Qu'est-ce qui s'est posé sur la tête de chacun ?",
+          "choices": [
+            "flame",
+            "star",
+            "flower"
+          ]
+        },
+        {
+          "question": "Les premiers chrétiens partageaient ensemble le…",
+          "choices": [
+            "bread",
+            "coin",
+            "crown"
+          ]
+        },
+        {
+          "question": "Au baptême de Jésus, le Saint-Esprit était descendu comme une…",
+          "choices": [
+            "dove",
+            "raven",
+            "owl"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 3
+      }
     }
   },
   "verse": {
@@ -115,16 +214,34 @@
     "reference": "Actes 1.8",
     "spoken": "Actes, chapitre 1, verset 8 : Vous recevrez une puissance, le Saint-Esprit survenant sur vous, et vous serez mes témoins.",
     "chunks": {
-      "bergers": ["Vous recevrez une puissance,", "le Saint-Esprit survenant sur vous,", "et vous serez mes témoins."],
-      "explorateurs": ["Vous recevrez", "une puissance,", "le Saint-Esprit", "survenant sur vous,", "et vous serez", "mes témoins."]
+      "bergers": [
+        "Vous recevrez une puissance,",
+        "le Saint-Esprit survenant sur vous,",
+        "et vous serez mes témoins."
+      ],
+      "explorateurs": [
+        "Vous recevrez",
+        "une puissance,",
+        "le Saint-Esprit",
+        "survenant sur vous,",
+        "et vous serez",
+        "mes témoins."
+      ]
     },
-    "referenceChoices": ["Actes 1.8", "Actes 8.1", "Luc 1.8"],
+    "referenceChoices": [
+      "Actes 1.8",
+      "Actes 8.1",
+      "Luc 1.8"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "pentecote", "title": "Les flammes de l'Esprit" },
+  "sticker": {
+    "id": "pentecote",
+    "title": "Les flammes de l'Esprit"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de la Pentecôte. Voici ton autocollant pour ton album !"
 }

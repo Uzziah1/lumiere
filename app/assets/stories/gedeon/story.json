@@ -75,39 +75,105 @@
     }
   ],
   "games": {
+    "lineup": [
+      "puzzle",
+      "chronology",
+      "memory"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "appel", "label": "L'ange et Gédéon" },
-        { "id": "toison", "label": "La toison" },
-        { "id": "armee", "label": "Trois cents hommes" },
-        { "id": "cruches", "label": "Cruches et trompettes" },
-        { "id": "nuit", "label": "Les torches brillent" },
-        { "id": "victoire", "label": "La victoire" }
+        {
+          "id": "appel",
+          "label": "L'ange et Gédéon"
+        },
+        {
+          "id": "toison",
+          "label": "La toison"
+        },
+        {
+          "id": "armee",
+          "label": "Trois cents hommes"
+        },
+        {
+          "id": "cruches",
+          "label": "Cruches et trompettes"
+        },
+        {
+          "id": "nuit",
+          "label": "Les torches brillent"
+        },
+        {
+          "id": "victoire",
+          "label": "La victoire"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Près du camp, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "torch", "label": "la torche" },
-        { "id": "horn", "label": "la trompette" },
-        { "id": "wheat", "label": "le blé" },
-        { "id": "sheep", "label": "le mouton" },
-        { "id": "camel", "label": "le chameau" },
-        { "id": "owl", "label": "le hibou" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "jar", "label": "la cruche" }
+        {
+          "id": "torch",
+          "label": "la torche"
+        },
+        {
+          "id": "horn",
+          "label": "la trompette"
+        },
+        {
+          "id": "wheat",
+          "label": "le blé"
+        },
+        {
+          "id": "sheep",
+          "label": "le mouton"
+        },
+        {
+          "id": "camel",
+          "label": "le chameau"
+        },
+        {
+          "id": "owl",
+          "label": "le hibou"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "jar",
+          "label": "la cruche"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["torch", "horn", "jar", "wheat", "camel", "tent"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "torch",
+        "horn",
+        "jar",
+        "wheat",
+        "camel",
+        "tent"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     }
   },
   "verse": {
@@ -115,16 +181,33 @@
     "reference": "Juges 6.12",
     "spoken": "Juges, chapitre 6, verset 12 : L'Éternel est avec toi, vaillant héros !",
     "chunks": {
-      "bergers": ["L'Éternel", "est avec toi,", "vaillant héros !"],
-      "explorateurs": ["L'Éternel", "est", "avec toi,", "vaillant", "héros !"]
+      "bergers": [
+        "L'Éternel",
+        "est avec toi,",
+        "vaillant héros !"
+      ],
+      "explorateurs": [
+        "L'Éternel",
+        "est",
+        "avec toi,",
+        "vaillant",
+        "héros !"
+      ]
     },
-    "referenceChoices": ["Juges 6.12", "Juges 12.6", "Josué 6.12"],
+    "referenceChoices": [
+      "Juges 6.12",
+      "Juges 12.6",
+      "Josué 6.12"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "gedeon", "title": "Les torches de Gédéon" },
+  "sticker": {
+    "id": "gedeon",
+    "title": "Les torches de Gédéon"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Gédéon. Voici ton autocollant pour ton album !"
 }

@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:lumiere/app.dart';
 import 'package:lumiere/audio/audio.dart';
 import 'package:lumiere/games/chronology_game.dart';
-import 'package:lumiere/games/memory_game.dart';
+import 'package:lumiere/games/puzzle_game.dart';
 import 'package:lumiere/games/seek_game.dart';
 import 'package:lumiere/games/verse_game.dart';
 import 'package:lumiere/story/recit_view.dart';
@@ -91,17 +91,14 @@ void main() {
         s.find(item.id);
       }
     });
-    await play('hub-memory', () {
-      final s = tester.state<MemoryGameState>(find.byType(MemoryGame));
-      s.preview = false;
-      final pending = List.generate(s.cards.length, (i) => i);
-      while (pending.isNotEmpty) {
-        final a = pending.removeAt(0);
-        final b = pending.firstWhere((i) => s.cards[i] == s.cards[a]);
-        pending.remove(b);
-        s.flip(a);
-        s.flip(b);
+    await play('hub-puzzle', () {
+      final s = tester.state<PuzzleGameState>(find.byType(PuzzleGame));
+      for (var i = 0; i < s.slots.length; i++) {
+        if (s.slots[i] == i) continue;
+        s.tap(s.slots.indexOf(i));
+        s.tap(i);
       }
+      expect(s.solved, isTrue);
     });
     await tester.tap(find.byKey(const ValueKey('hub-verse')));
     await frames(tester, 12);

@@ -75,39 +75,105 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "puzzle"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "flee", "label": "Jonas s'enfuit" },
-        { "id": "storm", "label": "La tempête" },
-        { "id": "fish", "label": "Le grand poisson" },
-        { "id": "prayer", "label": "La prière de Jonas" },
-        { "id": "nineveh", "label": "À Ninive" },
-        { "id": "plant", "label": "La plante" }
+        {
+          "id": "flee",
+          "label": "Jonas s'enfuit"
+        },
+        {
+          "id": "storm",
+          "label": "La tempête"
+        },
+        {
+          "id": "fish",
+          "label": "Le grand poisson"
+        },
+        {
+          "id": "prayer",
+          "label": "La prière de Jonas"
+        },
+        {
+          "id": "nineveh",
+          "label": "À Ninive"
+        },
+        {
+          "id": "plant",
+          "label": "La plante"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Au fond de la mer, des trésors se cachent ! Retrouve-les.",
       "items": [
-        { "id": "fish", "label": "le poisson" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "crate", "label": "la caisse" },
-        { "id": "shell", "label": "le coquillage" },
-        { "id": "star", "label": "l'étoile de mer" },
-        { "id": "plant", "label": "l'algue" },
-        { "id": "snail", "label": "l'escargot de mer" }
+        {
+          "id": "fish",
+          "label": "le poisson"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "crate",
+          "label": "la caisse"
+        },
+        {
+          "id": "shell",
+          "label": "le coquillage"
+        },
+        {
+          "id": "star",
+          "label": "l'étoile de mer"
+        },
+        {
+          "id": "plant",
+          "label": "l'algue"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot de mer"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire de Jonas.",
-      "pairs": ["fish", "boat", "plant", "sheep", "dove", "shell"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "fish",
+        "boat",
+        "plant",
+        "sheep",
+        "dove",
+        "shell"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     }
   },
   "verse": {
@@ -115,16 +181,33 @@
     "reference": "Jonas 2.10",
     "spoken": "Jonas, chapitre 2, verset 10 : Le salut vient de l'Éternel.",
     "chunks": {
-      "bergers": ["Le salut", "vient", "de l'Éternel."],
-      "explorateurs": ["Le", "salut", "vient", "de", "l'Éternel."]
+      "bergers": [
+        "Le salut",
+        "vient",
+        "de l'Éternel."
+      ],
+      "explorateurs": [
+        "Le",
+        "salut",
+        "vient",
+        "de",
+        "l'Éternel."
+      ]
     },
-    "referenceChoices": ["Jonas 2.10", "Jonas 10.2", "Jean 2.10"],
+    "referenceChoices": [
+      "Jonas 2.10",
+      "Jonas 10.2",
+      "Jean 2.10"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "jonas", "title": "Le grand poisson" },
+  "sticker": {
+    "id": "jonas",
+    "title": "Le grand poisson"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Jonas. Voici ton autocollant pour ton album !"
 }

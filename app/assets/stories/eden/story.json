@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "memory",
+      "puzzle",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "names", "label": "Adam et les animaux" },
-        { "id": "eve", "label": "Dieu crée Ève" },
-        { "id": "tree", "label": "L'arbre interdit" },
-        { "id": "serpent", "label": "Le serpent" },
-        { "id": "hide", "label": "Ils se cachent" },
-        { "id": "clothes", "label": "Les habits" }
+        {
+          "id": "names",
+          "label": "Adam et les animaux"
+        },
+        {
+          "id": "eve",
+          "label": "Dieu crée Ève"
+        },
+        {
+          "id": "tree",
+          "label": "L'arbre interdit"
+        },
+        {
+          "id": "serpent",
+          "label": "Le serpent"
+        },
+        {
+          "id": "hide",
+          "label": "Ils se cachent"
+        },
+        {
+          "id": "clothes",
+          "label": "Les habits"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Des animaux se cachent dans le jardin d'Éden ! Retrouve-les.",
       "items": [
-        { "id": "rabbit", "label": "le lapin" },
-        { "id": "owl", "label": "le hibou" },
-        { "id": "frog", "label": "la grenouille" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "ladybug", "label": "la coccinelle" },
-        { "id": "snail", "label": "l'escargot" }
+        {
+          "id": "rabbit",
+          "label": "le lapin"
+        },
+        {
+          "id": "owl",
+          "label": "le hibou"
+        },
+        {
+          "id": "frog",
+          "label": "la grenouille"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires du jardin.",
-      "pairs": ["fruit", "tree", "flower", "rabbit", "snake", "dove"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "fruit",
+        "tree",
+        "flower",
+        "rabbit",
+        "snake",
+        "dove"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Dans le jardin d'Éden, quel animal a menti à Ève ?",
+          "choices": [
+            "snake",
+            "sheep",
+            "dove"
+          ]
+        },
+        {
+          "question": "Qu'est-ce qu'Adam et Ève ne devaient pas manger ?",
+          "choices": [
+            "fruit",
+            "bread",
+            "fish"
+          ]
+        },
+        {
+          "question": "Où vivaient Adam et Ève ? Dans un beau jardin plein de…",
+          "choices": [
+            "tree",
+            "boat",
+            "city"
+          ]
+        },
+        {
+          "question": "Dieu a demandé à Adam de donner un nom à chacun des…",
+          "choices": [
+            "giraffe",
+            "star",
+            "stone"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,35 @@
     "reference": "Genèse 3.9",
     "spoken": "Genèse, chapitre 3, verset 9 : Mais l'Éternel Dieu appela l'homme, et lui dit : Où es-tu ?",
     "chunks": {
-      "bergers": ["Mais l'Éternel Dieu", "appela l'homme,", "et lui dit :", "Où es-tu ?"],
-      "explorateurs": ["Mais", "l'Éternel Dieu", "appela", "l'homme,", "et lui dit :", "Où es-tu ?"]
+      "bergers": [
+        "Mais l'Éternel Dieu",
+        "appela l'homme,",
+        "et lui dit :",
+        "Où es-tu ?"
+      ],
+      "explorateurs": [
+        "Mais",
+        "l'Éternel Dieu",
+        "appela",
+        "l'homme,",
+        "et lui dit :",
+        "Où es-tu ?"
+      ]
     },
-    "referenceChoices": ["Genèse 3.9", "Genèse 9.3", "Exode 3.9"],
+    "referenceChoices": [
+      "Genèse 3.9",
+      "Genèse 9.3",
+      "Exode 3.9"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "eden", "title": "Le jardin d'Éden" },
+  "sticker": {
+    "id": "eden",
+    "title": "Le jardin d'Éden"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire d'Adam et Ève. Voici ton autocollant pour ton album !"
 }

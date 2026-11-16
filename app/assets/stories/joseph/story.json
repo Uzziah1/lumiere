@@ -75,39 +75,105 @@
     }
   ],
   "games": {
+    "lineup": [
+      "puzzle",
+      "chronology",
+      "memory"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "coat", "label": "La tunique" },
-        { "id": "dreams", "label": "Les rêves" },
-        { "id": "pit", "label": "Vendu aux marchands" },
-        { "id": "pharaoh", "label": "Devant Pharaon" },
-        { "id": "granary", "label": "Les greniers" },
-        { "id": "forgive", "label": "Le pardon" }
+        {
+          "id": "coat",
+          "label": "La tunique"
+        },
+        {
+          "id": "dreams",
+          "label": "Les rêves"
+        },
+        {
+          "id": "pit",
+          "label": "Vendu aux marchands"
+        },
+        {
+          "id": "pharaoh",
+          "label": "Devant Pharaon"
+        },
+        {
+          "id": "granary",
+          "label": "Les greniers"
+        },
+        {
+          "id": "forgive",
+          "label": "Le pardon"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Des objets et des animaux se cachent près des greniers ! Retrouve-les.",
       "items": [
-        { "id": "jar", "label": "la jarre" },
-        { "id": "basket", "label": "le panier" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "frog", "label": "la grenouille" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "snail", "label": "l'escargot" },
-        { "id": "ladybug", "label": "la coccinelle" }
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "basket",
+          "label": "le panier"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "frog",
+          "label": "la grenouille"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire de Joseph.",
-      "pairs": ["coat", "wheat", "star", "moon", "sun", "crown"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "coat",
+        "wheat",
+        "star",
+        "moon",
+        "sun",
+        "crown"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     }
   },
   "verse": {
@@ -115,16 +181,35 @@
     "reference": "Genèse 50.20",
     "spoken": "Genèse, chapitre 50, verset 20 : Vous aviez médité de me faire du mal : Dieu l'a changé en bien.",
     "chunks": {
-      "bergers": ["Vous aviez médité", "de me faire du mal :", "Dieu l'a changé", "en bien."],
-      "explorateurs": ["Vous aviez", "médité", "de me faire", "du mal :", "Dieu l'a changé", "en bien."]
+      "bergers": [
+        "Vous aviez médité",
+        "de me faire du mal :",
+        "Dieu l'a changé",
+        "en bien."
+      ],
+      "explorateurs": [
+        "Vous aviez",
+        "médité",
+        "de me faire",
+        "du mal :",
+        "Dieu l'a changé",
+        "en bien."
+      ]
     },
-    "referenceChoices": ["Genèse 50.20", "Exode 20.12", "Genèse 5.20"],
+    "referenceChoices": [
+      "Genèse 50.20",
+      "Exode 20.12",
+      "Genèse 5.20"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "joseph", "title": "La tunique de Joseph" },
+  "sticker": {
+    "id": "joseph",
+    "title": "La tunique de Joseph"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Joseph. Voici ton autocollant pour ton album !"
 }

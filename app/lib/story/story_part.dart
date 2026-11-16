@@ -4,7 +4,13 @@ enum StoryPart {
   chronology,
   seek,
   memory,
-  verse;
+  verse,
+  puzzle,
+  quiz;
+
+  /// Les mini-jeux qu'une histoire peut proposer (trois par histoire, voir
+  /// `Story.lineup`).
+  static const games = [chronology, seek, memory, puzzle, quiz];
 
   static StoryPart? byName(String name) {
     for (final value in values) {

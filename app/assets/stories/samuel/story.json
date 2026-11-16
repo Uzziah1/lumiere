@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "memory",
+      "puzzle",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "anne", "label": "Anne prie" },
-        { "id": "bebe", "label": "Samuel à Silo" },
-        { "id": "lampes", "label": "Samuel aide Éli" },
-        { "id": "appel", "label": "« Samuel ! »" },
-        { "id": "ecoute", "label": "« Parle, j'écoute »" },
-        { "id": "prophete", "label": "Le prophète" }
+        {
+          "id": "anne",
+          "label": "Anne prie"
+        },
+        {
+          "id": "bebe",
+          "label": "Samuel à Silo"
+        },
+        {
+          "id": "lampes",
+          "label": "Samuel aide Éli"
+        },
+        {
+          "id": "appel",
+          "label": "« Samuel ! »"
+        },
+        {
+          "id": "ecoute",
+          "label": "« Parle, j'écoute »"
+        },
+        {
+          "id": "prophete",
+          "label": "Le prophète"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Dans la maison de Dieu, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "lamp", "label": "la lampe" },
-        { "id": "scroll", "label": "le rouleau" },
-        { "id": "jar", "label": "la jarre d'huile" },
-        { "id": "snail", "label": "l'escargot" },
-        { "id": "dove", "label": "la colombe" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "owl", "label": "le hibou" },
-        { "id": "bread", "label": "le pain" }
+        {
+          "id": "lamp",
+          "label": "la lampe"
+        },
+        {
+          "id": "scroll",
+          "label": "le rouleau"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre d'huile"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        },
+        {
+          "id": "dove",
+          "label": "la colombe"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "owl",
+          "label": "le hibou"
+        },
+        {
+          "id": "bread",
+          "label": "le pain"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["lamp", "bread", "scroll", "tent", "moon", "dove"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "lamp",
+        "bread",
+        "scroll",
+        "tent",
+        "moon",
+        "dove"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Qu'est-ce qui brillait dans la maison de Dieu pendant que Samuel dormait ?",
+          "choices": [
+            "lamp",
+            "sun",
+            "star"
+          ]
+        },
+        {
+          "question": "Chaque année, la maman de Samuel lui apportait une petite…",
+          "choices": [
+            "coat",
+            "crown",
+            "sling"
+          ]
+        },
+        {
+          "question": "Quand Dieu a appelé Samuel, c'était la nuit. Qu'y avait-il dans le ciel ?",
+          "choices": [
+            "moon",
+            "sun",
+            "bird"
+          ]
+        },
+        {
+          "question": "Plus tard, Samuel a versé de l'huile sur la tête de David pour en faire le roi. Dans quoi était l'huile ?",
+          "choices": [
+            "horn",
+            "basket",
+            "boat"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,33 @@
     "reference": "1 Samuel 3.10",
     "spoken": "Premier livre de Samuel, chapitre 3, verset 10 : Parle, car ton serviteur écoute.",
     "chunks": {
-      "bergers": ["Parle,", "car ton serviteur", "écoute."],
-      "explorateurs": ["Parle,", "car", "ton", "serviteur", "écoute."]
+      "bergers": [
+        "Parle,",
+        "car ton serviteur",
+        "écoute."
+      ],
+      "explorateurs": [
+        "Parle,",
+        "car",
+        "ton",
+        "serviteur",
+        "écoute."
+      ]
     },
-    "referenceChoices": ["1 Samuel 3.10", "1 Samuel 10.3", "2 Samuel 3.10"],
+    "referenceChoices": [
+      "1 Samuel 3.10",
+      "1 Samuel 10.3",
+      "2 Samuel 3.10"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "samuel", "title": "Parle, j'écoute" },
+  "sticker": {
+    "id": "samuel",
+    "title": "Parle, j'écoute"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Samuel. Voici ton autocollant pour ton album !"
 }

@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "memory",
+      "puzzle",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "shepherd", "label": "Le berger" },
-        { "id": "anoint", "label": "L'huile de Samuel" },
-        { "id": "goliath", "label": "Le géant Goliath" },
-        { "id": "stones", "label": "Les cinq pierres" },
-        { "id": "sling", "label": "La fronde" },
-        { "id": "psalm", "label": "Le roi qui chante" }
+        {
+          "id": "shepherd",
+          "label": "Le berger"
+        },
+        {
+          "id": "anoint",
+          "label": "L'huile de Samuel"
+        },
+        {
+          "id": "goliath",
+          "label": "Le géant Goliath"
+        },
+        {
+          "id": "stones",
+          "label": "Les cinq pierres"
+        },
+        {
+          "id": "sling",
+          "label": "La fronde"
+        },
+        {
+          "id": "psalm",
+          "label": "Le roi qui chante"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Des animaux se cachent dans les collines de Bethléhem ! Retrouve-les.",
       "items": [
-        { "id": "sheep", "label": "le mouton" },
-        { "id": "harp", "label": "la harpe" },
-        { "id": "rabbit", "label": "le lapin" },
-        { "id": "owl", "label": "le hibou" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "snail", "label": "l'escargot" }
+        {
+          "id": "sheep",
+          "label": "le mouton"
+        },
+        {
+          "id": "harp",
+          "label": "la harpe"
+        },
+        {
+          "id": "rabbit",
+          "label": "le lapin"
+        },
+        {
+          "id": "owl",
+          "label": "le hibou"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire de David.",
-      "pairs": ["harp", "sheep", "stone", "sling", "crown", "lion"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "harp",
+        "sheep",
+        "stone",
+        "sling",
+        "crown",
+        "lion"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Avant de devenir roi, quel était le travail de David ? Il gardait les…",
+          "choices": [
+            "sheep",
+            "fish",
+            "camel"
+          ]
+        },
+        {
+          "question": "Avec quoi David a-t-il vaincu le géant Goliath ?",
+          "choices": [
+            "sling",
+            "crown",
+            "horn"
+          ]
+        },
+        {
+          "question": "De quel instrument David jouait-il pour le roi Saül ?",
+          "choices": [
+            "harp",
+            "horn",
+            "tambourine"
+          ]
+        },
+        {
+          "question": "Plus tard, David est devenu roi. Qu'est-ce qu'un roi porte sur la tête ?",
+          "choices": [
+            "crown",
+            "basket",
+            "wheat"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,35 @@
     "reference": "Psaume 23.1",
     "spoken": "Psaume 23, verset 1 : L'Éternel est mon berger : je ne manquerai de rien.",
     "chunks": {
-      "bergers": ["L'Éternel", "est mon berger :", "je ne manquerai", "de rien."],
-      "explorateurs": ["L'Éternel", "est", "mon berger :", "je ne", "manquerai", "de rien."]
+      "bergers": [
+        "L'Éternel",
+        "est mon berger :",
+        "je ne manquerai",
+        "de rien."
+      ],
+      "explorateurs": [
+        "L'Éternel",
+        "est",
+        "mon berger :",
+        "je ne",
+        "manquerai",
+        "de rien."
+      ]
     },
-    "referenceChoices": ["Psaume 23.1", "Psaume 1.23", "1 Samuel 23.1"],
+    "referenceChoices": [
+      "Psaume 23.1",
+      "Psaume 1.23",
+      "1 Samuel 23.1"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "david", "title": "La harpe de David" },
+  "sticker": {
+    "id": "david",
+    "title": "La harpe de David"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de David. Voici ton autocollant pour ton album !"
 }

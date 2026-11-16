@@ -27,11 +27,17 @@ class StoryHub extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final session = StorySession.of(context);
+    const all = {
+      StoryPart.chronology: ('Dans l’ordre', _HubIcon.thumb),
+      StoryPart.seek: ('Cache-cache', _HubIcon.seek),
+      StoryPart.memory: ('Les paires', _HubIcon.memory),
+      StoryPart.puzzle: ('Le puzzle', _HubIcon.puzzle),
+      StoryPart.quiz: ('Le quiz', _HubIcon.quiz),
+      StoryPart.verse: ('Le verset', _HubIcon.verse),
+    };
+    // Les trois jeux de cette histoire, puis le verset.
     final games = [
-      (StoryPart.chronology, 'Dans l’ordre', _HubIcon.thumb),
-      (StoryPart.seek, 'Cache-cache', _HubIcon.seek),
-      (StoryPart.memory, 'Les paires', _HubIcon.memory),
-      (StoryPart.verse, 'Le verset', _HubIcon.verse),
+      for (final part in [...session.story.lineup, StoryPart.verse]) (part, all[part]!.$1, all[part]!.$2),
     ];
     return SafeArea(
       child: LayoutBuilder(
@@ -50,7 +56,7 @@ class StoryHub extends StatelessWidget {
                   onPressed: onExit,
                 ),
               ),
-              Positioned(right: 16, top: 12, child: _StarCount(count: stars.length)),
+              Positioned(right: 16, top: 12, child: _StarCount(count: stars.length > 5 ? 5 : stars.length)),
               Center(
                 child: SingleChildScrollView(
                   padding: const EdgeInsets.all(16),
@@ -209,6 +215,8 @@ class _HubIcon extends CustomPainter {
   static const seek = 1;
   static const memory = 2;
   static const verse = 3;
+  static const puzzle = 4;
+  static const quiz = 5;
 
   final int kind;
   final StorySession session;
@@ -252,6 +260,39 @@ class _HubIcon extends CustomPainter {
           );
           session.pack.paintItem(canvas, item, r.deflate(w * 0.12));
         }
+      case puzzle:
+        // La scène du puzzle, avec deux pièces un peu sorties de leur place.
+        final scene = session.pack.puzzleScene ?? session.story.chronology.cards.last.id;
+        session.pack.paintThumb(canvas, size, scene);
+        final line = Paint()
+          ..color = const Color(0xCCFFFFFF)
+          ..strokeWidth = 2;
+        canvas.drawLine(Offset(size.width / 2, 0), Offset(size.width / 2, size.height), line);
+        canvas.drawLine(Offset(0, size.height / 2), Offset(size.width, size.height / 2), line);
+        canvas.drawRect(
+          Rect.fromLTWH(size.width / 2, 0, size.width / 2, size.height / 2),
+          Paint()..color = const Color(0x55FFF6DC),
+        );
+      case quiz:
+        canvas.drawRect(Offset.zero & size, Paint()..color = const Color(0xFFF6E3C4));
+        final q = session.story.quiz!.questions.first;
+        final w = size.width * 0.28;
+        for (var i = 0; i < 3 && i < q.choices.length; i++) {
+          final r = Rect.fromLTWH(size.width * 0.04 + i * size.width * 0.32, size.height * 0.2, w, w);
+          canvas.drawRRect(
+            RRect.fromRectAndRadius(r, Radius.circular(w * 0.15)),
+            Paint()..color = Palette.cream,
+          );
+          session.pack.paintItem(canvas, q.choices[i], r.deflate(w * 0.1));
+        }
+        final tp = TextPainter(
+          text: TextSpan(
+            text: '?',
+            style: LumiereText.title(size.height * 0.3, color: Palette.goldDeep),
+          ),
+          textDirection: TextDirection.ltr,
+        )..layout();
+        tp.paint(canvas, Offset(size.width / 2 - tp.width / 2, size.height * 0.62));
       case verse:
         canvas.drawRect(Offset.zero & size, Paint()..color = const Color(0xFFDCE7F5));
         paintRainbow(

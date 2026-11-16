@@ -114,38 +114,101 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "puzzle"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "build", "label": "Noé construit l'arche" },
-        { "id": "animals", "label": "Les animaux entrent" },
-        { "id": "rain", "label": "La pluie tombe" },
-        { "id": "dove", "label": "La colombe revient" },
-        { "id": "rainbow", "label": "L'arc-en-ciel" }
+        {
+          "id": "build",
+          "label": "Noé construit l'arche"
+        },
+        {
+          "id": "animals",
+          "label": "Les animaux entrent"
+        },
+        {
+          "id": "rain",
+          "label": "La pluie tombe"
+        },
+        {
+          "id": "dove",
+          "label": "La colombe revient"
+        },
+        {
+          "id": "rainbow",
+          "label": "L'arc-en-ciel"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 5 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 5
+      }
     },
     "seek": {
       "instructions": "Des animaux se sont cachés dans l'arche ! Retrouve-les.",
       "items": [
-        { "id": "dove", "label": "la colombe" },
-        { "id": "sheep", "label": "le mouton" },
-        { "id": "rabbit", "label": "le lapin" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "owl", "label": "le hibou" },
-        { "id": "snail", "label": "l'escargot" },
-        { "id": "ladybug", "label": "la coccinelle" }
+        {
+          "id": "dove",
+          "label": "la colombe"
+        },
+        {
+          "id": "sheep",
+          "label": "le mouton"
+        },
+        {
+          "id": "rabbit",
+          "label": "le lapin"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "owl",
+          "label": "le hibou"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les couples d'animaux.",
-      "pairs": ["lion", "elephant", "giraffe", "sheep", "rabbit", "tortoise"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "lion",
+        "elephant",
+        "giraffe",
+        "sheep",
+        "rabbit",
+        "tortoise"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     }
   },
   "verse": {
@@ -153,16 +216,36 @@
     "reference": "Genèse 9.13",
     "spoken": "Genèse, chapitre 9, verset 13 : J'ai placé mon arc dans la nue, et il servira de signe d'alliance entre moi et la terre.",
     "chunks": {
-      "bergers": ["J'ai placé mon arc", "dans la nue,", "et il servira de signe d'alliance", "entre moi et la terre."],
-      "explorateurs": ["J'ai placé", "mon arc", "dans la nue,", "et il servira", "de signe d'alliance", "entre moi", "et la terre."]
+      "bergers": [
+        "J'ai placé mon arc",
+        "dans la nue,",
+        "et il servira de signe d'alliance",
+        "entre moi et la terre."
+      ],
+      "explorateurs": [
+        "J'ai placé",
+        "mon arc",
+        "dans la nue,",
+        "et il servira",
+        "de signe d'alliance",
+        "entre moi",
+        "et la terre."
+      ]
     },
-    "referenceChoices": ["Genèse 9.13", "Genèse 1.3", "Exode 9.13"],
+    "referenceChoices": [
+      "Genèse 9.13",
+      "Genèse 1.3",
+      "Exode 9.13"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs de l'arc-en-ciel pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "arche", "title": "L'arche de Noé" },
+  "sticker": {
+    "id": "arche",
+    "title": "L'arche de Noé"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Noé. Voici ton autocollant pour ton album !"
 }

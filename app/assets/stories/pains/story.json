@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "foule", "label": "La grande foule" },
-        { "id": "soir", "label": "Le soir" },
-        { "id": "garcon", "label": "Le petit garçon" },
-        { "id": "merci", "label": "Merci, Dieu !" },
-        { "id": "partage", "label": "Le partage" },
-        { "id": "paniers", "label": "Douze paniers" }
+        {
+          "id": "foule",
+          "label": "La grande foule"
+        },
+        {
+          "id": "soir",
+          "label": "Le soir"
+        },
+        {
+          "id": "garcon",
+          "label": "Le petit garçon"
+        },
+        {
+          "id": "merci",
+          "label": "Merci, Dieu !"
+        },
+        {
+          "id": "partage",
+          "label": "Le partage"
+        },
+        {
+          "id": "paniers",
+          "label": "Douze paniers"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Sur la colline, des choses se cachent dans l'herbe ! Retrouve-les.",
       "items": [
-        { "id": "bread", "label": "le pain" },
-        { "id": "fish", "label": "le poisson" },
-        { "id": "basket", "label": "le panier" },
-        { "id": "sheep", "label": "le mouton" },
-        { "id": "flower", "label": "la fleur" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "rabbit", "label": "le lapin" },
-        { "id": "ladybug", "label": "la coccinelle" }
+        {
+          "id": "bread",
+          "label": "le pain"
+        },
+        {
+          "id": "fish",
+          "label": "le poisson"
+        },
+        {
+          "id": "basket",
+          "label": "le panier"
+        },
+        {
+          "id": "sheep",
+          "label": "le mouton"
+        },
+        {
+          "id": "flower",
+          "label": "la fleur"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "rabbit",
+          "label": "le lapin"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["bread", "fish", "basket", "boat", "flower", "sheep"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "bread",
+        "fish",
+        "basket",
+        "boat",
+        "flower",
+        "sheep"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Le petit garçon avait cinq pains et deux…",
+          "choices": [
+            "fish",
+            "frog",
+            "bird"
+          ]
+        },
+        {
+          "question": "Qu'est-ce que Jésus a partagé à toute la foule ?",
+          "choices": [
+            "bread",
+            "coin",
+            "flower"
+          ]
+        },
+        {
+          "question": "Avec les restes, on a rempli douze…",
+          "choices": [
+            "basket",
+            "jar",
+            "boat"
+          ]
+        },
+        {
+          "question": "Comment Jésus avait-il traversé le lac avant d'arriver sur la colline ?",
+          "choices": [
+            "boat",
+            "camel",
+            "donkey"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,34 @@
     "reference": "Jean 6.35",
     "spoken": "Jean, chapitre 6, verset 35 : Je suis le pain de vie. Celui qui vient à moi n'aura jamais faim, et celui qui croit en moi n'aura jamais soif.",
     "chunks": {
-      "bergers": ["Je suis le pain de vie.", "Celui qui vient à moi n'aura jamais faim,", "et celui qui croit en moi n'aura jamais soif."],
-      "explorateurs": ["Je suis", "le pain de vie.", "Celui qui vient à moi", "n'aura jamais faim,", "et celui qui croit en moi", "n'aura jamais soif."]
+      "bergers": [
+        "Je suis le pain de vie.",
+        "Celui qui vient à moi n'aura jamais faim,",
+        "et celui qui croit en moi n'aura jamais soif."
+      ],
+      "explorateurs": [
+        "Je suis",
+        "le pain de vie.",
+        "Celui qui vient à moi",
+        "n'aura jamais faim,",
+        "et celui qui croit en moi",
+        "n'aura jamais soif."
+      ]
     },
-    "referenceChoices": ["Jean 6.35", "Jean 3.65", "Luc 6.35"],
+    "referenceChoices": [
+      "Jean 6.35",
+      "Jean 3.65",
+      "Luc 6.35"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "pains", "title": "Douze paniers" },
+  "sticker": {
+    "id": "pains",
+    "title": "Douze paniers"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire des pains et des poissons. Voici ton autocollant pour ton album !"
 }

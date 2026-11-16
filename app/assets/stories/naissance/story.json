@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "annonce", "label": "L'ange et Marie" },
-        { "id": "voyage", "label": "Le voyage" },
-        { "id": "etable", "label": "Jésus est né" },
-        { "id": "bergers", "label": "Les anges et les bergers" },
-        { "id": "visite", "label": "Les bergers à l'étable" },
-        { "id": "mages", "label": "Les mages" }
+        {
+          "id": "annonce",
+          "label": "L'ange et Marie"
+        },
+        {
+          "id": "voyage",
+          "label": "Le voyage"
+        },
+        {
+          "id": "etable",
+          "label": "Jésus est né"
+        },
+        {
+          "id": "bergers",
+          "label": "Les anges et les bergers"
+        },
+        {
+          "id": "visite",
+          "label": "Les bergers à l'étable"
+        },
+        {
+          "id": "mages",
+          "label": "Les mages"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Dans la maison de Bethléhem, des amis se cachent ! Retrouve-les.",
       "items": [
-        { "id": "sheep", "label": "le mouton" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "owl", "label": "le hibou" },
-        { "id": "dove", "label": "la colombe" },
-        { "id": "rabbit", "label": "le lapin" },
-        { "id": "ladybug", "label": "la coccinelle" },
-        { "id": "snail", "label": "l'escargot" },
-        { "id": "star", "label": "l'étoile" }
+        {
+          "id": "sheep",
+          "label": "le mouton"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "owl",
+          "label": "le hibou"
+        },
+        {
+          "id": "dove",
+          "label": "la colombe"
+        },
+        {
+          "id": "rabbit",
+          "label": "le lapin"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        },
+        {
+          "id": "star",
+          "label": "l'étoile"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de Noël.",
-      "pairs": ["star", "sheep", "donkey", "manger", "camel", "dove"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "star",
+        "sheep",
+        "donkey",
+        "manger",
+        "camel",
+        "dove"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Où le bébé Jésus a-t-il été couché ?",
+          "choices": [
+            "manger",
+            "boat",
+            "basket"
+          ]
+        },
+        {
+          "question": "Qu'est-ce que les mages ont suivi pour trouver Jésus ?",
+          "choices": [
+            "star",
+            "moon",
+            "bird"
+          ]
+        },
+        {
+          "question": "Quels animaux gardaient les bergers, la nuit où Jésus est né ?",
+          "choices": [
+            "sheep",
+            "camel",
+            "lion"
+          ]
+        },
+        {
+          "question": "Les mages ont offert de l'or, de l'encens et de la myrrhe. Lequel de ces cadeaux est en or ?",
+          "choices": [
+            "coin",
+            "flower",
+            "bread"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,34 @@
     "reference": "Luc 2.11",
     "spoken": "Luc, chapitre 2, verset 11 : Aujourd'hui, dans la ville de David, il vous est né un Sauveur, qui est le Christ, le Seigneur.",
     "chunks": {
-      "bergers": ["Aujourd'hui, dans la ville de David,", "il vous est né un Sauveur,", "qui est le Christ, le Seigneur."],
-      "explorateurs": ["Aujourd'hui,", "dans la ville de David,", "il vous est né", "un Sauveur,", "qui est le Christ,", "le Seigneur."]
+      "bergers": [
+        "Aujourd'hui, dans la ville de David,",
+        "il vous est né un Sauveur,",
+        "qui est le Christ, le Seigneur."
+      ],
+      "explorateurs": [
+        "Aujourd'hui,",
+        "dans la ville de David,",
+        "il vous est né",
+        "un Sauveur,",
+        "qui est le Christ,",
+        "le Seigneur."
+      ]
     },
-    "referenceChoices": ["Luc 2.11", "Luc 11.2", "Jean 2.11"],
+    "referenceChoices": [
+      "Luc 2.11",
+      "Luc 11.2",
+      "Jean 2.11"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "naissance", "title": "La crèche" },
+  "sticker": {
+    "id": "naissance",
+    "title": "La crèche"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de la naissance de Jésus. Voici ton autocollant pour ton album !"
 }

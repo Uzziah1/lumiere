@@ -75,39 +75,105 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "puzzle"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "secheresse", "label": "Plus de pluie" },
-        { "id": "corbeaux", "label": "Les corbeaux" },
-        { "id": "veuve", "label": "La farine et l'huile" },
-        { "id": "eau", "label": "L'eau sur l'autel" },
-        { "id": "feu", "label": "Le feu du ciel" },
-        { "id": "pluie", "label": "La pluie revient" }
+        {
+          "id": "secheresse",
+          "label": "Plus de pluie"
+        },
+        {
+          "id": "corbeaux",
+          "label": "Les corbeaux"
+        },
+        {
+          "id": "veuve",
+          "label": "La farine et l'huile"
+        },
+        {
+          "id": "eau",
+          "label": "L'eau sur l'autel"
+        },
+        {
+          "id": "feu",
+          "label": "Le feu du ciel"
+        },
+        {
+          "id": "pluie",
+          "label": "La pluie revient"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Près du torrent, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "raven", "label": "le corbeau" },
-        { "id": "bread", "label": "le pain" },
-        { "id": "jar", "label": "la jarre d'huile" },
-        { "id": "flame", "label": "la flamme" },
-        { "id": "stone", "label": "le caillou" },
-        { "id": "fish", "label": "le poisson" },
-        { "id": "snail", "label": "l'escargot" },
-        { "id": "tortoise", "label": "la tortue" }
+        {
+          "id": "raven",
+          "label": "le corbeau"
+        },
+        {
+          "id": "bread",
+          "label": "le pain"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre d'huile"
+        },
+        {
+          "id": "flame",
+          "label": "la flamme"
+        },
+        {
+          "id": "stone",
+          "label": "le caillou"
+        },
+        {
+          "id": "fish",
+          "label": "le poisson"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["raven", "bread", "jar", "altar", "flame", "crown"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "raven",
+        "bread",
+        "jar",
+        "altar",
+        "flame",
+        "crown"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     }
   },
   "verse": {
@@ -115,16 +181,32 @@
     "reference": "1 Rois 18.39",
     "spoken": "Premier livre des Rois, chapitre 18, verset 39 : C'est l'Éternel qui est Dieu ! C'est l'Éternel qui est Dieu !",
     "chunks": {
-      "bergers": ["C'est l'Éternel", "qui est Dieu !", "C'est l'Éternel qui est Dieu !"],
-      "explorateurs": ["C'est l'Éternel", "qui est Dieu !", "C'est l'Éternel", "qui est Dieu !"]
+      "bergers": [
+        "C'est l'Éternel",
+        "qui est Dieu !",
+        "C'est l'Éternel qui est Dieu !"
+      ],
+      "explorateurs": [
+        "C'est l'Éternel",
+        "qui est Dieu !",
+        "C'est l'Éternel",
+        "qui est Dieu !"
+      ]
     },
-    "referenceChoices": ["1 Rois 18.39", "1 Rois 39.18", "2 Rois 18.39"],
+    "referenceChoices": [
+      "1 Rois 18.39",
+      "1 Rois 39.18",
+      "2 Rois 18.39"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "elie", "title": "Le feu du Carmel" },
+  "sticker": {
+    "id": "elie",
+    "title": "Le feu du Carmel"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire d'Élie. Voici ton autocollant pour ton album !"
 }

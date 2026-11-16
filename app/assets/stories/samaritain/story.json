@@ -75,39 +75,105 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "puzzle"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "question", "label": "Qui est mon prochain ?" },
-        { "id": "chemin", "label": "Sur la route" },
-        { "id": "pretre", "label": "Le prêtre" },
-        { "id": "levite", "label": "Le Lévite" },
-        { "id": "soin", "label": "Le Samaritain" },
-        { "id": "auberge", "label": "L'auberge" }
+        {
+          "id": "question",
+          "label": "Qui est mon prochain ?"
+        },
+        {
+          "id": "chemin",
+          "label": "Sur la route"
+        },
+        {
+          "id": "pretre",
+          "label": "Le prêtre"
+        },
+        {
+          "id": "levite",
+          "label": "Le Lévite"
+        },
+        {
+          "id": "soin",
+          "label": "Le Samaritain"
+        },
+        {
+          "id": "auberge",
+          "label": "L'auberge"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Sur la route de Jéricho, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "donkey", "label": "l'âne" },
-        { "id": "jar", "label": "la jarre d'huile" },
-        { "id": "coin", "label": "la pièce" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "lion", "label": "le lion" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "snail", "label": "l'escargot" },
-        { "id": "stone", "label": "le caillou" }
+        {
+          "id": "donkey",
+          "label": "l'âne"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre d'huile"
+        },
+        {
+          "id": "coin",
+          "label": "la pièce"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "lion",
+          "label": "le lion"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        },
+        {
+          "id": "stone",
+          "label": "le caillou"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["donkey", "jar", "coin", "city", "palm", "stone"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "donkey",
+        "jar",
+        "coin",
+        "city",
+        "palm",
+        "stone"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     }
   },
   "verse": {
@@ -115,16 +181,35 @@
     "reference": "Luc 10.27",
     "spoken": "Luc, chapitre 10, verset 27 : Tu aimeras le Seigneur, ton Dieu, de tout ton cœur, de toute ton âme, de toute ta force, et de toute ta pensée ; et ton prochain comme toi-même.",
     "chunks": {
-      "bergers": ["Tu aimeras le Seigneur, ton Dieu,", "de tout ton cœur, de toute ton âme,", "de toute ta force, et de toute ta pensée ;", "et ton prochain comme toi-même."],
-      "explorateurs": ["Tu aimeras le Seigneur, ton Dieu,", "de tout ton cœur,", "de toute ton âme,", "de toute ta force,", "et de toute ta pensée ;", "et ton prochain comme toi-même."]
+      "bergers": [
+        "Tu aimeras le Seigneur, ton Dieu,",
+        "de tout ton cœur, de toute ton âme,",
+        "de toute ta force, et de toute ta pensée ;",
+        "et ton prochain comme toi-même."
+      ],
+      "explorateurs": [
+        "Tu aimeras le Seigneur, ton Dieu,",
+        "de tout ton cœur,",
+        "de toute ton âme,",
+        "de toute ta force,",
+        "et de toute ta pensée ;",
+        "et ton prochain comme toi-même."
+      ]
     },
-    "referenceChoices": ["Luc 10.27", "Luc 27.10", "Matthieu 10.27"],
+    "referenceChoices": [
+      "Luc 10.27",
+      "Luc 27.10",
+      "Matthieu 10.27"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "samaritain", "title": "Le bon Samaritain" },
+  "sticker": {
+    "id": "samaritain",
+    "title": "Le bon Samaritain"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire du bon Samaritain. Voici ton autocollant pour ton album !"
 }

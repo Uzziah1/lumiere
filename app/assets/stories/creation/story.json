@@ -76,39 +76,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les jours de la Création dans l'ordre. Qu'est-ce que Dieu a fait en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce que Dieu a fait en premier ?"
       },
       "cards": [
-        { "id": "light", "label": "La lumière" },
-        { "id": "land", "label": "La mer et la terre" },
-        { "id": "plants", "label": "Les plantes" },
-        { "id": "lights", "label": "Le soleil et la lune" },
-        { "id": "animals", "label": "Les animaux" },
-        { "id": "humans", "label": "L'homme et la femme" }
+        {
+          "id": "light",
+          "label": "La lumière"
+        },
+        {
+          "id": "land",
+          "label": "La mer et la terre"
+        },
+        {
+          "id": "plants",
+          "label": "Les plantes"
+        },
+        {
+          "id": "lights",
+          "label": "Le soleil et la lune"
+        },
+        {
+          "id": "animals",
+          "label": "Les animaux"
+        },
+        {
+          "id": "humans",
+          "label": "L'homme et la femme"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Des animaux se cachent dans le jardin ! Retrouve-les.",
       "items": [
-        { "id": "rabbit", "label": "le lapin" },
-        { "id": "dove", "label": "la colombe" },
-        { "id": "frog", "label": "la grenouille" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "owl", "label": "le hibou" },
-        { "id": "mouse", "label": "la souris" },
-        { "id": "ladybug", "label": "la coccinelle" },
-        { "id": "snail", "label": "l'escargot" }
+        {
+          "id": "rabbit",
+          "label": "le lapin"
+        },
+        {
+          "id": "dove",
+          "label": "la colombe"
+        },
+        {
+          "id": "frog",
+          "label": "la grenouille"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "owl",
+          "label": "le hibou"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de la Création.",
-      "pairs": ["sun", "moon", "star", "fish", "flower", "lion"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "sun",
+        "moon",
+        "star",
+        "fish",
+        "flower",
+        "lion"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Qu'est-ce que Dieu a mis dans le ciel pour éclairer la nuit ?",
+          "choices": [
+            "moon",
+            "fish",
+            "tree"
+          ]
+        },
+        {
+          "question": "Qu'est-ce que Dieu a créé pour nager dans la mer ?",
+          "choices": [
+            "fish",
+            "lion",
+            "flower"
+          ]
+        },
+        {
+          "question": "Qu'est-ce qui pousse sur la terre et donne des fruits ?",
+          "choices": [
+            "tree",
+            "star",
+            "bird"
+          ]
+        },
+        {
+          "question": "Le sixième jour, Dieu a créé les animaux de la terre, puis l'homme et la femme. Lequel de ces animaux vit sur la terre ?",
+          "choices": [
+            "lion",
+            "fish",
+            "bird"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -116,16 +223,35 @@
     "reference": "Genèse 1.1",
     "spoken": "Genèse, chapitre 1, verset 1 : Au commencement, Dieu créa les cieux et la terre.",
     "chunks": {
-      "bergers": ["Au commencement,", "Dieu créa", "les cieux", "et la terre."],
-      "explorateurs": ["Au", "commencement,", "Dieu", "créa", "les cieux", "et la terre."]
+      "bergers": [
+        "Au commencement,",
+        "Dieu créa",
+        "les cieux",
+        "et la terre."
+      ],
+      "explorateurs": [
+        "Au",
+        "commencement,",
+        "Dieu",
+        "créa",
+        "les cieux",
+        "et la terre."
+      ]
     },
-    "referenceChoices": ["Genèse 1.1", "Jean 1.1", "Exode 1.1"],
+    "referenceChoices": [
+      "Genèse 1.1",
+      "Jean 1.1",
+      "Exode 1.1"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "creation", "title": "La Création" },
+  "sticker": {
+    "id": "creation",
+    "title": "La Création"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de la Création. Voici ton autocollant pour ton album !"
 }

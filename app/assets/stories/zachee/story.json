@@ -75,39 +75,138 @@
     }
   ],
   "games": {
+    "lineup": [
+      "memory",
+      "puzzle",
+      "quiz"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "jericho", "label": "Zachée le riche" },
-        { "id": "foule", "label": "Trop petit !" },
-        { "id": "arbre", "label": "Dans l'arbre" },
-        { "id": "appel", "label": "« Descends vite ! »" },
-        { "id": "repas", "label": "Le repas" },
-        { "id": "change", "label": "Un cœur nouveau" }
+        {
+          "id": "jericho",
+          "label": "Zachée le riche"
+        },
+        {
+          "id": "foule",
+          "label": "Trop petit !"
+        },
+        {
+          "id": "arbre",
+          "label": "Dans l'arbre"
+        },
+        {
+          "id": "appel",
+          "label": "« Descends vite ! »"
+        },
+        {
+          "id": "repas",
+          "label": "Le repas"
+        },
+        {
+          "id": "change",
+          "label": "Un cœur nouveau"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Dans la rue de Jéricho, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "coin", "label": "la pièce" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "fruit", "label": "le fruit" },
-        { "id": "owl", "label": "le hibou" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "basket", "label": "le panier" },
-        { "id": "snail", "label": "l'escargot" },
-        { "id": "ladybug", "label": "la coccinelle" }
+        {
+          "id": "coin",
+          "label": "la pièce"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "fruit",
+          "label": "le fruit"
+        },
+        {
+          "id": "owl",
+          "label": "le hibou"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "basket",
+          "label": "le panier"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["coin", "tree", "bread", "palm", "fruit", "city"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "coin",
+        "tree",
+        "bread",
+        "palm",
+        "fruit",
+        "city"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Où Zachée est-il monté pour voir Jésus ?",
+          "choices": [
+            "tree",
+            "wall",
+            "boat"
+          ]
+        },
+        {
+          "question": "Qu'est-ce que Zachée aimait trop, avant de rencontrer Jésus ?",
+          "choices": [
+            "coin",
+            "fish",
+            "flower"
+          ]
+        },
+        {
+          "question": "Zachée habitait Jéricho, la ville des…",
+          "choices": [
+            "palm",
+            "flower",
+            "wheat"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 3
+      }
     }
   },
   "verse": {
@@ -115,16 +214,33 @@
     "reference": "Luc 19.10",
     "spoken": "Luc, chapitre 19, verset 10 : Car le Fils de l'homme est venu chercher et sauver ce qui était perdu.",
     "chunks": {
-      "bergers": ["Car le Fils de l'homme", "est venu chercher et sauver", "ce qui était perdu."],
-      "explorateurs": ["Car le Fils", "de l'homme", "est venu chercher", "et sauver", "ce qui était perdu."]
+      "bergers": [
+        "Car le Fils de l'homme",
+        "est venu chercher et sauver",
+        "ce qui était perdu."
+      ],
+      "explorateurs": [
+        "Car le Fils",
+        "de l'homme",
+        "est venu chercher",
+        "et sauver",
+        "ce qui était perdu."
+      ]
     },
-    "referenceChoices": ["Luc 19.10", "Luc 10.19", "Jean 19.10"],
+    "referenceChoices": [
+      "Luc 19.10",
+      "Luc 10.19",
+      "Jean 19.10"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "zachee", "title": "Le sycomore" },
+  "sticker": {
+    "id": "zachee",
+    "title": "Le sycomore"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire de Zachée. Voici ton autocollant pour ton album !"
 }

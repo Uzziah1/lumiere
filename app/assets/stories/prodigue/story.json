@@ -75,39 +75,146 @@
     }
   ],
   "games": {
+    "lineup": [
+      "quiz",
+      "memory",
+      "seek"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "depart", "label": "Le départ" },
-        { "id": "depense", "label": "Tout dépensé" },
-        { "id": "cochons", "label": "Les cochons" },
-        { "id": "retour", "label": "Le retour" },
-        { "id": "accueil", "label": "Dans les bras du père" },
-        { "id": "festin", "label": "La fête" }
+        {
+          "id": "depart",
+          "label": "Le départ"
+        },
+        {
+          "id": "depense",
+          "label": "Tout dépensé"
+        },
+        {
+          "id": "cochons",
+          "label": "Les cochons"
+        },
+        {
+          "id": "retour",
+          "label": "Le retour"
+        },
+        {
+          "id": "accueil",
+          "label": "Dans les bras du père"
+        },
+        {
+          "id": "festin",
+          "label": "La fête"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "À la ferme du papa, des choses se cachent ! Retrouve-les.",
       "items": [
-        { "id": "pig", "label": "le cochon" },
-        { "id": "ring", "label": "la bague" },
-        { "id": "coin", "label": "la pièce" },
-        { "id": "wheat", "label": "le blé" },
-        { "id": "sheep", "label": "le mouton" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "jar", "label": "la jarre" },
-        { "id": "mouse", "label": "la souris" }
+        {
+          "id": "pig",
+          "label": "le cochon"
+        },
+        {
+          "id": "ring",
+          "label": "la bague"
+        },
+        {
+          "id": "coin",
+          "label": "la pièce"
+        },
+        {
+          "id": "wheat",
+          "label": "le blé"
+        },
+        {
+          "id": "sheep",
+          "label": "le mouton"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "jar",
+          "label": "la jarre"
+        },
+        {
+          "id": "mouse",
+          "label": "la souris"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["pig", "ring", "coat", "coin", "bread", "wheat"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "pig",
+        "ring",
+        "coat",
+        "coin",
+        "bread",
+        "wheat"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
+    },
+    "quiz": {
+      "questions": [
+        {
+          "question": "Quels animaux le fils devait-il garder, loin de chez lui ?",
+          "choices": [
+            "pig",
+            "sheep",
+            "camel"
+          ]
+        },
+        {
+          "question": "Qu'est-ce que le papa a mis au doigt de son fils ?",
+          "choices": [
+            "ring",
+            "crown",
+            "flower"
+          ]
+        },
+        {
+          "question": "Qu'est-ce que le fils avait dépensé, loin de chez lui ?",
+          "choices": [
+            "coin",
+            "bread",
+            "wheat"
+          ]
+        },
+        {
+          "question": "Le papa a demandé d'apporter la plus belle…",
+          "choices": [
+            "coat",
+            "crown",
+            "harp"
+          ]
+        }
+      ],
+      "counts": {
+        "agneaux": 2,
+        "bergers": 3,
+        "explorateurs": 4
+      }
     }
   },
   "verse": {
@@ -115,16 +222,33 @@
     "reference": "Luc 15.24",
     "spoken": "Luc, chapitre 15, verset 24 : Mon fils que voici était mort, et il est revenu à la vie ; il était perdu, et il est retrouvé.",
     "chunks": {
-      "bergers": ["Mon fils que voici était mort,", "et il est revenu à la vie ;", "il était perdu, et il est retrouvé."],
-      "explorateurs": ["Mon fils que voici", "était mort,", "et il est revenu à la vie ;", "il était perdu,", "et il est retrouvé."]
+      "bergers": [
+        "Mon fils que voici était mort,",
+        "et il est revenu à la vie ;",
+        "il était perdu, et il est retrouvé."
+      ],
+      "explorateurs": [
+        "Mon fils que voici",
+        "était mort,",
+        "et il est revenu à la vie ;",
+        "il était perdu,",
+        "et il est retrouvé."
+      ]
     },
-    "referenceChoices": ["Luc 15.24", "Luc 24.15", "Jean 15.24"],
+    "referenceChoices": [
+      "Luc 15.24",
+      "Luc 24.15",
+      "Jean 15.24"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "prodigue", "title": "Le retour du fils" },
+  "sticker": {
+    "id": "prodigue",
+    "title": "Le retour du fils"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire du fils prodigue. Voici ton autocollant pour ton album !"
 }

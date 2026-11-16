@@ -75,39 +75,105 @@
     }
   ],
   "games": {
+    "lineup": [
+      "chronology",
+      "seek",
+      "puzzle"
+    ],
     "chronology": {
       "instructions": {
         "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
         "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
       },
       "cards": [
-        { "id": "desert", "label": "Jean dans le désert" },
-        { "id": "jourdain", "label": "Le Jourdain" },
-        { "id": "arrivee", "label": "Jésus arrive" },
-        { "id": "bapteme", "label": "Le baptême" },
-        { "id": "colombe", "label": "La colombe" },
-        { "id": "pecheurs", "label": "Les pêcheurs" }
+        {
+          "id": "desert",
+          "label": "Jean dans le désert"
+        },
+        {
+          "id": "jourdain",
+          "label": "Le Jourdain"
+        },
+        {
+          "id": "arrivee",
+          "label": "Jésus arrive"
+        },
+        {
+          "id": "bapteme",
+          "label": "Le baptême"
+        },
+        {
+          "id": "colombe",
+          "label": "La colombe"
+        },
+        {
+          "id": "pecheurs",
+          "label": "Les pêcheurs"
+        }
       ],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     },
     "seek": {
       "instructions": "Au bord du Jourdain, des animaux se cachent ! Retrouve-les.",
       "items": [
-        { "id": "fish", "label": "le poisson" },
-        { "id": "frog", "label": "la grenouille" },
-        { "id": "bird", "label": "l'oiseau" },
-        { "id": "dove", "label": "la colombe" },
-        { "id": "shell", "label": "le coquillage" },
-        { "id": "tortoise", "label": "la tortue" },
-        { "id": "ladybug", "label": "la coccinelle" },
-        { "id": "snail", "label": "l'escargot" }
+        {
+          "id": "fish",
+          "label": "le poisson"
+        },
+        {
+          "id": "frog",
+          "label": "la grenouille"
+        },
+        {
+          "id": "bird",
+          "label": "l'oiseau"
+        },
+        {
+          "id": "dove",
+          "label": "la colombe"
+        },
+        {
+          "id": "shell",
+          "label": "le coquillage"
+        },
+        {
+          "id": "tortoise",
+          "label": "la tortue"
+        },
+        {
+          "id": "ladybug",
+          "label": "la coccinelle"
+        },
+        {
+          "id": "snail",
+          "label": "l'escargot"
+        }
       ],
-      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+      "counts": {
+        "agneaux": 4,
+        "bergers": 6,
+        "explorateurs": 8
+      }
     },
     "memory": {
       "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
-      "pairs": ["dove", "fish", "boat", "reeds", "frog", "stone"],
-      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+      "pairs": [
+        "dove",
+        "fish",
+        "boat",
+        "reeds",
+        "frog",
+        "stone"
+      ],
+      "counts": {
+        "agneaux": 3,
+        "bergers": 4,
+        "explorateurs": 6
+      }
     }
   },
   "verse": {
@@ -115,16 +181,33 @@
     "reference": "Matthieu 3.17",
     "spoken": "Matthieu, chapitre 3, verset 17 : Celui-ci est mon Fils bien-aimé, en qui j'ai mis toute mon affection.",
     "chunks": {
-      "bergers": ["Celui-ci est", "mon Fils bien-aimé,", "en qui j'ai mis toute mon affection."],
-      "explorateurs": ["Celui-ci", "est mon Fils", "bien-aimé,", "en qui j'ai mis", "toute mon affection."]
+      "bergers": [
+        "Celui-ci est",
+        "mon Fils bien-aimé,",
+        "en qui j'ai mis toute mon affection."
+      ],
+      "explorateurs": [
+        "Celui-ci",
+        "est mon Fils",
+        "bien-aimé,",
+        "en qui j'ai mis",
+        "toute mon affection."
+      ]
     },
-    "referenceChoices": ["Matthieu 3.17", "Matthieu 17.3", "Marc 3.17"],
+    "referenceChoices": [
+      "Matthieu 3.17",
+      "Matthieu 17.3",
+      "Marc 3.17"
+    ],
     "instructions": {
       "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
       "bergers": "Remets les morceaux du verset dans l'ordre.",
       "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
     }
   },
-  "sticker": { "id": "bapteme", "title": "La colombe" },
+  "sticker": {
+    "id": "bapteme",
+    "title": "La colombe"
+  },
   "reward": "Bravo ! Tu as terminé l'histoire du baptême de Jésus. Voici ton autocollant pour ton album !"
 }
