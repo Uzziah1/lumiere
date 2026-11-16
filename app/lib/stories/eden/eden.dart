@@ -106,7 +106,12 @@ void _garden(Canvas canvas, Size s, double time, {List<Color> sky = Skies.day, b
       ..close();
     drawPaper(canvas, river, const Color(0xFF6CB8D4), elevation: 1, light: 0.2);
   }
-  for (final (fx, fy, h) in const [(0.08, 0.7, 0.42), (0.92, 0.7, 0.46), (0.3, 0.62, 0.3), (0.72, 0.6, 0.28)]) {
+  for (final (fx, fy, h) in const [
+    (0.08, 0.7, 0.42),
+    (0.92, 0.7, 0.46),
+    (0.3, 0.62, 0.3),
+    (0.72, 0.6, 0.28),
+  ]) {
     paintThing(canvas, 'tree', boxAt(s, fx, fy, h));
   }
 }
@@ -122,7 +127,11 @@ void _names(Canvas canvas, Size s, StageView v) {
     wave: v.pulse.reduce(math.max) * 0.9,
     blink: blinkAt(v.time, 0.4),
   );
-  final animals = [(Animal.giraffe, 0.14, 0.8, 0.44), (Animal.lion, 0.34, 0.8, 0.28), (Animal.rabbit, 0.84, 0.8, 0.2)];
+  final animals = [
+    (Animal.giraffe, 0.14, 0.8, 0.44),
+    (Animal.lion, 0.34, 0.8, 0.28),
+    (Animal.rabbit, 0.84, 0.8, 0.2),
+  ];
   for (var i = 0; i < animals.length; i++) {
     final (a, fx, fy, h) = animals[i];
     final hop = v.pulse[i] * s.height * 0.04;
@@ -133,7 +142,11 @@ void _names(Canvas canvas, Size s, StageView v) {
       paintThing(
         canvas,
         'star',
-        Rect.fromCenter(center: heart, width: s.height * 0.07 * v.shown(i), height: s.height * 0.07 * v.shown(i)),
+        Rect.fromCenter(
+          center: heart,
+          width: s.height * 0.07 * v.shown(i),
+          height: s.height * 0.07 * v.shown(i),
+        ),
       );
     }
   }
@@ -185,7 +198,13 @@ void _tree(Canvas canvas, Size s, StageView v) {
       ..maskFilter = MaskFilter.blur(BlurStyle.normal, tree.height * 0.15),
   );
   paintThing(canvas, 'tree', tree);
-  paintHeavenlyLight(canvas, s, Offset(s.width * 0.5, -s.height * 0.05), v.time, intensity: 0.45 + 0.7 * v.eased);
+  paintHeavenlyLight(
+    canvas,
+    s,
+    Offset(s.width * 0.5, -s.height * 0.05),
+    v.time,
+    intensity: 0.45 + 0.7 * v.eased,
+  );
   paintPerson(
     canvas,
     feetAt(s, 0.24, 0.94),
@@ -254,7 +273,13 @@ void _hide(Canvas canvas, Size s, StageView v) {
 // 6. Dieu leur fait des habits ; ils quittent le jardin, mais Dieu ne les oublie pas.
 void _clothes(Canvas canvas, Size s, StageView v) {
   _garden(canvas, s, v.time, river: false);
-  paintHeavenlyLight(canvas, s, Offset(s.width * 0.5, -s.height * 0.05), v.time, intensity: 0.4 + 0.4 * v.eased);
+  paintHeavenlyLight(
+    canvas,
+    s,
+    Offset(s.width * 0.5, -s.height * 0.05),
+    v.time,
+    intensity: 0.4 + 0.4 * v.eased,
+  );
   final styles = [(adam, _skinsAdam, 0.41), (eve, _skinsEve, 0.59)];
   for (var i = 0; i < 2; i++) {
     final (before, after, fx) = styles[i];

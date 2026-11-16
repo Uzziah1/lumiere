@@ -107,10 +107,30 @@ const _pharaohStyle = PersonStyle(
 );
 
 const _brothers = [
-  PersonStyle(skin: Color(0xFF7D4A30), robe: Color(0xFFB0563A), headcloth: Color(0xFFE8D6B3), beard: Color(0xFF2E1E15)),
-  PersonStyle(skin: Color(0xFF9C6440), robe: Color(0xFF5F9E7E), headcloth: Color(0xFFF0E2C8), beard: Color(0xFF3E2A1E)),
-  PersonStyle(skin: Color(0xFF6E4029), robe: Color(0xFFD08A47), headcloth: Color(0xFFEADBC0), beard: Color(0xFF2A1A12)),
-  PersonStyle(skin: Color(0xFFA9714B), robe: Color(0xFF8C79B5), headcloth: Color(0xFFF3E2C0), beard: Color(0xFF4A3323)),
+  PersonStyle(
+    skin: Color(0xFF7D4A30),
+    robe: Color(0xFFB0563A),
+    headcloth: Color(0xFFE8D6B3),
+    beard: Color(0xFF2E1E15),
+  ),
+  PersonStyle(
+    skin: Color(0xFF9C6440),
+    robe: Color(0xFF5F9E7E),
+    headcloth: Color(0xFFF0E2C8),
+    beard: Color(0xFF3E2A1E),
+  ),
+  PersonStyle(
+    skin: Color(0xFF6E4029),
+    robe: Color(0xFFD08A47),
+    headcloth: Color(0xFFEADBC0),
+    beard: Color(0xFF2A1A12),
+  ),
+  PersonStyle(
+    skin: Color(0xFFA9714B),
+    robe: Color(0xFF8C79B5),
+    headcloth: Color(0xFFF3E2C0),
+    beard: Color(0xFF4A3323),
+  ),
 ];
 
 void _canaan(Canvas canvas, Size s, double time, {List<Color> sky = Skies.day}) {
@@ -131,7 +151,9 @@ void _coatOn(Canvas canvas, Size s, Offset feet, double h, double reveal) {
   if (reveal <= 0) return;
   final box = Rect.fromLTWH(feet.dx - h * 0.27, feet.dy - h * 0.72, h * 0.54, h * 0.72);
   canvas.save();
-  canvas.clipRect(Rect.fromLTRB(box.left - 10, box.bottom - box.height * reveal, box.right + 10, box.bottom + 10));
+  canvas.clipRect(
+    Rect.fromLTRB(box.left - 10, box.bottom - box.height * reveal, box.right + 10, box.bottom + 10),
+  );
   paintThing(canvas, 'coat', box);
   canvas.restore();
 }
@@ -186,7 +208,11 @@ void _dreams(Canvas canvas, Size s, StageView v) {
     );
   canvas.drawPath(bubble, Paint()..color = const Color(0x33FFFFFF));
   for (final (fx, fy, r) in const [(0.24, 0.5, 0.025), (0.2, 0.58, 0.018)]) {
-    canvas.drawCircle(Offset(s.width * fx, s.height * fy), s.height * r, Paint()..color = const Color(0x33FFFFFF));
+    canvas.drawCircle(
+      Offset(s.width * fx, s.height * fy),
+      s.height * r,
+      Paint()..color = const Color(0x33FFFFFF),
+    );
   }
   final items = [('wheat', 0.39, 0.38, 0.3), ('sun', 0.6, 0.28, 0.22), ('moon', 0.79, 0.3, 0.2)];
   for (var i = 0; i < 3; i++) {
@@ -199,11 +225,18 @@ void _dreams(Canvas canvas, Size s, StageView v) {
   if (v.shown(2) > 0) {
     for (var k = 0; k < 11; k++) {
       final a = k / 11 * math.pi * 2 + v.time * 0.2;
-      final c = Offset(s.width * 0.79 + math.cos(a) * s.height * 0.13, s.height * 0.2 + math.sin(a) * s.height * 0.1);
+      final c = Offset(
+        s.width * 0.79 + math.cos(a) * s.height * 0.13,
+        s.height * 0.2 + math.sin(a) * s.height * 0.1,
+      );
       paintThing(
         canvas,
         'star',
-        Rect.fromCenter(center: c, width: s.height * 0.035 * v.shown(2), height: s.height * 0.035 * v.shown(2)),
+        Rect.fromCenter(
+          center: c,
+          width: s.height * 0.035 * v.shown(2),
+          height: s.height * 0.035 * v.shown(2),
+        ),
       );
     }
   }
@@ -236,7 +269,14 @@ void _pit(Canvas canvas, Size s, StageView v) {
   canvas.translate(go, 0);
   paintThing(canvas, 'camel', boxAt(s, 0.66, 0.86, 0.26, aspect: 1.1));
   paintThing(canvas, 'camel', boxAt(s, 0.84, 0.86, 0.24, aspect: 1.1));
-  paintPerson(canvas, feetAt(s, 0.75, 0.9), s.height * 0.32, _joseph, facingLeft: true, blink: blinkAt(v.time, 2));
+  paintPerson(
+    canvas,
+    feetAt(s, 0.75, 0.9),
+    s.height * 0.32,
+    _joseph,
+    facingLeft: true,
+    blink: blinkAt(v.time, 2),
+  );
   canvas.restore();
 }
 
@@ -312,7 +352,14 @@ void _granary(Canvas canvas, Size s, StageView v) {
       paintThing(canvas, 'wheat', boxAt(s, _granaries[i], 0.86 - 0.02, 0.18 * fill));
     }
   }
-  paintPerson(canvas, feetAt(s, 0.92, 0.94), s.height * 0.38, _governor, facingLeft: true, blink: blinkAt(v.time, 0.3));
+  paintPerson(
+    canvas,
+    feetAt(s, 0.92, 0.94),
+    s.height * 0.38,
+    _governor,
+    facingLeft: true,
+    blink: blinkAt(v.time, 0.3),
+  );
 }
 
 // 6. Joseph pardonne à ses frères.

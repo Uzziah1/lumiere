@@ -81,7 +81,10 @@ class VillageStage extends StoryStage {
         for (final (i, style) in [NoahFamily.ham, NoahFamily.shem, NoahFamily.japheth].indexed)
           (
             style: style,
-            feet: Offset(s.width * (0.62 + i * 0.08), ground.heightAt(s.width * (0.62 + i * 0.08)) + s.height * 0.06),
+            feet: Offset(
+              s.width * (0.62 + i * 0.08),
+              ground.heightAt(s.width * (0.62 + i * 0.08)) + s.height * 0.06,
+            ),
             height: s.height * 0.38,
             phase: i * 0.9 + 0.5,
           ),
@@ -214,7 +217,11 @@ class GodSpeaksStage extends StoryStage {
   @override
   void render(Canvas canvas) {
     final s = size.toSize();
-    paintSky(canvas, const [Color(0xFF3E4C7A), Color(0xFF8A6F9E), Color(0xFFF2B98A)], stops: const [0, 0.55, 1]);
+    paintSky(
+      canvas,
+      const [Color(0xFF3E4C7A), Color(0xFF8A6F9E), Color(0xFFF2B98A)],
+      stops: const [0, 0.55, 1],
+    );
     final star = Paint()..color = const Color(0xCCFFF6DC);
     final random = math.Random(8);
     for (var i = 0; i < 40; i++) {
@@ -307,7 +314,12 @@ class BuildingStage extends StoryStage {
     }
     // Planches empilées à côté du chantier.
     for (var i = 0; i < 4 - (step * 0.8).floor(); i++) {
-      final r = Rect.fromLTWH(s.width * 0.82, s.height * 0.9 - i * s.height * 0.025, s.width * 0.14, s.height * 0.022);
+      final r = Rect.fromLTWH(
+        s.width * 0.82,
+        s.height * 0.9 - i * s.height * 0.025,
+        s.width * 0.14,
+        s.height * 0.022,
+      );
       drawPaper(
         canvas,
         Path()..addRRect(RRect.fromRectAndRadius(r, const Radius.circular(3))),
@@ -527,7 +539,13 @@ class RainStage extends StoryStage {
       final x = (fx * s.width + ambient * (8 + i * 4)) % (s.width + 200) - 100;
       canvas.save();
       canvas.translate(x, s.height * (0.12 + i * 0.05));
-      drawPaper(canvas, cloudPath(Offset.zero, s.width * 0.28), const Color(0xFF6B7891), elevation: 4, light: 0.15);
+      drawPaper(
+        canvas,
+        cloudPath(Offset.zero, s.width * 0.28),
+        const Color(0xFF6B7891),
+        elevation: 4,
+        light: 0.15,
+      );
       canvas.restore();
     }
     paintWaves(canvas, s, _level - s.height * 0.05, ambient, to: 2);
@@ -606,7 +624,8 @@ class DoveStage extends StoryStage {
       1 => Offset.lerp(_windowPos, far, ease)! + Offset(0, -math.sin(ease * math.pi) * size.y * 0.12),
       2 => far,
       3 =>
-        Offset.lerp(far, _roof - Offset(0, size.y * 0.04), ease)! + Offset(0, -math.sin(ease * math.pi) * size.y * 0.1),
+        Offset.lerp(far, _roof - Offset(0, size.y * 0.04), ease)! +
+            Offset(0, -math.sin(ease * math.pi) * size.y * 0.1),
       4 => _roof - Offset(0, size.y * 0.04),
       _ => _windowPos,
     };
@@ -682,8 +701,19 @@ class ExitStage extends StoryStage {
       ..addAll([
         for (final (i, p) in family.indexed)
           _Walker(person: p, delay: 0.4 + i * 0.7, target: 0.56 + i * 0.075, height: h),
-        for (final (i, a) in const [Animal.elephant, Animal.giraffe, Animal.lion, Animal.sheep, Animal.rabbit].indexed)
-          _Walker(animal: a, delay: 0.75 + i * 0.7, target: 0.6 + i * 0.07, height: s.height * (0.12 - i * 0.01)),
+        for (final (i, a) in const [
+          Animal.elephant,
+          Animal.giraffe,
+          Animal.lion,
+          Animal.sheep,
+          Animal.rabbit,
+        ].indexed)
+          _Walker(
+            animal: a,
+            delay: 0.75 + i * 0.7,
+            target: 0.6 + i * 0.07,
+            height: s.height * (0.12 - i * 0.01),
+          ),
       ]);
   }
 
@@ -741,7 +771,11 @@ class ExitStage extends StoryStage {
     drawPaper(
       canvas,
       Path()..addOval(
-        Rect.fromCenter(center: Offset(s.width * 0.62, s.height * 0.27), width: s.width * 0.2, height: s.height * 0.16),
+        Rect.fromCenter(
+          center: Offset(s.width * 0.62, s.height * 0.27),
+          width: s.width * 0.2,
+          height: s.height * 0.16,
+        ),
       ),
       const Color(0xFFF7F4EE),
       elevation: 0,
@@ -865,7 +899,11 @@ class RainbowStage extends StoryStage {
         blink: _blinkAt(ambient, i * 1.3),
       );
     }
-    paintAnimal(canvas, Animal.sheep, Rect.fromLTWH(s.width * 0.42, s.height * 0.86, s.height * 0.11, s.height * 0.11));
+    paintAnimal(
+      canvas,
+      Animal.sheep,
+      Rect.fromLTWH(s.width * 0.42, s.height * 0.86, s.height * 0.11, s.height * 0.11),
+    );
     paintAnimal(
       canvas,
       Animal.rabbit,

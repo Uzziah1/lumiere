@@ -65,13 +65,15 @@ void main() {
     final music = SilentMusicPlayer();
     final state = GameState(MemorySaveStore());
     state.addProfile(name: 'Awa', age: AgeGroup.bergers, avatar: 'lion');
-    await tester.pumpWidget(LumiereApp(
-      trackPlaytime: false,
-      narrator: SilentNarrator(instant: true),
-      sfx: SilentSoundEffects(),
-      music: music,
-      gameState: state,
-    ));
+    await tester.pumpWidget(
+      LumiereApp(
+        trackPlaytime: false,
+        narrator: SilentNarrator(instant: true),
+        sfx: SilentSoundEffects(),
+        music: music,
+        gameState: state,
+      ),
+    );
     await frames(tester);
     expect(music.current, MusicTrack.home);
 

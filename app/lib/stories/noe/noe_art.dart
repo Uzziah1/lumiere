@@ -13,7 +13,10 @@ import '../../theme/palette.dart';
 import '../registry.dart';
 
 void _sky(Canvas canvas, Size s, List<Color> colors) {
-  canvas.drawRect(Offset.zero & s, Paint()..shader = Gradient.linear(Offset.zero, Offset(0, s.height), colors));
+  canvas.drawRect(
+    Offset.zero & s,
+    Paint()..shader = Gradient.linear(Offset.zero, Offset(0, s.height), colors),
+  );
 }
 
 Rect _ark(Size s, double cx, double bottom, double width) {
@@ -35,7 +38,13 @@ void paintNoeThumb(Canvas canvas, Size s, String id) {
         elevation: 2,
       );
       Ark.paint(canvas, _ark(s, 0.6, 0.86, 0.66), build: 0.65);
-      paintPerson(canvas, Offset(s.width * 0.16, s.height * 0.97), s.height * 0.5, NoahFamily.noah, wave: 0.8);
+      paintPerson(
+        canvas,
+        Offset(s.width * 0.16, s.height * 0.97),
+        s.height * 0.5,
+        NoahFamily.noah,
+        wave: 0.8,
+      );
     case 'animals':
       _sky(canvas, s, day);
       drawPaper(
@@ -156,7 +165,11 @@ class ArkInterior implements SeekScene {
     // Mur de planches.
     canvas.drawRect(
       Offset.zero & s,
-      Paint()..shader = Gradient.linear(Offset.zero, Offset(0, s.height), const [Color(0xFF8A5634), Color(0xFFB57B4E)]),
+      Paint()
+        ..shader = Gradient.linear(Offset.zero, Offset(0, s.height), const [
+          Color(0xFF8A5634),
+          Color(0xFFB57B4E),
+        ]),
     );
     final seam = Paint()
       ..color = const Color(0x553E2214)
@@ -182,7 +195,12 @@ class ArkInterior implements SeekScene {
     drawPaper(
       canvas,
       Path()..addRect(
-        Rect.fromLTWH(window.left - s.width * 0.01, window.bottom, window.width + s.width * 0.02, s.height * 0.025),
+        Rect.fromLTWH(
+          window.left - s.width * 0.01,
+          window.bottom,
+          window.width + s.width * 0.02,
+          s.height * 0.025,
+        ),
       ),
       Ark.woodDark,
       elevation: 2,
@@ -202,7 +220,8 @@ class ArkInterior implements SeekScene {
     canvas.drawCircle(
       lamp,
       s.height * 0.16,
-      Paint()..shader = Gradient.radial(lamp, s.height * 0.16, [const Color(0x88FFD67E), const Color(0x00FFD67E)]),
+      Paint()
+        ..shader = Gradient.radial(lamp, s.height * 0.16, [const Color(0x88FFD67E), const Color(0x00FFD67E)]),
     );
     canvas.drawLine(
       Offset(lamp.dx, s.height * 0.1),

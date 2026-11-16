@@ -36,7 +36,9 @@ final naissancePack = StoryPack.scripted(
       paint: _etable,
     ),
     'bergers': StageScript(
-      targets: [for (final (x, y) in _angels) Rect.fromCenter(center: Offset(x, y), width: 0.14, height: 0.26)],
+      targets: [
+        for (final (x, y) in _angels) Rect.fromCenter(center: Offset(x, y), width: 0.14, height: 0.26),
+      ],
       sfx: Sfx.chime,
       paint: _bergers,
     ),
@@ -72,8 +74,18 @@ final naissancePack = StoryPack.scripted(
 const _angels = [(0.24, 0.24), (0.5, 0.16), (0.76, 0.24)];
 
 const _shepherds = [
-  PersonStyle(skin: Color(0xFF7D4A30), robe: Color(0xFF9C7A54), headcloth: Color(0xFFE6D8BE), beard: Color(0xFF2E1E15)),
-  PersonStyle(skin: Color(0xFFA06A45), robe: Color(0xFF8C7B66), headcloth: Color(0xFFF0E2C8), beard: Color(0xFF4A3323)),
+  PersonStyle(
+    skin: Color(0xFF7D4A30),
+    robe: Color(0xFF9C7A54),
+    headcloth: Color(0xFFE6D8BE),
+    beard: Color(0xFF2E1E15),
+  ),
+  PersonStyle(
+    skin: Color(0xFFA06A45),
+    robe: Color(0xFF8C7B66),
+    headcloth: Color(0xFFF0E2C8),
+    beard: Color(0xFF4A3323),
+  ),
   PersonStyle(
     skin: Color(0xFF8E5A3B),
     robe: Color(0xFFB08A60),
@@ -168,7 +180,11 @@ void _etable(Canvas canvas, Size s, StageView v) {
   paintThing(
     canvas,
     'star',
-    Rect.fromCenter(center: Offset(s.width * 0.5, s.height * 0.1), width: s.height * 0.08, height: s.height * 0.08),
+    Rect.fromCenter(
+      center: Offset(s.width * 0.5, s.height * 0.1),
+      width: s.height * 0.08,
+      height: s.height * 0.08,
+    ),
   );
   paintHills(canvas, s, v.time, baselines: const [0.76, 0.88], colors: Lands.night, seed: 161);
   paintThing(canvas, 'city', boxAt(s, 0.14, 0.78, 0.16, aspect: 1.6));
@@ -201,7 +217,11 @@ void _bergers(Canvas canvas, Size s, StageView v) {
     final t = v.shown(i);
     final (x, y) = _angels[i];
     if (t <= 0) {
-      canvas.drawCircle(Offset(s.width * x, s.height * y), s.height * 0.03, Paint()..color = const Color(0x55FFF6DC));
+      canvas.drawCircle(
+        Offset(s.width * x, s.height * y),
+        s.height * 0.03,
+        Paint()..color = const Color(0x55FFF6DC),
+      );
       continue;
     }
     canvas.saveLayer(Offset.zero & s, Paint()..color = Color.fromRGBO(0, 0, 0, t));
@@ -233,8 +253,22 @@ void _visite(Canvas canvas, Size s, StageView v) {
   paintThing(canvas, 'stable', boxAt(s, 0.74, 0.84, 0.56, aspect: 1.1), glow: 1);
   paintThing(canvas, 'manger', boxAt(s, 0.74, 0.92, 0.16, aspect: 1.2));
   paintBaby(canvas, Offset(s.width * 0.74, s.height * 0.78), s.height * 0.032, glow: 1);
-  paintPerson(canvas, feetAt(s, 0.64, 0.95), s.height * 0.34, NT.mary, facingLeft: false, blink: blinkAt(v.time, 0.5));
-  paintPerson(canvas, feetAt(s, 0.86, 0.95), s.height * 0.38, NT.joseph, facingLeft: true, blink: blinkAt(v.time, 1.5));
+  paintPerson(
+    canvas,
+    feetAt(s, 0.64, 0.95),
+    s.height * 0.34,
+    NT.mary,
+    facingLeft: false,
+    blink: blinkAt(v.time, 0.5),
+  );
+  paintPerson(
+    canvas,
+    feetAt(s, 0.86, 0.95),
+    s.height * 0.38,
+    NT.joseph,
+    facingLeft: true,
+    blink: blinkAt(v.time, 1.5),
+  );
   for (var i = 0; i < 3; i++) {
     final t = v.shown(i);
     final fx = 0.07 + i * 0.1 + t * (0.34 - i * 0.04);
@@ -281,7 +315,13 @@ void _mages(Canvas canvas, Size s, StageView v) {
     canvas.save();
     canvas.translate(go, 0);
     paintThing(canvas, 'camel', boxAt(s, x, 0.93, 0.26, aspect: 1.1));
-    paintPerson(canvas, feetAt(s, x - 0.01, 0.76), s.height * 0.22, _magi[i], blink: blinkAt(v.time, i * 1.2));
+    paintPerson(
+      canvas,
+      feetAt(s, x - 0.01, 0.76),
+      s.height * 0.22,
+      _magi[i],
+      blink: blinkAt(v.time, i * 1.2),
+    );
     canvas.restore();
   }
 }
@@ -300,10 +340,18 @@ void _seekBackground(Canvas canvas, Size s) {
 void _seekForeground(Canvas canvas, Size s) {
   final hay = Path()
     ..addOval(
-      Rect.fromCenter(center: Offset(s.width * 0.18, s.height * 0.94), width: s.width * 0.2, height: s.height * 0.2),
+      Rect.fromCenter(
+        center: Offset(s.width * 0.18, s.height * 0.94),
+        width: s.width * 0.2,
+        height: s.height * 0.2,
+      ),
     )
     ..addOval(
-      Rect.fromCenter(center: Offset(s.width * 0.66, s.height * 0.96), width: s.width * 0.16, height: s.height * 0.16),
+      Rect.fromCenter(
+        center: Offset(s.width * 0.66, s.height * 0.96),
+        width: s.width * 0.16,
+        height: s.height * 0.16,
+      ),
     );
   drawPaper(canvas, hay, const Color(0xFFE6C15A), elevation: 5, light: 0.18);
   paintThing(canvas, 'crate', boxAt(s, 0.42, 1.0, 0.12));

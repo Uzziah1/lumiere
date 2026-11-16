@@ -97,7 +97,13 @@ abstract final class NT {
       bareHead: true,
       scale: 0.68,
     ),
-    PersonStyle(skin: Color(0xFFA9714B), robe: Color(0xFF6FA8A3), headcloth: Color(0xFFF2D6B8), veil: true, scale: 0.9),
+    PersonStyle(
+      skin: Color(0xFFA9714B),
+      robe: Color(0xFF6FA8A3),
+      headcloth: Color(0xFFF2D6B8),
+      veil: true,
+      scale: 0.9,
+    ),
     PersonStyle(
       skin: Color(0xFF8E5A3B),
       robe: Color(0xFF8C79B5),
@@ -123,7 +129,14 @@ abstract final class NT {
 }
 
 /// Un ange : une silhouette lumineuse aux grandes ailes.
-void paintAngel(Canvas canvas, Offset feet, double h, double time, {double glow = 1, bool facingLeft = false}) {
+void paintAngel(
+  Canvas canvas,
+  Offset feet,
+  double h,
+  double time, {
+  double glow = 1,
+  bool facingLeft = false,
+}) {
   final center = feet - Offset(0, h * 0.55);
   canvas.drawCircle(
     center,
@@ -197,7 +210,13 @@ void paintGalilee(Canvas canvas, Size s, double time, {List<Color> sky = Skies.d
 }
 
 /// Jérusalem au loin : murailles claires et le temple.
-void paintJerusalem(Canvas canvas, Size s, double time, {List<Color> sky = Skies.desert, double horizon = 0.62}) {
+void paintJerusalem(
+  Canvas canvas,
+  Size s,
+  double time, {
+  List<Color> sky = Skies.desert,
+  double horizon = 0.62,
+}) {
   paintSkyGradient(canvas, s, sky);
   paintClouds(canvas, s, time, count: 2);
   final wall = Path()
@@ -265,7 +284,12 @@ void paintHouse(Canvas canvas, Size s, {Color wall = const Color(0xFFE6CFA3), do
       l.dx + s.height * 0.035,
       l.dy - s.height * 0.07,
     )
-    ..quadraticBezierTo(l.dx + s.height * 0.05, l.dy - s.height * 0.04, l.dx + s.height * 0.04, l.dy - s.height * 0.01)
+    ..quadraticBezierTo(
+      l.dx + s.height * 0.05,
+      l.dy - s.height * 0.04,
+      l.dx + s.height * 0.04,
+      l.dy - s.height * 0.01,
+    )
     ..close();
   canvas.drawPath(flame, Paint()..color = const Color(0xFFF29A45));
 }

@@ -43,7 +43,8 @@ class StoryPack {
       stages: {for (final MapEntry(:key, :value) in scripts.entries) key: () => ScriptedStage(value)},
       paintThumb: paintFinished,
       seekScene: seekScene,
-      paintSticker: (canvas, size) => paintStickerFrame(canvas, size, (c, s) => paintFinished(c, s, stickerScene)),
+      paintSticker: (canvas, size) =>
+          paintStickerFrame(canvas, size, (c, s) => paintFinished(c, s, stickerScene)),
     );
   }
 

@@ -33,7 +33,9 @@ final abrahamPack = StoryPack.scripted(
       paint: _tent,
     ),
     'stars': StageScript(
-      targets: [for (final (x, y) in _bigStars) Rect.fromCenter(center: Offset(x, y), width: 0.12, height: 0.16)],
+      targets: [
+        for (final (x, y) in _bigStars) Rect.fromCenter(center: Offset(x, y), width: 0.12, height: 0.16),
+      ],
       sfx: Sfx.chime,
       paint: _stars,
     ),
@@ -134,7 +136,13 @@ void _desert(
 void _call(Canvas canvas, Size s, StageView v) {
   _desert(canvas, s, v.time, sky: Skies.dawn, land: Lands.green);
   paintThing(canvas, 'city', boxAt(s, 0.82, 0.66, 0.22, aspect: 1.6));
-  paintHeavenlyLight(canvas, s, Offset(s.width * 0.3, -s.height * 0.05), v.time, intensity: 0.5 + 0.7 * v.eased);
+  paintHeavenlyLight(
+    canvas,
+    s,
+    Offset(s.width * 0.3, -s.height * 0.05),
+    v.time,
+    intensity: 0.5 + 0.7 * v.eased,
+  );
   paintPerson(
     canvas,
     feetAt(s, 0.56, 0.92),
@@ -360,7 +368,11 @@ void _seekForeground(Canvas canvas, Size s) {
   drawPaper(
     canvas,
     Path()..addOval(
-      Rect.fromCenter(center: Offset(s.width * 0.84, s.height * 0.96), width: s.width * 0.1, height: s.height * 0.1),
+      Rect.fromCenter(
+        center: Offset(s.width * 0.84, s.height * 0.96),
+        width: s.width * 0.1,
+        height: s.height * 0.1,
+      ),
     ),
     const Color(0xFFC9B48A),
     elevation: 4,

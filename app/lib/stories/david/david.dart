@@ -16,7 +16,8 @@ final davidPack = StoryPack.scripted(
   scripts: {
     'shepherd': StageScript(
       targets: [
-        for (final (x, y) in _sheepHomes) Rect.fromCenter(center: Offset(x, y - 0.06), width: 0.12, height: 0.16),
+        for (final (x, y) in _sheepHomes)
+          Rect.fromCenter(center: Offset(x, y - 0.06), width: 0.12, height: 0.16),
       ],
       paint: _shepherd,
     ),
@@ -34,7 +35,9 @@ final davidPack = StoryPack.scripted(
       paint: _goliath,
     ),
     'stones': StageScript(
-      targets: [for (final x in _stoneSpots) Rect.fromCenter(center: Offset(x, 0.74), width: 0.1, height: 0.14)],
+      targets: [
+        for (final x in _stoneSpots) Rect.fromCenter(center: Offset(x, 0.74), width: 0.1, height: 0.14),
+      ],
       paint: _stones,
     ),
     'sling': const StageScript(
@@ -165,7 +168,14 @@ void _shepherd(Canvas canvas, Size s, StageView v) {
 // 2. Le prophète Samuel verse l'huile sur la tête de David.
 void _anoint(Canvas canvas, Size s, StageView v) {
   _hills(canvas, s, v.time, sky: Skies.dawn);
-  paintPerson(canvas, feetAt(s, 0.36, 0.92), s.height * 0.46, _samuel, wave: 0.7, blink: blinkAt(v.time, 0.8));
+  paintPerson(
+    canvas,
+    feetAt(s, 0.36, 0.92),
+    s.height * 0.46,
+    _samuel,
+    wave: 0.7,
+    blink: blinkAt(v.time, 0.8),
+  );
   final horn = boxAt(s, 0.46, 0.52, 0.12);
   paintThing(canvas, 'horn', horn, glow: v.eased);
   final head = Offset(s.width * 0.56, s.height * 0.92 - s.height * 0.4 * 0.86 * 0.8);
@@ -186,7 +196,14 @@ void _anoint(Canvas canvas, Size s, StageView v) {
         ..maskFilter = MaskFilter.blur(BlurStyle.normal, s.height * 0.07),
     );
   }
-  paintPerson(canvas, feetAt(s, 0.56, 0.92), s.height * 0.4, david, facingLeft: true, blink: blinkAt(v.time, 1.7));
+  paintPerson(
+    canvas,
+    feetAt(s, 0.56, 0.92),
+    s.height * 0.4,
+    david,
+    facingLeft: true,
+    blink: blinkAt(v.time, 1.7),
+  );
   for (var k = 0; k < 3; k++) {
     paintPerson(
       canvas,
@@ -252,7 +269,11 @@ void _stones(Canvas canvas, Size s, StageView v) {
       paintThing(
         canvas,
         'stone',
-        Rect.fromCenter(center: at, width: s.height * 0.16 * (1 - t * 0.5), height: s.height * 0.16 * (1 - t * 0.5)),
+        Rect.fromCenter(
+          center: at,
+          width: s.height * 0.16 * (1 - t * 0.5),
+          height: s.height * 0.16 * (1 - t * 0.5),
+        ),
       );
     }
   }
@@ -303,7 +324,10 @@ void _sling(Canvas canvas, Size s, StageView v) {
         canvas,
         'star',
         Rect.fromCenter(
-          center: Offset(s.width * 0.5 + math.cos(a) * s.width * 0.03, s.height * 0.8 + math.sin(a) * s.height * 0.03),
+          center: Offset(
+            s.width * 0.5 + math.cos(a) * s.width * 0.03,
+            s.height * 0.8 + math.sin(a) * s.height * 0.03,
+          ),
           width: s.height * 0.04,
           height: s.height * 0.04,
         ),
@@ -357,7 +381,13 @@ void _psalm(Canvas canvas, Size s, StageView v) {
   paintStarField(canvas, s, v.time, count: 30, opacity: 0.8);
   paintHills(canvas, s, v.time, baselines: const [0.66, 0.78, 0.88], colors: Lands.green, seed: 137);
   for (final (fx, i) in const [(0.18, 0), (0.28, 1), (0.82, 2)]) {
-    paintAnimal(canvas, Animal.sheep, boxAt(s, fx, 0.94, 0.11), facingLeft: fx > 0.5, blink: blinkAt(v.time, i * 1.3));
+    paintAnimal(
+      canvas,
+      Animal.sheep,
+      boxAt(s, fx, 0.94, 0.11),
+      facingLeft: fx > 0.5,
+      blink: blinkAt(v.time, i * 1.3),
+    );
   }
   paintPerson(
     canvas,

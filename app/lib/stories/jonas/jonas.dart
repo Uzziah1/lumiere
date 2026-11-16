@@ -94,8 +94,19 @@ const _sailors = [
 ];
 
 const _ninevites = [
-  PersonStyle(skin: Color(0xFF9C6440), robe: Color(0xFF9C7A54), headcloth: Color(0xFFE6D8BE), beard: Color(0xFF3E2A1E)),
-  PersonStyle(skin: Color(0xFF7D4A30), robe: Color(0xFF8C7B66), headcloth: Color(0xFFF3E2C0), veil: true, scale: 0.92),
+  PersonStyle(
+    skin: Color(0xFF9C6440),
+    robe: Color(0xFF9C7A54),
+    headcloth: Color(0xFFE6D8BE),
+    beard: Color(0xFF3E2A1E),
+  ),
+  PersonStyle(
+    skin: Color(0xFF7D4A30),
+    robe: Color(0xFF8C7B66),
+    headcloth: Color(0xFFF3E2C0),
+    veil: true,
+    scale: 0.92,
+  ),
   PersonStyle(
     skin: Color(0xFFA06A45),
     robe: Color(0xFF7A6A58),
@@ -239,7 +250,12 @@ void _fish(Canvas canvas, Size s, StageView v) {
   _boat(canvas, s, Offset(s.width * 0.8, s.height * 0.32), s.height * 0.28, withJonah: false);
   // Jonas descend doucement, puis le poisson arrive.
   final swim = v.eased;
-  final fishBox = Rect.fromLTWH(s.width * (0.0 + 0.28 * swim), s.height * 0.46, s.width * 0.4, s.width * 0.24);
+  final fishBox = Rect.fromLTWH(
+    s.width * (0.0 + 0.28 * swim),
+    s.height * 0.46,
+    s.width * 0.4,
+    s.width * 0.24,
+  );
   if (swim < 0.8) {
     paintPerson(
       canvas,
@@ -265,7 +281,11 @@ void _fish(Canvas canvas, Size s, StageView v) {
 void _prayer(Canvas canvas, Size s, StageView v) {
   canvas.drawRect(
     Offset.zero & s,
-    Paint()..shader = Gradient.linear(Offset.zero, Offset(0, s.height), const [Color(0xFF5BB3D3), Color(0xFF1F5C86)]),
+    Paint()
+      ..shader = Gradient.linear(Offset.zero, Offset(0, s.height), const [
+        Color(0xFF5BB3D3),
+        Color(0xFF1F5C86),
+      ]),
   );
   final ashore = v.done ? (v.sinceDone / 1.5).clamp(0.0, 1.0) : 0.0;
   // La plage où le poisson va déposer Jonas.
@@ -279,7 +299,12 @@ void _prayer(Canvas canvas, Size s, StageView v) {
     const Color(0xFFE8CF96),
     elevation: 4,
   );
-  final fish = Rect.fromLTWH(s.width * (0.16 + 0.12 * ashore), s.height * 0.22, s.width * 0.6, s.width * 0.36);
+  final fish = Rect.fromLTWH(
+    s.width * (0.16 + 0.12 * ashore),
+    s.height * 0.22,
+    s.width * 0.6,
+    s.width * 0.36,
+  );
   paintBigFish(canvas, fish, mouth: ashore, time: v.time);
   // Une fenêtre ronde dans le poisson : Jonas, à genoux, prie.
   final window = Offset(fish.left + fish.width * 0.48, fish.top + fish.height * 0.55);
@@ -432,7 +457,11 @@ void _seekForeground(Canvas canvas, Size s) {
   drawPaper(
     canvas,
     Path()..addOval(
-      Rect.fromCenter(center: Offset(s.width * 0.2, s.height * 0.98), width: s.width * 0.12, height: s.height * 0.12),
+      Rect.fromCenter(
+        center: Offset(s.width * 0.2, s.height * 0.98),
+        width: s.width * 0.12,
+        height: s.height * 0.12,
+      ),
     ),
     const Color(0xFF8A8F98),
     elevation: 4,
@@ -440,7 +469,11 @@ void _seekForeground(Canvas canvas, Size s) {
   drawPaper(
     canvas,
     Path()..addOval(
-      Rect.fromCenter(center: Offset(s.width * 0.74, s.height * 0.97), width: s.width * 0.1, height: s.height * 0.1),
+      Rect.fromCenter(
+        center: Offset(s.width * 0.74, s.height * 0.97),
+        width: s.width * 0.1,
+        height: s.height * 0.1,
+      ),
     ),
     const Color(0xFF9AA0A8),
     elevation: 4,
@@ -448,7 +481,11 @@ void _seekForeground(Canvas canvas, Size s) {
   drawPaper(
     canvas,
     Path()..addOval(
-      Rect.fromCenter(center: Offset(s.width * 0.84, s.height * 0.7), width: s.width * 0.08, height: s.height * 0.08),
+      Rect.fromCenter(
+        center: Offset(s.width * 0.84, s.height * 0.7),
+        width: s.width * 0.08,
+        height: s.height * 0.08,
+      ),
     ),
     const Color(0xFF8A8F98),
     elevation: 4,
