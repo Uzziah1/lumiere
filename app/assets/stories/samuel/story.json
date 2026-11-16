@@ -1,0 +1,130 @@
+{
+  "id": "samuel",
+  "title": "Samuel entend Dieu",
+  "reference": "1 Samuel 1 à 3",
+  "intro": "Samuel entend Dieu. Une histoire de la Bible, dans le premier livre de Samuel.",
+  "scenes": [
+    {
+      "id": "anne",
+      "stage": "anne",
+      "reference": "1 Samuel 1.9-18",
+      "text": {
+        "agneaux": "Anne était triste : elle n'avait pas d'enfant. Elle pria Dieu de tout son cœur : « S'il te plaît, donne-moi un fils ! »",
+        "bergers": "Anne désirait très fort avoir un enfant, mais elle n'en avait pas. Un jour, dans la maison de Dieu à Silo, elle pria en pleurant : « Seigneur, si tu me donnes un fils, je te le donnerai pour qu'il te serve toute sa vie. » Le prêtre Éli lui dit : « Va en paix, que Dieu t'exauce ! »",
+        "explorateurs": "Anne, l'âme remplie d'amertume, pria l'Éternel et versa des pleurs. Elle fit un vœu, en disant : « Éternel des armées ! si tu daignes regarder l'affliction de ta servante et si tu donnes à ta servante un enfant mâle, je le consacrerai à l'Éternel pour tous les jours de sa vie. » Éli lui dit : « Va en paix, et que le Dieu d'Israël exauce la prière que tu lui as adressée ! »"
+      },
+      "action": "Touche Anne pendant qu'elle prie."
+    },
+    {
+      "id": "bebe",
+      "stage": "bebe",
+      "reference": "1 Samuel 1.19-28",
+      "text": {
+        "agneaux": "Dieu entendit Anne : elle eut un bébé, Samuel ! Quand il fut grand, elle l'amena à la maison de Dieu.",
+        "bergers": "Dieu entendit la prière d'Anne : elle eut un fils et l'appela Samuel, ce qui veut dire « Dieu a entendu ». Quand Samuel fut assez grand, Anne tint sa promesse : elle l'amena à Silo, auprès d'Éli, pour servir Dieu.",
+        "explorateurs": "Anne devint enceinte et enfanta un fils, qu'elle nomma Samuel, « car, dit-elle, je l'ai demandé à l'Éternel ». Quand elle l'eut sevré, elle le fit monter avec elle à la maison de l'Éternel à Silo, et dit à Éli : « C'était pour cet enfant que je priais, et l'Éternel a exaucé la prière que je lui adressais. Aussi je veux le prêter à l'Éternel. »"
+      },
+      "action": "Fais glisser la famille jusqu'à la maison de Dieu."
+    },
+    {
+      "id": "lampes",
+      "stage": "lampes",
+      "reference": "1 Samuel 2.18-26",
+      "text": {
+        "agneaux": "Samuel aidait le vieux prêtre Éli dans la maison de Dieu. Chaque année, sa maman lui apportait une petite tunique neuve.",
+        "bergers": "Samuel grandissait dans la maison de Dieu. Il aidait Éli, le vieux prêtre, et portait un petit vêtement de lin. Chaque année, sa maman lui cousait une petite tunique neuve et la lui apportait. Samuel plaisait à Dieu et aux gens.",
+        "explorateurs": "Samuel faisait le service devant l'Éternel, et cet enfant était revêtu d'un éphod de lin. Sa mère lui faisait chaque année une petite robe, qu'elle lui apportait en montant avec son mari pour offrir le sacrifice annuel. Le jeune Samuel continuait à grandir, et il était agréable à l'Éternel et aux hommes."
+      },
+      "action": "Touche les lampes pour aider Samuel à les allumer."
+    },
+    {
+      "id": "appel",
+      "stage": "appel",
+      "reference": "1 Samuel 3.2-8",
+      "text": {
+        "agneaux": "Une nuit, une voix appela : « Samuel ! » Il courut vers Éli : « Me voici ! » Mais ce n'était pas Éli. Cela arriva trois fois !",
+        "bergers": "Une nuit, Samuel était couché dans la maison de Dieu, près de la lampe allumée. Une voix l'appela : « Samuel ! » Il courut vers Éli : « Me voici, tu m'as appelé ! » Éli répondit : « Je ne t'ai pas appelé, recouche-toi. » Cela arriva trois fois.",
+        "explorateurs": "La lampe de Dieu n'était pas encore éteinte, et Samuel était couché dans le temple de l'Éternel, où était l'arche de Dieu. Alors l'Éternel appela Samuel. Il répondit : « Me voici ! » et il courut vers Éli. Éli répondit : « Je n'ai point appelé ; retourne te coucher. » L'Éternel appela de nouveau, une troisième fois. Samuel ne connaissait pas encore l'Éternel."
+      },
+      "action": "Touche Samuel trois fois : il court vers Éli !"
+    },
+    {
+      "id": "ecoute",
+      "stage": "ecoute",
+      "reference": "1 Samuel 3.8-10",
+      "text": {
+        "agneaux": "Éli comprit : c'était Dieu qui appelait ! Samuel répondit : « Parle, je t'écoute. »",
+        "bergers": "Éli comprit que c'était Dieu qui appelait l'enfant. Il dit à Samuel : « Si on t'appelle encore, réponds : Parle, Seigneur, car ton serviteur écoute. » Dieu appela encore : « Samuel, Samuel ! » Et Samuel répondit : « Parle, car ton serviteur écoute. »",
+        "explorateurs": "Éli comprit que c'était l'Éternel qui appelait l'enfant, et il dit à Samuel : « Va, couche-toi ; et si l'on t'appelle, tu diras : Parle, Éternel, car ton serviteur écoute. » L'Éternel vint et se présenta, et il appela comme les autres fois : « Samuel, Samuel ! » Et Samuel répondit : « Parle, car ton serviteur écoute. »"
+      },
+      "action": "Touche Samuel pour qu'il réponde à Dieu."
+    },
+    {
+      "id": "prophete",
+      "stage": "prophete",
+      "reference": "1 Samuel 3.19-21",
+      "text": {
+        "agneaux": "Samuel grandit, et Dieu lui parlait souvent. Il transmettait la parole de Dieu à tout le peuple.",
+        "bergers": "Samuel grandit, et Dieu était avec lui. Tout ce que Samuel annonçait de la part de Dieu se réalisait. Dans tout le pays, on savait que Samuel était un prophète, quelqu'un qui écoute Dieu et transmet sa parole.",
+        "explorateurs": "Samuel grandissait. L'Éternel était avec lui, et il ne laissa aucune de ses paroles sans effet. Tout Israël, depuis Dan jusqu'à Beer-Schéba, reconnut que Samuel était établi prophète de l'Éternel. L'Éternel se révélait à Samuel par la parole de l'Éternel."
+      },
+      "action": "Touche Samuel trois fois pour le voir grandir !",
+      "after": {
+        "all": "Toi aussi, tu peux dire à Dieu : « Parle, je t'écoute. »"
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "anne", "label": "Anne prie" },
+        { "id": "bebe", "label": "Samuel à Silo" },
+        { "id": "lampes", "label": "Samuel aide Éli" },
+        { "id": "appel", "label": "« Samuel ! »" },
+        { "id": "ecoute", "label": "« Parle, j'écoute »" },
+        { "id": "prophete", "label": "Le prophète" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Dans la maison de Dieu, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "lamp", "label": "la lampe" },
+        { "id": "scroll", "label": "le rouleau" },
+        { "id": "jar", "label": "la jarre d'huile" },
+        { "id": "snail", "label": "l'escargot" },
+        { "id": "dove", "label": "la colombe" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "owl", "label": "le hibou" },
+        { "id": "bread", "label": "le pain" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["lamp", "bread", "scroll", "tent", "moon", "dove"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Parle, car ton serviteur écoute.",
+    "reference": "1 Samuel 3.10",
+    "spoken": "Premier livre de Samuel, chapitre 3, verset 10 : Parle, car ton serviteur écoute.",
+    "chunks": {
+      "bergers": ["Parle,", "car ton serviteur", "écoute."],
+      "explorateurs": ["Parle,", "car", "ton", "serviteur", "écoute."]
+    },
+    "referenceChoices": ["1 Samuel 3.10", "1 Samuel 10.3", "2 Samuel 3.10"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "samuel", "title": "Parle, j'écoute" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Samuel. Voici ton autocollant pour ton album !"
+}

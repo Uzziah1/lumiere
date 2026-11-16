@@ -1,0 +1,130 @@
+{
+  "id": "ruth",
+  "title": "Ruth et Naomi",
+  "reference": "Ruth 1 à 4",
+  "intro": "Ruth et Naomi. Une histoire de la Bible, dans le livre de Ruth.",
+  "scenes": [
+    {
+      "id": "promesse",
+      "stage": "promesse",
+      "reference": "Ruth 1.1-18",
+      "text": {
+        "agneaux": "Naomi était triste et toute seule. Elle voulait rentrer chez elle. Ruth lui dit : « Je viens avec toi ! Ton Dieu sera mon Dieu. »",
+        "bergers": "Naomi vivait loin de son pays, à Moab. Son mari et ses deux fils étaient morts, et elle décida de rentrer à Bethléhem. Elle dit à ses deux belles-filles : « Retournez chez vos mamans. » Orpa partit, mais Ruth la serra fort : « Où tu iras, j'irai. Ton peuple sera mon peuple, et ton Dieu sera mon Dieu. »",
+        "explorateurs": "Au temps des juges, il y eut une famine, et Élimélec partit avec sa femme Naomi et ses deux fils au pays de Moab. Élimélec mourut, puis ses deux fils, et Naomi resta seule avec ses belles-filles, Orpa et Ruth. Naomi voulut retourner à Bethléhem. Orpa baisa sa belle-mère, mais Ruth s'attacha à elle : « Où tu iras j'irai, où tu demeureras je demeurerai ; ton peuple sera mon peuple, et ton Dieu sera mon Dieu. »"
+      },
+      "action": "Touche Ruth !"
+    },
+    {
+      "id": "voyage",
+      "stage": "voyage",
+      "reference": "Ruth 1.19-22",
+      "text": {
+        "agneaux": "Ruth et Naomi marchèrent ensemble jusqu'à Bethléhem.",
+        "bergers": "Ruth et Naomi firent ensemble le long chemin jusqu'à Bethléhem. Elles arrivèrent au moment où l'on commençait à récolter l'orge dans les champs.",
+        "explorateurs": "Naomi et Ruth la Moabite firent route ensemble jusqu'à leur arrivée à Bethléhem. Toute la ville fut émue à cause d'elles. Elles arrivèrent à Bethléhem au commencement de la moisson des orges."
+      },
+      "action": "Fais glisser Ruth et Naomi sur le chemin de Bethléhem."
+    },
+    {
+      "id": "glaner",
+      "stage": "glaner",
+      "reference": "Ruth 2.1-3",
+      "text": {
+        "agneaux": "Pour avoir à manger, Ruth alla dans un champ ramasser les épis que les moissonneurs laissaient tomber.",
+        "bergers": "Ruth et Naomi étaient pauvres. Ruth dit : « Je vais aller ramasser les épis qui restent derrière les moissonneurs. » Elle travailla courageusement dans un champ, du matin jusqu'au soir.",
+        "explorateurs": "Ruth la Moabite dit à Naomi : « Laisse-moi, je te prie, aller glaner des épis dans le champ de celui aux yeux duquel je trouverai grâce. » Elle alla glaner dans un champ derrière les moissonneurs. Et il se trouva par hasard que la pièce de terre appartenait à Boaz, de la famille d'Élimélec."
+      },
+      "action": "Touche les épis pour aider Ruth à les ramasser !"
+    },
+    {
+      "id": "boaz",
+      "stage": "boaz",
+      "reference": "Ruth 2.8-17",
+      "text": {
+        "agneaux": "Le maître du champ, Boaz, était très gentil. Il dit à ses ouvriers : « Laissez tomber des épis exprès pour elle ! »",
+        "bergers": "Le maître du champ s'appelait Boaz. Il avait entendu comme Ruth était bonne pour Naomi. Il lui dit : « Reste dans mon champ, tu seras en sécurité. » Et il dit en secret à ses ouvriers : « Laissez tomber des épis exprès pour elle. » Le soir, Ruth rapporta beaucoup d'orge à Naomi !",
+        "explorateurs": "Boaz dit à Ruth : « On m'a rapporté tout ce que tu as fait pour ta belle-mère. Que l'Éternel te rende ce que tu as fait, et que ta récompense soit entière de la part de l'Éternel, le Dieu d'Israël, sous les ailes duquel tu es venue te réfugier ! » Puis il donna cet ordre à ses serviteurs : « Vous ôterez même pour elle des gerbes quelques épis, que vous la laisserez glaner. »"
+      },
+      "action": "Touche Boaz trois fois pour qu'il laisse des épis à Ruth !"
+    },
+    {
+      "id": "mariage",
+      "stage": "mariage",
+      "reference": "Ruth 4.9-13",
+      "text": {
+        "agneaux": "Boaz aimait Ruth. Il se maria avec elle, et tout le monde fit la fête !",
+        "bergers": "Boaz était de la famille de Naomi. Devant les anciens de la ville, il promit de prendre soin de Naomi et d'épouser Ruth. Tout le village était témoin et se réjouissait avec eux.",
+        "explorateurs": "Boaz dit aux anciens et à tout le peuple : « Vous êtes aujourd'hui témoins que j'ai acquis aussi pour femme Ruth la Moabite. » Tout le peuple qui était à la porte et les anciens dirent : « Nous en sommes témoins ! Que l'Éternel rende la femme qui entre dans ta maison semblable à Rachel et à Léa. » Boaz prit Ruth, qui devint sa femme."
+      },
+      "action": "Touche les mariés !"
+    },
+    {
+      "id": "obed",
+      "stage": "obed",
+      "reference": "Ruth 4.13-17",
+      "text": {
+        "agneaux": "Ruth et Boaz eurent un bébé, Obed. Naomi n'était plus triste du tout ! Obed fut le grand-père du roi David.",
+        "bergers": "Ruth et Boaz eurent un fils, Obed. Naomi le prit dans ses bras, toute joyeuse. Les femmes disaient : « Béni soit Dieu, qui ne t'a pas abandonnée ! » Et devine quoi : Obed fut le grand-père du roi David !",
+        "explorateurs": "L'Éternel permit à Ruth de concevoir, et elle enfanta un fils. Les femmes dirent à Naomi : « Béni soit l'Éternel, qui ne t'a point laissé manquer aujourd'hui d'un homme qui ait droit de rachat ! » Naomi prit l'enfant et le mit sur son sein. Elles l'appelèrent Obed. Ce fut le père d'Isaï, père de David."
+      },
+      "action": "Touche le bébé Obed !",
+      "after": {
+        "all": "Ruth a été fidèle et bonne, et Dieu a pris soin d'elle."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "promesse", "label": "« Ton Dieu sera mon Dieu »" },
+        { "id": "voyage", "label": "Vers Bethléhem" },
+        { "id": "glaner", "label": "Les épis" },
+        { "id": "boaz", "label": "Boaz est bon" },
+        { "id": "mariage", "label": "Le mariage" },
+        { "id": "obed", "label": "Le bébé Obed" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Dans le champ d'orge, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "wheat", "label": "l'épi" },
+        { "id": "basket", "label": "le panier" },
+        { "id": "jar", "label": "la jarre" },
+        { "id": "bread", "label": "le pain" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "rabbit", "label": "le lapin" },
+        { "id": "ladybug", "label": "la coccinelle" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["wheat", "basket", "bread", "city", "flower", "harp"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Où tu iras j'irai, où tu demeureras je demeurerai ; ton peuple sera mon peuple, et ton Dieu sera mon Dieu.",
+    "reference": "Ruth 1.16",
+    "spoken": "Ruth, chapitre 1, verset 16 : Où tu iras j'irai, où tu demeureras je demeurerai ; ton peuple sera mon peuple, et ton Dieu sera mon Dieu.",
+    "chunks": {
+      "bergers": ["Où tu iras j'irai,", "où tu demeureras je demeurerai ;", "ton peuple sera mon peuple,", "et ton Dieu sera mon Dieu."],
+      "explorateurs": ["Où tu iras", "j'irai,", "où tu demeureras", "je demeurerai ;", "ton peuple sera mon peuple,", "et ton Dieu sera mon Dieu."]
+    },
+    "referenceChoices": ["Ruth 1.16", "Ruth 16.1", "Rois 1.16"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "ruth", "title": "Le champ de Boaz" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Ruth. Voici ton autocollant pour ton album !"
+}
