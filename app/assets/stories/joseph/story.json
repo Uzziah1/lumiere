@@ -1,0 +1,130 @@
+{
+  "id": "joseph",
+  "title": "Joseph et ses frères",
+  "reference": "Genèse 37 à 45",
+  "intro": "Joseph et ses frères. Une histoire de la Bible, dans le livre de la Genèse.",
+  "scenes": [
+    {
+      "id": "tunique",
+      "stage": "coat",
+      "reference": "Genèse 37.3-4",
+      "text": {
+        "agneaux": "Jacob avait douze fils. Il aimait beaucoup Joseph, et lui offrit une belle tunique de toutes les couleurs.",
+        "bergers": "Jacob avait douze fils. Il aimait Joseph plus que les autres, et il lui fit une magnifique tunique de toutes les couleurs. Ses frères devinrent jaloux.",
+        "explorateurs": "Jacob, qu'on appelait aussi Israël, avait douze fils. Il aimait Joseph plus que tous ses autres fils, parce qu'il l'avait eu dans sa vieillesse, et il lui fit une tunique de plusieurs couleurs. Ses frères le virent et se mirent à le haïr."
+      },
+      "action": "Touche la tunique pour lui donner ses couleurs !"
+    },
+    {
+      "id": "reves",
+      "stage": "dreams",
+      "reference": "Genèse 37.5-11",
+      "text": {
+        "agneaux": "Joseph fit des rêves étonnants : des gerbes de blé, le soleil, la lune et onze étoiles s'inclinaient devant lui.",
+        "bergers": "Joseph raconta ses rêves à sa famille : des gerbes de blé s'inclinaient devant la sienne ; puis le soleil, la lune et onze étoiles s'inclinaient devant lui. Ses frères furent encore plus jaloux.",
+        "explorateurs": "Joseph eut un songe : ses gerbes et celles de ses frères étaient dans les champs, et les gerbes de ses frères se prosternaient devant la sienne. Puis il rêva que le soleil, la lune et onze étoiles se prosternaient devant lui. Ses frères eurent de l'envie contre lui, mais son père garda le souvenir de ces choses."
+      },
+      "action": "Touche le blé, le soleil et la lune du rêve !"
+    },
+    {
+      "id": "puits",
+      "stage": "pit",
+      "reference": "Genèse 37.18-28",
+      "text": {
+        "agneaux": "Les frères, jaloux, jetèrent Joseph dans un trou. Puis ils le vendirent à des marchands qui partaient en Égypte.",
+        "bergers": "Un jour, loin de la maison, les frères jetèrent Joseph dans une citerne vide. Puis ils le vendirent à des marchands qui passaient avec leurs chameaux. Joseph fut emmené en Égypte. Mais Dieu était avec lui.",
+        "explorateurs": "Quand ils le virent de loin, les frères complotèrent contre Joseph. Ils lui ôtèrent sa tunique et le jetèrent dans une citerne vide. Puis, voyant passer une caravane de marchands ismaélites qui descendaient en Égypte, ils le vendirent pour vingt pièces d'argent. Mais l'Éternel fut avec Joseph."
+      },
+      "action": "Touche la caravane des marchands."
+    },
+    {
+      "id": "pharaon",
+      "stage": "pharaoh",
+      "reference": "Genèse 41.14-43",
+      "text": {
+        "agneaux": "En Égypte, le roi Pharaon fit un rêve. Dieu aida Joseph à le comprendre. Pharaon fit de Joseph un grand chef !",
+        "bergers": "Des années plus tard, Pharaon, le roi d'Égypte, fit des rêves que personne ne comprenait. Joseph dit : « Ce n'est pas moi, c'est Dieu qui donnera la réponse. » Sept années d'abondance allaient venir, puis sept années de famine. Pharaon fit de Joseph le gouverneur de toute l'Égypte.",
+        "explorateurs": "Pharaon rêva de sept vaches grasses mangées par sept vaches maigres, et de sept épis pleins avalés par sept épis maigres. Joseph répondit : « Ce n'est pas moi ! C'est Dieu qui donnera une réponse favorable à Pharaon. » Il annonça sept années d'abondance, puis sept années de famine. Pharaon lui dit : « Je t'établis sur tout le pays d'Égypte », et il lui mit un collier d'or au cou."
+      },
+      "action": "Touche Pharaon !"
+    },
+    {
+      "id": "greniers",
+      "stage": "granary",
+      "reference": "Genèse 41.47-57",
+      "text": {
+        "agneaux": "Joseph fit remplir de grands greniers de blé. Ainsi, quand la famine arriva, tout le monde put manger.",
+        "bergers": "Pendant les sept bonnes années, Joseph fit ranger le blé dans de grands greniers. Quand vint la famine, il y avait du pain pour l'Égypte, et des gens venaient de partout pour acheter du blé.",
+        "explorateurs": "Pendant les sept années d'abondance, Joseph amassa du blé comme le sable de la mer, en si grande quantité qu'on cessa de compter. Puis la famine arriva sur toute la terre, et l'on venait de tous les pays en Égypte pour acheter du blé auprès de Joseph."
+      },
+      "action": "Touche les greniers pour les remplir de blé !"
+    },
+    {
+      "id": "pardon",
+      "stage": "forgive",
+      "reference": "Genèse 42 à 45 ; 50.20",
+      "text": {
+        "agneaux": "Les frères de Joseph vinrent chercher du blé. Joseph leur dit : « C'est moi, Joseph ! » Et il leur pardonna.",
+        "bergers": "Les frères de Joseph vinrent en Égypte pour acheter du blé, sans le reconnaître. Joseph pleura et leur dit : « Je suis Joseph, votre frère ! N'ayez pas peur. Dieu m'a envoyé ici pour vous sauver la vie. » Et il les serra dans ses bras.",
+        "explorateurs": "Les frères vinrent acheter du blé et se prosternèrent devant le gouverneur, sans savoir que c'était Joseph : son rêve s'accomplissait. Joseph ne put se contenir : « Je suis Joseph, votre frère, que vous avez vendu. Ne soyez pas fâchés : c'est pour vous sauver la vie que Dieu m'a envoyé devant vous. » Il embrassa ses frères en pleurant."
+      },
+      "action": "Touche Joseph !",
+      "after": {
+        "all": "Joseph dit à ses frères : « Vous vouliez me faire du mal, mais Dieu l'a changé en bien. »"
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "coat", "label": "La tunique" },
+        { "id": "dreams", "label": "Les rêves" },
+        { "id": "pit", "label": "Vendu aux marchands" },
+        { "id": "pharaoh", "label": "Devant Pharaon" },
+        { "id": "granary", "label": "Les greniers" },
+        { "id": "forgive", "label": "Le pardon" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Des objets et des animaux se cachent près des greniers ! Retrouve-les.",
+      "items": [
+        { "id": "jar", "label": "la jarre" },
+        { "id": "basket", "label": "le panier" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "frog", "label": "la grenouille" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "tortoise", "label": "la tortue" },
+        { "id": "snail", "label": "l'escargot" },
+        { "id": "ladybug", "label": "la coccinelle" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire de Joseph.",
+      "pairs": ["coat", "wheat", "star", "moon", "sun", "crown"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Vous aviez médité de me faire du mal : Dieu l'a changé en bien.",
+    "reference": "Genèse 50.20",
+    "spoken": "Genèse, chapitre 50, verset 20 : Vous aviez médité de me faire du mal : Dieu l'a changé en bien.",
+    "chunks": {
+      "bergers": ["Vous aviez médité", "de me faire du mal :", "Dieu l'a changé", "en bien."],
+      "explorateurs": ["Vous aviez", "médité", "de me faire", "du mal :", "Dieu l'a changé", "en bien."]
+    },
+    "referenceChoices": ["Genèse 50.20", "Exode 20.12", "Genèse 5.20"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "joseph", "title": "La tunique de Joseph" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Joseph. Voici ton autocollant pour ton album !"
+}
