@@ -7,6 +7,7 @@ import '../story/story_game.dart';
 import '../theme/palette.dart';
 import 'abraham/abraham.dart';
 import 'creation/creation.dart';
+import 'david/david.dart';
 import 'eden/eden.dart';
 import 'joseph/joseph.dart';
 import 'moise/moise.dart';
@@ -141,6 +142,7 @@ final Map<String, StoryPack> storyPacks = {
   'abraham': abrahamPack,
   'joseph': josephPack,
   'moise': moisePack,
+  'david': davidPack,
   'noe': StoryPack(
     stages: noeStages,
     paintThumb: paintNoeThumb,

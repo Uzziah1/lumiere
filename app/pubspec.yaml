@@ -76,6 +76,8 @@ flutter:
     - assets/stories/joseph/audio/
     - assets/stories/moise/
     - assets/stories/moise/audio/
+    - assets/stories/david/
+    - assets/stories/david/audio/
 
   fonts:
     - family: Fredoka

@@ -1,0 +1,130 @@
+{
+  "id": "david",
+  "title": "David et Goliath",
+  "reference": "1 Samuel 16 et 17",
+  "intro": "David et Goliath. Une histoire de la Bible, dans le premier livre de Samuel.",
+  "scenes": [
+    {
+      "id": "berger",
+      "stage": "shepherd",
+      "reference": "1 Samuel 16.11 ; 17.34-35",
+      "text": {
+        "agneaux": "David était un jeune berger. Il prenait soin de ses moutons, et il jouait de la harpe pour Dieu.",
+        "bergers": "David était le plus jeune des huit fils d'Isaï, à Bethléhem. Il gardait les moutons de son père, les protégeait des bêtes sauvages, et jouait de la harpe en chantant pour Dieu.",
+        "explorateurs": "David, le plus jeune fils d'Isaï de Bethléhem, faisait paître les brebis de son père. Il raconta plus tard qu'un lion ou un ours venait parfois enlever une brebis du troupeau, et qu'il la délivrait de sa gueule. David était aussi un excellent joueur de harpe."
+      },
+      "action": "Touche les moutons pour les rassembler près de David !"
+    },
+    {
+      "id": "onction",
+      "stage": "anoint",
+      "reference": "1 Samuel 16.1-13",
+      "text": {
+        "agneaux": "Dieu envoya le prophète Samuel. Il versa de l'huile sur la tête de David : un jour, David serait roi !",
+        "bergers": "Dieu envoya le prophète Samuel chez Isaï pour choisir le futur roi. Les grands frères de David étaient forts et beaux, mais Dieu dit : « L'homme regarde à l'apparence, mais moi, je regarde au cœur. » Samuel versa de l'huile sur la tête de David.",
+        "explorateurs": "L'Éternel envoya Samuel à Bethléhem. En voyant Éliab, le fils aîné d'Isaï, Samuel pensa que c'était lui. Mais l'Éternel dit : « Ne prends point garde à son apparence ; l'homme regarde à ce qui frappe les yeux, mais l'Éternel regarde au cœur. » On alla chercher David auprès des brebis, et Samuel prit la corne d'huile et l'oignit au milieu de ses frères. L'esprit de l'Éternel saisit David."
+      },
+      "action": "Touche la corne d'huile de Samuel !"
+    },
+    {
+      "id": "goliath",
+      "stage": "goliath",
+      "reference": "1 Samuel 17.4-32",
+      "text": {
+        "agneaux": "Un géant, Goliath, criait contre le peuple de Dieu. Tous les soldats avaient peur. Mais David dit : « Moi, j'irai ! »",
+        "bergers": "Les Philistins avaient un géant immense, Goliath, avec un casque et une grande armure. Chaque jour, il se moquait de l'armée d'Israël et de Dieu. Les soldats tremblaient. David arriva et dit : « N'ayez pas peur, j'irai combattre ce Philistin ! »",
+        "explorateurs": "Un géant philistin, Goliath de Gath, haut de six coudées et un empan, portait un casque d'airain et une cuirasse à écailles. Pendant quarante jours, il défia l'armée d'Israël, et tous furent saisis de crainte. David, venu apporter du pain à ses frères, dit au roi Saül : « Que personne ne se décourage à cause de ce Philistin ! Ton serviteur ira se battre contre lui. »"
+      },
+      "action": "Touche David pour qu'il s'avance !"
+    },
+    {
+      "id": "pierres",
+      "stage": "stones",
+      "reference": "1 Samuel 17.38-40",
+      "text": {
+        "agneaux": "David ne prit pas d'armure. Il prit son bâton, sa fronde, et cinq pierres bien lisses.",
+        "bergers": "Le roi Saül voulut donner son armure à David, mais elle était trop lourde. David prit son bâton de berger, choisit cinq pierres bien lisses dans le torrent, et prit sa fronde à la main.",
+        "explorateurs": "Saül revêtit David de ses vêtements, d'un casque et d'une cuirasse, mais David ne pouvait pas marcher avec. Il les ôta, prit son bâton, choisit dans le torrent cinq pierres polies, les mit dans sa gibecière de berger, et, sa fronde à la main, il s'avança vers le Philistin."
+      },
+      "action": "Touche les cinq pierres pour les ramasser !"
+    },
+    {
+      "id": "fronde",
+      "stage": "sling",
+      "reference": "1 Samuel 17.41-50",
+      "text": {
+        "agneaux": "David dit : « Je viens au nom de l'Éternel ! » Il lança une pierre avec sa fronde, et le géant tomba par terre !",
+        "bergers": "Goliath se moqua de David. Mais David répondit : « Tu viens avec une épée, et moi je viens au nom de l'Éternel ! » Il fit tourner sa fronde, la pierre partit et frappa le géant au front. Goliath tomba face contre terre !",
+        "explorateurs": "David dit au Philistin : « Tu marches contre moi avec l'épée, la lance et le javelot ; et moi, je marche contre toi au nom de l'Éternel des armées. Toute la terre saura qu'Israël a un Dieu. » David lança une pierre avec sa fronde ; elle s'enfonça dans le front du Philistin, qui tomba le visage contre terre."
+      },
+      "action": "Touche David pour qu'il lance sa fronde !"
+    },
+    {
+      "id": "psaume",
+      "stage": "psalm",
+      "reference": "2 Samuel 5.3 ; Psaume 23",
+      "text": {
+        "agneaux": "Plus tard, David devint roi. Il chantait pour Dieu : « L'Éternel est mon berger ! »",
+        "bergers": "Des années plus tard, David devint roi d'Israël. Il écrivit beaucoup de chants pour Dieu, les psaumes. Le plus connu dit : « L'Éternel est mon berger : je ne manquerai de rien. »",
+        "explorateurs": "Les anciens d'Israël oignirent David pour roi sur Israël. Le berger devenu roi composa de nombreux psaumes. Il savait que Dieu prenait soin de lui comme lui-même prenait soin de ses brebis : « L'Éternel est mon berger : je ne manquerai de rien. »"
+      },
+      "action": "Touche la harpe pour écouter le chant de David !",
+      "after": {
+        "all": "Avec Dieu, même un petit berger peut être très courageux !"
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "shepherd", "label": "Le berger" },
+        { "id": "anoint", "label": "L'huile de Samuel" },
+        { "id": "goliath", "label": "Le géant Goliath" },
+        { "id": "stones", "label": "Les cinq pierres" },
+        { "id": "sling", "label": "La fronde" },
+        { "id": "psalm", "label": "Le roi qui chante" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Des animaux se cachent dans les collines de Bethléhem ! Retrouve-les.",
+      "items": [
+        { "id": "sheep", "label": "le mouton" },
+        { "id": "harp", "label": "la harpe" },
+        { "id": "rabbit", "label": "le lapin" },
+        { "id": "owl", "label": "le hibou" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "tortoise", "label": "la tortue" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "snail", "label": "l'escargot" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire de David.",
+      "pairs": ["harp", "sheep", "stone", "sling", "crown", "lion"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "L'Éternel est mon berger : je ne manquerai de rien.",
+    "reference": "Psaume 23.1",
+    "spoken": "Psaume 23, verset 1 : L'Éternel est mon berger : je ne manquerai de rien.",
+    "chunks": {
+      "bergers": ["L'Éternel", "est mon berger :", "je ne manquerai", "de rien."],
+      "explorateurs": ["L'Éternel", "est", "mon berger :", "je ne", "manquerai", "de rien."]
+    },
+    "referenceChoices": ["Psaume 23.1", "Psaume 1.23", "1 Samuel 23.1"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "david", "title": "La harpe de David" },
+  "reward": "Bravo ! Tu as terminé l'histoire de David. Voici ton autocollant pour ton album !"
+}
