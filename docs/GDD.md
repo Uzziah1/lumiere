@@ -215,6 +215,7 @@ Une étape à la fois, validée par Uzziah avant la suivante.
 | nov. 2026 | Lot 3 : versets Josué 1.9, Juges 6.12, Ruth 1.16, 1 Samuel 3.10, 1 Rois 18.39, Daniel 6.23, Esther 4.14 ; Cana : Jean 2.5 |
 | nov. 2026 | L7 : deux nouveaux jeux, le puzzle de la scène (4, 6 ou 9 pièces selon l'âge, on échange deux pièces d'une touche, modèle à côté) et le quiz illustré (questions lues, réponses en images, une erreur efface seulement l'image) |
 | nov. 2026 | Rotation : chaque histoire propose 3 jeux sur 5 (chronologie, cache-cache, memory, puzzle, quiz) plus le verset, toujours 5 étoiles ; les étoiles déjà gagnées à un jeu retiré restent comptées |
+| nov. 2026 | Icône : une colombe blanche stylisée (ailes levées, rameau d'olivier) devant un disque doré, sur un fond de nuit bleu foncé, pour être reconnue d'un coup d'œil ; icône adaptative sur Android |
 
 ## 14. Questions ouvertes
 

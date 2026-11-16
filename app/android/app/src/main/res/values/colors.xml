@@ -2,4 +2,6 @@
 <resources>
     <!-- Couleur de l'horizon à l'aube, affichée pendant le démarrage. -->
     <color name="lumiere_dawn">#FFE6BE</color>
+    <!-- Fond de l'icône adaptative : le ciel de nuit de l'emblème. -->
+    <color name="ic_launcher_background">#14183A</color>
 </resources>

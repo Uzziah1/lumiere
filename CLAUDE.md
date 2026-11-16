@@ -55,7 +55,10 @@ et ressources libres, ou produits par nous.
 - Polices intégrées (OFL, `app/assets/fonts`) : **Fredoka** (titres, variable : graisse via `FontVariation`,
   voir `LumiereText.title`) et **Andika** (texte, faite pour les jeunes lecteurs).
 - **Colombe** (`lib/art/colombe.dart`) : la colombe guide, dessinée dans une boîte 100 × 80, ailes qui battent
-  (`flap`), yeux qui clignent (`blink`), rameau d'olivier. Les icônes de l'appli sont générées à partir d'elle :
+  (`flap`), yeux qui clignent (`blink`), rameau d'olivier.
+- **Icône** : l'emblème (`lib/art/emblem.dart`) — colombe blanche stylisée, ailes levées, rameau d'olivier vert,
+  devant un disque doré, sur un ciel de nuit `#14183A` ; aperçu `flutter test tool/emblem_preview_test.dart`.
+  Toutes les icônes (web, Android avec icône adaptative `mipmap-anydpi-v26`, iOS) :
   `flutter test tool/render_icons_test.dart` (depuis `app/`).
 - Composants d'interface : `PaperButton` (papier épais qui s'enfonce, `lib/widgets/paper_button.dart`),
   `LumiereTitle` (lettres de papier qui flottent).
@@ -207,6 +210,7 @@ et ressources libres, ou produits par nous.
 - **L6 — Les héros de la foi** ✅ : 7 histoires de l'Ancien Testament (Jéricho, Gédéon,
   Ruth, Samuel, Élie, Daniel, Esther) entre les deux Testaments sur la carte, coffre au trésor, et les noces de
   Cana dans le Nouveau Testament (11 histoires, jardin à 11 amis) ; 26 histoires en tout.
-- **L7 — Des jeux variés** ✅ (à valider par Uzziah) : puzzle de la scène et quiz illustré (61 questions dans
+- **L7 — Des jeux variés** ✅ : puzzle de la scène et quiz illustré (61 questions dans
   16 histoires), rotation de 3 jeux sur 5 par histoire, toujours 5 étoiles.
-- **L8** : à définir avec Uzziah (Play Store, voix réelles, lot 4, coloriage…).
+- **L8 — Nouvelle icône** ✅ (à valider par Uzziah) : emblème colombe sur fond de nuit, icône adaptative Android.
+- **L9** : à définir avec Uzziah (Play Store, voix réelles, lot 4, coloriage…).
