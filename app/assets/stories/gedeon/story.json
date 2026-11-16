@@ -1,0 +1,130 @@
+{
+  "id": "gedeon",
+  "title": "Gédéon et les trois cents",
+  "reference": "Juges 6 et 7",
+  "intro": "Gédéon et les trois cents. Une histoire de la Bible, dans le livre des Juges.",
+  "scenes": [
+    {
+      "id": "appel",
+      "stage": "appel",
+      "reference": "Juges 6.11-16",
+      "text": {
+        "agneaux": "Gédéon avait peur et se cachait pour préparer son blé. Un ange vint lui dire : « Dieu est avec toi, homme courageux ! »",
+        "bergers": "Le peuple de Dieu était maltraité par les Madianites, qui venaient prendre leurs récoltes. Gédéon battait son blé en cachette, au fond d'un pressoir. L'ange de l'Éternel lui apparut et lui dit : « L'Éternel est avec toi, vaillant héros ! Va délivrer ton peuple. » Gédéon répondit : « Mais je suis le plus petit de ma famille ! » Dieu dit : « Je serai avec toi. »",
+        "explorateurs": "Gédéon battait du froment au pressoir, pour le mettre à l'abri de Madian. L'ange de l'Éternel lui apparut, et lui dit : « L'Éternel est avec toi, vaillant héros ! » Gédéon dit : « Ah ! mon seigneur, avec quoi délivrerai-je Israël ? Voici, ma famille est la plus pauvre, et je suis le plus petit dans la maison de mon père. » L'Éternel lui dit : « Mais je serai avec toi. »"
+      },
+      "action": "Touche l'ange !"
+    },
+    {
+      "id": "toison",
+      "stage": "toison",
+      "reference": "Juges 6.36-40",
+      "text": {
+        "agneaux": "Gédéon posa une toison de laine par terre. Le matin, la laine était mouillée, et le sol tout sec ! Puis ce fut le contraire. Dieu lui répondait.",
+        "bergers": "Gédéon voulait être sûr que Dieu l'envoyait. Il posa une toison de laine sur le sol et pria : « Si la toison est mouillée de rosée et le sol sec, je saurai. » Le matin, il pressa la toison et en sortit une coupe d'eau ! La nuit suivante, il demanda l'inverse : la toison resta sèche, et tout le sol fut couvert de rosée.",
+        "explorateurs": "Gédéon dit à Dieu : « Je vais mettre une toison de laine dans l'aire ; si la toison seule se couvre de rosée et que tout le terrain reste sec, je connaîtrai que tu délivreras Israël par ma main. » Et il arriva ainsi : il pressa la toison et en fit sortir de la rosée, plein une coupe d'eau. La nuit suivante, Dieu fit ainsi : la toison seule resta sèche, et tout le terrain se couvrit de rosée."
+      },
+      "action": "Touche la toison deux fois : une fois par nuit."
+    },
+    {
+      "id": "armee",
+      "stage": "armee",
+      "reference": "Juges 7.2-7",
+      "text": {
+        "agneaux": "Gédéon avait beaucoup de soldats. Dieu dit : « C'est trop ! » Il n'en garda que trois cents.",
+        "bergers": "Trente-deux mille hommes vinrent aider Gédéon. Mais Dieu dit : « C'est trop. Sinon, ils diront qu'ils ont gagné tout seuls ! » Ceux qui avaient peur rentrèrent chez eux. Puis Dieu fit descendre les autres à la rivière pour boire, et il ne garda que trois cents hommes.",
+        "explorateurs": "L'Éternel dit à Gédéon : « Le peuple que tu as avec toi est trop nombreux pour que je livre Madian entre ses mains ; il pourrait en tirer gloire contre moi. » Vingt-deux mille hommes s'en retournèrent. L'Éternel dit encore : « Fais-les descendre vers l'eau. » Le nombre de ceux qui lapèrent l'eau en la portant à leur bouche avec la main fut de trois cents hommes. « C'est par les trois cents hommes que je vous sauverai. »"
+      },
+      "action": "Touche Gédéon trois fois : l'armée devient toute petite !"
+    },
+    {
+      "id": "cruches",
+      "stage": "cruches",
+      "reference": "Juges 7.16",
+      "text": {
+        "agneaux": "Gédéon donna à chacun une trompette et une cruche, avec une torche cachée dedans.",
+        "bergers": "Pas d'épées pour commencer ! Gédéon partagea ses trois cents hommes en trois groupes. Il donna à chacun une trompette et une cruche vide, avec une torche allumée cachée à l'intérieur.",
+        "explorateurs": "Gédéon divisa en trois corps les trois cents hommes, et il leur remit à tous des trompettes et des cruches vides, avec des flambeaux dans les cruches."
+      },
+      "action": "Touche chaque homme pour lui donner sa cruche et sa trompette."
+    },
+    {
+      "id": "nuit",
+      "stage": "nuit",
+      "reference": "Juges 7.19-20",
+      "text": {
+        "agneaux": "Au milieu de la nuit, ils cassèrent les cruches. Les torches brillèrent, les trompettes sonnèrent !",
+        "bergers": "Au milieu de la nuit, ils entourèrent le camp ennemi. Au signal, ils sonnèrent des trompettes et cassèrent les cruches : les torches brillèrent tout autour du camp ! Et ils crièrent : « Épée pour l'Éternel et pour Gédéon ! »",
+        "explorateurs": "Gédéon et les cent hommes qui étaient avec lui arrivèrent aux abords du camp au commencement de la veille du milieu de la nuit. Ils sonnèrent des trompettes et brisèrent les cruches qu'ils avaient à la main. Ils saisirent de la main gauche les flambeaux, et de la main droite les trompettes, et ils s'écrièrent : « Épée pour l'Éternel et pour Gédéon ! »"
+      },
+      "action": "Touche les cruches pour les casser !"
+    },
+    {
+      "id": "victoire",
+      "stage": "victoire",
+      "reference": "Juges 7.21-22",
+      "text": {
+        "agneaux": "Les ennemis eurent si peur qu'ils s'enfuirent tous ! Dieu avait sauvé son peuple.",
+        "bergers": "Réveillés en sursaut par le bruit et les lumières, les Madianites furent pris de panique et s'enfuirent dans tous les sens ! Gédéon et ses trois cents hommes n'avaient pas bougé : c'est Dieu qui avait donné la victoire.",
+        "explorateurs": "Ils restèrent chacun à sa place autour du camp. Tout le camp se mit à courir, à pousser des cris et à prendre la fuite. Les trois cents sonnèrent encore des trompettes, et l'Éternel jeta la confusion dans tout le camp. Ainsi Dieu délivra Israël."
+      },
+      "action": "Touche le soleil qui se lève.",
+      "after": {
+        "all": "Même quand on se sent petit, Dieu peut faire de grandes choses avec nous."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "appel", "label": "L'ange et Gédéon" },
+        { "id": "toison", "label": "La toison" },
+        { "id": "armee", "label": "Trois cents hommes" },
+        { "id": "cruches", "label": "Cruches et trompettes" },
+        { "id": "nuit", "label": "Les torches brillent" },
+        { "id": "victoire", "label": "La victoire" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Près du camp, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "torch", "label": "la torche" },
+        { "id": "horn", "label": "la trompette" },
+        { "id": "wheat", "label": "le blé" },
+        { "id": "sheep", "label": "le mouton" },
+        { "id": "camel", "label": "le chameau" },
+        { "id": "owl", "label": "le hibou" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "jar", "label": "la cruche" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["torch", "horn", "jar", "wheat", "camel", "tent"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "L'Éternel est avec toi, vaillant héros !",
+    "reference": "Juges 6.12",
+    "spoken": "Juges, chapitre 6, verset 12 : L'Éternel est avec toi, vaillant héros !",
+    "chunks": {
+      "bergers": ["L'Éternel", "est avec toi,", "vaillant héros !"],
+      "explorateurs": ["L'Éternel", "est", "avec toi,", "vaillant", "héros !"]
+    },
+    "referenceChoices": ["Juges 6.12", "Juges 12.6", "Josué 6.12"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "gedeon", "title": "Les torches de Gédéon" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Gédéon. Voici ton autocollant pour ton album !"
+}

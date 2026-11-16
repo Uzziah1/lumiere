@@ -1,0 +1,130 @@
+{
+  "id": "jericho",
+  "title": "Les murs de Jéricho",
+  "reference": "Josué 6",
+  "intro": "Les murs de Jéricho. Une histoire de la Bible, dans le livre de Josué.",
+  "scenes": [
+    {
+      "id": "promesse",
+      "stage": "promesse",
+      "reference": "Josué 6.1-5",
+      "text": {
+        "agneaux": "Devant le peuple de Dieu, il y avait une ville avec de très hauts murs : Jéricho. Dieu dit à Josué : « Je te donne cette ville. »",
+        "bergers": "Après Moïse, c'est Josué qui conduisait le peuple de Dieu. Devant eux se dressait Jéricho, une ville entourée de murailles énormes, aux portes bien fermées. Dieu dit à Josué : « Je livre Jéricho entre tes mains. Voici ce que vous ferez. »",
+        "explorateurs": "Jéricho était fermée et barricadée devant les enfants d'Israël ; personne ne sortait, et personne n'entrait. L'Éternel dit à Josué : « Vois, je livre entre tes mains Jéricho et son roi. Faites le tour de la ville, une fois par jour, pendant six jours. Le septième jour, vous ferez sept fois le tour, et les prêtres sonneront des trompettes. »"
+      },
+      "action": "Touche la lumière pour écouter Dieu."
+    },
+    {
+      "id": "tour",
+      "stage": "tour",
+      "reference": "Josué 6.12-14",
+      "text": {
+        "agneaux": "Chaque jour, le peuple marcha autour de la ville, sans rien dire. Un jour, deux jours… six jours !",
+        "bergers": "Josué fit exactement ce que Dieu avait dit. Chaque jour, le peuple marchait une fois autour de la ville, en silence, puis rentrait au camp. Ils le firent pendant six jours. Les gens de Jéricho, du haut des murs, devaient se demander ce qui se passait !",
+        "explorateurs": "Josué se leva de bon matin. Les sacrificateurs portèrent l'arche de l'Éternel, et le peuple fit une fois le tour de la ville, puis rentra au camp. Ils firent ainsi pendant six jours. Josué avait ordonné : « Vous ne crierez point, vous ne ferez point entendre votre voix, jusqu'au jour où je vous dirai : Poussez des cris ! »"
+      },
+      "action": "Touche le peuple six fois : un tour par jour !"
+    },
+    {
+      "id": "trompettes",
+      "stage": "trompettes",
+      "reference": "Josué 6.8-9",
+      "text": {
+        "agneaux": "Devant le peuple, des prêtres portaient l'arche de Dieu et soufflaient dans des trompettes.",
+        "bergers": "Devant le peuple marchaient sept prêtres. Ils soufflaient dans des trompettes en cornes de bélier. Derrière eux, d'autres prêtres portaient l'arche de l'alliance, le coffre doré qui rappelait que Dieu était avec son peuple.",
+        "explorateurs": "Sept sacrificateurs portant les sept trompettes retentissantes devant l'Éternel s'avancèrent et sonnèrent des trompettes, et l'arche de l'alliance de l'Éternel allait derrière eux. Les hommes armés marchaient devant, et l'arrière-garde suivait l'arche."
+      },
+      "action": "Touche les prêtres pour qu'ils sonnent de la trompette !"
+    },
+    {
+      "id": "septieme",
+      "stage": "septieme",
+      "reference": "Josué 6.15",
+      "text": {
+        "agneaux": "Le septième jour, ils firent sept fois le tour de la ville !",
+        "bergers": "Le septième jour, ils se levèrent très tôt, à l'aurore. Cette fois, ils firent le tour de la ville sept fois de suite : un, deux, trois, quatre, cinq, six, sept !",
+        "explorateurs": "Le septième jour, ils se levèrent de bon matin, dès l'aurore, et ils firent de la même manière sept fois le tour de la ville ; ce fut le seul jour où ils firent sept fois le tour de la ville."
+      },
+      "action": "Fais glisser ton doigt pour faire marcher le peuple autour de la ville."
+    },
+    {
+      "id": "cri",
+      "stage": "cri",
+      "reference": "Josué 6.16-20",
+      "text": {
+        "agneaux": "Les trompettes sonnèrent, et tout le peuple poussa un grand cri. Et les murs tombèrent !",
+        "bergers": "Au septième tour, les prêtres sonnèrent des trompettes, et Josué dit au peuple : « Criez, car Dieu vous donne la ville ! » Le peuple poussa un grand cri… et les murailles de Jéricho s'écroulèrent ! Ils n'avaient rien fait d'autre que d'obéir à Dieu.",
+        "explorateurs": "À la septième fois, comme les sacrificateurs sonnaient des trompettes, Josué dit au peuple : « Poussez des cris, car l'Éternel vous a livré la ville ! » Le peuple poussa de grands cris au son des trompettes, et la muraille s'écroula. Le peuple monta dans la ville, chacun devant soi."
+      },
+      "action": "Touche la muraille quand le peuple crie !"
+    },
+    {
+      "id": "rahab",
+      "stage": "rahab",
+      "reference": "Josué 6.22-25",
+      "text": {
+        "agneaux": "Une femme, Rahab, avait aidé le peuple de Dieu. Elle avait mis un cordon rouge à sa fenêtre. Elle et sa famille furent sauvées.",
+        "bergers": "Quelque temps avant, une femme de Jéricho appelée Rahab avait caché deux espions envoyés par Josué. Ils lui avaient promis : « Attache ce cordon rouge à ta fenêtre, et ta famille sera sauvée. » Josué tint parole : Rahab et toute sa famille furent sauvées, et vécurent au milieu du peuple de Dieu.",
+        "explorateurs": "Josué dit aux deux hommes qui avaient exploré le pays : « Entrez dans la maison de cette femme, et faites-la sortir, avec tout ce qui lui appartient, comme vous le lui avez juré. » Ils firent sortir Rahab, son père, sa mère, ses frères et toute sa famille. Josué laissa la vie à Rahab, parce qu'elle avait caché les messagers qu'il avait envoyés."
+      },
+      "action": "Touche le cordon rouge à la fenêtre de Rahab.",
+      "after": {
+        "all": "Quand on fait confiance à Dieu et qu'on lui obéit, il fait de grandes choses."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "promesse", "label": "Dieu parle à Josué" },
+        { "id": "tour", "label": "Six jours de marche" },
+        { "id": "trompettes", "label": "Les trompettes" },
+        { "id": "septieme", "label": "Sept tours" },
+        { "id": "cri", "label": "Les murs tombent" },
+        { "id": "rahab", "label": "Rahab est sauvée" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Dans les pierres des murs tombés, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "horn", "label": "la trompette" },
+        { "id": "stone", "label": "le caillou" },
+        { "id": "jar", "label": "la jarre" },
+        { "id": "palm", "label": "la palme" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "snail", "label": "l'escargot" },
+        { "id": "tortoise", "label": "la tortue" },
+        { "id": "ladybug", "label": "la coccinelle" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["horn", "wall", "city", "palm", "sheep", "jar"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Ne t'effraie point et ne t'épouvante point, car l'Éternel, ton Dieu, est avec toi dans tout ce que tu entreprendras.",
+    "reference": "Josué 1.9",
+    "spoken": "Josué, chapitre 1, verset 9 : Ne t'effraie point et ne t'épouvante point, car l'Éternel, ton Dieu, est avec toi dans tout ce que tu entreprendras.",
+    "chunks": {
+      "bergers": ["Ne t'effraie point et ne t'épouvante point,", "car l'Éternel, ton Dieu, est avec toi", "dans tout ce que tu entreprendras."],
+      "explorateurs": ["Ne t'effraie point", "et ne t'épouvante point,", "car l'Éternel, ton Dieu,", "est avec toi", "dans tout ce que tu entreprendras."]
+    },
+    "referenceChoices": ["Josué 1.9", "Josué 9.1", "Juges 1.9"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "jericho", "title": "Les murs de Jéricho" },
+  "reward": "Bravo ! Tu as terminé l'histoire des murs de Jéricho. Voici ton autocollant pour ton album !"
+}
