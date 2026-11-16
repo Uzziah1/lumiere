@@ -1,0 +1,131 @@
+{
+  "id": "moise",
+  "title": "Moïse et la mer",
+  "reference": "Exode 2 à 15",
+  "intro": "Moïse et la mer. Une histoire de la Bible, dans le livre de l'Exode.",
+  "scenes": [
+    {
+      "id": "panier",
+      "stage": "basket",
+      "reference": "Exode 2.1-10",
+      "text": {
+        "agneaux": "Pour le protéger, la maman de Moïse le cacha dans un panier sur le fleuve. Sa grande sœur Miriam surveillait, cachée dans les roseaux.",
+        "bergers": "En Égypte, le peuple d'Israël était esclave, et Pharaon voulait faire du mal aux bébés garçons. Pour sauver son fils, une maman le cacha dans un panier sur le Nil. Sa sœur Miriam surveillait, cachée dans les roseaux.",
+        "explorateurs": "Les Israélites étaient esclaves en Égypte, et Pharaon avait ordonné de jeter dans le fleuve tous les garçons qui naîtraient. Une femme de la tribu de Lévi cacha son fils trois mois, puis le déposa dans une corbeille de joncs enduite de bitume, parmi les roseaux du Nil. Sa sœur se tenait à distance pour savoir ce qui lui arriverait."
+      },
+      "action": "Touche le panier pour le faire flotter !",
+      "after": {
+        "agneaux": "La fille de Pharaon trouva le bébé et le garda. Elle l'appela Moïse.",
+        "all": "La fille de Pharaon trouva le bébé et eut pitié de lui. Elle l'adopta et l'appela Moïse, ce qui veut dire « sauvé des eaux »."
+      }
+    },
+    {
+      "id": "buisson",
+      "stage": "bush",
+      "reference": "Exode 3.1-12",
+      "text": {
+        "agneaux": "Moïse devint grand et garda des moutons. Un jour, il vit un buisson en feu qui ne brûlait pas ! Dieu lui parla : « Va libérer mon peuple. »",
+        "bergers": "Moïse grandit et devint berger. Un jour, il vit un buisson en feu qui ne se consumait pas. Du milieu du buisson, Dieu l'appela : « Moïse, Moïse ! J'ai vu la souffrance de mon peuple. Va, je t'envoie vers Pharaon. »",
+        "explorateurs": "Moïse faisait paître le troupeau près de la montagne de Dieu, à Horeb. L'ange de l'Éternel lui apparut dans une flamme de feu, au milieu d'un buisson : le buisson était tout en feu, et il ne se consumait point. Dieu l'appela du milieu du buisson : « Ôte tes souliers, car le lieu sur lequel tu te tiens est une terre sainte. J'ai vu la souffrance de mon peuple ; va, je t'envoie auprès de Pharaon. Je serai avec toi. »"
+      },
+      "action": "Touche le buisson !"
+    },
+    {
+      "id": "pharaon",
+      "stage": "plagues",
+      "reference": "Exode 5.1 à 12.32",
+      "text": {
+        "agneaux": "Moïse dit à Pharaon : « Dieu dit : laisse partir mon peuple ! » Mais Pharaon ne voulait pas. Alors Dieu envoya des signes, comme des grenouilles partout !",
+        "bergers": "Moïse et son frère Aaron dirent à Pharaon : « Ainsi parle l'Éternel : laisse aller mon peuple ! » Pharaon refusa. Alors Dieu envoya dix grands signes sur l'Égypte, comme des grenouilles partout, jusque dans le palais. Enfin, Pharaon laissa partir le peuple.",
+        "explorateurs": "Moïse et Aaron dirent à Pharaon : « Ainsi parle l'Éternel, le Dieu d'Israël : laisse aller mon peuple. » Pharaon répondit : « Qui est l'Éternel, pour que j'obéisse à sa voix ? » Alors Dieu frappa l'Égypte de dix plaies : l'eau changée en sang, les grenouilles, les moustiques, et bien d'autres. Après la dixième, Pharaon appela Moïse et dit : « Partez ! »"
+      },
+      "action": "Touche Moïse pour qu'il parle à Pharaon, encore et encore !"
+    },
+    {
+      "id": "colonne",
+      "stage": "pillar",
+      "reference": "Exode 13.21-22",
+      "text": {
+        "agneaux": "Le peuple quitta l'Égypte. Dieu marchait devant eux : une colonne de nuée le jour, une colonne de feu la nuit.",
+        "bergers": "Le peuple d'Israël quitta l'Égypte. Dieu les guidait : le jour, il allait devant eux dans une colonne de nuée, et la nuit, dans une colonne de feu pour les éclairer.",
+        "explorateurs": "Les enfants d'Israël partirent, environ six cent mille hommes à pied, sans compter les enfants. L'Éternel allait devant eux, le jour dans une colonne de nuée pour les guider dans leur chemin, et la nuit dans une colonne de feu pour les éclairer, afin qu'ils puissent marcher jour et nuit."
+      },
+      "action": "Touche la colonne de nuée pour la suivre !"
+    },
+    {
+      "id": "mer",
+      "stage": "sea",
+      "reference": "Exode 14.10-22",
+      "text": {
+        "agneaux": "Devant eux, la mer ! Derrière, l'armée de Pharaon ! Moïse leva son bâton, et Dieu ouvrit la mer en deux.",
+        "bergers": "Pharaon changea d'avis et poursuivit le peuple avec son armée. Devant eux, il y avait la mer Rouge ! Moïse dit : « N'ayez pas peur ! L'Éternel combattra pour vous. » Moïse étendit la main, et Dieu ouvrit un chemin au milieu de la mer.",
+        "explorateurs": "Les Égyptiens poursuivaient Israël, et le peuple eut très peur. Moïse répondit : « Ne craignez rien, restez en place, et regardez la délivrance que l'Éternel va vous accorder. L'Éternel combattra pour vous. » Moïse étendit sa main sur la mer, et l'Éternel fit souffler toute la nuit un vent d'orient : les eaux se fendirent."
+      },
+      "action": "Glisse ton doigt sur la mer pour l'ouvrir !"
+    },
+    {
+      "id": "traversee",
+      "stage": "cross",
+      "reference": "Exode 14.22 à 15.21",
+      "text": {
+        "agneaux": "Tout le peuple traversa la mer à pied sec ! De l'autre côté, Miriam dansa avec son tambourin pour remercier Dieu.",
+        "bergers": "Les Israélites marchèrent à pied sec au milieu de la mer, entre deux murailles d'eau. Quand tout le monde fut passé, les eaux revinrent. Le peuple était sauvé ! Miriam prit son tambourin, et toutes les femmes chantèrent et dansèrent pour remercier Dieu.",
+        "explorateurs": "Les enfants d'Israël entrèrent au milieu de la mer à sec, et les eaux formaient comme une muraille à leur droite et à leur gauche. Quand ils furent passés, les eaux revinrent et l'armée de Pharaon ne put les poursuivre. Le peuple crut en l'Éternel. Miriam, la prophétesse, prit un tambourin et chanta : « Chantez à l'Éternel, car il a fait éclater sa gloire ! »"
+      },
+      "action": "Touche les familles pour les faire traverser !"
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "basket", "label": "Le panier sur le Nil" },
+        { "id": "bush", "label": "Le buisson en feu" },
+        { "id": "plagues", "label": "Devant Pharaon" },
+        { "id": "pillar", "label": "La colonne de nuée" },
+        { "id": "sea", "label": "La mer s'ouvre" },
+        { "id": "cross", "label": "La traversée" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Des animaux se cachent au bord du Nil ! Retrouve-les.",
+      "items": [
+        { "id": "frog", "label": "la grenouille" },
+        { "id": "fish", "label": "le poisson" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "tortoise", "label": "la tortue" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "shell", "label": "le coquillage" },
+        { "id": "snail", "label": "l'escargot" },
+        { "id": "ladybug", "label": "la coccinelle" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire de Moïse.",
+      "pairs": ["basket", "staff", "frog", "tambourine", "flame", "sheep"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "L'Éternel combattra pour vous ; et vous, gardez le silence.",
+    "reference": "Exode 14.14",
+    "spoken": "Exode, chapitre 14, verset 14 : L'Éternel combattra pour vous ; et vous, gardez le silence.",
+    "chunks": {
+      "bergers": ["L'Éternel combattra", "pour vous ;", "et vous,", "gardez le silence."],
+      "explorateurs": ["L'Éternel", "combattra", "pour vous ;", "et vous,", "gardez", "le silence."]
+    },
+    "referenceChoices": ["Exode 14.14", "Exode 4.14", "Matthieu 14.14"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "moise", "title": "La mer ouverte" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Moïse. Voici ton autocollant pour ton album !"
+}
