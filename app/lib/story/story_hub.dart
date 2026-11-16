@@ -7,10 +7,8 @@ import '../theme/palette.dart';
 import '../widgets/colombe_bubble.dart';
 import '../widgets/paper_button.dart';
 import '../widgets/round_button.dart';
+import 'story_part.dart';
 import 'story_session.dart';
-
-/// Les étapes d'une histoire qui rapportent une étoile.
-enum StoryPart { recit, chronology, seek, memory, verse }
 
 /// Le menu des jeux, après le récit.
 class StoryHub extends StatelessWidget {
