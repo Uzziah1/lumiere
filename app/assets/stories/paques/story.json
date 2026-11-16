@@ -1,0 +1,130 @@
+{
+  "id": "paques",
+  "title": "Pâques : Jésus est vivant !",
+  "reference": "Luc 19 à 24",
+  "intro": "Pâques : Jésus est vivant ! Une histoire de la Bible, dans le livre de Luc.",
+  "scenes": [
+    {
+      "id": "rameaux",
+      "stage": "rameaux",
+      "reference": "Luc 19.35-38",
+      "text": {
+        "agneaux": "Jésus arriva à Jérusalem sur un petit âne. Les gens étaient tout joyeux et criaient : « Hosanna ! »",
+        "bergers": "Jésus entra à Jérusalem, assis sur un ânon. La foule étendait des vêtements et des branches de palmier sur le chemin, et les gens criaient de joie : « Béni soit le roi qui vient au nom du Seigneur ! »",
+        "explorateurs": "Ils amenèrent l'ânon à Jésus, et, ayant jeté leurs vêtements sur l'ânon, ils y firent monter Jésus. Quand il fut près de Jérusalem, toute la multitude des disciples, saisie de joie, se mit à louer Dieu à haute voix : « Béni soit le roi qui vient au nom du Seigneur ! Paix dans le ciel, et gloire dans les lieux très hauts ! »"
+      },
+      "action": "Touche les palmes pour accueillir Jésus !"
+    },
+    {
+      "id": "cene",
+      "stage": "cene",
+      "reference": "Luc 22.14-20",
+      "text": {
+        "agneaux": "Jésus prit un dernier repas avec ses amis. Il partagea le pain et dit : « Souvenez-vous de moi. »",
+        "bergers": "Le soir de la Pâque, Jésus prit un dernier repas avec ses disciples. Il prit du pain, remercia Dieu, le partagea et dit : « Ceci est mon corps, donné pour vous. Faites ceci en souvenir de moi. » Puis il leur donna la coupe.",
+        "explorateurs": "L'heure étant venue, il se mit à table, et les apôtres avec lui. Ensuite il prit du pain ; et, après avoir rendu grâces, il le rompit, et le leur donna, en disant : « Ceci est mon corps, qui est donné pour vous ; faites ceci en mémoire de moi. » Il prit de même la coupe, après le souper, et la leur donna."
+      },
+      "action": "Touche le pain pour le partager."
+    },
+    {
+      "id": "croix",
+      "stage": "croix",
+      "reference": "Luc 23.33-46",
+      "text": {
+        "agneaux": "Des gens méchants firent mourir Jésus sur une croix. Jésus a donné sa vie parce qu'il nous aime.",
+        "bergers": "Des chefs jaloux firent arrêter Jésus, et il fut cloué sur une croix, sur une colline. Jésus pria : « Père, pardonne-leur. » Le ciel devint sombre. Jésus donna sa vie, par amour pour nous, pour que nos péchés soient pardonnés.",
+        "explorateurs": "Lorsqu'ils furent arrivés au lieu appelé Crâne, ils le crucifièrent. Jésus dit : « Père, pardonne-leur, car ils ne savent ce qu'ils font. » Il était déjà environ la sixième heure, et il y eut des ténèbres sur toute la terre. Jésus s'écria d'une voix forte : « Père, je remets mon esprit entre tes mains. » Et, en disant ces paroles, il expira. Il a donné sa vie pour nous."
+      },
+      "action": "Touche doucement la croix."
+    },
+    {
+      "id": "tombeau",
+      "stage": "tombeau",
+      "reference": "Luc 23.50-56",
+      "text": {
+        "agneaux": "Les amis de Jésus le mirent dans un tombeau, et une grosse pierre fut roulée devant. Ils étaient très tristes.",
+        "bergers": "Un homme appelé Joseph d'Arimathée déposa le corps de Jésus dans un tombeau creusé dans le rocher, et une grande pierre en ferma l'entrée. Les amis de Jésus étaient très tristes. Un jour passa, puis deux…",
+        "explorateurs": "Un homme bon et juste, nommé Joseph, alla vers Pilate et demanda le corps de Jésus. Il le descendit de la croix, l'enveloppa d'un linceul, et le déposa dans un sépulcre taillé dans le roc, où personne n'avait encore été mis. Les femmes qui étaient venues de la Galilée avec Jésus virent le sépulcre, puis se reposèrent le jour du sabbat."
+      },
+      "action": "Touche la lune trois fois pour les trois jours."
+    },
+    {
+      "id": "matin",
+      "stage": "matin",
+      "reference": "Luc 24.1-8",
+      "text": {
+        "agneaux": "Le dimanche matin, des femmes vinrent au tombeau. La pierre était roulée ! Un ange dit : « Jésus n'est pas ici, il est vivant ! »",
+        "bergers": "Le dimanche, très tôt, des femmes vinrent au tombeau avec des parfums. Surprise : la pierre était roulée, et le tombeau était vide ! Deux anges en vêtements brillants leur dirent : « Pourquoi cherchez-vous parmi les morts celui qui est vivant ? Il n'est pas ici, il est ressuscité ! »",
+        "explorateurs": "Le premier jour de la semaine, elles se rendirent au sépulcre de grand matin, portant les aromates qu'elles avaient préparés. Elles trouvèrent que la pierre avait été roulée de devant le sépulcre ; et, étant entrées, elles ne trouvèrent pas le corps du Seigneur Jésus. Deux hommes leur apparurent, en habits resplendissants : « Pourquoi cherchez-vous parmi les morts celui qui est vivant ? Il n'est point ici, mais il est ressuscité. »"
+      },
+      "action": "Touche le tombeau !"
+    },
+    {
+      "id": "vivant",
+      "stage": "vivant",
+      "reference": "Luc 24.36-43",
+      "text": {
+        "agneaux": "Puis Jésus vint voir ses amis. « La paix soit avec vous ! » Il était vivant ! Ils étaient remplis de joie !",
+        "bergers": "Le soir, les disciples étaient réunis. Tout à coup, Jésus fut là, au milieu d'eux : « La paix soit avec vous ! » Ils croyaient voir un fantôme, mais Jésus leur montra ses mains et ses pieds, et il mangea avec eux. Il était vraiment vivant ! Quelle joie !",
+        "explorateurs": "Tandis qu'ils parlaient, Jésus lui-même se présenta au milieu d'eux, et leur dit : « La paix soit avec vous ! » Saisis de frayeur, ils croyaient voir un esprit. Mais il leur dit : « Voyez mes mains et mes pieds, c'est bien moi. » Il prit un morceau de poisson et le mangea devant eux. Dans leur joie, ils avaient peine à croire."
+      },
+      "action": "Touche les disciples pour partager leur joie !",
+      "after": {
+        "all": "Jésus est vivant ! C'est la grande joie de Pâques."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "rameaux", "label": "Les palmes" },
+        { "id": "cene", "label": "Le dernier repas" },
+        { "id": "croix", "label": "La croix" },
+        { "id": "tombeau", "label": "Le tombeau" },
+        { "id": "matin", "label": "La pierre roulée" },
+        { "id": "vivant", "label": "Jésus est vivant !" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Dans le jardin du matin de Pâques, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "flower", "label": "la fleur" },
+        { "id": "palm", "label": "la palme" },
+        { "id": "dove", "label": "la colombe" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "jar", "label": "le vase de parfum" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "rabbit", "label": "le lapin" },
+        { "id": "ladybug", "label": "la coccinelle" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["palm", "donkey", "bread", "tomb", "flower", "dove"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Il n'est point ici, mais il est ressuscité.",
+    "reference": "Luc 24.6",
+    "spoken": "Luc, chapitre 24, verset 6 : Il n'est point ici, mais il est ressuscité.",
+    "chunks": {
+      "bergers": ["Il n'est point ici,", "mais il est", "ressuscité."],
+      "explorateurs": ["Il n'est", "point ici,", "mais", "il est", "ressuscité."]
+    },
+    "referenceChoices": ["Luc 24.6", "Luc 6.24", "Jean 24.6"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "paques", "title": "Le tombeau vide" },
+  "reward": "Bravo ! Tu as terminé l'histoire de Pâques. Jésus est vivant ! Voici ton autocollant pour ton album !"
+}

@@ -1,0 +1,130 @@
+{
+  "id": "pentecote",
+  "title": "La Pentecôte",
+  "reference": "Actes 1 et 2",
+  "intro": "La Pentecôte. Une histoire de la Bible, dans le livre des Actes des apôtres.",
+  "scenes": [
+    {
+      "id": "ascension",
+      "stage": "ascension",
+      "reference": "Actes 1.8-11",
+      "text": {
+        "agneaux": "Jésus promit à ses amis : « Je vais vous envoyer le Saint-Esprit. » Puis il monta au ciel.",
+        "bergers": "Avant de partir, Jésus promit à ses disciples : « Vous recevrez une force, le Saint-Esprit, et vous parlerez de moi jusqu'au bout du monde. » Puis il s'éleva vers le ciel, et une nuée le cacha. Des anges dirent : « Jésus reviendra ! »",
+        "explorateurs": "Jésus leur dit : « Vous recevrez une puissance, le Saint-Esprit survenant sur vous, et vous serez mes témoins à Jérusalem, dans toute la Judée, dans la Samarie, et jusqu'aux extrémités de la terre. » Après avoir dit cela, il fut élevé pendant qu'ils le regardaient, et une nuée le déroba à leurs yeux. Deux hommes vêtus de blanc leur dirent : « Ce Jésus reviendra de la même manière que vous l'avez vu allant au ciel. »"
+      },
+      "action": "Fais glisser ton doigt vers le ciel."
+    },
+    {
+      "id": "priere",
+      "stage": "priere",
+      "reference": "Actes 1.12-14",
+      "text": {
+        "agneaux": "Les amis de Jésus restèrent ensemble dans une maison. Ils priaient tous les jours.",
+        "bergers": "Les disciples retournèrent à Jérusalem. Ils se réunissaient dans une chambre, en haut d'une maison, avec Marie, la mère de Jésus. Tous ensemble, ils priaient et attendaient le Saint-Esprit.",
+        "explorateurs": "Alors ils retournèrent à Jérusalem. Quand ils furent arrivés, ils montèrent dans la chambre haute où ils se tenaient d'ordinaire. Tous d'un commun accord persévéraient dans la prière, avec les femmes, et Marie, mère de Jésus."
+      },
+      "action": "Touche chaque ami de Jésus pendant qu'il prie."
+    },
+    {
+      "id": "vent",
+      "stage": "vent",
+      "reference": "Actes 2.1-2",
+      "text": {
+        "agneaux": "Le jour de la fête de la Pentecôte, on entendit un grand bruit, comme un vent très fort !",
+        "bergers": "Le jour de la fête de la Pentecôte, ils étaient tous réunis. Tout à coup, un bruit vint du ciel, comme le souffle d'un vent violent, et il remplit toute la maison.",
+        "explorateurs": "Le jour de la Pentecôte, ils étaient tous ensemble dans le même lieu. Tout à coup il vint du ciel un bruit comme celui d'un vent impétueux, et il remplit toute la maison où ils étaient assis."
+      },
+      "action": "Fais glisser ton doigt pour faire souffler le vent !"
+    },
+    {
+      "id": "flammes",
+      "stage": "flammes",
+      "reference": "Actes 2.3-4",
+      "text": {
+        "agneaux": "Des petites flammes de lumière se posèrent sur chacun. Le Saint-Esprit vint dans leur cœur !",
+        "bergers": "Ils virent comme des petites flammes de feu qui se séparaient et se posaient sur chacun d'eux. Ils furent tous remplis du Saint-Esprit.",
+        "explorateurs": "Des langues, semblables à des langues de feu, leur apparurent, séparées les unes des autres, et se posèrent sur chacun d'eux. Et ils furent tous remplis du Saint-Esprit, et se mirent à parler en d'autres langues, selon que l'Esprit leur donnait de s'exprimer."
+      },
+      "action": "Touche au-dessus de chacun pour voir les flammes !"
+    },
+    {
+      "id": "langues",
+      "stage": "langues",
+      "reference": "Actes 2.5-11",
+      "text": {
+        "agneaux": "Des gens venus de beaucoup de pays étaient là. Chacun entendait parler de Dieu dans sa propre langue !",
+        "bergers": "À Jérusalem, il y avait des visiteurs venus de nombreux pays. En entendant ce bruit, ils accoururent. Et chacun entendait les disciples parler dans sa propre langue ! Ils étaient tout étonnés : « Nous les entendons raconter les merveilles de Dieu ! »",
+        "explorateurs": "Or, il y avait en séjour à Jérusalem des Juifs, hommes pieux, de toutes les nations qui sont sous le ciel. Au bruit qui eut lieu, la multitude accourut, et elle fut confondue parce que chacun les entendait parler dans sa propre langue. Ils disaient : « Comment les entendons-nous dans notre propre langue ? Nous les entendons parler de la grandeur de Dieu ! »"
+      },
+      "action": "Touche les visiteurs pour qu'ils comprennent !"
+    },
+    {
+      "id": "eglise",
+      "stage": "eglise",
+      "reference": "Actes 2.14-47",
+      "text": {
+        "agneaux": "Pierre parla de Jésus à la foule. Beaucoup de gens crurent en Jésus. Ils priaient et partageaient tout ensemble.",
+        "bergers": "Pierre se leva et parla de Jésus à la foule : « Dieu l'a ressuscité ! » Ce jour-là, environ trois mille personnes crurent en Jésus et furent baptisées. Ensemble, ils écoutaient l'enseignement des apôtres, priaient, partageaient le pain, et Dieu ajoutait chaque jour de nouveaux croyants. L'Église était née !",
+        "explorateurs": "Pierre, se présentant avec les onze, éleva la voix : « C'est ce Jésus que Dieu a ressuscité ; nous en sommes tous témoins. Repentez-vous, et que chacun de vous soit baptisé au nom de Jésus-Christ. » Ceux qui acceptèrent sa parole furent baptisés ; et, en ce jour-là, furent ajoutées environ trois mille âmes. Ils persévéraient dans l'enseignement des apôtres, dans la communion fraternelle, dans la fraction du pain, et dans les prières."
+      },
+      "action": "Touche Pierre trois fois pour qu'il parle à la foule !",
+      "after": {
+        "all": "Le Saint-Esprit aide aujourd'hui encore tous ceux qui aiment Jésus."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "ascension", "label": "Jésus monte au ciel" },
+        { "id": "priere", "label": "Ils prient" },
+        { "id": "vent", "label": "Le grand vent" },
+        { "id": "flammes", "label": "Les flammes" },
+        { "id": "langues", "label": "Toutes les langues" },
+        { "id": "eglise", "label": "L'Église est née" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "Dans la chambre haute, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "flame", "label": "la flamme" },
+        { "id": "scroll", "label": "le rouleau" },
+        { "id": "bread", "label": "le pain" },
+        { "id": "dove", "label": "la colombe" },
+        { "id": "jar", "label": "la jarre" },
+        { "id": "basket", "label": "le panier" },
+        { "id": "mouse", "label": "la souris" },
+        { "id": "coin", "label": "la pièce" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["flame", "dove", "scroll", "bread", "city", "basket"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Vous recevrez une puissance, le Saint-Esprit survenant sur vous, et vous serez mes témoins.",
+    "reference": "Actes 1.8",
+    "spoken": "Actes, chapitre 1, verset 8 : Vous recevrez une puissance, le Saint-Esprit survenant sur vous, et vous serez mes témoins.",
+    "chunks": {
+      "bergers": ["Vous recevrez une puissance,", "le Saint-Esprit survenant sur vous,", "et vous serez mes témoins."],
+      "explorateurs": ["Vous recevrez", "une puissance,", "le Saint-Esprit", "survenant sur vous,", "et vous serez", "mes témoins."]
+    },
+    "referenceChoices": ["Actes 1.8", "Actes 8.1", "Luc 1.8"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "pentecote", "title": "Les flammes de l'Esprit" },
+  "reward": "Bravo ! Tu as terminé l'histoire de la Pentecôte. Voici ton autocollant pour ton album !"
+}

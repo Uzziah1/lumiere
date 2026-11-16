@@ -1,0 +1,130 @@
+{
+  "id": "prodigue",
+  "title": "Le fils prodigue",
+  "reference": "Luc 15.11-32",
+  "intro": "Le fils prodigue. Une histoire que Jésus a racontée, dans le livre de Luc.",
+  "scenes": [
+    {
+      "id": "depart",
+      "stage": "depart",
+      "reference": "Luc 15.11-13",
+      "text": {
+        "agneaux": "Jésus raconta : « Un papa avait deux fils. Le plus jeune lui demanda sa part de l'argent, et il partit très loin. »",
+        "bergers": "Jésus raconta cette histoire : « Un homme avait deux fils. Le plus jeune dit à son père : “Donne-moi la part de tes biens qui doit me revenir.” Le père partagea ses biens, et quelques jours plus tard, le fils partit pour un pays lointain. »",
+        "explorateurs": "Jésus dit encore : « Un homme avait deux fils. Le plus jeune dit à son père : “Mon père, donne-moi la part de bien qui doit me revenir.” Et le père leur partagea son bien. Peu de jours après, le plus jeune fils, ayant tout ramassé, partit pour un pays éloigné. »"
+      },
+      "action": "Fais glisser le fils sur le chemin."
+    },
+    {
+      "id": "depense",
+      "stage": "depense",
+      "reference": "Luc 15.13",
+      "text": {
+        "agneaux": "Là-bas, il fit la fête et dépensa tout son argent. Bientôt, il n'avait plus rien.",
+        "bergers": "« Dans ce pays lointain, il dépensa tout son argent en faisant n'importe quoi. Il avait beaucoup d'amis tant qu'il avait de l'argent. Mais bientôt, il ne lui resta plus rien. »",
+        "explorateurs": "« Là, il dissipa son bien en vivant dans la débauche. Lorsqu'il eut tout dépensé, il ne lui resta plus rien. »"
+      },
+      "action": "Touche le fils trois fois : son argent s'envole !"
+    },
+    {
+      "id": "cochons",
+      "stage": "cochons",
+      "reference": "Luc 15.14-17",
+      "text": {
+        "agneaux": "Il dut garder des cochons, et il avait très faim. Il pensa : « Chez mon papa, même les serviteurs ont du pain ! »",
+        "bergers": "« Une grande famine arriva dans ce pays. Il trouva un travail : garder des cochons. Il avait si faim qu'il aurait voulu manger leur nourriture, mais personne ne lui en donnait. Alors il pensa : “Chez mon père, les ouvriers ont du pain en abondance, et moi, ici, je meurs de faim !” »",
+        "explorateurs": "« Une grande famine survint dans ce pays, et il commença à se trouver dans le besoin. Il alla se mettre au service d'un des habitants, qui l'envoya dans ses champs garder les pourceaux. Il aurait bien voulu se rassasier des carouges que mangeaient les pourceaux, mais personne ne lui en donnait. Étant rentré en lui-même, il se dit : “Combien d'ouvriers chez mon père ont du pain en abondance, et moi, ici, je meurs de faim !” »"
+      },
+      "action": "Touche les cochons."
+    },
+    {
+      "id": "retour",
+      "stage": "retour",
+      "reference": "Luc 15.18-20",
+      "text": {
+        "agneaux": "Il décida : « Je rentre à la maison. Je dirai pardon à mon papa. » Et il reprit le chemin.",
+        "bergers": "« Il se dit : “Je vais retourner chez mon père et je lui dirai : Père, j'ai péché contre Dieu et contre toi. Je ne mérite plus d'être appelé ton fils. Prends-moi comme un de tes ouvriers.” Et il se mit en route. »",
+        "explorateurs": "« Je me lèverai, j'irai vers mon père, et je lui dirai : “Mon père, j'ai péché contre le ciel et contre toi, je ne suis plus digne d'être appelé ton fils ; traite-moi comme l'un de tes mercenaires.” Et il se leva, et alla vers son père. »"
+      },
+      "action": "Fais glisser le fils sur le chemin du retour."
+    },
+    {
+      "id": "accueil",
+      "stage": "accueil",
+      "reference": "Luc 15.20-21",
+      "text": {
+        "agneaux": "Son papa le vit de loin. Il courut vers lui et le serra très fort dans ses bras !",
+        "bergers": "« Il était encore loin quand son père le vit. Rempli d'amour, le père courut vers son fils, le serra dans ses bras et l'embrassa. Le fils dit : “Père, j'ai péché contre Dieu et contre toi.” »",
+        "explorateurs": "« Comme il était encore loin, son père le vit et fut ému de compassion. Il courut se jeter à son cou et le baisa. Le fils lui dit : “Mon père, j'ai péché contre le ciel et contre toi, je ne suis plus digne d'être appelé ton fils.” »"
+      },
+      "action": "Touche le papa pour qu'il coure vers son fils !"
+    },
+    {
+      "id": "festin",
+      "stage": "festin",
+      "reference": "Luc 15.22-24",
+      "text": {
+        "agneaux": "Le papa dit : « Apportez une belle robe, une bague, et faisons la fête ! Mon fils était perdu, et je l'ai retrouvé ! »",
+        "bergers": "« Mais le père dit à ses serviteurs : “Vite, apportez la plus belle robe et mettez-la-lui ! Mettez-lui une bague au doigt et des sandales aux pieds. Faisons un grand repas et réjouissons-nous ! Car mon fils était mort, et il est revenu à la vie ; il était perdu, et il est retrouvé !” Et la fête commença. »",
+        "explorateurs": "« Mais le père dit à ses serviteurs : “Apportez vite la plus belle robe, et l'en revêtez ; mettez-lui un anneau au doigt, et des souliers aux pieds. Amenez le veau gras, et tuez-le. Mangeons et réjouissons-nous ; car mon fils que voici était mort, et il est revenu à la vie ; il était perdu, et il est retrouvé.” Et ils commencèrent à se réjouir. »"
+      },
+      "action": "Touche la robe, la bague et le pain pour la fête !",
+      "after": {
+        "all": "Dieu est comme ce papa : il nous attend toujours, et il est heureux quand nous revenons à lui."
+      }
+    }
+  ],
+  "games": {
+    "chronology": {
+      "instructions": {
+        "all": "Remets les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?",
+        "agneaux": "Touche les images dans l'ordre de l'histoire. Qu'est-ce qui s'est passé en premier ?"
+      },
+      "cards": [
+        { "id": "depart", "label": "Le départ" },
+        { "id": "depense", "label": "Tout dépensé" },
+        { "id": "cochons", "label": "Les cochons" },
+        { "id": "retour", "label": "Le retour" },
+        { "id": "accueil", "label": "Dans les bras du père" },
+        { "id": "festin", "label": "La fête" }
+      ],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    },
+    "seek": {
+      "instructions": "À la ferme du papa, des choses se cachent ! Retrouve-les.",
+      "items": [
+        { "id": "pig", "label": "le cochon" },
+        { "id": "ring", "label": "la bague" },
+        { "id": "coin", "label": "la pièce" },
+        { "id": "wheat", "label": "le blé" },
+        { "id": "sheep", "label": "le mouton" },
+        { "id": "bird", "label": "l'oiseau" },
+        { "id": "jar", "label": "la jarre" },
+        { "id": "mouse", "label": "la souris" }
+      ],
+      "counts": { "agneaux": 4, "bergers": 6, "explorateurs": 8 }
+    },
+    "memory": {
+      "instructions": "Retourne les cartes et retrouve les paires de l'histoire.",
+      "pairs": ["pig", "ring", "coat", "coin", "bread", "wheat"],
+      "counts": { "agneaux": 3, "bergers": 4, "explorateurs": 6 }
+    }
+  },
+  "verse": {
+    "text": "Mon fils que voici était mort, et il est revenu à la vie ; il était perdu, et il est retrouvé.",
+    "reference": "Luc 15.24",
+    "spoken": "Luc, chapitre 15, verset 24 : Mon fils que voici était mort, et il est revenu à la vie ; il était perdu, et il est retrouvé.",
+    "chunks": {
+      "bergers": ["Mon fils que voici était mort,", "et il est revenu à la vie ;", "il était perdu, et il est retrouvé."],
+      "explorateurs": ["Mon fils que voici", "était mort,", "et il est revenu à la vie ;", "il était perdu,", "et il est retrouvé."]
+    },
+    "referenceChoices": ["Luc 15.24", "Luc 24.15", "Jean 15.24"],
+    "instructions": {
+      "agneaux": "Touche les couleurs pour écouter la parole de Dieu.",
+      "bergers": "Remets les morceaux du verset dans l'ordre.",
+      "explorateurs": "Remets les morceaux du verset dans l'ordre, puis trouve où il se trouve dans la Bible."
+    }
+  },
+  "sticker": { "id": "prodigue", "title": "Le retour du fils" },
+  "reward": "Bravo ! Tu as terminé l'histoire du fils prodigue. Voici ton autocollant pour ton album !"
+}
